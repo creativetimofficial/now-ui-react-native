@@ -1,0 +1,53 @@
+{
+  "name": "argon-pro-react-native",
+  "version": "1.0.0",
+  "description": "Argon Pro React Native, based on Argon Design System. Coded by Creative Tim",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/creativetimofficial/argon-pro-react-native.git"
+  },
+  "dependencies": {
+    "expo": "^33.0.0",
+    "expo-asset": "^5.0.1",
+    "expo-font": "^5.0.1",
+    "galio-framework": "^0.5.3",
+    "prop-types": "^15.7.2",
+    "react": "16.8.3",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
+    "react-native-modal-dropdown": "^0.6.2",
+    "react-navigation": "^3.11.0"
+  },
+  "devDependencies": {
+    "babel-preset-expo": "^5.0.0"
+  },
+  "keywords": [
+    "argon react native",
+    "argon design system",
+    "argon app react native",
+    "argon iOS",
+    "react native iOS",
+    "creative tim",
+    "argon Android",
+    "react native ui kit",
+    "react native expo",
+    "freebie",
+    "react native argon design",
+    "react native galio",
+    "galio argon pro",
+    "galio react native free app",
+    "argon expo react native",
+    "react native ui template"
+  ],
+  "author": "Creative Tim <hello@creative-tim.com> (https://www.creative-tim.com/)",
+  "bugs": {
+    "url": "https://github.com/creativetimofficial/argon-pro-react-native/issues"
+  },
+  "homepage": "https://demos.creative-tim.com/argon-pro-react-native"
+}
