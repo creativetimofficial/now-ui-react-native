@@ -9,55 +9,36 @@ class ProgressBar extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.progress !== this.props.progress) {
+    if(prevProps.progress !== this.props.progress) {
       Animated.timing(this.animation, {
         toValue: this.props.progress,
         duration: this.props.duration
       }).start();
     }
   }
-  convertHex(hex,alpha){
-    hex = hex.replace('#','');
-    r = parseInt(hex.substring(0,2), 16);
-    g = parseInt(hex.substring(2,4), 16);
-    b = parseInt(hex.substring(4,6), 16);
-
-    result = 'rgba('+r+','+g+','+b+',' + alpha/100+')';
-    return result;
-   }
-
 
   render() {
     const {
       height,
+      borderColor,
       borderWidth,
       borderRadius,
       barColor,
       fillColor,
-      row,
-      color
+      row
     } = this.props;
 
     const widthInterpolated = this.animation.interpolate({
       inputRange: [0, 1],
       outputRange: ["0%", "100%"],
       extrapolate: "clamp"
-    });
-    const borderColor = color && nowUITheme.COLORS[color.toUpperCase()];
+    })
 
-    return (
-      <View
-        style={[
-          { flexDirection: "row", height },
-          row ? { flex: 1 } : undefined
-        ]}
-      >
-        <View style={{ flex: 1, borderColor, borderWidth, borderRadius }}>
+    return(
+      <View style={[{ flexDirection: "row", height }, row ? { flex: 1 } : undefined ]}>
+        <View style={{ flex: 1, borderColor, borderWidth, borderRadius }} >
           <View
-            style={[
-              StyleSheet.absoluteFill,
-              { backgroundColor: this.convertHex(color, 20) }
-            ]}
+            style={[ StyleSheet.absoluteFill, { backgroundColor: fillColor } ]}
           />
           <Animated.View
             style={{
@@ -72,14 +53,15 @@ class ProgressBar extends React.Component {
         </View>
       </View>
     );
-  }
+  };
 }
 
 ProgressBar.defaultProps = {
   height: 10,
+  borderColor: "#000",
   borderWidth: 2,
   borderRadius: 4,
-  barColor: "red",
+  barColor: "tomato",
   fillColor: "rgba(0,0,205,.5)",
   duration: 100
 };

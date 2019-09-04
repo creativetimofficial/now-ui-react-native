@@ -7,7 +7,7 @@ import {
   TouchableWithoutFeedback,
   Keyboard
 } from "react-native";
-import { Block, Checkbox, Text } from "galio-framework";
+import { Block, Checkbox, Text,  Button as GaButton, theme } from "galio-framework";
 
 import { Button, Icon, Input } from "../components";
 import { Images, nowTheme } from "../constants";
@@ -34,38 +34,47 @@ class Register extends React.Component {
               <Block style={styles.registerContainer}>
                 <Block flex space="between">
                   <Block flex={0.2} middle style={styles.socialConnect}>
-                    <Block flex={0.6} middle>
-                      <Text color="#8898AA" size={12}>
-                        Sign up with
+                    <Block flex={0.3} middle>
+                      <Text  size={18}>
+                         Register
                       </Text>
                     </Block>
-                    <Block flex={0.4} row style={{ marginBottom: 18 }}>
-                      <Button
-                        style={{ ...styles.socialButtons, marginRight: 30 }}
-                      >
-                        <Block row>
-                          <Icon
-                            name="logo-github"
-                            family="Ionicon"
-                            size={14}
-                            color={"black"}
-                            style={{ marginTop: 2, marginRight: 5 }}
-                          />
-                          <Text style={styles.socialTextButtons}>GITHUB</Text>
-                        </Block>
-                      </Button>
-                      <Button style={styles.socialButtons}>
-                        <Block row>
-                          <Icon
-                            name="facebook-square"
-                            family="font-awesome"
-                            size={14}
-                            color={"black"}
-                            style={{ marginTop: 2, marginRight: 5 }}
-                          />
-                          <Text style={styles.socialTextButtons}>FACEBOOK</Text>
-                        </Block>
-                      </Button>
+                    <Block flex={0.7}  row style={{ marginBottom: 18 }}>
+                    <GaButton
+                round
+                onlyIcon
+                shadowless
+                icon="twitter"
+                iconFamily="Font-Awesome"
+                iconColor={theme.COLORS.WHITE}
+                iconSize={theme.SIZES.BASE * 1.625}
+                color={nowTheme.COLORS.TWITTER}
+                style={[styles.social, styles.shadow]}
+              />
+
+                      <GaButton
+                round
+                onlyIcon
+                shadowless
+                icon="dribbble"
+                iconFamily="Font-Awesome"
+                iconColor={theme.COLORS.WHITE}
+                iconSize={theme.SIZES.BASE * 1.625}
+                color={nowTheme.COLORS.DRIBBBLE}
+                style={[styles.social, styles.shadow]}
+              />
+                 <GaButton
+                round
+                onlyIcon
+                shadowless
+                icon="facebook"
+                iconFamily="Font-Awesome"
+                iconColor={theme.COLORS.WHITE}
+                iconSize={theme.SIZES.BASE * 1.625}
+                color={nowTheme.COLORS.FACEBOOK}
+                style={[styles.social, styles.shadow]}
+              />
+
                     </Block>
                   </Block>
                   <Block flex={0.8} middle space="between">
@@ -76,9 +85,10 @@ class Register extends React.Component {
                           textAlign: "center"
                         }}
                         color="#8898AA"
-                        size={12}
+                        size={20}
+
                       >
-                        Or sign up the classic way
+                        or be classical
                       </Text>
                     </Block>
                     <Block center flex={0.9}>
@@ -90,7 +100,7 @@ class Register extends React.Component {
                           >
                             <Input
                               borderless
-                              placeholder="Name"
+                              placeholder="First Name"
                               iconContent={
                                 <Icon
                                   size={16}
@@ -108,7 +118,7 @@ class Register extends React.Component {
                           >
                             <Input
                               borderless
-                              placeholder="Email"
+                              placeholder="Last Name"
                               iconContent={
                                 <Icon
                                   size={16}
@@ -121,37 +131,20 @@ class Register extends React.Component {
                             />
                           </Block>
                           <Block width={width * 0.8}>
-                            <Input
-                              password
+                          <Input
                               borderless
-                              placeholder="Password"
+                              placeholder="Email"
                               iconContent={
                                 <Icon
                                   size={16}
                                   color="#ADB5BD"
-                                  name="padlock-unlocked"
+                                  name="ic_mail_24px"
                                   family="ArgonExtra"
                                   style={styles.inputIcons}
                                 />
                               }
                             />
-                            <Block row style={styles.passwordCheck}>
-                              <Text
-                                style={{ fontFamily: "open-sans-regular" }}
-                                size={12}
-                                color={nowTheme.COLORS.MUTED}
-                              >
-                                password strength:
-                              </Text>
-                              <Text
-                                style={{ fontFamily: "open-sans-bold" }}
-                                size={12}
-                                color={nowTheme.COLORS.SUCCESS}
-                              >
-                                {" "}
-                                strong
-                              </Text>
-                            </Block>
+
                           </Block>
                           <Block row width={width * 0.75}>
                             <Checkbox
@@ -180,13 +173,13 @@ class Register extends React.Component {
                           </Block>
                         </Block>
                         <Block center>
-                          <Button color="primary" style={styles.createButton}>
+                          <Button color="primary" round  style={styles.createButton}>
                             <Text
                               style={{ fontFamily: "open-sans-bold" }}
                               size={14}
                               color={nowTheme.COLORS.WHITE}
                             >
-                              CREATE ACCOUNT
+                              Get Started
                             </Text>
                           </Button>
                         </Block>
@@ -207,7 +200,7 @@ const styles = StyleSheet.create({
   registerContainer: {
     width: width * 0.9,
     height: height < 812 ? height * 0.9 : height * 0.8,
-    backgroundColor: "#F4F5F7",
+    backgroundColor: nowTheme.COLORS.WHITE,
     borderRadius: 4,
     shadowColor: nowTheme.COLORS.BLACK,
     shadowOffset: {
@@ -221,8 +214,8 @@ const styles = StyleSheet.create({
   },
   socialConnect: {
     backgroundColor: nowTheme.COLORS.WHITE,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: "rgba(136, 152, 170, 0.3)"
+    // borderBottomWidth: StyleSheet.hairlineWidth,
+    // borderColor: "rgba(136, 152, 170, 0.3)"
   },
   socialButtons: {
     width: 120,
@@ -254,7 +247,14 @@ const styles = StyleSheet.create({
     width: width * 0.5,
     marginTop: 25,
     marginBottom: 40
-  }
+  },
+  social: {
+    width: theme.SIZES.BASE * 3.5,
+    height: theme.SIZES.BASE * 3.5,
+    borderRadius: theme.SIZES.BASE * 1.75,
+    justifyContent: "center",
+    marginVertical: 10
+  },
 });
 
 export default Register;

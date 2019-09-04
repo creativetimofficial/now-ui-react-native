@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   Slider,
   ProgressViewIOS,
-  CheckBox
+  View
 } from "react-native";
 // Galio components
 import { Block, Text, Button as GaButton, theme } from "galio-framework";
@@ -20,6 +20,7 @@ import ProgressBar from "../components/ProgressBar";
 import NSlider from "../components/Sliders";
 import Label from "../components/Label";
 import RadioButton from "../components/RadioButton";
+import Checkbox from "../components/Checkbox";
 
 const { width } = Dimensions.get("screen");
 
@@ -31,19 +32,26 @@ class Elements extends React.Component {
     value: 50,
     checked: false
   };
-  getProgress(offset) {
-    var progress = this.state.progress + offset;
-    return Math.sin(progress % Math.PI) % 1;
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      checkSelected: []
+    };
   }
+  _onSelect = id => {
+    console.log(id);
+  };
+
   componentDidMount() {
     setInterval(() => {
       this.setState(state => ({
         progress: state.progress + 0.1
       }));
-    }, 1000);
+    }, 250);
   }
   onChangeCheck() {
-    this.setState({ checked: !this.state.checked})
+    this.setState({ checked: !this.state.checked });
   }
 
   toggleSwitch = switchId =>
@@ -63,15 +71,6 @@ class Elements extends React.Component {
               style={styles.button}
             >
               ROUND
-            </Button>
-          </Block>
-          <Block center>
-            <Button
-              textStyle={{ fontFamily: "open-sans-bold" }}
-              small
-              style={styles.button}
-            >
-              SMALL
             </Button>
           </Block>
           <Block center>
@@ -309,7 +308,7 @@ class Elements extends React.Component {
         </Text>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
           <Img type="raised"></Img>
-          <Img type="circle"/>
+          <Img type="circle" />
         </Block>
       </Block>
     );
@@ -652,7 +651,6 @@ class Elements extends React.Component {
 
           <Block style={{ marginBottom: theme.SIZES.BASE }}>
             <Header
-              white
               back
               title="Title"
               navigation={this.props.navigation}
@@ -739,43 +737,62 @@ class Elements extends React.Component {
           Progress Bars
         </Text>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <ProgressBar
+        <ProgressBar
             row
             progress={this.state.progress}
             duration={500}
-            color={nowTheme.COLORS.SUCCESS}
           />
         </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+        {/* <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+          <Text  color={nowTheme.COLORS.PRIMARY}>Primary</Text>
+          <Block right>
+            <Text color={nowTheme.COLORS.PRIMARY}>{String(this.getProgress(0.4)*100).split('.')[0] + '%'}</Text>
+          </Block>
           <ProgressViewIOS
             progressTintColor={nowTheme.COLORS.PRIMARY}
-            progress={this.getProgress(0.4)}
+            progress={this.getProgress(2)}
           />
         </Block>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+          <Text  color={nowTheme.COLORS.SECONDARY}>Seconday</Text>
+          <Block right>
+            <Text color={nowTheme.COLORS.SECONDARY}>{String(this.getProgress(0.4)*100).split('.')[0] + '%'}</Text>
+          </Block>
           <ProgressViewIOS
             progressTintColor={nowTheme.COLORS.SECONDARY}
-            progress={this.getProgress(0.4)}
+            progress={this.getProgress(2)}
           />
-        </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+        </Block> */}
+        {/* <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+          <Text  color={nowTheme.COLORS.SUCCESS}>Success</Text>
+          <Block right>
+            <Text color={nowTheme.COLORS.SUCCESS}>{String(this.getProgress(0.4)*100).split('.')[0] + '%'}</Text>
+          </Block>
           <ProgressViewIOS
             progressTintColor={nowTheme.COLORS.SUCCESS}
             progress={this.getProgress(0.4)}
           />
         </Block>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+          <Text  color={nowTheme.COLORS.WARNING}>Warning</Text>
+          <Block right>
+            <Text color={nowTheme.COLORS.WARNING}>{String(this.getProgress(0.4)*100).split('.')[0] + '%'}</Text>
+          </Block>
           <ProgressViewIOS
             progressTintColor={nowTheme.COLORS.WARNING}
             progress={this.getProgress(0.4)}
           />
         </Block>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+          <Text  color={nowTheme.COLORS.ERROR}>Error</Text>
+          <Block right>
+            <Text color={nowTheme.COLORS.ERROR}>{String(this.getProgress(0.4)*100).split('.')[0] + '%'}</Text>
+          </Block>
           <ProgressViewIOS
             progressTintColor={nowTheme.COLORS.ERROR}
             progress={this.getProgress(0.4)}
           />
-        </Block>
+        </Block> */}
       </Block>
     );
   };
@@ -823,51 +840,62 @@ class Elements extends React.Component {
     );
   };
   renderCheckboxes = () => {
-    return(
+    return (
       <Block flex style={styles.group}>
         <Text size={16} style={styles.title}>
           Checkboxes
         </Text>
-        <CheckBox
-
-          value={this.state.checked}
-          onChange={() => this.onChangeCheck()} />
+        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+          <Checkbox
+            label={"Checked"}
+            id={"one"}
+            checked={true}
+            onChecked={id => this._onSelect(id)}
+          />
+          <Checkbox
+            label={"Unchecked"}
+            id={"two"}
+            onChecked={id => this._onSelect(id)}
+          />
+        </Block>
       </Block>
-    )
-  }
-  renderRadioButtons =  () => {
-    const options = [
-      {
-        key: 'pay',
-        text: 'Radio is off',
-
-      },
-      {
-        key: 'performance',
-        text: 'Radio is on',
-      },
-      {
-        key: 'aToZ',
-        text: 'Disabled radio is off',
-      },
-      {
-        key: 'zToA',
-        text: 'Disabled radio is on',
-      },
-    ];
-
-    return(
+    );
+  };
+  renderRadioButtons = () => {
+    return (
       <Block flex style={styles.group}>
-      <Text size={16} style={styles.title}>
-        Radio Buttons
-      </Text>
-      <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-        <RadioButton id={"btn1"} text={"Disabled radio"} disabled={true} />
-        <RadioButton id={"btn2"} text={"Radio is on"}  />
+        <Text size={16} style={styles.title}>
+          Radio Buttons
+        </Text>
+        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+          <RadioButton id={"btn1"} text={"Disabled radio"} disabled={true} />
+          <RadioButton id={"btn2"} text={"Radio is on"} />
+        </Block>
       </Block>
-
-    </Block>
-    )
+    );
+  };
+  renderSocialV2 = ()=>{
+    return(
+    <Block flex style={styles.group}>
+        <Text size={16} style={styles.title}>
+          Social Btns
+        </Text>
+        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+        <Button
+              textStyle={{ fontFamily: "open-sans-bold" }}
+              color="primary"
+              style={styles.button}
+              icon="facebook"
+              iconFamily="Font-Awesome"
+              iconColor={theme.COLORS.BLACK}
+              iconSize={theme.SIZES.BASE * 1.625}
+              color={nowTheme.COLORS.FACEBOOK}
+            >
+              DEFAULT
+            </Button>
+        </Block>
+      </Block>
+    );
   }
   render() {
     return (
@@ -880,6 +908,7 @@ class Elements extends React.Component {
           {this.renderText()}
           {this.renderInputs()}
           {this.renderSocial()}
+          {this.renderSocialV2()}
           {this.renderSwitches()}
           {this.renderProgressBar()}
           {this.renderSliders()}
@@ -953,9 +982,19 @@ const styles = StyleSheet.create({
     borderRadius: theme.SIZES.BASE * 1.75,
     justifyContent: "center"
   },
-  sliderDummy: {
-    backgroundColor: "rgba(24, 206, 15, 0.3)"
-  }
+  socialButtons: {
+    width: 120,
+    height: 40,
+    backgroundColor: "#fff",
+    shadowColor: nowTheme.COLORS.BLACK,
+    shadowOffset: {
+      width: 0,
+      height: 4
+    },
+    shadowRadius: 8,
+    shadowOpacity: 0.1,
+    elevation: 1
+  },
 });
 
 export default Elements;

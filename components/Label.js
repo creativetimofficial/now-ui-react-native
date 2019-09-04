@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity, Text } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import PropTypes from "prop-types";
 
 import nowTheme from "../constants/Theme";
@@ -14,14 +14,14 @@ class Label extends React.Component {
       styles.label
     ];
     return (
-      <TouchableOpacity style={labelStyles}>
+      <View style={labelStyles}>
         <Text
         adjustsFontSizeToFit
         numberOfLines={1}
         style={styles.labelText}>
           {children}
         </Text>
-      </TouchableOpacity>
+      </View>
     );
   }
 }
@@ -49,7 +49,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     height: 40,
     margin: 3,
-    padding: 10
+    padding: 6,
+    width: 60
   },
   labelText: {
     color: nowTheme.COLORS.WHITE,

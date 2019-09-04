@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import { Text, View, TouchableOpacity, StyleSheet } from "react-native";
 
-export default class RadioButton extends Component {
+export default class RadioButton extends React.Component {
   state = {
     value: null
   };

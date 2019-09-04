@@ -1,4 +1,4 @@
-# [Argon PRO React Native](https://creativetimofficial.github.io/argon-pro-react-native/docs/#) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?text=Start%20Your%20Development%20With%20A%20Badass%20React%20Native%20app%20inspired%20by%20Argon%20Design%20System.%0Ahttps%3A//demos.creative-tim.com/argon-pro-react-native/)
+# [Now UI PRO React Native](https://creativetimofficial.github.io/argon-pro-react-native/docs/#) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?text=Start%20Your%20Development%20With%20A%20Badass%20React%20Native%20app%20inspired%20by%20Argon%20Design%20System.%0Ahttps%3A//demos.creative-tim.com/argon-pro-react-native/)
 
 
  ![version](https://img.shields.io/badge/version-1.0.0-blue.svg)  [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/ct-argon-pro-react-native.svg?style=flat)](https://github.com/creativetimofficial/ct-argon-pro-react-native/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/ct-argon-pro-react-native.svg?maxAge=2592000)](https://github.com/creativetimofficial/ct-argon-pro-react-native/issues?q=is%3Aissue+is%3Aclosed)
@@ -8,7 +8,7 @@
 
 Argon PRO React Native is a fully coded app template built over [Galio.io](https://galio.io/?ref=creativetim), [React Native](https://facebook.github.io/react-native/?ref=creativetim) and [Expo](https://expo.io/?ref=creativetim) to allow you to create powerful and beautiful e-commerce mobile applications. We have redesigned all the usual components in Galio to make it look like Argon's Design System, minimalistic and easy to use.
 
-Start your development with a badass Design System for React Native inspired by Argon Design System. If you like Argon's Design System, you will love this react native app template! It features a huge number of components and screens built to fit together and look amazing. 
+Start your development with a badass Design System for React Native inspired by Argon Design System. If you like Argon's Design System, you will love this react native app template! It features a huge number of components and screens built to fit together and look amazing.
 
 ### FULLY CODED COMPONENTS
 
@@ -17,12 +17,12 @@ Argon PRO React Native features over 200 variations of components like buttons, 
 You will save a lot of time going from prototyping to full-functional code, because all elements are implemented. We wanted the design process to be seamless, so switching from image to the real page is very easy to do.
 
 ### Components & Cards
-Argon PRO React Native comes packed with a large number of components and cards. Putting together a mobile app has never been easier than matching together different components. From the profile screen to a settings screen, you can easily customise and build your screens. We have created multiple options for you to put together and customise into pixel perfect screens. 
+Argon PRO React Native comes packed with a large number of components and cards. Putting together a mobile app has never been easier than matching together different components. From the profile screen to a settings screen, you can easily customise and build your screens. We have created multiple options for you to put together and customise into pixel perfect screens.
 
 View [ all components/cards here](https://demos.creative-tim.com/argon-pro-react-native/index.html#cards).
 
 ### Example Screens
-If you want to get inspiration or just show something directly to your clients, you can jump start your development with our pre-built example screens. From onboarding screens to profile or discover screens, you will be able to quickly set up the basic structure for your React Native mobile project. 
+If you want to get inspiration or just show something directly to your clients, you can jump start your development with our pre-built example screens. From onboarding screens to profile or discover screens, you will be able to quickly set up the basic structure for your React Native mobile project.
 
 View [all screens here](https://demos.creative-tim.com/argon-pro-react-native/index.html#screens).
 
@@ -32,7 +32,7 @@ Let us know your thoughts below. And good luck with development!
 
 ## Table of Contents
 
-* [Versions](#versions) 
+* [Versions](#versions)
 * [Demo](#demo)
 * [Quick Start](#quick-start)
 * [Documentation](#documentation)
