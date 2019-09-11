@@ -7,7 +7,13 @@ import {
   TouchableWithoutFeedback,
   Keyboard
 } from "react-native";
-import { Block, Checkbox, Text,  Button as GaButton, theme } from "galio-framework";
+import {
+  Block,
+  Checkbox,
+  Text,
+  Button as GaButton,
+  theme
+} from "galio-framework";
 
 import { Button, Icon, Input } from "../components";
 import { Images, nowTheme } from "../constants";
@@ -32,53 +38,54 @@ class Register extends React.Component {
           >
             <Block flex middle>
               <Block style={styles.registerContainer}>
-                <Block flex space="between">
-                  <Block flex={0.2} middle style={styles.socialConnect}>
-                    <Block flex={0.3} middle>
-                      <Text  size={18}>
-                         Register
-                      </Text>
+                <Block flex space="evenly">
+                  <Block flex={0.4} middle style={styles.socialConnect}>
+                    <Block flex={0.5} middle>
+                      <Text  style={{
+                          fontFamily: "open-sans-regular",
+                          textAlign: "center"
+                        }}   color="#8898AA"
+                        size={20}>Register</Text>
                     </Block>
-                    <Block flex={0.7}  row style={{ marginBottom: 18 }}>
-                    <GaButton
-                round
-                onlyIcon
-                shadowless
-                icon="twitter"
-                iconFamily="Font-Awesome"
-                iconColor={theme.COLORS.WHITE}
-                iconSize={theme.SIZES.BASE * 1.625}
-                color={nowTheme.COLORS.TWITTER}
-                style={[styles.social, styles.shadow]}
-              />
+
+                    <Block flex={0.5} row middle space="between"  style={{ marginBottom: 18 }}>
+                      <GaButton
+                        round
+                        onlyIcon
+                        shadowless
+                        icon="twitter"
+                        iconFamily="Font-Awesome"
+                        iconColor={theme.COLORS.WHITE}
+                        iconSize={theme.SIZES.BASE * 1.625}
+                        color={nowTheme.COLORS.TWITTER}
+                        style={[styles.social, styles.shadow]}
+                      />
 
                       <GaButton
-                round
-                onlyIcon
-                shadowless
-                icon="dribbble"
-                iconFamily="Font-Awesome"
-                iconColor={theme.COLORS.WHITE}
-                iconSize={theme.SIZES.BASE * 1.625}
-                color={nowTheme.COLORS.DRIBBBLE}
-                style={[styles.social, styles.shadow]}
-              />
-                 <GaButton
-                round
-                onlyIcon
-                shadowless
-                icon="facebook"
-                iconFamily="Font-Awesome"
-                iconColor={theme.COLORS.WHITE}
-                iconSize={theme.SIZES.BASE * 1.625}
-                color={nowTheme.COLORS.FACEBOOK}
-                style={[styles.social, styles.shadow]}
-              />
-
+                        round
+                        onlyIcon
+                        shadowless
+                        icon="dribbble"
+                        iconFamily="Font-Awesome"
+                        iconColor={theme.COLORS.WHITE}
+                        iconSize={theme.SIZES.BASE * 1.625}
+                        color={nowTheme.COLORS.DRIBBBLE}
+                        style={[styles.social, styles.shadow]}
+                      />
+                      <GaButton
+                        round
+                        onlyIcon
+                        shadowless
+                        icon="facebook"
+                        iconFamily="Font-Awesome"
+                        iconColor={theme.COLORS.WHITE}
+                        iconSize={theme.SIZES.BASE * 1.625}
+                        color={nowTheme.COLORS.FACEBOOK}
+                        style={[styles.social, styles.shadow]}
+                      />
                     </Block>
                   </Block>
-                  <Block flex={0.8} middle space="between">
-                    <Block flex={0.2} middle>
+                  <Block flex={0.1} middle>
                       <Text
                         style={{
                           fontFamily: "open-sans-regular",
@@ -86,11 +93,12 @@ class Register extends React.Component {
                         }}
                         color="#8898AA"
                         size={20}
-
                       >
                         or be classical
                       </Text>
                     </Block>
+                  <Block flex={0.8} middle space="between">
+
                     <Block center flex={0.9}>
                       <Block flex space="between">
                         <Block>
@@ -131,7 +139,7 @@ class Register extends React.Component {
                             />
                           </Block>
                           <Block width={width * 0.8}>
-                          <Input
+                            <Input
                               borderless
                               placeholder="Email"
                               iconContent={
@@ -144,7 +152,6 @@ class Register extends React.Component {
                                 />
                               }
                             />
-
                           </Block>
                           <Block row width={width * 0.75}>
                             <Checkbox
@@ -173,7 +180,11 @@ class Register extends React.Component {
                           </Block>
                         </Block>
                         <Block center>
-                          <Button color="primary" round  style={styles.createButton}>
+                          <Button
+                            color="primary"
+                            round
+                            style={styles.createButton}
+                          >
                             <Text
                               style={{ fontFamily: "open-sans-bold" }}
                               size={14}
@@ -213,7 +224,7 @@ const styles = StyleSheet.create({
     overflow: "hidden"
   },
   socialConnect: {
-    backgroundColor: nowTheme.COLORS.WHITE,
+    backgroundColor: nowTheme.COLORS.WHITE
     // borderBottomWidth: StyleSheet.hairlineWidth,
     // borderColor: "rgba(136, 152, 170, 0.3)"
   },
@@ -253,8 +264,8 @@ const styles = StyleSheet.create({
     height: theme.SIZES.BASE * 3.5,
     borderRadius: theme.SIZES.BASE * 1.75,
     justifyContent: "center",
-    marginVertical: 10
-  },
+    marginHorizontal:10
+  }
 });
 
 export default Register;

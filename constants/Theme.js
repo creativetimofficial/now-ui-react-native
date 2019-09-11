@@ -7,7 +7,7 @@ const COLORS = {
   ERROR: "#FF3636",
   SUCCESS: "#18ce0f",
   WARNING: "#FFB236",
-  NEUTRAL: "rgba(255, 255, 255, 0.8)",
+  NEUTRAL: "rgba(255, 255, 255, 0.2)",
   TEXT: "#32325D",
   MUTED: "#8898AA",
   INPUT: "#DCDCDC",

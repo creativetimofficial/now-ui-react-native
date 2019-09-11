@@ -1,13 +1,12 @@
 import React from "react";
 import {
   View,
-  Text,
   TouchableWithoutFeedback,
   StyleSheet
 } from 'react-native';
 import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/Ionicons';
-
+import {Text} from 'galio-framework'
 
 export default class Checkbox extends React.Component {
   constructor(props) {

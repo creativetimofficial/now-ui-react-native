@@ -1,5 +1,6 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View,  } from "react-native";
+import { Text } from "galio-framework";
 import PropTypes from "prop-types";
 
 import nowTheme from "../constants/Theme";
@@ -13,12 +14,16 @@ class Label extends React.Component {
       { backgroundColor: colorStyle, borderColor: colorStyle },
       styles.label
     ];
+    const labelTextStyle=[
+      {color : (color) === 'neutral' ? nowTheme.COLORS.BLACK : nowTheme.COLORS.WHITE},
+      styles.labelText
+    ]
     return (
       <View style={labelStyles}>
         <Text
         adjustsFontSizeToFit
         numberOfLines={1}
-        style={styles.labelText}>
+        style={labelTextStyle}>
           {children}
         </Text>
       </View>
@@ -46,17 +51,17 @@ const styles = StyleSheet.create({
   label: {
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: 10,
+    borderRadius: 14,
     height: 40,
     margin: 3,
     padding: 6,
     width: 60
   },
   labelText: {
-    color: nowTheme.COLORS.WHITE,
     textAlignVertical: "center",
     textAlign: "center",
-    textTransform: "uppercase"
+    textTransform: "uppercase",
+    fontWeight: "bold"
   }
 });
 

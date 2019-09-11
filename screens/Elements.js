@@ -4,15 +4,15 @@ import {
   StyleSheet,
   Dimensions,
   TouchableOpacity,
-  Slider,
-  ProgressViewIOS,
-  View
+  ImageBackground,
+  TouchableWithoutFeedback,
+  Image
 } from "react-native";
 // Galio components
 import { Block, Text, Button as GaButton, theme } from "galio-framework";
 
 // Argon themed components
-import { nowTheme, tabs } from "../constants";
+import { nowTheme, tabs, articles, Images } from "../constants";
 import { Button, Select, Icon, Input, Header, Switch } from "../components";
 import Blockquote from "../components/Blockquote";
 import Img from "../components/Img";
@@ -21,22 +21,22 @@ import NSlider from "../components/Sliders";
 import Label from "../components/Label";
 import RadioButton from "../components/RadioButton";
 import Checkbox from "../components/Checkbox";
+import { Card } from "../components/";
+
 
 const { width } = Dimensions.get("screen");
 
+const cardWidth = width - theme.SIZES.BASE * 2;
 class Elements extends React.Component {
-  state = {
-    "switch-1": true,
-    "switch-2": false,
-    progress: 0,
-    value: 50,
-    checked: false
-  };
-
   constructor(props) {
     super(props);
     this.state = {
-      checkSelected: []
+      checkSelected: [],
+      "switch-1": true,
+      "switch-2": false,
+      progress: 0,
+      value: 50,
+      checked: false
     };
   }
   _onSelect = id => {
@@ -48,7 +48,7 @@ class Elements extends React.Component {
       this.setState(state => ({
         progress: state.progress + 0.1
       }));
-    }, 250);
+    }, 1000);
   }
   onChangeCheck() {
     this.setState({ checked: !this.state.checked });
@@ -737,62 +737,67 @@ class Elements extends React.Component {
           Progress Bars
         </Text>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-        <ProgressBar
-            row
+          <Text  color={nowTheme.COLORS.PRIMARY}>PRIMARY</Text>
+
+          <ProgressBar
             progress={this.state.progress}
             duration={500}
+            barColor={nowTheme.COLORS.PRIMARY}
+            fillColor={nowTheme.COLORS.PRIMARY}
+            borderColor={nowTheme.COLORS.PRIMARY}
           />
         </Block>
-        {/* <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Text  color={nowTheme.COLORS.PRIMARY}>Primary</Text>
-          <Block right>
-            <Text color={nowTheme.COLORS.PRIMARY}>{String(this.getProgress(0.4)*100).split('.')[0] + '%'}</Text>
-          </Block>
-          <ProgressViewIOS
-            progressTintColor={nowTheme.COLORS.PRIMARY}
-            progress={this.getProgress(2)}
+        <Block style={{ paddingHorizontal: theme.SIZES.BASE, marginTop:10 }}>
+        <Text  color={nowTheme.COLORS.SECONDARY}>SECONDARY</Text>
+          <ProgressBar
+            progress={this.state.progress}
+            duration={500}
+            barColor={nowTheme.COLORS.SECONDARY}
+            fillColor={nowTheme.COLORS.SECONDARY}
+            borderColor={nowTheme.COLORS.SECONDARY}
           />
         </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Text  color={nowTheme.COLORS.SECONDARY}>Seconday</Text>
-          <Block right>
-            <Text color={nowTheme.COLORS.SECONDARY}>{String(this.getProgress(0.4)*100).split('.')[0] + '%'}</Text>
-          </Block>
-          <ProgressViewIOS
-            progressTintColor={nowTheme.COLORS.SECONDARY}
-            progress={this.getProgress(2)}
-          />
-        </Block> */}
-        {/* <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Text  color={nowTheme.COLORS.SUCCESS}>Success</Text>
-          <Block right>
-            <Text color={nowTheme.COLORS.SUCCESS}>{String(this.getProgress(0.4)*100).split('.')[0] + '%'}</Text>
-          </Block>
-          <ProgressViewIOS
-            progressTintColor={nowTheme.COLORS.SUCCESS}
-            progress={this.getProgress(0.4)}
+        <Block style={{ paddingHorizontal: theme.SIZES.BASE, marginTop:10 }}>
+        <Text  color={nowTheme.COLORS.INFO}>INFO</Text>
+          <ProgressBar
+            progress={this.state.progress}
+            duration={500}
+            barColor={nowTheme.COLORS.INFO}
+            fillColor={nowTheme.COLORS.INFO}
+            borderColor={nowTheme.COLORS.INFO}
           />
         </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Text  color={nowTheme.COLORS.WARNING}>Warning</Text>
-          <Block right>
-            <Text color={nowTheme.COLORS.WARNING}>{String(this.getProgress(0.4)*100).split('.')[0] + '%'}</Text>
-          </Block>
-          <ProgressViewIOS
-            progressTintColor={nowTheme.COLORS.WARNING}
-            progress={this.getProgress(0.4)}
+        <Block style={{ paddingHorizontal: theme.SIZES.BASE, marginTop:10 }}>
+        <Text  color={nowTheme.COLORS.SUCCESS}>SUCCESS</Text>
+          <ProgressBar
+            progress={this.state.progress}
+            duration={500}
+            barColor={nowTheme.COLORS.SUCCESS}
+            fillColor={nowTheme.COLORS.SUCCESS}
+            borderColor={nowTheme.COLORS.SUCCESS}
           />
         </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Text  color={nowTheme.COLORS.ERROR}>Error</Text>
-          <Block right>
-            <Text color={nowTheme.COLORS.ERROR}>{String(this.getProgress(0.4)*100).split('.')[0] + '%'}</Text>
-          </Block>
-          <ProgressViewIOS
-            progressTintColor={nowTheme.COLORS.ERROR}
-            progress={this.getProgress(0.4)}
+        <Block style={{ paddingHorizontal: theme.SIZES.BASE, marginTop:10 }}>
+        <Text  color={nowTheme.COLORS.WARNING}>WARNING</Text>
+          <ProgressBar
+            progress={this.state.progress}
+            duration={500}
+            barColor={nowTheme.COLORS.WARNING}
+            fillColor={nowTheme.COLORS.WARNING}
+            borderColor={nowTheme.COLORS.WARNING}
           />
-        </Block> */}
+        </Block>
+        <Block style={{ paddingHorizontal: theme.SIZES.BASE, marginTop:10 }}>
+        <Text  color={nowTheme.COLORS.ERROR}>ERROR</Text>
+          <ProgressBar
+            progress={this.state.progress}
+            duration={500}
+            barColor={nowTheme.COLORS.ERROR}
+            fillColor={nowTheme.COLORS.ERROR}
+            borderColor={nowTheme.COLORS.ERROR}
+          />
+        </Block>
+
       </Block>
     );
   };
@@ -829,13 +834,26 @@ class Elements extends React.Component {
         <Text size={16} style={styles.title}>
           Labels
         </Text>
-        <Label color="default">default</Label>
-        <Label color="primary">primary</Label>
-        <Label color="secondary">secondary</Label>
-        <Label color="success">success</Label>
-        <Label color="warning">warning</Label>
-        <Label color="error">error</Label>
-        <Label color="neutral">neutral</Label>
+        <Block row space="evenly">
+          <Block flex={1} row style={{ paddingHorizontal: theme.SIZES.BASE }}>
+            <Label color="default">default</Label>
+            <Label color="primary">primary</Label>
+            <Label color="secondary">secondary</Label>
+            <Label color="success">success</Label>
+          </Block>
+        </Block>
+        <Block
+          row
+          space="evenly"
+          style={{ paddingHorizontal: theme.SIZES.BASE }}
+        >
+          <Block flex={1} row>
+            <Label color="info">info</Label>
+            <Label color="warning">warning</Label>
+            <Label color="error">error</Label>
+            <Label color="neutral">neutral</Label>
+          </Block>
+        </Block>
       </Block>
     );
   };
@@ -874,29 +892,55 @@ class Elements extends React.Component {
       </Block>
     );
   };
-  renderSocialV2 = ()=>{
-    return(
-    <Block flex style={styles.group}>
+  renderSocialV2 = () => {
+    return (
+      <Block flex style={styles.group}>
         <Text size={16} style={styles.title}>
           Social Btns
         </Text>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-        <Button
-              textStyle={{ fontFamily: "open-sans-bold" }}
-              color="primary"
-              style={styles.button}
-              icon="facebook"
-              iconFamily="Font-Awesome"
-              iconColor={theme.COLORS.BLACK}
-              iconSize={theme.SIZES.BASE * 1.625}
-              color={nowTheme.COLORS.FACEBOOK}
-            >
-              DEFAULT
-            </Button>
+          <Button
+            textStyle={{ fontFamily: "open-sans-bold" }}
+            color="primary"
+            style={styles.button}
+            icon="facebook"
+            iconFamily="Font-Awesome"
+            iconColor={theme.COLORS.BLACK}
+            iconSize={theme.SIZES.BASE * 1.625}
+            color={nowTheme.COLORS.FACEBOOK}
+          >
+            DEFAULT
+          </Button>
         </Block>
       </Block>
     );
-  }
+  };
+  renderCards = () => {
+    return (
+
+      <Block flex style={styles.group}>
+        <Text size={16} style={styles.title}>
+          Cards
+        </Text>
+        <Block flex>
+          <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+            <Card item={articles[0]} horizontal />
+            <Block flex row>
+              <Card
+                item={articles[1]}
+                style={{ marginRight: theme.SIZES.BASE }}
+              />
+              <Card item={articles[2]} />
+            </Block>
+
+
+          </Block>
+
+        </Block>
+      </Block>
+    );
+  };
+
   render() {
     return (
       <Block flex center>
@@ -918,6 +962,7 @@ class Elements extends React.Component {
           {this.renderNavigation()}
           {this.renderTableCell()}
           {this.renderImages()}
+          {this.renderCards()}
         </ScrollView>
       </Block>
     );
@@ -995,6 +1040,29 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     elevation: 1
   },
+  productItem: {
+    width: cardWidth - theme.SIZES.BASE * 2,
+    marginHorizontal: theme.SIZES.BASE,
+    shadowColor: "black",
+    shadowOffset: { width: 0, height: 7 },
+    shadowRadius: 10,
+    shadowOpacity: 0.2
+  },
+  productImage: {
+    width: cardWidth - theme.SIZES.BASE,
+    height: cardWidth - theme.SIZES.BASE,
+    borderRadius: 3
+  },
+  productPrice: {
+    paddingTop: theme.SIZES.BASE,
+    paddingBottom: theme.SIZES.BASE / 2,
+    fontFamily: 'open-sans-bold'
+  },
+  productDescription: {
+    paddingTop: theme.SIZES.BASE,
+    fontFamily: 'open-sans-regular'
+    // paddingBottom: theme.SIZES.BASE * 2,
+  }
 });
 
 export default Elements;
