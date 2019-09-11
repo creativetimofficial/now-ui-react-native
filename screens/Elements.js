@@ -23,7 +23,6 @@ import RadioButton from "../components/RadioButton";
 import Checkbox from "../components/Checkbox";
 import { Card } from "../components/";
 
-
 const { width } = Dimensions.get("screen");
 
 const cardWidth = width - theme.SIZES.BASE * 2;
@@ -628,7 +627,7 @@ class Elements extends React.Component {
                 iconFamily="Font-Awesome"
                 iconColor={theme.COLORS.WHITE}
                 iconSize={theme.SIZES.BASE * 1.625}
-                color={nowTheme.COLORS.GMAIL}
+                color={nowTheme.COLORS.GOOGLE}
                 style={[styles.social, styles.shadow]}
               />
             </Block>
@@ -737,7 +736,7 @@ class Elements extends React.Component {
           Progress Bars
         </Text>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Text  color={nowTheme.COLORS.PRIMARY}>PRIMARY</Text>
+          <Text color={nowTheme.COLORS.PRIMARY}>PRIMARY</Text>
 
           <ProgressBar
             progress={this.state.progress}
@@ -747,8 +746,8 @@ class Elements extends React.Component {
             borderColor={nowTheme.COLORS.PRIMARY}
           />
         </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE, marginTop:10 }}>
-        <Text  color={nowTheme.COLORS.SECONDARY}>SECONDARY</Text>
+        <Block style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}>
+          <Text color={nowTheme.COLORS.SECONDARY}>SECONDARY</Text>
           <ProgressBar
             progress={this.state.progress}
             duration={500}
@@ -757,8 +756,8 @@ class Elements extends React.Component {
             borderColor={nowTheme.COLORS.SECONDARY}
           />
         </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE, marginTop:10 }}>
-        <Text  color={nowTheme.COLORS.INFO}>INFO</Text>
+        <Block style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}>
+          <Text color={nowTheme.COLORS.INFO}>INFO</Text>
           <ProgressBar
             progress={this.state.progress}
             duration={500}
@@ -767,8 +766,8 @@ class Elements extends React.Component {
             borderColor={nowTheme.COLORS.INFO}
           />
         </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE, marginTop:10 }}>
-        <Text  color={nowTheme.COLORS.SUCCESS}>SUCCESS</Text>
+        <Block style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}>
+          <Text color={nowTheme.COLORS.SUCCESS}>SUCCESS</Text>
           <ProgressBar
             progress={this.state.progress}
             duration={500}
@@ -777,8 +776,8 @@ class Elements extends React.Component {
             borderColor={nowTheme.COLORS.SUCCESS}
           />
         </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE, marginTop:10 }}>
-        <Text  color={nowTheme.COLORS.WARNING}>WARNING</Text>
+        <Block style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}>
+          <Text color={nowTheme.COLORS.WARNING}>WARNING</Text>
           <ProgressBar
             progress={this.state.progress}
             duration={500}
@@ -787,8 +786,8 @@ class Elements extends React.Component {
             borderColor={nowTheme.COLORS.WARNING}
           />
         </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE, marginTop:10 }}>
-        <Text  color={nowTheme.COLORS.ERROR}>ERROR</Text>
+        <Block style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}>
+          <Text color={nowTheme.COLORS.ERROR}>ERROR</Text>
           <ProgressBar
             progress={this.state.progress}
             duration={500}
@@ -797,7 +796,6 @@ class Elements extends React.Component {
             borderColor={nowTheme.COLORS.ERROR}
           />
         </Block>
-
       </Block>
     );
   };
@@ -892,32 +890,849 @@ class Elements extends React.Component {
       </Block>
     );
   };
-  renderSocialV2 = () => {
+  renderDefaultSocialBtns = () => {
     return (
       <Block flex style={styles.group}>
         <Text size={16} style={styles.title}>
-          Social Btns
+          Social Btns V2
         </Text>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+        <Block middle style={{ paddingHorizontal: theme.SIZES.BASE }}>
+
           <Button
-            textStyle={{ fontFamily: "open-sans-bold" }}
-            color="primary"
-            style={styles.button}
-            icon="facebook"
-            iconFamily="Font-Awesome"
-            iconColor={theme.COLORS.BLACK}
-            iconSize={theme.SIZES.BASE * 1.625}
-            color={nowTheme.COLORS.FACEBOOK}
+            style={{
+              ...styles.socialButtons,
+              ...styles.githubBtn,
+              marginRight: 30
+            }}
           >
-            DEFAULT
+            <Block row>
+              <Icon
+                name="logo-github"
+                family="Ionicon"
+                size={14}
+                color={"white"}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+              <Text adjustsFontSizeToFit style={styles.socialTextButtons}>
+                Connect with Github
+              </Text>
+            </Block>
+          </Button>
+        </Block>
+        <Block
+          middle
+          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}
+        >
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.twitterBtn,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-twitter"
+                family="Ionicon"
+                size={14}
+                color={"white"}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+              <Text adjustsFontSizeToFit style={styles.socialTextButtons}>
+                Connect with Twitter
+              </Text>
+            </Block>
+          </Button>
+        </Block>
+        <Block
+          middle
+          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}
+        >
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.facebookBtn,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-facebook"
+                family="Ionicon"
+                size={14}
+                color={"white"}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+              <Text adjustsFontSizeToFit style={styles.socialTextButtons}>
+                Connect with Facebook
+              </Text>
+            </Block>
+          </Button>
+        </Block>
+
+        <Block
+          middle
+          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}
+        >
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.linkedinBtn,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-linkedin"
+                family="Ionicon"
+                size={14}
+                color={"white"}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+              <Text adjustsFontSizeToFit style={styles.socialTextButtons}>
+                Connect with Linkedin
+              </Text>
+            </Block>
+          </Button>
+        </Block>
+        <Block
+          middle
+          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}
+        >
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.youtubeBtn,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-youtube"
+                family="Ionicon"
+                size={14}
+                color={"white"}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+              <Text adjustsFontSizeToFit style={styles.socialTextButtons}>
+                Connect with Youtube
+              </Text>
+            </Block>
+          </Button>
+        </Block>
+        <Block
+          middle
+          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}
+        >
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.pinterestBtn,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-youtube"
+                family="Ionicon"
+                size={14}
+                color={"white"}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+              <Text adjustsFontSizeToFit style={styles.socialTextButtons}>
+                Connect with Pinterest
+              </Text>
+            </Block>
+          </Button>
+        </Block>
+        <Block
+          middle
+          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}
+        >
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.tumblrBtn,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-youtube"
+                family="Ionicon"
+                size={14}
+                color={"white"}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+              <Text adjustsFontSizeToFit style={styles.socialTextButtons}>
+                Connect with Tumblr
+              </Text>
+            </Block>
+          </Button>
+        </Block>
+        <Block
+          middle
+          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}
+        >
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.redditBtn,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-youtube"
+                family="Ionicon"
+                size={14}
+                color={"white"}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+              <Text adjustsFontSizeToFit style={styles.socialTextButtons}>
+                Connect with Reddit
+              </Text>
+            </Block>
+          </Button>
+        </Block>
+        <Block
+          middle
+          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}
+        >
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.googleBtn,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-google"
+                family="Ionicon"
+                size={14}
+                color={"white"}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+              <Text adjustsFontSizeToFit style={styles.socialTextButtons}>
+                Connect with Google
+              </Text>
+            </Block>
+          </Button>
+        </Block>
+        <Block
+          middle
+          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}
+        >
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.dribbbleBtn,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-dribbble"
+                family="Ionicon"
+                size={14}
+                color={"white"}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+              <Text adjustsFontSizeToFit style={styles.socialTextButtons}>
+                Connect with Dribbble
+              </Text>
+            </Block>
           </Button>
         </Block>
       </Block>
     );
   };
+  renderSocialBtnIcons = () => {
+    return (
+      <Block flex style={styles.group}>
+        <Text size={16} style={styles.title}>
+          Social Btns Icons
+        </Text>
+        <Block row space="evenly"  style={{ paddingHorizontal: theme.SIZES.BASE }}>
+
+          <Button
+            style={{
+              ...styles.btnIcon,
+              ...styles.googleBtn,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-google"
+                family="Ionicon"
+                size={20}
+                color={"white"}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.btnIcon,
+              ...styles.facebookBtn,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-facebook"
+                family="Ionicon"
+                size={20}
+                color={"white"}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.btnIcon,
+              ...styles.twitterBtn,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-twitter"
+                family="Ionicon"
+                size={25}
+                color={"white"}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+            </Block>
+          </Button>
+
+        </Block>
+        <Block row space="evenly"  style={{ marginTop : 10,paddingHorizontal: theme.SIZES.BASE }}>
+
+          <Button
+            style={{
+              ...styles.btnIcon,
+              ...styles.githubBtn,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-github"
+                family="Ionicon"
+                size={20}
+                color={"white"}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.btnIcon,
+              ...styles.dribbbleBtn,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-dribbble"
+                family="Ionicon"
+                size={20}
+                color={"white"}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.btnIcon,
+              ...styles.linkedinBtn,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-linkedin"
+                family="Ionicon"
+                size={25}
+                color={"white"}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+            </Block>
+          </Button>
+
+        </Block>
+        <Block row space="evenly"  style={{ marginTop : 10,paddingHorizontal: theme.SIZES.BASE }}>
+
+          <Button
+            style={{
+              ...styles.btnIcon,
+              ...styles.pinterestBtn,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-pinterest"
+                family="Ionicon"
+                size={20}
+                color={"white"}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.btnIcon,
+              ...styles.youtubeBtn,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-youtube"
+                family="Ionicon"
+                size={20}
+                color={"white"}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.btnIcon,
+              ...styles.redditBtn,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-reddit"
+                family="Ionicon"
+                size={25}
+                color={"white"}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+            </Block>
+          </Button>
+
+        </Block>
+      </Block>
+    );
+  };
+  renderNeutralSocialBtn = () => {
+    return (
+      <Block flex style={styles.group}>
+        <Text size={16} style={styles.title}>
+          Social Btns Icons
+        </Text>
+        <Block middle space="evenly"  style={{ paddingHorizontal: theme.SIZES.BASE }}>
+
+         <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.neutralLink,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-github"
+                family="Ionicon"
+                size={14}
+                color={nowTheme.COLORS.GITHUB}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+              <Text adjustsFontSizeToFit style={{color:nowTheme.COLORS.GITHUB}}>
+                Connect with Github
+              </Text>
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.neutralLink,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-facebook"
+                family="Ionicon"
+                size={14}
+                color={nowTheme.COLORS.FACEBOOK}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+              <Text adjustsFontSizeToFit style={{color:nowTheme.COLORS.FACEBOOK}}>
+                Connect with Facebook
+              </Text>
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.neutralLink,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-google"
+                family="Ionicon"
+                size={14}
+                color={nowTheme.COLORS.GOOGLE}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+              <Text adjustsFontSizeToFit style={{color:nowTheme.COLORS.GOOGLE}}>
+                Share on Google+
+              </Text>
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.neutralLink,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-pinterest"
+                family="Ionicon"
+                size={14}
+                color={nowTheme.COLORS.PINTEREST}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+              <Text adjustsFontSizeToFit style={{color:nowTheme.COLORS.PINTEREST}}>
+                Pin it - 232
+              </Text>
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.neutralLink,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-youtube"
+                family="Ionicon"
+                size={14}
+                color={nowTheme.COLORS.YOUTUBE}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+              <Text adjustsFontSizeToFit style={{color:nowTheme.COLORS.YOUTUBE}}>
+                View on Youtube
+              </Text>
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.neutralLink,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-dribbble"
+                family="Ionicon"
+                size={14}
+                color={nowTheme.COLORS.DRIBBBLE}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+              <Text adjustsFontSizeToFit style={{color:nowTheme.COLORS.DRIBBBLE}}>
+                Find us on Dribbble
+              </Text>
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.neutralLink,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-reddit"
+                family="Ionicon"
+                size={14}
+                color={nowTheme.COLORS.REDDIT}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+              <Text adjustsFontSizeToFit style={{color:nowTheme.COLORS.REDDIT}}>
+                Report - 232
+              </Text>
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.neutralLink,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-tumblr"
+                family="Ionicon"
+                size={14}
+                color={nowTheme.COLORS.TUMBLR}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+              <Text adjustsFontSizeToFit style={{color:nowTheme.COLORS.TUMBLR}}>
+                Repost
+              </Text>
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.neutralLink,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-linkedin"
+                family="Ionicon"
+                size={14}
+                color={nowTheme.COLORS.LINKEDIN}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+              <Text adjustsFontSizeToFit style={{color:nowTheme.COLORS.LINKEDIN}}>
+                Connect with Linkedin
+              </Text>
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.neutralLink,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-twitter"
+                family="Ionicon"
+                size={14}
+                color={nowTheme.COLORS.TWITTER}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+              <Text adjustsFontSizeToFit style={{color:nowTheme.COLORS.TWITTER}}>
+                Connect with Twitter
+              </Text>
+            </Block>
+          </Button>
+
+        </Block>
+
+      </Block>
+    );
+  };
+  renderNeutralSocialIcons = () => {
+    return (
+      <Block flex style={styles.group}>
+        <Text size={16} style={styles.title}>
+          Social Icons
+        </Text>
+        <Block middle space="evenly"  style={{ paddingHorizontal: theme.SIZES.BASE }}>
+
+         <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.neutralLink,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-github"
+                family="Ionicon"
+                size={25}
+                color={nowTheme.COLORS.GITHUB}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.neutralLink,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-facebook"
+                family="Ionicon"
+                size={25}
+                color={nowTheme.COLORS.FACEBOOK}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.neutralLink,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-google"
+                family="Ionicon"
+                size={25}
+                color={nowTheme.COLORS.GOOGLE}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.neutralLink,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-pinterest"
+                family="Ionicon"
+                size={25}
+                color={nowTheme.COLORS.PINTEREST}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.neutralLink,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-youtube"
+                family="Ionicon"
+                size={25}
+                color={nowTheme.COLORS.YOUTUBE}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.neutralLink,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-dribbble"
+                family="Ionicon"
+                size={25}
+                color={nowTheme.COLORS.DRIBBBLE}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.neutralLink,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-reddit"
+                family="Ionicon"
+                size={25}
+                color={nowTheme.COLORS.REDDIT}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.neutralLink,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-tumblr"
+                family="Ionicon"
+                size={25}
+                color={nowTheme.COLORS.TUMBLR}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.neutralLink,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-linkedin"
+                family="Ionicon"
+                size={25}
+                color={nowTheme.COLORS.LINKEDIN}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.socialButtons,
+              ...styles.neutralLink,
+              marginRight: 30
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-twitter"
+                family="Ionicon"
+                size={25}
+                color={nowTheme.COLORS.TWITTER}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+
+            </Block>
+          </Button>
+
+        </Block>
+
+      </Block>
+    );
+  };
+
   renderCards = () => {
     return (
-
       <Block flex style={styles.group}>
         <Text size={16} style={styles.title}>
           Cards
@@ -932,10 +1747,7 @@ class Elements extends React.Component {
               />
               <Card item={articles[2]} />
             </Block>
-
-
           </Block>
-
         </Block>
       </Block>
     );
@@ -952,7 +1764,10 @@ class Elements extends React.Component {
           {this.renderText()}
           {this.renderInputs()}
           {this.renderSocial()}
-          {this.renderSocialV2()}
+          {this.renderDefaultSocialBtns()}
+          {this.renderSocialBtnIcons()}
+          {this.renderNeutralSocialBtn()}
+          {this.renderNeutralSocialIcons()}
           {this.renderSwitches()}
           {this.renderProgressBar()}
           {this.renderSliders()}
@@ -1027,10 +1842,29 @@ const styles = StyleSheet.create({
     borderRadius: theme.SIZES.BASE * 1.75,
     justifyContent: "center"
   },
+  btnIcon: {
+    width: 70,
+    height: 50,
+    paddingVertical: 11,
+    paddingHorizontal: 22,
+    shadowColor: nowTheme.COLORS.BLACK,
+    shadowOffset: {
+      width: 0,
+      height: 4
+    },
+    shadowRadius: 8,
+    shadowOpacity: 0.1,
+    elevation: 1,
+    borderRadius: 3
+  },
+  neutralLink:{
+    backgroundColor: 'rgba(0,0,0,0)'
+  },
   socialButtons: {
-    width: 120,
+    width: 240,
     height: 40,
-    backgroundColor: "#fff",
+    paddingVertical: 11,
+    paddingHorizontal: 22,
     shadowColor: nowTheme.COLORS.BLACK,
     shadowOffset: {
       width: 0,
@@ -1040,6 +1874,47 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     elevation: 1
   },
+  socialTextButtons: {
+    color: nowTheme.COLORS.WHITE,
+    fontWeight: "800",
+    fontSize: 14,
+    alignItems: "center"
+  },
+
+  githubBtn: {
+    backgroundColor: nowTheme.COLORS.GITHUB
+  },
+  facebookBtn: {
+    backgroundColor: nowTheme.COLORS.FACEBOOK
+  },
+  twitterBtn: {
+    backgroundColor: nowTheme.COLORS.TWITTER
+  },
+  googleBtn: {
+    backgroundColor: nowTheme.COLORS.GOOGLE
+  },
+  linkedinBtn: {
+    backgroundColor: nowTheme.COLORS.LINKEDIN
+  },
+  youtubeBtn: {
+    backgroundColor: nowTheme.COLORS.YOUTUBE
+  },
+  pinterestBtn: {
+    backgroundColor: nowTheme.COLORS.PINTEREST
+  },
+  tumblrBtn: {
+    backgroundColor: nowTheme.COLORS.TUMBLR
+  },
+  dribbbleBtn: {
+    backgroundColor: nowTheme.COLORS.DRIBBBLE
+  },
+  redditBtn: {
+    backgroundColor: nowTheme.COLORS.REDDIT
+  },
+  behanceBtn: {
+    backgroundColor: nowTheme.COLORS.BEHANCE
+  },
+
   productItem: {
     width: cardWidth - theme.SIZES.BASE * 2,
     marginHorizontal: theme.SIZES.BASE,
@@ -1056,11 +1931,11 @@ const styles = StyleSheet.create({
   productPrice: {
     paddingTop: theme.SIZES.BASE,
     paddingBottom: theme.SIZES.BASE / 2,
-    fontFamily: 'open-sans-bold'
+    fontFamily: "open-sans-bold"
   },
   productDescription: {
     paddingTop: theme.SIZES.BASE,
-    fontFamily: 'open-sans-regular'
+    fontFamily: "open-sans-regular"
     // paddingBottom: theme.SIZES.BASE * 2,
   }
 });

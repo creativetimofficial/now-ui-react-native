@@ -16,8 +16,12 @@ const COLORS = {
   ACTIVE: "#f96332", //same as primary
   BUTTON_COLOR: "#9C26B0", //wtf
   PLACEHOLDER: "#9FA5AA",
-  SWITCH_ON: "#5E72E4",
-  SWITCH_OFF: "#D4D9DD",
+  THUMB_SWITCH_ON : "#fff",
+  THUMB_SWITCH_ON : "#fff",
+ // SWITCH_ON: "#5E72E4",
+  SWITCH_ON: "#fff",
+  //SWITCH_OFF: "#D4D9DD",
+  SWITCH_OFF: "#000000",
   GRADIENT_START: "#6B24AA",
   GRADIENT_END: "#AC2688",
   PRICE_COLOR: "#EAD5FB",
@@ -38,7 +42,7 @@ const COLORS = {
   GITHUB: "#333333",
   BEHANCE: "#1769ff",
   REDDIT: "#ff4500",
-  GMAIL:"#dd4b39"
+  GOOGLE: "#dd4b39"
 };
 
 const SIZES = {
