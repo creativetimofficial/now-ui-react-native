@@ -4,12 +4,12 @@ import {
   StyleSheet,
   Dimensions,
   TouchableOpacity,
-  ImageBackground,
-  TouchableWithoutFeedback,
-  Image
+  Alert,
+  TextInput
 } from "react-native";
 // Galio components
 import { Block, Text, Button as GaButton, theme } from "galio-framework";
+import TagInput from 'react-native-tag-input';
 
 // Argon themed components
 import { nowTheme, tabs, articles, Images } from "../constants";
@@ -21,6 +21,7 @@ import NSlider from "../components/Sliders";
 import Label from "../components/Label";
 import RadioButton from "../components/RadioButton";
 import Checkbox from "../components/Checkbox";
+import { Notification } from "../components";
 import { Card } from "../components/";
 
 const { width } = Dimensions.get("screen");
@@ -35,7 +36,10 @@ class Elements extends React.Component {
       "switch-2": false,
       progress: 0,
       value: 50,
-      checked: false
+      checked: false,
+      borderTextArea: "#E3E3E3",
+      textTag:"City",
+      tags:["Washington", "Sydney", "Beijing"]
     };
   }
   _onSelect = id => {
@@ -51,6 +55,11 @@ class Elements extends React.Component {
   }
   onChangeCheck() {
     this.setState({ checked: !this.state.checked });
+  }
+  onFocus() {
+    this.setState({
+      borderTextArea: nowTheme.COLORS.PRIMARY
+    });
   }
 
   toggleSwitch = switchId =>
@@ -306,8 +315,12 @@ class Elements extends React.Component {
           Images
         </Text>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Img type="raised"></Img>
-          <Img type="circle" />
+          <Block middle row>
+            <Img type="raised"></Img>
+          </Block>
+          <Block middle row>
+            <Img type="circle" />
+          </Block>
         </Block>
       </Block>
     );
@@ -725,6 +738,17 @@ class Elements extends React.Component {
               navigation={this.props.navigation}
             />
           </Block>
+          <Block style={{ marginBottom: theme.SIZES.BASE }}>
+            <Header
+              transparent
+              options
+              search
+              title="Title"
+              optionLeft="Option 1"
+              optionRight="Option 2"
+              navigation={this.props.navigation}
+            />
+          </Block>
         </Block>
       </Block>
     );
@@ -897,7 +921,6 @@ class Elements extends React.Component {
           Social Btns V2
         </Text>
         <Block middle style={{ paddingHorizontal: theme.SIZES.BASE }}>
-
           <Button
             style={{
               ...styles.socialButtons,
@@ -1154,8 +1177,11 @@ class Elements extends React.Component {
         <Text size={16} style={styles.title}>
           Social Btns Icons
         </Text>
-        <Block row space="evenly"  style={{ paddingHorizontal: theme.SIZES.BASE }}>
-
+        <Block
+          row
+          space="evenly"
+          style={{ paddingHorizontal: theme.SIZES.BASE }}
+        >
           <Button
             style={{
               ...styles.btnIcon,
@@ -1207,10 +1233,12 @@ class Elements extends React.Component {
               />
             </Block>
           </Button>
-
         </Block>
-        <Block row space="evenly"  style={{ marginTop : 10,paddingHorizontal: theme.SIZES.BASE }}>
-
+        <Block
+          row
+          space="evenly"
+          style={{ marginTop: 10, paddingHorizontal: theme.SIZES.BASE }}
+        >
           <Button
             style={{
               ...styles.btnIcon,
@@ -1262,10 +1290,12 @@ class Elements extends React.Component {
               />
             </Block>
           </Button>
-
         </Block>
-        <Block row space="evenly"  style={{ marginTop : 10,paddingHorizontal: theme.SIZES.BASE }}>
-
+        <Block
+          row
+          space="evenly"
+          style={{ marginTop: 10, paddingHorizontal: theme.SIZES.BASE }}
+        >
           <Button
             style={{
               ...styles.btnIcon,
@@ -1317,7 +1347,6 @@ class Elements extends React.Component {
               />
             </Block>
           </Button>
-
         </Block>
       </Block>
     );
@@ -1328,9 +1357,12 @@ class Elements extends React.Component {
         <Text size={16} style={styles.title}>
           Social Btns Icons
         </Text>
-        <Block middle space="evenly"  style={{ paddingHorizontal: theme.SIZES.BASE }}>
-
-         <Button
+        <Block
+          middle
+          space="evenly"
+          style={{ paddingHorizontal: theme.SIZES.BASE }}
+        >
+          <Button
             style={{
               ...styles.socialButtons,
               ...styles.neutralLink,
@@ -1345,7 +1377,10 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.GITHUB}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-              <Text adjustsFontSizeToFit style={{color:nowTheme.COLORS.GITHUB}}>
+              <Text
+                adjustsFontSizeToFit
+                style={{ color: nowTheme.COLORS.GITHUB }}
+              >
                 Connect with Github
               </Text>
             </Block>
@@ -1365,7 +1400,10 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.FACEBOOK}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-              <Text adjustsFontSizeToFit style={{color:nowTheme.COLORS.FACEBOOK}}>
+              <Text
+                adjustsFontSizeToFit
+                style={{ color: nowTheme.COLORS.FACEBOOK }}
+              >
                 Connect with Facebook
               </Text>
             </Block>
@@ -1385,7 +1423,10 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.GOOGLE}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-              <Text adjustsFontSizeToFit style={{color:nowTheme.COLORS.GOOGLE}}>
+              <Text
+                adjustsFontSizeToFit
+                style={{ color: nowTheme.COLORS.GOOGLE }}
+              >
                 Share on Google+
               </Text>
             </Block>
@@ -1405,7 +1446,10 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.PINTEREST}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-              <Text adjustsFontSizeToFit style={{color:nowTheme.COLORS.PINTEREST}}>
+              <Text
+                adjustsFontSizeToFit
+                style={{ color: nowTheme.COLORS.PINTEREST }}
+              >
                 Pin it - 232
               </Text>
             </Block>
@@ -1425,7 +1469,10 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.YOUTUBE}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-              <Text adjustsFontSizeToFit style={{color:nowTheme.COLORS.YOUTUBE}}>
+              <Text
+                adjustsFontSizeToFit
+                style={{ color: nowTheme.COLORS.YOUTUBE }}
+              >
                 View on Youtube
               </Text>
             </Block>
@@ -1445,7 +1492,10 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.DRIBBBLE}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-              <Text adjustsFontSizeToFit style={{color:nowTheme.COLORS.DRIBBBLE}}>
+              <Text
+                adjustsFontSizeToFit
+                style={{ color: nowTheme.COLORS.DRIBBBLE }}
+              >
                 Find us on Dribbble
               </Text>
             </Block>
@@ -1465,7 +1515,10 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.REDDIT}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-              <Text adjustsFontSizeToFit style={{color:nowTheme.COLORS.REDDIT}}>
+              <Text
+                adjustsFontSizeToFit
+                style={{ color: nowTheme.COLORS.REDDIT }}
+              >
                 Report - 232
               </Text>
             </Block>
@@ -1485,7 +1538,10 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.TUMBLR}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-              <Text adjustsFontSizeToFit style={{color:nowTheme.COLORS.TUMBLR}}>
+              <Text
+                adjustsFontSizeToFit
+                style={{ color: nowTheme.COLORS.TUMBLR }}
+              >
                 Repost
               </Text>
             </Block>
@@ -1505,7 +1561,10 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.LINKEDIN}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-              <Text adjustsFontSizeToFit style={{color:nowTheme.COLORS.LINKEDIN}}>
+              <Text
+                adjustsFontSizeToFit
+                style={{ color: nowTheme.COLORS.LINKEDIN }}
+              >
                 Connect with Linkedin
               </Text>
             </Block>
@@ -1525,14 +1584,15 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.TWITTER}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-              <Text adjustsFontSizeToFit style={{color:nowTheme.COLORS.TWITTER}}>
+              <Text
+                adjustsFontSizeToFit
+                style={{ color: nowTheme.COLORS.TWITTER }}
+              >
                 Connect with Twitter
               </Text>
             </Block>
           </Button>
-
         </Block>
-
       </Block>
     );
   };
@@ -1542,11 +1602,14 @@ class Elements extends React.Component {
         <Text size={16} style={styles.title}>
           Social Icons
         </Text>
-        <Block middle space="evenly"  style={{ paddingHorizontal: theme.SIZES.BASE }}>
-
-         <Button
+        <Block
+          middle
+          space="evenly"
+          style={{ paddingHorizontal: theme.SIZES.BASE }}
+        >
+          <Button
             style={{
-              ...styles.socialButtons,
+              ...styles.neutralIcon,
               ...styles.neutralLink,
               marginRight: 30
             }}
@@ -1559,12 +1622,11 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.GITHUB}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-
             </Block>
           </Button>
           <Button
             style={{
-              ...styles.socialButtons,
+              ...styles.neutralIcon,
               ...styles.neutralLink,
               marginRight: 30
             }}
@@ -1577,12 +1639,11 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.FACEBOOK}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-
             </Block>
           </Button>
           <Button
             style={{
-              ...styles.socialButtons,
+              ...styles.neutralIcon,
               ...styles.neutralLink,
               marginRight: 30
             }}
@@ -1595,12 +1656,11 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.GOOGLE}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-
             </Block>
           </Button>
           <Button
             style={{
-              ...styles.socialButtons,
+              ...styles.neutralIcon,
               ...styles.neutralLink,
               marginRight: 30
             }}
@@ -1613,12 +1673,11 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.PINTEREST}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-
             </Block>
           </Button>
           <Button
             style={{
-              ...styles.socialButtons,
+              ...styles.neutralIcon,
               ...styles.neutralLink,
               marginRight: 30
             }}
@@ -1631,12 +1690,11 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.YOUTUBE}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-
             </Block>
           </Button>
           <Button
             style={{
-              ...styles.socialButtons,
+              ...styles.neutralIcon,
               ...styles.neutralLink,
               marginRight: 30
             }}
@@ -1649,12 +1707,11 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.DRIBBBLE}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-
             </Block>
           </Button>
           <Button
             style={{
-              ...styles.socialButtons,
+              ...styles.neutralIcon,
               ...styles.neutralLink,
               marginRight: 30
             }}
@@ -1667,12 +1724,11 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.REDDIT}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-
             </Block>
           </Button>
           <Button
             style={{
-              ...styles.socialButtons,
+              ...styles.neutralIcon,
               ...styles.neutralLink,
               marginRight: 30
             }}
@@ -1685,12 +1741,11 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.TUMBLR}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-
             </Block>
           </Button>
           <Button
             style={{
-              ...styles.socialButtons,
+              ...styles.neutralIcon,
               ...styles.neutralLink,
               marginRight: 30
             }}
@@ -1703,12 +1758,11 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.LINKEDIN}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-
             </Block>
           </Button>
           <Button
             style={{
-              ...styles.socialButtons,
+              ...styles.neutralIcon,
               ...styles.neutralLink,
               marginRight: 30
             }}
@@ -1721,12 +1775,9 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.TWITTER}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-
             </Block>
           </Button>
-
         </Block>
-
       </Block>
     );
   };
@@ -1752,7 +1803,137 @@ class Elements extends React.Component {
       </Block>
     );
   };
-
+  renderNotifications = () => {
+    return (
+      <Block flex style={styles.group}>
+        <Text size={16} style={styles.title}>
+          Notifications
+        </Text>
+        <Block flex style={{ paddingHorizontal: theme.SIZES.BASE }}>
+          <Notification
+            color={nowTheme.COLORS.PRIMARY}
+            time="15:30"
+            body="About your order #45C23B Wifey made the best Father's Day meal ever. So thankful so happy."
+            iconName="ship"
+            iconFamily="font-awesome"
+            style={{ marginTop: 15 }}
+            onPress={() =>
+              Alert.alert(
+                "Yes, you can use the notifications as buttons so you could send your customers to anything you want."
+              )
+            }
+          />
+          <Notification
+            color={nowTheme.COLORS.SECONDARY}
+            time="15:30"
+            body="About your order #45C23B Wifey made the best Father's Day meal ever. So thankful so happy."
+            iconName="ship"
+            iconFamily="font-awesome"
+            style={{ marginTop: 15 }}
+            onPress={() =>
+              Alert.alert(
+                "Yes, you can use the notifications as buttons so you could send your customers to anything you want."
+              )
+            }
+          />
+          <Notification
+            color={nowTheme.COLORS.INFO}
+            time="15:30"
+            body="About your order #45C23B Wifey made the best Father's Day meal ever. So thankful so happy."
+            iconName="ship"
+            iconFamily="font-awesome"
+            style={{ marginTop: 15 }}
+            onPress={() =>
+              Alert.alert(
+                "Yes, you can use the notifications as buttons so you could send your customers to anything you want."
+              )
+            }
+          />
+          <Notification
+            color={nowTheme.COLORS.WARNING}
+            time="15:30"
+            body="About your order #45C23B Wifey made the best Father's Day meal ever. So thankful so happy."
+            iconName="ship"
+            iconFamily="font-awesome"
+            style={{ marginTop: 15 }}
+            onPress={() =>
+              Alert.alert(
+                "Yes, you can use the notifications as buttons so you could send your customers to anything you want."
+              )
+            }
+          />
+          <Notification
+            color={nowTheme.COLORS.ERROR}
+            time="15:30"
+            body="About your order #45C23B Wifey made the best Father's Day meal ever. So thankful so happy."
+            iconName="ship"
+            iconFamily="font-awesome"
+            style={{ marginTop: 15 }}
+            onPress={() =>
+              Alert.alert(
+                "Yes, you can use the notifications as buttons so you could send your customers to anything you want."
+              )
+            }
+          />
+          <Notification
+            time="04:23"
+            body="Congratulations! Someone just ordered a pair of Yamaha HS8 speakers through your app! Hurry up and ship them!"
+            iconName="ship"
+            iconFamily="font-awesome"
+            color={nowTheme.COLORS.SUCCESS}
+            style={{ marginTop: 15 }}
+            onPress={() =>
+              Alert.alert(
+                "Yes, you can use the notifications as buttons so you could send your customers to anything you want."
+              )
+            }
+          />
+        </Block>
+      </Block>
+    );
+  };
+  renderTextArea = () => {
+    return (
+      <Block flex style={styles.group}>
+        <Text size={16} style={styles.title}>
+          Textarea
+        </Text>
+        <Block flex style={{ paddingHorizontal: theme.SIZES.BASE }}>
+          <TextInput
+            style={{
+              ...styles.textArea,
+              borderBottomColor: this.state.borderTextArea
+            }}
+            multiline={true}
+            numberOfLines={4}
+            onFocus={() => this.onFocus()}
+            placeholder="You can write your text here..."
+          />
+        </Block>
+      </Block>
+    );
+  };
+  renderTags = () => {
+    return (
+      <Block flex style={styles.group}>
+        <Text size={16} style={styles.title}>
+          Tags
+        </Text>
+        <Block flex style={{ paddingHorizontal: theme.SIZES.BASE }}>
+        <TagInput
+          value={this.state.tags}
+          tagContainerStyle={styles.tagContainer}
+          labelExtractor={(tag) => tag}
+          text={this.state.textTag}
+          tagTextStyle={{color: nowTheme.COLORS.WHITE}}
+          onChange={(tags) => this.setState({ tags })}
+          onChangeText={(textTag) => this.setState({ textTag })}
+          text={"Example"}
+        />
+        </Block>
+      </Block>
+    );
+  };
   render() {
     return (
       <Block flex center>
@@ -1763,11 +1944,14 @@ class Elements extends React.Component {
           {this.renderButtons()}
           {this.renderText()}
           {this.renderInputs()}
+          {this.renderTextArea()}
+          {this.renderTags()}
           {this.renderSocial()}
           {this.renderDefaultSocialBtns()}
           {this.renderSocialBtnIcons()}
           {this.renderNeutralSocialBtn()}
           {this.renderNeutralSocialIcons()}
+          {this.renderNotifications()}
           {this.renderSwitches()}
           {this.renderProgressBar()}
           {this.renderSliders()}
@@ -1857,8 +2041,12 @@ const styles = StyleSheet.create({
     elevation: 1,
     borderRadius: 3
   },
-  neutralLink:{
-    backgroundColor: 'rgba(0,0,0,0)'
+  neutralLink: {
+    backgroundColor: "rgba(0,0,0,0)"
+  },
+  neutralIcon: {
+    width: 140,
+    height: 60
   },
   socialButtons: {
     width: 240,
@@ -1914,7 +2102,13 @@ const styles = StyleSheet.create({
   behanceBtn: {
     backgroundColor: nowTheme.COLORS.BEHANCE
   },
-
+  tagContainer:{
+    backgroundColor: "#FF3636",
+    paddingVertical: 3,
+    paddingVertical:8,
+    borderRadius: 12,
+    height:30
+  },
   productItem: {
     width: cardWidth - theme.SIZES.BASE * 2,
     marginHorizontal: theme.SIZES.BASE,
@@ -1937,6 +2131,11 @@ const styles = StyleSheet.create({
     paddingTop: theme.SIZES.BASE,
     fontFamily: "open-sans-regular"
     // paddingBottom: theme.SIZES.BASE * 2,
+  },
+  textArea: {
+    borderBottomWidth: 1,
+    padding: 5,
+    height: 50
   }
 });
 

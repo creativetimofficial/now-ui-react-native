@@ -31,7 +31,7 @@ export default class Notification extends React.Component {
 
     const container = [
       styles.card,
-      !transparent && { backgroundColor: nowTheme.COLORS.WHITE },
+      !transparent && { backgroundColor: color },
       !transparent && styles.cardShadow,
       system && { height: 78 },
       style
@@ -78,7 +78,7 @@ export default class Notification extends React.Component {
                 </Block>
               )}
               <Text
-                color={nowTheme.COLORS.TEXT}
+                color={nowTheme.COLORS.WHITE}
                 size={system ? 13 : 14}
                 style={{ fontFamily: system ? "open-sans-bold" : "open-sans-regular" }}
               >
@@ -91,10 +91,10 @@ export default class Notification extends React.Component {
                   family="material-community"
                   name="clock"
                   size={12}
-                  color={nowTheme.COLORS.MUTED}
+                  color={nowTheme.COLORS.WHITE}
                 />
                 <Text
-                  color={nowTheme.COLORS.MUTED}
+                  color={nowTheme.COLORS.WHITE}
                   style={{
                     fontFamily: "open-sans-regular",
                     marginLeft: 3,
