@@ -1603,113 +1603,11 @@ class Elements extends React.Component {
           Social Icons
         </Text>
         <Block
-          middle
+          row
           space="evenly"
           style={{ paddingHorizontal: theme.SIZES.BASE }}
         >
-          <Button
-            style={{
-              ...styles.neutralIcon,
-              ...styles.neutralLink,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-github"
-                family="Ionicon"
-                size={25}
-                color={nowTheme.COLORS.GITHUB}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.neutralIcon,
-              ...styles.neutralLink,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-facebook"
-                family="Ionicon"
-                size={25}
-                color={nowTheme.COLORS.FACEBOOK}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.neutralIcon,
-              ...styles.neutralLink,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-google"
-                family="Ionicon"
-                size={25}
-                color={nowTheme.COLORS.GOOGLE}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.neutralIcon,
-              ...styles.neutralLink,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-pinterest"
-                family="Ionicon"
-                size={25}
-                color={nowTheme.COLORS.PINTEREST}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.neutralIcon,
-              ...styles.neutralLink,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-youtube"
-                family="Ionicon"
-                size={25}
-                color={nowTheme.COLORS.YOUTUBE}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.neutralIcon,
-              ...styles.neutralLink,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-dribbble"
-                family="Ionicon"
-                size={25}
-                color={nowTheme.COLORS.DRIBBBLE}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-          <Button
+           <Button
             style={{
               ...styles.neutralIcon,
               ...styles.neutralLink,
@@ -1730,7 +1628,7 @@ class Elements extends React.Component {
             style={{
               ...styles.neutralIcon,
               ...styles.neutralLink,
-              marginRight: 30
+
             }}
           >
             <Block row>
@@ -1747,7 +1645,7 @@ class Elements extends React.Component {
             style={{
               ...styles.neutralIcon,
               ...styles.neutralLink,
-              marginRight: 30
+
             }}
           >
             <Block row>
@@ -1764,7 +1662,7 @@ class Elements extends React.Component {
             style={{
               ...styles.neutralIcon,
               ...styles.neutralLink,
-              marginRight: 30
+
             }}
           >
             <Block row>
@@ -1777,7 +1675,118 @@ class Elements extends React.Component {
               />
             </Block>
           </Button>
+          <Button
+            style={{
+              ...styles.neutralIcon,
+              ...styles.neutralLink,
+
+            }}
+          >
+          <Block row>
+              <Icon
+                name="logo-github"
+                family="Ionicon"
+                size={25}
+                color={nowTheme.COLORS.GITHUB}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+            </Block>
+          </Button>
         </Block>
+        <Block
+          row
+          space="evenly"
+          style={{ paddingHorizontal: theme.SIZES.BASE }}
+        >
+
+          <Button
+            style={{
+              ...styles.neutralIcon,
+              ...styles.neutralLink,
+
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-facebook"
+                family="Ionicon"
+                size={25}
+                color={nowTheme.COLORS.FACEBOOK}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.neutralIcon,
+              ...styles.neutralLink,
+
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-google"
+                family="Ionicon"
+                size={25}
+                color={nowTheme.COLORS.GOOGLE}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.neutralIcon,
+              ...styles.neutralLink,
+
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-pinterest"
+                family="Ionicon"
+                size={25}
+                color={nowTheme.COLORS.PINTEREST}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.neutralIcon,
+              ...styles.neutralLink,
+
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-youtube"
+                family="Ionicon"
+                size={25}
+                color={nowTheme.COLORS.YOUTUBE}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+            </Block>
+          </Button>
+          <Button
+            style={{
+              ...styles.neutralIcon,
+              ...styles.neutralLink,
+
+            }}
+          >
+            <Block row>
+              <Icon
+                name="logo-dribbble"
+                family="Ionicon"
+                size={25}
+                color={nowTheme.COLORS.DRIBBBLE}
+                style={{ marginTop: 2, marginRight: 5 }}
+              />
+            </Block>
+          </Button>
+
+        </Block>
+
       </Block>
     );
   };

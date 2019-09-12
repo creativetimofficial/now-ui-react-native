@@ -12,9 +12,10 @@ class MkSwitch extends React.Component {
     return (
       <Switch
         value={value}
-        thumbColor={thumbColor}
+        thumbColor={'#7ab8e1'}
+        //thumbColor={thumbColor}
         ios_backgroundColor={nowTheme.COLORS.SWITCH_OFF}
-        trackColor={{ false: nowTheme.COLORS.SWITCH_ON, true: nowTheme.COLORS.SWITCH_ON }}
+        trackColor={{ false: "#E3E3E3", true: nowTheme.COLORS.SWITCH_ON }}
         {...props}
       />
     );

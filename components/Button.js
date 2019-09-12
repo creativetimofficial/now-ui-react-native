@@ -18,6 +18,7 @@ class ArButton extends React.Component {
       {...style}
     ];
 
+
     return (
       <Button
         style={buttonStyles}
@@ -36,7 +37,11 @@ ArButton.propTypes = {
   shadowless: PropTypes.bool,
   color: PropTypes.oneOfType([
     PropTypes.string,
-    PropTypes.oneOf(['default', 'primary', 'secondary', 'info', 'error', 'success', 'warning'])
+    PropTypes.oneOf(['default', 'primary', 'secondary', 'info', 'error', 'success', 'warning', 'simple'])
+  ]),
+  size:PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.oneOf(['small', 'regular', 'large'])
   ])
 }
 
