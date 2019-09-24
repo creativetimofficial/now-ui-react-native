@@ -5,28 +5,25 @@ import {
   Dimensions,
   TouchableOpacity,
   Alert,
-  TextInput
+  Image,
+  ImageBackground,
 } from "react-native";
 // Galio components
 import { Block, Text, Button as GaButton, theme } from "galio-framework";
-import TagInput from 'react-native-tag-input';
 
 // Argon themed components
-import { nowTheme, tabs, articles, Images } from "../constants";
+import { articles, Images, nowTheme, tabs  } from "../constants/";
 import { Button, Select, Icon, Input, Header, Switch } from "../components";
-import Blockquote from "../components/Blockquote";
+
 import Img from "../components/Img";
-import ProgressBar from "../components/ProgressBar";
-import NSlider from "../components/Sliders";
-import Label from "../components/Label";
-import RadioButton from "../components/RadioButton";
-import Checkbox from "../components/Checkbox";
 import { Notification } from "../components";
 import { Card } from "../components/";
 
 const { width } = Dimensions.get("screen");
 
+const thumbMeasure = (width - 48 - 32) / 3;
 const cardWidth = width - theme.SIZES.BASE * 2;
+
 class Elements extends React.Component {
   constructor(props) {
     super(props);
@@ -72,13 +69,12 @@ class Elements extends React.Component {
           Buttons
         </Text>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Block center>
+        <Block center>
             <Button
               textStyle={{ fontFamily: "open-sans-bold" }}
-              round
-              style={styles.button}
+              color="neutral"
             >
-              ROUND
+              DEFAULT
             </Button>
           </Block>
           <Block center>
@@ -247,63 +243,6 @@ class Elements extends React.Component {
           <Text style={{ fontFamily: "open-sans-regular" }} muted>
             This is a muted paragraph.
           </Text>
-          <Blockquote color="warning" source="NOAA" style={styles.button}>
-            "I will be the leader of a company that ends up being worth billions
-            of dollars, because I got the answers. I understand culture. I am
-            the nucleus. I think that’s a responsibility that I have, to push
-            possibilities, to show people, this is the level that things could
-            be at."
-          </Blockquote>
-          <Text
-            color={nowTheme.COLORS.PRIMARY}
-            style={{
-              fontFamily: "open-sans-regular",
-              marginBottom: theme.SIZES.BASE / 2
-            }}
-          >
-            I will be the leader of a company that ends up being worth billions
-            of dollars, because I got the answers...
-          </Text>
-          <Text
-            color={nowTheme.COLORS.INFO}
-            style={{
-              fontFamily: "open-sans-regular",
-              marginBottom: theme.SIZES.BASE / 2
-            }}
-          >
-            I will be the leader of a company that ends up being worth billions
-            of dollars, because I got the answers...
-          </Text>
-          <Text
-            color={nowTheme.COLORS.SUCCESS}
-            style={{
-              fontFamily: "open-sans-regular",
-              marginBottom: theme.SIZES.BASE / 2
-            }}
-          >
-            I will be the leader of a company that ends up being worth billions
-            of dollars, because I got the answers...
-          </Text>
-          <Text
-            color={nowTheme.COLORS.WARNING}
-            style={{
-              fontFamily: "open-sans-regular",
-              marginBottom: theme.SIZES.BASE / 2
-            }}
-          >
-            I will be the leader of a company that ends up being worth billions
-            of dollars, because I got the answers...
-          </Text>
-          <Text
-            color={nowTheme.COLORS.ERROR}
-            style={{
-              fontFamily: "open-sans-regular",
-              marginBottom: theme.SIZES.BASE / 2
-            }}
-          >
-            I will be the leader of a company that ends up being worth billions
-            of dollars, because I got the answers...
-          </Text>
         </Block>
       </Block>
     );
@@ -333,46 +272,6 @@ class Elements extends React.Component {
         </Text>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
           <Input right placeholder="Regular" iconContent={<Block />} />
-        </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Input
-            right
-            placeholder="Regular Custom"
-            style={{
-              borderColor: nowTheme.COLORS.PRIMARY,
-              borderRadius: 4,
-              backgroundColor: "#fff"
-            }}
-            iconContent={<Block />}
-          />
-        </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Input
-            placeholder="Icon left"
-            iconContent={
-              <Icon
-                size={11}
-                style={{ marginRight: 10 }}
-                color={nowTheme.COLORS.ICON}
-                name="search-zoom-in"
-                family="ArgonExtra"
-              />
-            }
-          />
-        </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Input
-            right
-            placeholder="Icon Right"
-            iconContent={
-              <Icon
-                size={11}
-                color={nowTheme.COLORS.ICON}
-                name="search-zoom-in"
-                family="ArgonExtra"
-              />
-            }
-          />
         </Block>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
           <Input
@@ -424,6 +323,37 @@ class Elements extends React.Component {
             }
           />
         </Block>
+        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+          <Input
+            placeholder="Left Font Awesome Icon"
+            iconContent={
+              <Icon
+                size={11}
+                style={{ marginRight: 10 }}
+                color={nowTheme.COLORS.ICON}
+                name="search-zoom-in"
+                family="ArgonExtra"
+              />
+            }
+          />
+        </Block>
+
+        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+          <Input
+            right
+            placeholder="Icon Right"
+            iconContent={
+              <Icon
+                size={11}
+                color={nowTheme.COLORS.ICON}
+                name="search-zoom-in"
+                family="ArgonExtra"
+              />
+            }
+          />
+        </Block>
+
+
       </Block>
     );
   };
@@ -549,101 +479,7 @@ class Elements extends React.Component {
                 style={[styles.social, styles.shadow]}
               />
             </Block>
-            <Block flex middle left>
-              <GaButton
-                round
-                onlyIcon
-                shadowless
-                icon="linkedin"
-                iconFamily="Font-Awesome"
-                iconColor={theme.COLORS.WHITE}
-                iconSize={theme.SIZES.BASE * 1.625}
-                color={nowTheme.COLORS.LINKEDIN}
-                style={[styles.social, styles.shadow]}
-              />
-            </Block>
-            <Block flex middle left>
-              <GaButton
-                round
-                onlyIcon
-                shadowless
-                icon="pinterest"
-                iconFamily="Font-Awesome"
-                iconColor={theme.COLORS.WHITE}
-                iconSize={theme.SIZES.BASE * 1.625}
-                color={nowTheme.COLORS.PINTEREST}
-                style={[styles.social, styles.shadow]}
-              />
-            </Block>
-          </Block>
-        </Block>
-        <Block style={{ paddingVertical: theme.SIZES.BASE }}>
-          <Block row center space="between">
-            <Block flex middle right>
-              <GaButton
-                round
-                onlyIcon
-                shadowless
-                icon="behance"
-                iconFamily="Font-Awesome"
-                iconColor={theme.COLORS.WHITE}
-                iconSize={theme.SIZES.BASE * 1.625}
-                color={nowTheme.COLORS.BEHANCE}
-                style={[styles.social, styles.shadow]}
-              />
-            </Block>
-            <Block flex middle center>
-              <GaButton
-                round
-                onlyIcon
-                shadowless
-                icon="youtube"
-                iconFamily="Font-Awesome"
-                iconColor={theme.COLORS.WHITE}
-                iconSize={theme.SIZES.BASE * 1.625}
-                color={nowTheme.COLORS.YOUTUBE}
-                style={[styles.social, styles.shadow]}
-              />
-            </Block>
-            <Block flex middle left>
-              <GaButton
-                round
-                onlyIcon
-                shadowless
-                icon="tumblr"
-                iconFamily="Font-Awesome"
-                iconColor={theme.COLORS.WHITE}
-                iconSize={theme.SIZES.BASE * 1.625}
-                color={nowTheme.COLORS.TUMBLR}
-                style={[styles.social, styles.shadow]}
-              />
-            </Block>
-            <Block flex middle left>
-              <GaButton
-                round
-                onlyIcon
-                shadowless
-                icon="github"
-                iconFamily="Font-Awesome"
-                iconColor={theme.COLORS.WHITE}
-                iconSize={theme.SIZES.BASE * 1.625}
-                color={nowTheme.COLORS.GITHUB}
-                style={[styles.social, styles.shadow]}
-              />
-            </Block>
-            <Block flex middle left>
-              <GaButton
-                round
-                onlyIcon
-                shadowless
-                icon="google"
-                iconFamily="Font-Awesome"
-                iconColor={theme.COLORS.WHITE}
-                iconSize={theme.SIZES.BASE * 1.625}
-                color={nowTheme.COLORS.GOOGLE}
-                style={[styles.social, styles.shadow]}
-              />
-            </Block>
+
           </Block>
         </Block>
       </Block>
@@ -669,64 +505,13 @@ class Elements extends React.Component {
               bgColor={nowTheme.COLORS.ACTIVE}
               titleColor="white"
               iconColor="white"
-            />
-          </Block>
-          <Block style={{ marginBottom: theme.SIZES.BASE }}>
-            <Header
-              white
-              back
-              title="Title"
-              navigation={this.props.navigation}
-              bgColor={nowTheme.COLORS.SUCCESS}
-              titleColor="white"
-              iconColor="white"
-            />
-          </Block>
-          <Block style={{ marginBottom: theme.SIZES.BASE }}>
-            <Header
-              white
-              back
-              title="Title"
-              navigation={this.props.navigation}
-              bgColor={nowTheme.COLORS.INFO}
-              titleColor="white"
-              iconColor="white"
-            />
-          </Block>
-          <Block style={{ marginBottom: theme.SIZES.BASE }}>
-            <Header
-              white
-              back
-              title="Title"
-              navigation={this.props.navigation}
-              bgColor={nowTheme.COLORS.WARNING}
-              titleColor="white"
-              iconColor="white"
-            />
-          </Block>
-          <Block style={{ marginBottom: theme.SIZES.BASE }}>
-            <Header
-              white
-              back
-              title="Title"
-              navigation={this.props.navigation}
-              bgColor={nowTheme.COLORS.ERROR}
-              titleColor="white"
-              iconColor="white"
+              white={true}
             />
           </Block>
           <Block style={{ marginBottom: theme.SIZES.BASE }}>
             <Header search title="Title" navigation={this.props.navigation} />
           </Block>
 
-          <Block style={{ marginBottom: theme.SIZES.BASE }}>
-            <Header
-              tabs={tabs.categories}
-              search
-              title="Title"
-              navigation={this.props.navigation}
-            />
-          </Block>
 
           <Block style={{ marginBottom: theme.SIZES.BASE }}>
             <Header
@@ -738,619 +523,13 @@ class Elements extends React.Component {
               navigation={this.props.navigation}
             />
           </Block>
-          <Block style={{ marginBottom: theme.SIZES.BASE }}>
-            <Header
-              transparent
-              options
-              search
-              title="Title"
-              optionLeft="Option 1"
-              optionRight="Option 2"
-              navigation={this.props.navigation}
-            />
-          </Block>
-        </Block>
-      </Block>
-    );
-  };
-  renderProgressBar = () => {
-    return (
-      <Block flex style={styles.group}>
-        <Text size={16} style={styles.title}>
-          Progress Bars
-        </Text>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Text color={nowTheme.COLORS.PRIMARY}>PRIMARY</Text>
 
-          <ProgressBar
-            progress={this.state.progress}
-            duration={500}
-            barColor={nowTheme.COLORS.PRIMARY}
-            fillColor={nowTheme.COLORS.PRIMARY}
-            borderColor={nowTheme.COLORS.PRIMARY}
-          />
-        </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}>
-          <Text color={nowTheme.COLORS.SECONDARY}>SECONDARY</Text>
-          <ProgressBar
-            progress={this.state.progress}
-            duration={500}
-            barColor={nowTheme.COLORS.SECONDARY}
-            fillColor={nowTheme.COLORS.SECONDARY}
-            borderColor={nowTheme.COLORS.SECONDARY}
-          />
-        </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}>
-          <Text color={nowTheme.COLORS.INFO}>INFO</Text>
-          <ProgressBar
-            progress={this.state.progress}
-            duration={500}
-            barColor={nowTheme.COLORS.INFO}
-            fillColor={nowTheme.COLORS.INFO}
-            borderColor={nowTheme.COLORS.INFO}
-          />
-        </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}>
-          <Text color={nowTheme.COLORS.SUCCESS}>SUCCESS</Text>
-          <ProgressBar
-            progress={this.state.progress}
-            duration={500}
-            barColor={nowTheme.COLORS.SUCCESS}
-            fillColor={nowTheme.COLORS.SUCCESS}
-            borderColor={nowTheme.COLORS.SUCCESS}
-          />
-        </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}>
-          <Text color={nowTheme.COLORS.WARNING}>WARNING</Text>
-          <ProgressBar
-            progress={this.state.progress}
-            duration={500}
-            barColor={nowTheme.COLORS.WARNING}
-            fillColor={nowTheme.COLORS.WARNING}
-            borderColor={nowTheme.COLORS.WARNING}
-          />
-        </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}>
-          <Text color={nowTheme.COLORS.ERROR}>ERROR</Text>
-          <ProgressBar
-            progress={this.state.progress}
-            duration={500}
-            barColor={nowTheme.COLORS.ERROR}
-            fillColor={nowTheme.COLORS.ERROR}
-            borderColor={nowTheme.COLORS.ERROR}
-          />
         </Block>
       </Block>
     );
   };
-  renderSliders = () => {
-    return (
-      <Block flex style={styles.group}>
-        <Text size={16} style={styles.title}>
-          Sliders
-        </Text>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <NSlider color="default" />
-        </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <NSlider color="primary" />
-        </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <NSlider color="secondary" />
-        </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <NSlider color="success" />
-        </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <NSlider color="warning" />
-        </Block>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <NSlider color="error" />
-        </Block>
-      </Block>
-    );
-  };
-  renderLabels = () => {
-    return (
-      <Block flex style={styles.group}>
-        <Text size={16} style={styles.title}>
-          Labels
-        </Text>
-        <Block row space="evenly">
-          <Block flex={1} row style={{ paddingHorizontal: theme.SIZES.BASE }}>
-            <Label color="default">default</Label>
-            <Label color="primary">primary</Label>
-            <Label color="secondary">secondary</Label>
-            <Label color="success">success</Label>
-          </Block>
-        </Block>
-        <Block
-          row
-          space="evenly"
-          style={{ paddingHorizontal: theme.SIZES.BASE }}
-        >
-          <Block flex={1} row>
-            <Label color="info">info</Label>
-            <Label color="warning">warning</Label>
-            <Label color="error">error</Label>
-            <Label color="neutral">neutral</Label>
-          </Block>
-        </Block>
-      </Block>
-    );
-  };
-  renderCheckboxes = () => {
-    return (
-      <Block flex style={styles.group}>
-        <Text size={16} style={styles.title}>
-          Checkboxes
-        </Text>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Checkbox
-            label={"Checked"}
-            id={"one"}
-            checked={true}
-            onChecked={id => this._onSelect(id)}
-          />
-          <Checkbox
-            label={"Unchecked"}
-            id={"two"}
-            onChecked={id => this._onSelect(id)}
-          />
-        </Block>
-      </Block>
-    );
-  };
-  renderRadioButtons = () => {
-    return (
-      <Block flex style={styles.group}>
-        <Text size={16} style={styles.title}>
-          Radio Buttons
-        </Text>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <RadioButton id={"btn1"} text={"Disabled radio"} disabled={true} />
-          <RadioButton id={"btn2"} text={"Radio is on"} />
-        </Block>
-      </Block>
-    );
-  };
-  renderDefaultSocialBtns = () => {
-    return (
-      <Block flex style={styles.group}>
-        <Text size={16} style={styles.title}>
-          Social Btns V2
-        </Text>
-        <Block middle style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Button
-            style={{
-              ...styles.socialButtons,
-              ...styles.githubBtn,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-github"
-                family="Ionicon"
-                size={14}
-                color={"white"}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-              <Text adjustsFontSizeToFit style={styles.socialTextButtons}>
-                Connect with Github
-              </Text>
-            </Block>
-          </Button>
-        </Block>
-        <Block
-          middle
-          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}
-        >
-          <Button
-            style={{
-              ...styles.socialButtons,
-              ...styles.twitterBtn,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-twitter"
-                family="Ionicon"
-                size={14}
-                color={"white"}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-              <Text adjustsFontSizeToFit style={styles.socialTextButtons}>
-                Connect with Twitter
-              </Text>
-            </Block>
-          </Button>
-        </Block>
-        <Block
-          middle
-          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}
-        >
-          <Button
-            style={{
-              ...styles.socialButtons,
-              ...styles.facebookBtn,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-facebook"
-                family="Ionicon"
-                size={14}
-                color={"white"}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-              <Text adjustsFontSizeToFit style={styles.socialTextButtons}>
-                Connect with Facebook
-              </Text>
-            </Block>
-          </Button>
-        </Block>
 
-        <Block
-          middle
-          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}
-        >
-          <Button
-            style={{
-              ...styles.socialButtons,
-              ...styles.linkedinBtn,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-linkedin"
-                family="Ionicon"
-                size={14}
-                color={"white"}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-              <Text adjustsFontSizeToFit style={styles.socialTextButtons}>
-                Connect with Linkedin
-              </Text>
-            </Block>
-          </Button>
-        </Block>
-        <Block
-          middle
-          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}
-        >
-          <Button
-            style={{
-              ...styles.socialButtons,
-              ...styles.youtubeBtn,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-youtube"
-                family="Ionicon"
-                size={14}
-                color={"white"}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-              <Text adjustsFontSizeToFit style={styles.socialTextButtons}>
-                Connect with Youtube
-              </Text>
-            </Block>
-          </Button>
-        </Block>
-        <Block
-          middle
-          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}
-        >
-          <Button
-            style={{
-              ...styles.socialButtons,
-              ...styles.pinterestBtn,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-youtube"
-                family="Ionicon"
-                size={14}
-                color={"white"}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-              <Text adjustsFontSizeToFit style={styles.socialTextButtons}>
-                Connect with Pinterest
-              </Text>
-            </Block>
-          </Button>
-        </Block>
-        <Block
-          middle
-          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}
-        >
-          <Button
-            style={{
-              ...styles.socialButtons,
-              ...styles.tumblrBtn,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-youtube"
-                family="Ionicon"
-                size={14}
-                color={"white"}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-              <Text adjustsFontSizeToFit style={styles.socialTextButtons}>
-                Connect with Tumblr
-              </Text>
-            </Block>
-          </Button>
-        </Block>
-        <Block
-          middle
-          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}
-        >
-          <Button
-            style={{
-              ...styles.socialButtons,
-              ...styles.redditBtn,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-youtube"
-                family="Ionicon"
-                size={14}
-                color={"white"}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-              <Text adjustsFontSizeToFit style={styles.socialTextButtons}>
-                Connect with Reddit
-              </Text>
-            </Block>
-          </Button>
-        </Block>
-        <Block
-          middle
-          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}
-        >
-          <Button
-            style={{
-              ...styles.socialButtons,
-              ...styles.googleBtn,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-google"
-                family="Ionicon"
-                size={14}
-                color={"white"}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-              <Text adjustsFontSizeToFit style={styles.socialTextButtons}>
-                Connect with Google
-              </Text>
-            </Block>
-          </Button>
-        </Block>
-        <Block
-          middle
-          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 10 }}
-        >
-          <Button
-            style={{
-              ...styles.socialButtons,
-              ...styles.dribbbleBtn,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-dribbble"
-                family="Ionicon"
-                size={14}
-                color={"white"}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-              <Text adjustsFontSizeToFit style={styles.socialTextButtons}>
-                Connect with Dribbble
-              </Text>
-            </Block>
-          </Button>
-        </Block>
-      </Block>
-    );
-  };
-  renderSocialBtnIcons = () => {
-    return (
-      <Block flex style={styles.group}>
-        <Text size={16} style={styles.title}>
-          Social Btns Icons
-        </Text>
-        <Block
-          row
-          space="evenly"
-          style={{ paddingHorizontal: theme.SIZES.BASE }}
-        >
-          <Button
-            style={{
-              ...styles.btnIcon,
-              ...styles.googleBtn,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-google"
-                family="Ionicon"
-                size={20}
-                color={"white"}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.btnIcon,
-              ...styles.facebookBtn,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-facebook"
-                family="Ionicon"
-                size={20}
-                color={"white"}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.btnIcon,
-              ...styles.twitterBtn,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-twitter"
-                family="Ionicon"
-                size={25}
-                color={"white"}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-        </Block>
-        <Block
-          row
-          space="evenly"
-          style={{ marginTop: 10, paddingHorizontal: theme.SIZES.BASE }}
-        >
-          <Button
-            style={{
-              ...styles.btnIcon,
-              ...styles.githubBtn,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-github"
-                family="Ionicon"
-                size={20}
-                color={"white"}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.btnIcon,
-              ...styles.dribbbleBtn,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-dribbble"
-                family="Ionicon"
-                size={20}
-                color={"white"}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.btnIcon,
-              ...styles.linkedinBtn,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-linkedin"
-                family="Ionicon"
-                size={25}
-                color={"white"}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-        </Block>
-        <Block
-          row
-          space="evenly"
-          style={{ marginTop: 10, paddingHorizontal: theme.SIZES.BASE }}
-        >
-          <Button
-            style={{
-              ...styles.btnIcon,
-              ...styles.pinterestBtn,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-pinterest"
-                family="Ionicon"
-                size={20}
-                color={"white"}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.btnIcon,
-              ...styles.youtubeBtn,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-youtube"
-                family="Ionicon"
-                size={20}
-                color={"white"}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.btnIcon,
-              ...styles.redditBtn,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-reddit"
-                family="Ionicon"
-                size={25}
-                color={"white"}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-        </Block>
-      </Block>
-    );
-  };
+
   renderNeutralSocialBtn = () => {
     return (
       <Block flex style={styles.group}>
@@ -1798,6 +977,7 @@ class Elements extends React.Component {
           Cards
         </Text>
         <Block flex>
+
           <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
             <Card item={articles[0]} horizontal />
             <Block flex row>
@@ -1807,11 +987,72 @@ class Elements extends React.Component {
               />
               <Card item={articles[2]} />
             </Block>
+            <Card item={articles[4]} full />
+            <Block flex card shadow style={styles.category}>
+              <ImageBackground
+                source={{ uri: Images.Products["View article"] }}
+                style={[
+                  styles.imageBlock,
+                  { width: width - theme.SIZES.BASE * 2, height: 252 }
+                ]}
+                imageStyle={{
+                  width: width - theme.SIZES.BASE * 2,
+                  height: 252
+                }}
+              >
+                <Block style={styles.categoryTitle}>
+                  <Text style={{ fontFamily: 'open-sans-bold' }} size={18} color={theme.COLORS.WHITE}>
+                    View article
+                  </Text>
+                </Block>
+              </ImageBackground>
+            </Block>
+          </Block>
+          </Block>
+        </Block>
+
+    );
+  };
+  renderAlbums = () =>{
+    const { navigation } = this.props;
+
+    return (
+      <Block
+        flex
+        style={[styles.group, { paddingBottom: theme.SIZES.BASE * 5 }]}
+      >
+        <Block style={{ marginHorizontal: theme.SIZES.BASE * 2 }}>
+          <Block row space="between">
+          <Text bold size={16} color="#525F7F" style={{ marginTop: 3 }}>
+          Album
+        </Text>
+            <Button
+              small
+              color="transparent"
+              textStyle={{ color: "#5E72E4", fontSize: 14 }}
+            >
+              View All
+            </Button>
+          </Block>
+          <Block
+            row
+            space="between"
+            style={{ marginTop: theme.SIZES.BASE, flexWrap: "wrap" }}
+          >
+            {Images.Viewed.map((img, index) => (
+              <Block key={`viewed-${img}`} style={styles.shadow}>
+                <Image
+                  resizeMode="cover"
+                  source={{ uri: img }}
+                  style={styles.albumThumb}
+                />
+              </Block>
+            ))}
           </Block>
         </Block>
       </Block>
     );
-  };
+  }
   renderNotifications = () => {
     return (
       <Block flex style={styles.group}>
@@ -1901,48 +1142,8 @@ class Elements extends React.Component {
       </Block>
     );
   };
-  renderTextArea = () => {
-    return (
-      <Block flex style={styles.group}>
-        <Text size={16} style={styles.title}>
-          Textarea
-        </Text>
-        <Block flex style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <TextInput
-            style={{
-              ...styles.textArea,
-              borderBottomColor: this.state.borderTextArea
-            }}
-            multiline={true}
-            numberOfLines={4}
-            onFocus={() => this.onFocus()}
-            placeholder="You can write your text here..."
-          />
-        </Block>
-      </Block>
-    );
-  };
-  renderTags = () => {
-    return (
-      <Block flex style={styles.group}>
-        <Text size={16} style={styles.title}>
-          Tags
-        </Text>
-        <Block flex style={{ paddingHorizontal: theme.SIZES.BASE }}>
-        <TagInput
-          value={this.state.tags}
-          tagContainerStyle={styles.tagContainer}
-          labelExtractor={(tag) => tag}
-          text={this.state.textTag}
-          tagTextStyle={{color: nowTheme.COLORS.WHITE}}
-          onChange={(tags) => this.setState({ tags })}
-          onChangeText={(textTag) => this.setState({ textTag })}
-          text={"Example"}
-        />
-        </Block>
-      </Block>
-    );
-  };
+
+
   render() {
     return (
       <Block flex center>
@@ -1953,24 +1154,12 @@ class Elements extends React.Component {
           {this.renderButtons()}
           {this.renderText()}
           {this.renderInputs()}
-          {this.renderTextArea()}
-          {this.renderTags()}
           {this.renderSocial()}
-          {this.renderDefaultSocialBtns()}
-          {this.renderSocialBtnIcons()}
-          {this.renderNeutralSocialBtn()}
-          {this.renderNeutralSocialIcons()}
-          {this.renderNotifications()}
           {this.renderSwitches()}
-          {this.renderProgressBar()}
-          {this.renderSliders()}
-          {this.renderLabels()}
-          {this.renderCheckboxes()}
-          {this.renderRadioButtons()}
-          {this.renderNavigation()}
           {this.renderTableCell()}
-          {this.renderImages()}
+          {this.renderNavigation()}
           {this.renderCards()}
+          {this.renderAlbums()}
         </ScrollView>
       </Block>
     );
@@ -2145,7 +1334,56 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     padding: 5,
     height: 50
-  }
+  },
+  category: {
+    backgroundColor: theme.COLORS.WHITE,
+    marginVertical: theme.SIZES.BASE / 2,
+    borderWidth: 0
+  },
+  categoryTitle: {
+    height: "100%",
+    paddingHorizontal: theme.SIZES.BASE,
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  imageBlock: {
+    overflow: "hidden",
+    borderRadius: 4
+  },
+  productItem: {
+    width: cardWidth - theme.SIZES.BASE * 2,
+    marginHorizontal: theme.SIZES.BASE,
+    shadowColor: "black",
+    shadowOffset: { width: 0, height: 7 },
+    shadowRadius: 10,
+    shadowOpacity: 0.2
+  },
+  productImage: {
+    width: cardWidth - theme.SIZES.BASE,
+    height: cardWidth - theme.SIZES.BASE,
+    borderRadius: 3
+  },
+  productPrice: {
+    paddingTop: theme.SIZES.BASE,
+    paddingBottom: theme.SIZES.BASE / 2,
+    fontFamily: 'open-sans-bold'
+  },
+  productDescription: {
+    paddingTop: theme.SIZES.BASE,
+    fontFamily: 'open-sans-regular'
+    // paddingBottom: theme.SIZES.BASE * 2,
+  },
+  group: {
+    paddingTop: theme.SIZES.BASE
+  },
+  albumThumb: {
+    borderRadius: 4,
+    marginVertical: 4,
+    alignSelf: "center",
+    width: thumbMeasure,
+    height: thumbMeasure
+  },
 });
 
 export default Elements;

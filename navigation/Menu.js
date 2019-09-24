@@ -6,6 +6,8 @@ import { Block, Text, theme } from "galio-framework";
 import Images from "../constants/Images";
 import { DrawerItem } from '../components/index'
 
+import nowTheme from '../constants/Theme';
+
 const { width } = Dimensions.get("screen");
 
 const Drawer = props => (
@@ -20,11 +22,11 @@ const Drawer = props => (
       <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }}>
         <DrawerItems {...props} />
         <Block flex style={{ marginTop: 24, marginVertical: 8, paddingHorizontal: 8 }}>
-            <Block style={{ borderColor: "rgba(0,0,0,0.2)", width: '100%', borderWidth: StyleSheet.hairlineWidth }}/>
-            <Text color="#8898AA" style={{ marginTop: 16, marginLeft: 8, fontFamily: 'open-sans-regular' }}>DOCUMENTATION</Text>
+            <Block style={{ borderColor: "white", width: '100%', borderWidth: StyleSheet.hairlineWidth }}/>
+            <Text color={nowTheme.COLORS.WHITE} style={{ marginTop: 16, marginLeft: 8, fontFamily: 'open-sans-regular' }}>DOCUMENTATION</Text>
         </Block>
         <TouchableOpacity onPress={() => Linking.openURL('https://demos.creative-tim.com/argon-pro-react-native/docs/').catch((err) => console.error('An error occurred', err))}>
-          <DrawerItem title="Getting Started" />
+          <DrawerItem   {...props} title="Getting Started" />
         </TouchableOpacity>
       </ScrollView>
     </Block>
@@ -33,11 +35,11 @@ const Drawer = props => (
 
 const Menu = {
   contentComponent: props => <Drawer {...props} />,
-  drawerBackgroundColor: "white",
+  drawerBackgroundColor: nowTheme.COLORS.PRIMARY,
   drawerWidth: width * 0.8,
   contentOptions: {
-    activeTintColor: "white",
-    inactiveTintColor: "#000",
+    activeTintColor: nowTheme.COLORS.WHITE,
+    inactiveTintColor: nowTheme.COLORS.WHITE,
     activeBackgroundColor: "transparent",
     itemStyle: {
       width: width * 0.75,
@@ -46,7 +48,8 @@ const Menu = {
     labelStyle: {
       fontSize: 18,
       marginLeft: 12,
-      fontWeight: "normal"
+      fontWeight: "normal",
+
     },
     itemsContainerStyle: {
       paddingVertical: 16,

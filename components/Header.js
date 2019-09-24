@@ -253,7 +253,7 @@ const styles = StyleSheet.create({
     width: width - 32,
     marginHorizontal: 16,
     borderWidth: 1,
-    borderRadius: 3,
+    borderRadius: 30,
     borderColor: nowTheme.COLORS.BORDER
   },
   options: {

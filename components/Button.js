@@ -13,7 +13,7 @@ class ArButton extends React.Component {
 
     const buttonStyles = [
       small && styles.smallButton,
-      color && { backgroundColor: colorStyle },
+      (colorStyle === 'neutral') ? { backgroundColor: 'rgba(0,0,0,0)', color:'#333' } :   color && { backgroundColor: colorStyle },
       !shadowless && styles.shadow,
       {...style}
     ];
@@ -37,12 +37,9 @@ ArButton.propTypes = {
   shadowless: PropTypes.bool,
   color: PropTypes.oneOfType([
     PropTypes.string,
-    PropTypes.oneOf(['default', 'primary', 'secondary', 'info', 'error', 'success', 'warning', 'simple'])
+    PropTypes.oneOf(['default', 'primary', 'secondary', 'info', 'error', 'success', 'warning', 'simple', 'neutral'])
   ]),
-  size:PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.oneOf(['small', 'regular', 'large'])
-  ])
+
 }
 
 const styles = StyleSheet.create({

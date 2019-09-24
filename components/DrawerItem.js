@@ -16,7 +16,7 @@ class DrawerItem extends React.Component {
             name="shop"
             family="ArgonExtra"
             size={14}
-            color={focused ? "white" : nowTheme.COLORS.PRIMARY}
+            color={"rgba(0,0,0,0.5)"}
           />
         );
       case "Elements":
@@ -25,7 +25,7 @@ class DrawerItem extends React.Component {
             name="map-big"
             family="ArgonExtra"
             size={14}
-            color={focused ? "white" : nowTheme.COLORS.ERROR}
+            color={"rgba(0,0,0,0.5)"}
           />
         );
       case "Articles":
@@ -34,7 +34,7 @@ class DrawerItem extends React.Component {
             name="spaceship"
             family="ArgonExtra"
             size={14}
-            color={focused ? "white" : nowTheme.COLORS.PRIMARY}
+            color={"rgba(0,0,0,0.5)"}
           />
         );
       case "Profile":
@@ -43,7 +43,7 @@ class DrawerItem extends React.Component {
             name="chart-pie-35"
             family="ArgonExtra"
             size={14}
-            color={focused ? "white" : nowTheme.COLORS.WARNING}
+            color={"rgba(0,0,0,0.5)"}
           />
         );
       case "Account":
@@ -52,7 +52,7 @@ class DrawerItem extends React.Component {
             name="calendar-date"
             family="ArgonExtra"
             size={14}
-            color={focused ? "white" : nowTheme.COLORS.INFO}
+            color={"rgba(0,0,0,0.5)"}
           />
         );
       case "Settings":
@@ -61,7 +61,7 @@ class DrawerItem extends React.Component {
             name="calendar-date"
             family="ArgonExtra"
             size={14}
-            color={focused ? "white" : nowTheme.COLORS.DEFAULT}
+            color={focused ? nowTheme.COLORS.PRIMARY : "rgba(0,0,0,0.5)"}
           />
         );
       case "Getting Started":
@@ -70,7 +70,8 @@ class DrawerItem extends React.Component {
             name="spaceship"
             family="ArgonExtra"
             size={14}
-            color={focused ? "white" : "rgba(0,0,0,0.5)"}
+            style={{ borderColor:"rgba(0,0,0,0.5)"}}
+            color={focused ? nowTheme.COLORS.PRIMARY : "rgba(0,0,0,0.5)"}
           />
         );
       case "Log out":
@@ -98,7 +99,7 @@ class DrawerItem extends React.Component {
             style={{ fontFamily: 'open-sans-regular' }}
             size={15}
             bold={focused ? true : false}
-            color={focused ? "white" : "rgba(0,0,0,0.5)"}
+            color={focused ? nowTheme.COLORS.PRIMARY : "white"}
           >
             {title}
           </Text>
@@ -111,11 +112,13 @@ class DrawerItem extends React.Component {
 const styles = StyleSheet.create({
   defaultStyle: {
     paddingVertical: 15,
-    paddingHorizontal: 14
+    paddingHorizontal: 14,
+    color: 'white',
   },
   activeStyle: {
-    backgroundColor: nowTheme.COLORS.ACTIVE,
-    borderRadius: 4
+    backgroundColor: nowTheme.COLORS.WHITE,
+    borderRadius: 30,
+    color: 'white',
   },
   shadow: {
     shadowColor: theme.COLORS.BLACK,
