@@ -81,7 +81,7 @@ export default class Chat extends React.Component {
             />
             <Block style={styles.messageCardWrapper}>
               <Block style={[styles.messageCard, styles.shadow]}>
-                <Text style={{ fontFamily: 'open-sans-regular' }} color={nowTheme.COLORS.TEXT}>{msg.message}</Text>
+                <Text style={{ fontFamily: 'montserrat-regular' }} color={nowTheme.COLORS.TEXT}>{msg.message}</Text>
               </Block>
               <Block right>
                 <Text style={styles.time}>{msg.time}</Text>
@@ -97,7 +97,7 @@ export default class Chat extends React.Component {
         <Block row>
           <Block style={styles.messageCardWrapper}>
             <Block style={[styles.messageCardPersonal, styles.shadow]}>
-              <Text style={{ fontFamily: 'open-sans-regular' }} color={nowTheme.COLORS.WHITE}>{msg.message}</Text>
+              <Text style={{ fontFamily: 'montserrat-regular' }} color={nowTheme.COLORS.WHITE}>{msg.message}</Text>
             </Block>
             <Block right>
               <Text style={[styles.time, { marginRight: 8 }]}>{msg.time}</Text>
@@ -255,7 +255,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 1
   },
   time: {
-    fontFamily: 'open-sans-regular',
+    fontFamily: 'montserrat-regular',
     fontSize: 11,
     opacity: 0.5,
     marginTop: 8

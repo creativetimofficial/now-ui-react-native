@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   StyleSheet,
   Dimensions,
@@ -8,15 +8,15 @@ import {
   Image,
   Animated,
   Platform
-} from "react-native";
+} from 'react-native';
 
-import { Block, Text, Button, theme } from "galio-framework";
-import { Icon } from "../components";
-import nowTheme from "../constants/Theme";
-import Images from "../constants/Images";
-import { iPhoneX, HeaderHeight } from "../constants/utils";
+import { Block, Text, Button, theme } from 'galio-framework';
+import { Icon } from '../components';
+import nowTheme from '../constants/Theme';
+import Images from '../constants/Images';
+import { iPhoneX, HeaderHeight } from '../constants/utils';
 
-const { height, width } = Dimensions.get("window");
+const { height, width } = Dimensions.get('window');
 
 export default class Product extends React.Component {
   state = {
@@ -29,12 +29,7 @@ export default class Product extends React.Component {
     const { navigation } = this.props;
     const { params } = navigation && navigation.state;
     const product = params.product;
-    const productImages = [
-      product.image,
-      product.image,
-      product.image,
-      product.image
-    ];
+    const productImages = [product.image, product.image, product.image, product.image];
 
     return (
       <ScrollView
@@ -43,16 +38,12 @@ export default class Product extends React.Component {
         decelerationRate={0}
         scrollEventThrottle={16}
         showsHorizontalScrollIndicator={false}
-        onScroll={Animated.event([
-          { nativeEvent: { contentOffset: { x: this.scrollX } } }
-        ])}
+        onScroll={Animated.event([{ nativeEvent: { contentOffset: { x: this.scrollX } } }])}
       >
         {productImages.map((image, index) => (
           <TouchableWithoutFeedback
             key={`product-image-${index}`}
-            onPress={() =>
-              navigation.navigate("Gallery", { images: productImages, index })
-            }
+            onPress={() => navigation.navigate('Gallery', { images: productImages, index })}
           >
             <Image
               resizeMode="cover"
@@ -69,12 +60,7 @@ export default class Product extends React.Component {
     const { navigation } = this.props;
     const { params } = navigation && navigation.state;
     const product = params.product;
-    const productImages = [
-      product.image,
-      product.image,
-      product.image,
-      product.image
-    ];
+    const productImages = [product.image, product.image, product.image, product.image];
 
     const position = Animated.divide(this.scrollX, width);
 
@@ -84,18 +70,16 @@ export default class Product extends React.Component {
           const opacity = position.interpolate({
             inputRange: [i - 1, i, i + 1],
             outputRange: [0.5, 1, 0.5],
-            extrapolate: "clamp"
+            extrapolate: 'clamp'
           });
 
           const width = position.interpolate({
             inputRange: [i - 1, i, i + 1],
             outputRange: [8, 18, 8],
-            extrapolate: "clamp"
+            extrapolate: 'clamp'
           });
 
-          return (
-            <Animated.View key={i} style={[styles.dots, { opacity, width }]} />
-          );
+          return <Animated.View key={i} style={[styles.dots, { opacity, width }]} />;
         })}
       </Block>
     );
@@ -110,7 +94,12 @@ export default class Product extends React.Component {
         underlayColor={nowTheme.COLORS.PRICE_COLOR}
         onPress={() => this.setState({ selectedSize: label })}
       >
-        <Text style={{ fontFamily: 'open-sans-regular' }} color={active ? theme.COLORS.PRIMARY : nowTheme.COLORS.TEXT}>{label}</Text>
+        <Text
+          style={{ fontFamily: 'montserrat-regular' }}
+          color={active ? theme.COLORS.PRIMARY : nowTheme.COLORS.TEXT}
+        >
+          {label}
+        </Text>
       </TouchableHighlight>
     );
   };
@@ -124,14 +113,9 @@ export default class Product extends React.Component {
           opacity={0.9}
           style={styles.chat}
           color={nowTheme.COLORS.PRIMARY}
-          onPress={() => navigation.navigate("Chat")}
+          onPress={() => navigation.navigate('Chat')}
         >
-          <Icon
-            size={18}
-            family="materialicon"
-            name="chat-bubble"
-            color="white"
-          />
+          <Icon size={18} family="materialicon" name="chat-bubble" color="white" />
         </Button>
       </Block>
     );
@@ -145,7 +129,7 @@ export default class Product extends React.Component {
 
     return (
       <Block flex style={styles.product}>
-        <Block flex style={{ position: "relative" }}>
+        <Block flex style={{ position: 'relative' }}>
           {this.renderGallery()}
           <Block center style={styles.dotsContainer}>
             {this.renderProgress()}
@@ -160,29 +144,51 @@ export default class Product extends React.Component {
                 paddingTop: theme.SIZES.BASE * 2
               }}
             >
-              <Text  size={28} style={{ paddingBottom: 24, fontFamily: 'open-sans-regular' }} color={nowTheme.COLORS.TEXT}>
+              <Text
+                size={28}
+                style={{ paddingBottom: 24, fontFamily: 'montserrat-regular' }}
+                color={nowTheme.COLORS.TEXT}
+              >
                 {product.title}
               </Text>
               <Block row space="between">
                 <Block row>
-                  <Image
-                    source={Images.ProfilePicture }
-                    style={styles.avatar}
-                  />
+                  <Image source={Images.ProfilePicture} style={styles.avatar} />
                   <Block style={{ marginTop: 2 }}>
-                    <Text style={{ fontFamily: 'open-sans-regular' }} size={14} color={nowTheme.COLORS.TEXT}>Jessica Jones</Text>
-                    <Text style={{ fontFamily: 'open-sans-light' }} size={14} color={nowTheme.COLORS.TEXT} style={{ fontWeight: '100' }}>
+                    <Text
+                      style={{ fontFamily: 'montserrat-regular' }}
+                      size={14}
+                      color={nowTheme.COLORS.TEXT}
+                    >
+                      Jessica Jones
+                    </Text>
+                    <Text
+                      style={{ fontFamily: 'montserrat-regular' }}
+                      size={14}
+                      color={nowTheme.COLORS.TEXT}
+                      style={{ fontWeight: '100' }}
+                    >
                       Pro Seller
                     </Text>
                   </Block>
                 </Block>
-                <Text style={{ fontFamily: 'open-sans-bold' }} size={18} color={nowTheme.COLORS.TEXT}>
+                <Text
+                  style={{ fontFamily: 'montserrat-bold' }}
+                  size={18}
+                  color={nowTheme.COLORS.TEXT}
+                >
                   $899
                 </Text>
               </Block>
             </Block>
             <Block style={{ padding: theme.SIZES.BASE }}>
-              <Text style={{ fontFamily: 'open-sans-regular' }} size={16} color={nowTheme.COLORS.TEXT}>Size</Text>
+              <Text
+                style={{ fontFamily: 'montserrat-regular' }}
+                size={16}
+                color={nowTheme.COLORS.TEXT}
+              >
+                Size
+              </Text>
               <Block card style={{ marginTop: 16 }}>
                 <Block row>
                   <Block
@@ -191,20 +197,17 @@ export default class Product extends React.Component {
                     style={[
                       styles.size,
                       styles.roundTopLeft,
-                      selectedSize === "XS" ? styles.active : null
+                      selectedSize === 'XS' ? styles.active : null
                     ]}
                   >
-                    {this.renderSize("XS")}
+                    {this.renderSize('XS')}
                   </Block>
                   <Block
                     flex
                     middle
-                    style={[
-                      styles.size,
-                      selectedSize === "S" ? styles.active : null
-                    ]}
+                    style={[styles.size, selectedSize === 'S' ? styles.active : null]}
                   >
-                    {this.renderSize("S")}
+                    {this.renderSize('S')}
                   </Block>
                   <Block
                     flex
@@ -212,10 +215,10 @@ export default class Product extends React.Component {
                     style={[
                       styles.size,
                       styles.roundTopRight,
-                      selectedSize === "M" ? styles.active : null
+                      selectedSize === 'M' ? styles.active : null
                     ]}
                   >
-                    {this.renderSize("M")}
+                    {this.renderSize('M')}
                   </Block>
                 </Block>
                 <Block row>
@@ -225,10 +228,10 @@ export default class Product extends React.Component {
                     style={[
                       styles.size,
                       styles.roundBottomLeft,
-                      selectedSize === "L" ? styles.active : null
+                      selectedSize === 'L' ? styles.active : null
                     ]}
                   >
-                    {this.renderSize("L")}
+                    {this.renderSize('L')}
                   </Block>
                   <Block
                     flex
@@ -236,10 +239,10 @@ export default class Product extends React.Component {
                     style={[
                       styles.size,
                       { borderBottomWidth: 0 },
-                      selectedSize === "XL" ? styles.active : null
+                      selectedSize === 'XL' ? styles.active : null
                     ]}
                   >
-                    {this.renderSize("XL")}
+                    {this.renderSize('XL')}
                   </Block>
                   <Block
                     flex
@@ -247,10 +250,10 @@ export default class Product extends React.Component {
                     style={[
                       styles.size,
                       styles.roundBottomRight,
-                      selectedSize === "2XL" ? styles.active : null
+                      selectedSize === '2XL' ? styles.active : null
                     ]}
                   >
-                    {this.renderSize("2XL")}
+                    {this.renderSize('2XL')}
                   </Block>
                 </Block>
               </Block>
@@ -258,10 +261,11 @@ export default class Product extends React.Component {
                 shadowless
                 style={styles.addToCart}
                 color={nowTheme.COLORS.PRIMARY}
-                onPress={() => navigation.navigate("Cart")}
-
+                onPress={() => navigation.navigate('Cart')}
               >
-                <Text style={{ fontFamily: 'open-sans-bold' }} color={nowTheme.COLORS.WHITE}>ADD TO CART</Text>
+                <Text style={{ fontFamily: 'montserrat-bold' }} color={nowTheme.COLORS.WHITE}>
+                  ADD TO CART
+                </Text>
               </Button>
             </Block>
           </ScrollView>
@@ -273,33 +277,33 @@ export default class Product extends React.Component {
 
 const styles = StyleSheet.create({
   product: {
-    marginTop: Platform.OS === "android" ? -HeaderHeight : 0
+    marginTop: Platform.OS === 'android' ? -HeaderHeight : 0
   },
   options: {
-    position: "relative",
+    position: 'relative',
     marginHorizontal: theme.SIZES.BASE,
     marginTop: -theme.SIZES.BASE * 2,
     marginBottom: 0,
     borderTopLeftRadius: 13,
     borderTopRightRadius: 13,
     backgroundColor: theme.COLORS.WHITE,
-    shadowColor: "black",
+    shadowColor: 'black',
     shadowOffset: { width: 0, height: 0 },
     shadowRadius: 8,
     shadowOpacity: 0.2
   },
   galleryImage: {
     width: width,
-    height: "auto"
+    height: 'auto'
   },
   dots: {
     height: theme.SIZES.BASE / 2,
     margin: theme.SIZES.BASE / 2,
     borderRadius: 4,
-    backgroundColor: "white"
+    backgroundColor: 'white'
   },
   dotsContainer: {
-    position: "absolute",
+    position: 'absolute',
     bottom: theme.SIZES.BASE,
     left: 0,
     right: 0,
@@ -308,7 +312,7 @@ const styles = StyleSheet.create({
   addToCart: {
     width: width - theme.SIZES.BASE * 4,
     marginTop: theme.SIZES.BASE * 2,
-    shadowColor: "rgba(0, 0, 0, 0.2)",
+    shadowColor: 'rgba(0, 0, 0, 0.2)',
     shadowOffset: { width: 0, height: 4 },
     shadowRadius: 8,
     shadowOpacity: 1
@@ -324,7 +328,7 @@ const styles = StyleSheet.create({
     width: 56,
     height: 56,
     padding: 20,
-    shadowColor: "rgba(0, 0, 0, 0.2)",
+    shadowColor: 'rgba(0, 0, 0, 0.2)',
     shadowOffset: { width: 0, height: 4 },
     shadowRadius: 8,
     shadowOpacity: 1
@@ -333,20 +337,20 @@ const styles = StyleSheet.create({
     top: -28,
     right: theme.SIZES.BASE,
     zIndex: 2,
-    position: "absolute"
+    position: 'absolute'
   },
   size: {
     height: theme.SIZES.BASE * 3,
     width: (width - theme.SIZES.BASE * 2) / 3,
     borderBottomWidth: 0.5,
     borderBottomColor: nowTheme.COLORS.BORDER_COLOR,
-    overflow: "hidden"
+    overflow: 'hidden'
   },
   sizeButton: {
     height: theme.SIZES.BASE * 3,
-    width: "100%",
-    justifyContent: "center",
-    alignItems: "center"
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   active: {
     backgroundColor: nowTheme.COLORS.PRICE_COLOR

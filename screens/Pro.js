@@ -1,17 +1,10 @@
-import React from "react";
-import {
-  ImageBackground,
-  Image,
-  StyleSheet,
-  StatusBar,
-  Dimensions,
-  Platform
-} from "react-native";
-import { Block, Button, Text, theme } from "galio-framework";
+import React from 'react';
+import { ImageBackground, Image, StyleSheet, StatusBar, Dimensions, Platform } from 'react-native';
+import { Block, Button, Text, theme } from 'galio-framework';
 
-const { height, width } = Dimensions.get("screen");
-import { Images, nowTheme } from "../constants/";
-import { HeaderHeight } from "../constants/utils";
+const { height, width } = Dimensions.get('screen');
+import { Images, nowTheme } from '../constants/';
+import { HeaderHeight } from '../constants/utils';
 
 export default class Pro extends React.Component {
   render() {
@@ -27,72 +20,72 @@ export default class Pro extends React.Component {
           />
           <Block space="between" style={styles.padded}>
             <Block>
+              <Block middle style={{ marginTop: 5 }}>
+                <Image source={Images.ArgonLogo} style={{ width: 115, height: 124 }} />
+              </Block>
               <Block>
+                <Block middle style={{ marginTop: 25 }}>
+                  <Text style={{ fontFamily: 'montserrat-regular' }} color="white" size={44}>
+                    Now UI Kit
+                  </Text>
+                </Block>
+              </Block>
+              <Block row style={{ marginTop: 35 }}>
+                <Text
+                  color="white"
+                  size={16}
+                  style={{ fontFamily: 'montserrat-regular', marginTop: 4 }}
+                >
+                  Designed by
+                </Text>
                 <Image
-                  source={Images.ArgonLogo}
-                  style={{ marginBottom: theme.SIZES.BASE * 1.5 }}
+                  source={Images.InvisionLogo}
+                  style={{
+                    height: 28,
+                    width: 91,
+                    marginLeft: theme.SIZES.BASE
+                  }}
                 />
               </Block>
-              <Block>
-                <Block>
-                  <Text style={{ fontFamily: 'open-sans-regular' }} color="white" size={60}>
-                    Argon
-                  </Text>
-                </Block>
-                <Block>
-                  <Text style={{ fontFamily: 'open-sans-regular' }} color="white" size={60}>
-                    Design
-                  </Text>
-                </Block>
-                <Block row>
-                  <Text style={{ fontFamily: 'open-sans-regular' }} color="white" size={60}>
-                    System
-                  </Text>
-                  <Block middle style={styles.pro}>
-                    <Text style={{ fontFamily: 'open-sans-bold' }} size={16} color="white">
-                      PRO
-                    </Text>
-                  </Block>
-                </Block>
+              <Block row style={{ marginTop: 35 }}>
+                <Text
+                  color="white"
+                  size={16}
+                  style={{ fontFamily: 'montserrat-regular', marginTop: 4 }}
+                >
+                  Coded by
+                </Text>
+                <Image
+                  source={Images.CreativeTimLogo}
+                  style={{
+                    height: 29,
+                    width: 129,
+                    marginLeft: theme.SIZES.BASE
+                  }}
+                />
               </Block>
-              <Text
-                size={16}
-                color="rgba(255,255,255,0.6)"
-                style={{ marginTop: 35, fontFamily: 'open-sans-regular' }}
-              >
-                Take advantage of all the features and screens made upon Galio
-                Design System, coded on React Native for both.
-              </Text>
+
               <Block
                 row
                 style={{
-                  marginTop: theme.SIZES.BASE * 1.5,
-                  marginBottom: theme.SIZES.BASE * 4
+                  marginTop: theme.SIZES.BASE * 2.5,
+                  marginBottom: theme.SIZES.BASE * 2
                 }}
               >
-                <Image
-                  source={Images.iOSLogo}
-                  style={{
-                    height: 38,
-                    width: 82,
-                    marginRight: theme.SIZES.BASE * 1.5
-                  }}
-                />
-                <Image
-                  source={Images.androidLogo}
-                  style={{ height: 38, width: 140 }}
-                />
+                <Button
+                  shadowless
+                  style={styles.button}
+                  color={nowTheme.COLORS.PRIMARY}
+                  onPress={() => navigation.navigate('Home')}
+                >
+                  <Text
+                    style={{ fontFamily: 'montserrat-bold', fontSize: 14 }}
+                    color={theme.COLORS.WHITE}
+                  >
+                    GET STARTED
+                  </Text>
+                </Button>
               </Block>
-              <Button
-                shadowless
-                style={styles.button}
-                color={nowTheme.COLORS.INFO}
-                onPress={() => navigation.navigate("Home")}
-              >
-                <Text style={{ fontFamily: 'open-sans-bold', fontSize: 14 }} color={theme.COLORS.WHITE}>
-                  GET STARTED
-                </Text>
-              </Button>
             </Block>
           </Block>
         </Block>
@@ -104,14 +97,13 @@ export default class Pro extends React.Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: theme.COLORS.BLACK,
-    marginTop: Platform.OS === "android" ? -HeaderHeight : 0
+    marginTop: Platform.OS === 'android' ? -HeaderHeight : 0
   },
   padded: {
     paddingHorizontal: theme.SIZES.BASE * 2,
     zIndex: 3,
-    position: "absolute",
-    bottom:
-      Platform.OS === "android" ? theme.SIZES.BASE * 2 : theme.SIZES.BASE * 3
+    position: 'absolute',
+    bottom: Platform.OS === 'android' ? theme.SIZES.BASE * 2 : theme.SIZES.BASE * 3
   },
   button: {
     width: width - theme.SIZES.BASE * 4,
@@ -119,17 +111,10 @@ const styles = StyleSheet.create({
     shadowRadius: 0,
     shadowOpacity: 0
   },
-  pro: {
-    backgroundColor: nowTheme.COLORS.INFO,
-    paddingHorizontal: 8,
-    marginLeft: 3,
-    borderRadius: 4,
-    height: 22,
-    marginTop: 15
-  },
+
   gradient: {
     zIndex: 1,
-    position: "absolute",
+    position: 'absolute',
     bottom: 0,
     left: 0,
     right: 0,

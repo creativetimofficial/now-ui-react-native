@@ -61,7 +61,7 @@ class Articles extends React.Component {
             >
               {item.price}
             </Text>
-            <Text style={{ fontFamily: 'open-sans-regular' }} center size={34} color={nowTheme.COLORS.TEXT}>
+            <Text style={{ fontFamily: 'montserrat-regular' }} center size={34} color={nowTheme.COLORS.TEXT}>
               {item.title}
             </Text>
             <Text
@@ -108,7 +108,7 @@ class Articles extends React.Component {
                 }}
               >
                 <Block style={styles.categoryTitle}>
-                  <Text style={{ fontFamily: 'open-sans-bold' }} size={18} color={theme.COLORS.WHITE}>
+                  <Text style={{ fontFamily: 'montserrat-bold' }} size={18} color={theme.COLORS.WHITE}>
                     View article
                   </Text>
                 </Block>
@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: theme.SIZES.BASE * 2,
     marginTop: 22,
     color: nowTheme.COLORS.HEADER,
-    fontFamily: 'open-sans-bold'
+    fontFamily: 'montserrat-bold'
   },
   group: {
     paddingTop: theme.SIZES.BASE
@@ -242,11 +242,11 @@ const styles = StyleSheet.create({
   productPrice: {
     paddingTop: theme.SIZES.BASE,
     paddingBottom: theme.SIZES.BASE / 2,
-    fontFamily: 'open-sans-bold'
+    fontFamily: 'montserrat-bold'
   },
   productDescription: {
     paddingTop: theme.SIZES.BASE,
-    fontFamily: 'open-sans-regular'
+    fontFamily: 'montserrat-regular'
     // paddingBottom: theme.SIZES.BASE * 2,
   }
 });

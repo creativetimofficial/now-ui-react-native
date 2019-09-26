@@ -13,7 +13,7 @@ export default class Notifications extends React.Component {
 
   renderItem = ({ item }) => (
     <Block row middle space="between" style={styles.rows}>
-      <Text style={{ fontFamily: 'open-sans-regular' }} size={theme.SIZES.FONT} color="#525F7F" size={15}>{item.title}</Text>
+      <Text style={{ fontFamily: 'montserrat-regular' }} size={theme.SIZES.FONT} color="#525F7F" size={15}>{item.title}</Text>
       <Switch
         onValueChange={() => this.toggleSwitch(item.id)}
         value={this.state[item.id]}
@@ -37,10 +37,10 @@ export default class Notifications extends React.Component {
           renderItem={this.renderItem}
           ListHeaderComponent={
             <Block style={styles.title}>
-              <Text style={{ fontFamily: 'open-sans-bold', paddingBottom: 5 }} center size={16} color={nowTheme.COLORS.TEXT}>
+              <Text style={{ fontFamily: 'montserrat-bold', paddingBottom: 5 }} center size={16} color={nowTheme.COLORS.TEXT}>
                 Recommended Settings
               </Text>
-              <Text style={{ fontFamily: 'open-sans-regular' }} center size={12} color={nowTheme.COLORS.TEXT}>
+              <Text style={{ fontFamily: 'montserrat-regular' }} center size={12} color={nowTheme.COLORS.TEXT}>
                 These are the most important settings
               </Text>
             </Block>

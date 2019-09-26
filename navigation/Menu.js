@@ -23,7 +23,7 @@ const Drawer = props => (
         <DrawerItems {...props} />
         <Block flex style={{ marginTop: 24, marginVertical: 8, paddingHorizontal: 8 }}>
             <Block style={{ borderColor: "white", width: '100%', borderWidth: StyleSheet.hairlineWidth }}/>
-            <Text color={nowTheme.COLORS.WHITE} style={{ marginTop: 16, marginLeft: 8, fontFamily: 'open-sans-regular' }}>DOCUMENTATION</Text>
+            <Text color={nowTheme.COLORS.WHITE} style={{ marginTop: 16, marginLeft: 8, fontFamily: 'montserrat-regular' }}>DOCUMENTATION</Text>
         </Block>
         <TouchableOpacity onPress={() => Linking.openURL('https://demos.creative-tim.com/argon-pro-react-native/docs/').catch((err) => console.error('An error occurred', err))}>
           <DrawerItem   {...props} title="Getting Started" />

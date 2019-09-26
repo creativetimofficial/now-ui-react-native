@@ -83,7 +83,7 @@ export default class Cart extends React.Component {
               <Block flex row space="between">
                 <Block bottom>
                   <Text
-                    style={{ fontFamily: 'open-sans-regular' }}
+                    style={{ fontFamily: 'montserrat-regular' }}
                     size={theme.SIZES.BASE * 0.75}
                     color={nowTheme.COLORS[item.stock ? "SUCCESS" : "ERROR"]}
                   >
@@ -92,7 +92,7 @@ export default class Cart extends React.Component {
                 </Block>
                 <Block bottom>
                   <Text
-                    style={{ fontFamily: 'open-sans-regular' }}
+                    style={{ fontFamily: 'montserrat-regular' }}
                     size={theme.SIZES.BASE * 0.75}
                     color={nowTheme.COLORS.ACTIVE}
                   >
@@ -195,9 +195,9 @@ export default class Cart extends React.Component {
     return (
       <Block flex style={styles.header}>
         <Block style={{ marginBottom: theme.SIZES.BASE * 2 }}>
-          <Text style={{ fontFamily: 'open-sans-regular' }} color={nowTheme.COLORS.TEXT}>
+          <Text style={{ fontFamily: 'montserrat-regular' }} color={nowTheme.COLORS.TEXT}>
             Cart subtotal ({productsQty} items):{" "}
-            <Text style={{ fontFamily: 'open-sans-bold' }} color={nowTheme.COLORS.ERROR}>
+            <Text style={{ fontFamily: 'montserrat-bold' }} color={nowTheme.COLORS.ERROR}>
               ${total}
             </Text>
           </Text>
@@ -244,7 +244,7 @@ export default class Cart extends React.Component {
   };
 
   renderEmpty() {
-    return <Text style={{ fontFamily: 'open-sans-regular' }} color={nowTheme.COLORS.ERROR}>The cart is empty</Text>;
+    return <Text style={{ fontFamily: 'montserrat-regular' }} color={nowTheme.COLORS.ERROR}>The cart is empty</Text>;
   }
 
   renderCheckoutButton() {
@@ -321,7 +321,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1
   },
   productTitle: {
-    fontFamily: 'open-sans-regular',
+    fontFamily: 'montserrat-regular',
     flex: 1,
     flexWrap: "wrap",
     paddingBottom: 6
@@ -351,7 +351,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 1
   },
   optionsButtonText: {
-    fontFamily: 'open-sans-bold',
+    fontFamily: 'montserrat-bold',
     fontSize: theme.SIZES.BASE * 0.75,
     color: theme.COLORS.WHITE,
     fontWeight: "normal",

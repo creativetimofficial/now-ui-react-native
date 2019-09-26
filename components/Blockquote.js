@@ -52,7 +52,7 @@ Blockquote.propTypes = {
 
 const styles = StyleSheet.create({
   quote: {
-    fontFamily: "open-sans-regular",
+    fontFamily: "montserrat-regular",
     fontSize: 20,
     borderWidth: 1,
     padding: 20

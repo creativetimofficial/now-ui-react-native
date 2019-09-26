@@ -13,14 +13,14 @@ export default class About extends React.Component {
           contentContainerStyle={styles.about}
           overScrollMode="always"
         >
-          <Text style={{ fontFamily: 'open-sans-regular' }} size={16} color={nowTheme.COLORS.TEXT}>
+          <Text style={{ fontFamily: 'montserrat-regular' }} size={16} color={nowTheme.COLORS.TEXT}>
             Shares of the giant tech companies tumbled on Monday, pushing major
             stock market indexes into negative territory for November and
             leaving investors clinging to a gain of less than 1 percent for the
             year.
           </Text>
           <Text
-            style={{ fontFamily: 'open-sans-regular' }}
+            style={{ fontFamily: 'montserrat-regular' }}
             muted
             size={16}
             style={{ paddingTop: 9 }}
@@ -32,7 +32,7 @@ export default class About extends React.Component {
             extraordinary pipeline of profits.
           </Text>
           <Text
-            style={{ fontFamily: 'open-sans-regular' }}
+            style={{ fontFamily: 'montserrat-regular' }}
             muted
             size={16}
             style={{ paddingTop: 9 }}
@@ -47,7 +47,7 @@ export default class About extends React.Component {
             that it significantly increased the amount it spends on security.
           </Text>
           <Text
-            style={{ fontFamily: 'open-sans-regular' }}
+            style={{ fontFamily: 'montserrat-regular' }}
             muted
             size={16}
             style={{ paddingTop: 9 }}

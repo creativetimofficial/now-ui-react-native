@@ -128,13 +128,13 @@ class Header extends React.Component {
         <Button shadowless style={[styles.tab, styles.divider]} onPress={() => navigation.navigate('Beauty')}>
           <Block row middle>
             <Icon name="diamond" family="ArgonExtra" style={{ paddingRight: 8 }} color={nowTheme.COLORS.ICON} />
-            <Text style={{ fontFamily: 'open-sans-regular' }} size={16}  style={styles.tabTitle}>{optionLeft || 'Beauty'}</Text>
+            <Text style={{ fontFamily: 'montserrat-regular' }} size={16}  style={styles.tabTitle}>{optionLeft || 'Beauty'}</Text>
           </Block>
         </Button>
         <Button shadowless style={styles.tab} onPress={() => navigation.navigate('Fashion')}>
           <Block row middle>
             <Icon size={16} name="bag-17" family="ArgonExtra" style={{ paddingRight: 8 }} color={nowTheme.COLORS.ICON}/>
-            <Text style={{ fontFamily: 'open-sans-regular' }} size={16} style={styles.tabTitle}>{optionRight || 'Fashion'}</Text>
+            <Text style={{ fontFamily: 'montserrat-regular' }} size={16} style={styles.tabTitle}>{optionRight || 'Fashion'}</Text>
           </Block>
         </Button>
       </Block>

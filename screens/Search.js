@@ -89,11 +89,11 @@ export default class Search extends React.Component {
   renderNotFound = () => {
     return (
       <Block style={styles.notfound}>
-        <Text style={{ fontFamily: 'open-sans-regular' }} size={18} color={nowTheme.COLORS.TEXT}>
+        <Text style={{ fontFamily: 'montserrat-regular' }} size={18} color={nowTheme.COLORS.TEXT}>
           We didn’t find "<Text bold>{this.state.search}</Text>" in our store.
         </Text>
 
-        <Text size={18} style={{ marginTop: theme.SIZES.BASE, fontFamily: 'open-sans-regular' }} color={nowTheme.COLORS.TEXT}>
+        <Text size={18} style={{ marginTop: theme.SIZES.BASE, fontFamily: 'montserrat-regular' }} color={nowTheme.COLORS.TEXT}>
           You can see more products from other categories.
         </Text>
       </Block>
@@ -113,7 +113,7 @@ export default class Search extends React.Component {
             onPress={() => navigation.navigate("Category", { ...item })}
           >
             <Block flex row middle space="between">
-              <Text style={{ fontFamily: 'open-sans-regular' }} size={14} color={nowTheme.COLORS.TEXT}>{item.title}</Text>
+              <Text style={{ fontFamily: 'montserrat-regular' }} size={14} color={nowTheme.COLORS.TEXT}>{item.title}</Text>
               <Icon
                 name="chevron-right"
                 family="evilicon"
@@ -171,7 +171,7 @@ export default class Search extends React.Component {
         <Block style={{ width: width - 40 }}>
           {this.renderNotFound()}
           {this.renderSuggestions()}
-          <Text style={{ fontFamily: 'open-sans-regular' }} size={18} color={nowTheme.COLORS.TEXT}>Daily Deals</Text>
+          <Text style={{ fontFamily: 'montserrat-regular' }} size={18} color={nowTheme.COLORS.TEXT}>Daily Deals</Text>
           {this.renderDeals()}
         </Block>
       );

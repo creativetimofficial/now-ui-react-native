@@ -105,7 +105,7 @@ const NotificationsStack = createBottomTabNavigator(
       activeTintColor: nowTheme.COLORS.PRIMARY,
       inactiveTintColor: "gray",
       labelStyle: {
-        fontFamily: 'open-sans-regular',
+        fontFamily: 'montserrat-regular',
       }
     }
   }

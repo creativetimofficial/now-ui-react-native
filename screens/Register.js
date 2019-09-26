@@ -42,7 +42,7 @@ class Register extends React.Component {
                   <Block flex={0.4} middle style={styles.socialConnect}>
                     <Block flex={0.5} middle>
                       <Text  style={{
-                          fontFamily: "open-sans-regular",
+                          fontFamily: "montserrat-regular",
                           textAlign: "center"
                         }}   color="#8898AA"
                         size={20}>Register</Text>
@@ -88,7 +88,7 @@ class Register extends React.Component {
                   <Block flex={0.1} middle>
                       <Text
                         style={{
-                          fontFamily: "open-sans-regular",
+                          fontFamily: "montserrat-regular",
                           textAlign: "center"
                         }}
                         color="#8898AA"
@@ -161,7 +161,7 @@ class Register extends React.Component {
                               color={nowTheme.COLORS.PRIMARY}
                               labelStyle={{
                                 color: nowTheme.COLORS.TEXT,
-                                fontFamily: "open-sans-regular"
+                                fontFamily: "montserrat-regular"
                               }}
                               label="I agree with the"
                             />
@@ -171,7 +171,7 @@ class Register extends React.Component {
                               textStyle={{
                                 color: nowTheme.COLORS.PRIMARY,
                                 fontSize: 14,
-                                fontFamily: "open-sans-regular",
+                                fontFamily: "montserrat-regular",
                                 marginRight: 5
                               }}
                             >
@@ -186,7 +186,7 @@ class Register extends React.Component {
                             style={styles.createButton}
                           >
                             <Text
-                              style={{ fontFamily: "open-sans-bold" }}
+                              style={{ fontFamily: "montserrat-bold" }}
                               size={14}
                               color={nowTheme.COLORS.WHITE}
                             >

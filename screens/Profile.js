@@ -1,19 +1,12 @@
-import React from "react";
-import {
-  StyleSheet,
-  Dimensions,
-  ScrollView,
-  Image,
-  ImageBackground,
-  Platform
-} from "react-native";
-import { Block, Text, theme } from "galio-framework";
+import React from 'react';
+import { StyleSheet, Dimensions, ScrollView, Image, ImageBackground, Platform } from 'react-native';
+import { Block, Text, theme } from 'galio-framework';
 
-import { Button } from "../components";
-import { Images, nowTheme } from "../constants";
-import { HeaderHeight } from "../constants/utils";
+import { Button } from '../components';
+import { Images, nowTheme } from '../constants';
+import { HeaderHeight } from '../constants/utils';
 
-const { width, height } = Dimensions.get("screen");
+const { width, height } = Dimensions.get('screen');
 
 const thumbMeasure = (width - 48 - 32) / 3;
 
@@ -27,34 +20,17 @@ class Profile extends React.Component {
             style={styles.profileContainer}
             imageStyle={styles.profileBackground}
           >
-            <ScrollView
-              showsVerticalScrollIndicator={false}
-              style={{ width, marginTop: "25%" }}
-            >
+            <ScrollView showsVerticalScrollIndicator={false} style={{ width, marginTop: '25%' }}>
               <Block flex style={styles.profileCard}>
                 <Block middle style={styles.avatarContainer}>
-                  <Image
-                    source={ Images.ProfilePicture }
-                    style={styles.avatar}
-                  />
+                  <Image source={Images.ProfilePicture} style={styles.avatar} />
                 </Block>
                 <Block style={styles.info}>
-                  <Block
-                    middle
-                    row
-                    space="evenly"
-                    style={{ marginTop: 20, paddingBottom: 24 }}
-                  >
-                    <Button
-                      small
-                      style={{ backgroundColor: nowTheme.COLORS.INFO }}
-                    >
+                  <Block middle row space="evenly" style={{ marginTop: 20, paddingBottom: 24 }}>
+                    <Button small style={{ backgroundColor: nowTheme.COLORS.INFO }}>
                       CONNECT
                     </Button>
-                    <Button
-                      small
-                      style={{ backgroundColor: nowTheme.COLORS.DEFAULT }}
-                    >
+                    <Button small style={{ backgroundColor: nowTheme.COLORS.DEFAULT }}>
                       MESSAGE
                     </Button>
                   </Block>
@@ -63,40 +39,62 @@ class Profile extends React.Component {
                       <Text
                         size={18}
                         color="#525F7F"
-                        style={{ marginBottom: 4, fontFamily: 'open-sans-bold' }}
+                        style={{ marginBottom: 4, fontFamily: 'montserrat-bold' }}
                       >
                         2K
                       </Text>
-                      <Text style={{ fontFamily: 'open-sans-regular' }} size={12} color={nowTheme.COLORS.TEXT}>Orders</Text>
+                      <Text
+                        style={{ fontFamily: 'montserrat-regular' }}
+                        size={12}
+                        color={nowTheme.COLORS.TEXT}
+                      >
+                        Orders
+                      </Text>
                     </Block>
                     <Block middle>
                       <Text
                         color="#525F7F"
                         size={18}
-                        style={{ marginBottom: 4, fontFamily: 'open-sans-bold' }}
+                        style={{ marginBottom: 4, fontFamily: 'montserrat-bold' }}
                       >
                         10
                       </Text>
-                      <Text style={{ fontFamily: 'open-sans-regular' }} size={12} color={nowTheme.COLORS.TEXT}>Photos</Text>
+                      <Text
+                        style={{ fontFamily: 'montserrat-regular' }}
+                        size={12}
+                        color={nowTheme.COLORS.TEXT}
+                      >
+                        Photos
+                      </Text>
                     </Block>
                     <Block middle>
                       <Text
                         color="#525F7F"
                         size={18}
-                        style={{ marginBottom: 4, fontFamily: 'open-sans-bold' }}
+                        style={{ marginBottom: 4, fontFamily: 'montserrat-bold' }}
                       >
                         89
                       </Text>
-                      <Text style={{ fontFamily: 'open-sans-regular' }} size={12} color={nowTheme.COLORS.TEXT}>Comments</Text>
+                      <Text
+                        style={{ fontFamily: 'montserrat-regular' }}
+                        size={12}
+                        color={nowTheme.COLORS.TEXT}
+                      >
+                        Comments
+                      </Text>
                     </Block>
                   </Block>
                 </Block>
                 <Block flex>
                   <Block middle style={styles.nameInfo}>
-                    <Text style={{ fontFamily: 'open-sans-regular' }} size={28} color="#32325D">
+                    <Text style={{ fontFamily: 'montserrat-regular' }} size={28} color="#32325D">
                       Jessica Jones, 27
                     </Text>
-                    <Text size={16} color="#32325D" style={{ marginTop: 10, fontFamily: 'open-sans-light' }}>
+                    <Text
+                      size={16}
+                      color="#32325D"
+                      style={{ marginTop: 10, fontFamily: 'montserrat-regular' }}
+                    >
                       San Francisco, USA
                     </Text>
                   </Block>
@@ -107,41 +105,36 @@ class Profile extends React.Component {
                     <Text
                       size={16}
                       color="#525F7F"
-                      style={{ textAlign: "center", fontFamily: 'open-sans-regular' }}
+                      style={{ textAlign: 'center', fontFamily: 'montserrat-regular' }}
                     >
-                      An artist of considerable range, Jessica name taken by
-                      Melbourne …
+                      An artist of considerable range, Jessica name taken by Melbourne …
                     </Text>
                     <Button
                       color="transparent"
                       textStyle={{
-                        color: "#233DD2",
-                        fontWeight: "500",
+                        color: '#233DD2',
+                        fontWeight: '500',
                         fontSize: 16,
-                        fontFamily: 'open-sans-regular'
+                        fontFamily: 'montserrat-regular'
                       }}
                     >
                       Show more
                     </Button>
                   </Block>
-                  <Block
-                    row
-                    style={{ paddingVertical: 14 }}
-                    space="between"
-                  >
+                  <Block row style={{ paddingVertical: 14 }} space="between">
                     <Text bold size={16} color="#525F7F" style={{ marginTop: 3 }}>
                       Album
                     </Text>
                     <Button
                       small
                       color="transparent"
-                      textStyle={{ color: "#5E72E4", fontSize: 14 }}
+                      textStyle={{ color: '#5E72E4', fontSize: 14 }}
                     >
                       View all
                     </Button>
                   </Block>
                   <Block style={{ paddingBottom: -HeaderHeight * 2 }}>
-                    <Block row space="between" style={{ flexWrap: "wrap" }}>
+                    <Block row space="between" style={{ flexWrap: 'wrap' }}>
                       {Images.Viewed.map((img, imgIndex) => (
                         <Image
                           source={{ uri: img }}
@@ -154,7 +147,7 @@ class Profile extends React.Component {
                   </Block>
                 </Block>
               </Block>
-              <Block style={{ marginBottom: 25 }}/>
+              <Block style={{ marginBottom: 25 }} />
             </ScrollView>
           </ImageBackground>
         </Block>
@@ -165,7 +158,7 @@ class Profile extends React.Component {
 
 const styles = StyleSheet.create({
   profile: {
-    marginTop: Platform.OS === "android" ? -HeaderHeight : 0,
+    marginTop: Platform.OS === 'android' ? -HeaderHeight : 0,
     // marginBottom: -HeaderHeight * 2,
     flex: 1
   },
@@ -187,7 +180,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 6,
     borderTopRightRadius: 6,
     backgroundColor: theme.COLORS.WHITE,
-    shadowColor: "black",
+    shadowColor: 'black',
     shadowOffset: { width: 0, height: 0 },
     shadowRadius: 8,
     shadowOpacity: 0.2,
@@ -197,7 +190,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 40
   },
   avatarContainer: {
-    position: "relative",
+    position: 'relative',
     marginTop: -80
   },
   avatar: {
@@ -210,14 +203,14 @@ const styles = StyleSheet.create({
     marginTop: 35
   },
   divider: {
-    width: "90%",
+    width: '90%',
     borderWidth: 1,
-    borderColor: "#E9ECEF"
+    borderColor: '#E9ECEF'
   },
   thumb: {
     borderRadius: 4,
     marginVertical: 4,
-    alignSelf: "center",
+    alignSelf: 'center',
     width: thumbMeasure,
     height: thumbMeasure
   }

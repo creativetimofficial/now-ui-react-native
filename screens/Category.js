@@ -54,7 +54,7 @@ export default class Category extends React.Component {
             >
               $125
             </Text>
-            <Text style={{ fontFamily: 'open-sans-regular' }} center size={34} color={nowTheme.COLORS.TEXT}>
+            <Text style={{ fontFamily: 'montserrat-regular' }} center size={34} color={nowTheme.COLORS.TEXT}>
               {item.title}
             </Text>
             <Text
@@ -128,12 +128,12 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 4
   },
   price: {
-    fontFamily: 'open-sans-bold',
+    fontFamily: 'montserrat-bold',
     paddingTop: theme.SIZES.BASE,
     paddingBottom: theme.SIZES.BASE / 2
   },
   description: {
-    fontFamily: 'open-sans-regular',
+    fontFamily: 'montserrat-regular',
     paddingTop: theme.SIZES.BASE,
     paddingBottom: theme.SIZES.BASE * 2
   },

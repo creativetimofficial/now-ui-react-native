@@ -15,7 +15,7 @@ export default class Privacy extends React.Component {
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.privacy}
         >
-          <Text style={{ fontFamily: 'open-sans-bold' }} size={16} color={nowTheme.COLORS.TEXT}>
+          <Text style={{ fontFamily: 'montserrat-bold' }} size={16} color={nowTheme.COLORS.TEXT}>
             In recent months, Facebook, Google, IBM, Microsoft and others have
             aggressively lobbied officials in the Trump administration and
             elsewhere to start outlining a federal privacy law, according to
@@ -26,7 +26,7 @@ export default class Privacy extends React.Component {
             handled.
           </Text>
           <Text
-            style={{ fontFamily: 'open-sans-regular' }}
+            style={{ fontFamily: 'montserrat-regular' }}
             size={16}
             color={nowTheme.COLORS.TEXT}
             style={{ paddingTop: 9 }}
@@ -38,7 +38,7 @@ export default class Privacy extends React.Component {
             best way is to work toward developing our own blueprint.”
           </Text>
           <Text
-            style={{ fontFamily: 'open-sans-regular' }}
+            style={{ fontFamily: 'montserrat-regular' }}
             size={16}
             color={nowTheme.COLORS.TEXT}
             style={{ paddingTop: 9 }}
@@ -51,7 +51,7 @@ export default class Privacy extends React.Component {
           </Text>
 
           <Text
-            style={{ fontFamily: 'open-sans-regular' }}
+            style={{ fontFamily: 'montserrat-regular' }}
             size={16}
             color={nowTheme.COLORS.TEXT}
             style={{ paddingTop: 9 }}
@@ -69,7 +69,7 @@ export default class Privacy extends React.Component {
             color={nowTheme.COLORS.PRIMARY}
             style={styles.privacyButton}
           >
-            <Text style={{ fontFamily: 'open-sans-bold' }} size={16} color={nowTheme.COLORS.WHITE}>
+            <Text style={{ fontFamily: 'montserrat-bold' }} size={16} color={nowTheme.COLORS.WHITE}>
               ACCEPT
             </Text>
           </Button>
@@ -78,7 +78,7 @@ export default class Privacy extends React.Component {
             textStyle={{ color: theme.COLORS.MUTED }}
             style={styles.privacyButton}
           >
-            <Text style={{ fontFamily: 'open-sans-bold' }} size={16} color={nowTheme.COLORS.MUTED}>
+            <Text style={{ fontFamily: 'montserrat-bold' }} size={16} color={nowTheme.COLORS.MUTED}>
               DECLINE
             </Text>
           </Button>

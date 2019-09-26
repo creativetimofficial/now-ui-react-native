@@ -65,7 +65,7 @@ export default class Categories extends React.Component {
                   }}
                 >
                   <Block style={styles.categoryTitle}>
-                    <Text style={{ fontFamily: 'open-sans-bold' }} size={18} color={theme.COLORS.WHITE}>
+                    <Text style={{ fontFamily: 'montserrat-bold' }} size={18} color={theme.COLORS.WHITE}>
                       {category.title}
                     </Text>
                   </Block>

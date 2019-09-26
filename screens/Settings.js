@@ -23,7 +23,7 @@ export default class Settings extends React.Component {
       case "switch":
         return (
           <Block row middle space="between" style={styles.rows}>
-            <Text style={{ fontFamily: 'open-sans-regular' }} size={14} color="#525F7F">{item.title}</Text>
+            <Text style={{ fontFamily: 'montserrat-regular' }} size={14} color="#525F7F">{item.title}</Text>
             <Switch
               onValueChange={() => this.toggleSwitch(item.id)}
               value={this.state[item.id]}
@@ -35,7 +35,7 @@ export default class Settings extends React.Component {
           <Block style={styles.rows}>
             <TouchableOpacity onPress={() => navigate(item.id)}>
               <Block row middle space="between" style={{ paddingTop: 7 }}>
-                <Text style={{ fontFamily: 'open-sans-regular' }} size={14} color="#525F7F">{item.title}</Text>
+                <Text style={{ fontFamily: 'montserrat-regular' }} size={14} color="#525F7F">{item.title}</Text>
                 <Icon
                   name="angle-right"
                   family="font-awesome"
@@ -79,20 +79,20 @@ export default class Settings extends React.Component {
           renderItem={this.renderItem}
           ListHeaderComponent={
             <Block center style={styles.title}>
-              <Text style={{ fontFamily: 'open-sans-bold', paddingBottom: 5 }} size={theme.SIZES.BASE} color={nowTheme.COLORS.TEXT}>
+              <Text style={{ fontFamily: 'montserrat-bold', paddingBottom: 5 }} size={theme.SIZES.BASE} color={nowTheme.COLORS.TEXT}>
                 Recommended Settings
               </Text>
-              <Text style={{ fontFamily: 'open-sans-regular' }} size={12} color={nowTheme.COLORS.CAPTION} color={nowTheme.COLORS.TEXT}>
+              <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color={nowTheme.COLORS.CAPTION} color={nowTheme.COLORS.TEXT}>
                 These are the most important settings
               </Text>
             </Block>
           }
         />
         <Block center style={styles.title}>
-          <Text style={{ fontFamily: 'open-sans-bold', paddingBottom: 5 }} size={theme.SIZES.BASE} color={nowTheme.COLORS.TEXT}>
+          <Text style={{ fontFamily: 'montserrat-bold', paddingBottom: 5 }} size={theme.SIZES.BASE} color={nowTheme.COLORS.TEXT}>
             Payment Settings
           </Text>
-          <Text style={{ fontFamily: 'open-sans-regular' }} size={12} color={nowTheme.COLORS.CAPTION} color={nowTheme.COLORS.TEXT}>
+          <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color={nowTheme.COLORS.CAPTION} color={nowTheme.COLORS.TEXT}>
             These are also important settings
           </Text>
         </Block>
@@ -104,10 +104,10 @@ export default class Settings extends React.Component {
         />
 
         <Block center style={styles.title}>
-          <Text style={{ fontFamily: 'open-sans-bold', paddingBottom: 5 }} size={theme.SIZES.BASE} color={nowTheme.COLORS.TEXT}>
+          <Text style={{ fontFamily: 'montserrat-bold', paddingBottom: 5 }} size={theme.SIZES.BASE} color={nowTheme.COLORS.TEXT}>
             Privacy Settings
           </Text>
-          <Text style={{ fontFamily: 'open-sans-regular' }} size={12} color={nowTheme.COLORS.CAPTION} color={nowTheme.COLORS.TEXT}>
+          <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color={nowTheme.COLORS.CAPTION} color={nowTheme.COLORS.TEXT}>
             Third most important settings
           </Text>
         </Block>

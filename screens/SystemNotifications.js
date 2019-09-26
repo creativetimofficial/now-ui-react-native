@@ -14,7 +14,7 @@ export default class SystemNotifications extends React.Component {
               <Block style={styles.cardHeader}>
                 <Text
                   size={18}
-                  style={{ fontFamily: "open-sans-bold" }}
+                  style={{ fontFamily: "montserrat-bold" }}
                   color={nowTheme.COLORS.TEXT}
                 >
                   Unread notifications
@@ -49,7 +49,7 @@ export default class SystemNotifications extends React.Component {
               <Block style={styles.cardHeader}>
                 <Text
                   size={18}
-                  style={{ fontFamily: "open-sans-bold" }}
+                  style={{ fontFamily: "montserrat-bold" }}
                   color={nowTheme.COLORS.TEXT}
                 >
                   Read notifications

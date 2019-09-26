@@ -55,7 +55,7 @@ export default class Notification extends React.Component {
             <Block flex style={{ paddingRight: 3, paddingLeft: 12 }}>
               {system && (
                 <Block row space="between" style={{ height: 18 }}>
-                  <Text color={nowTheme.COLORS.MUTED} style={{ fontFamily: 'open-sans-bold' }} size={13}>{title}</Text>
+                  <Text color={nowTheme.COLORS.MUTED} style={{ fontFamily: 'montserrat-bold' }} size={13}>{title}</Text>
                   <Block row style={{ marginTop: 3 }}>
                     <Icon
                       family="material-community"
@@ -66,7 +66,7 @@ export default class Notification extends React.Component {
                     <Text
                       color={nowTheme.COLORS.MUTED}
                       style={{
-                        fontFamily: "open-sans-regular",
+                        fontFamily: "montserrat-regular",
                         marginLeft: 3,
                         marginTop: -3
                       }}
@@ -80,7 +80,7 @@ export default class Notification extends React.Component {
               <Text
                 color={nowTheme.COLORS.WHITE}
                 size={system ? 13 : 14}
-                style={{ fontFamily: system ? "open-sans-bold" : "open-sans-regular" }}
+                style={{ fontFamily: system ? "montserrat-bold" : "montserrat-regular" }}
               >
                 {body}
               </Text>
@@ -96,7 +96,7 @@ export default class Notification extends React.Component {
                 <Text
                   color={nowTheme.COLORS.WHITE}
                   style={{
-                    fontFamily: "open-sans-regular",
+                    fontFamily: "montserrat-regular",
                     marginLeft: 3,
                     marginTop: -2
                   }}

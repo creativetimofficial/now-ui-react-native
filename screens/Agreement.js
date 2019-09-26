@@ -13,7 +13,7 @@ export default class Agreement extends React.Component {
           contentContainerStyle={styles.agreements}
           overScrollMode="always"
         >
-          <Text style={{ fontFamily: 'open-sans-bold' }} size={16} color={nowTheme.COLORS.TEXT}>
+          <Text style={{ fontFamily: 'montserrat-bold' }} size={16} color={nowTheme.COLORS.TEXT}>
             It all started in the early 1970s, when, floundering a bit in her
             post-college life, she landed a gig at WBFO, a radio station in
             Buffalo. There she would call subjects and interview them for the
@@ -21,7 +21,7 @@ export default class Agreement extends React.Component {
             1975 to host “Fresh Air,” the brainchild of a colleague from WBFO.
           </Text>
           <Text
-            style={{ fontFamily: 'open-sans-regular' }}
+            style={{ fontFamily: 'montserrat-regular' }}
             size={16}
             color={nowTheme.COLORS.TEXT}
             style={{ paddingTop: 9 }}
@@ -33,7 +33,7 @@ export default class Agreement extends React.Component {
             this person matters, and why it’s worthy of our listeners’ time.”
           </Text>
           <Text
-            style={{ fontFamily: 'open-sans-regular' }}
+            style={{ fontFamily: 'montserrat-regular' }}
             size={16}
             color={nowTheme.COLORS.TEXT}
             style={{ paddingTop: 9 }}

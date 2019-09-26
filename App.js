@@ -16,7 +16,7 @@ const assetImages = [
   Images.Pro,
   Images.ArgonLogo,
   Images.iOSLogo,
-  Images.androidLogo,
+  Images.androidLogo
 ];
 
 // cache product images
@@ -35,21 +35,20 @@ function cacheImages(images) {
 export default class App extends React.Component {
   state = {
     isLoadingComplete: false,
-    fontLoaded: false,
-  }
+    fontLoaded: false
+  };
 
   async componentDidMount() {
     Font.loadAsync({
-      'open-sans-regular': require('./assets/font/OpenSans-Regular.ttf'),
-      'open-sans-light': require('./assets/font/OpenSans-Light.ttf'),
-      'open-sans-bold': require('./assets/font/OpenSans-Bold.ttf'),
+      'montserrat-regular': require('./assets/font/Montserrat-Regular.ttf'),
+      'montserrat-bold': require('./assets/font/Montserrat-Bold.ttf')
     });
 
     this.setState({ fontLoaded: true });
   }
 
   render() {
-    if(!this.state.isLoadingComplete) {
+    if (!this.state.isLoadingComplete) {
       return (
         <AppLoading
           startAsync={this._loadResourcesAsync}
@@ -69,9 +68,7 @@ export default class App extends React.Component {
   }
 
   _loadResourcesAsync = async () => {
-    return Promise.all([
-      ...cacheImages(assetImages),
-    ]);
+    return Promise.all([...cacheImages(assetImages)]);
   };
 
   _handleLoadingError = error => {
@@ -81,9 +78,8 @@ export default class App extends React.Component {
   };
 
   _handleFinishLoading = () => {
-    if(this.state.fontLoaded) {
+    if (this.state.fontLoaded) {
       this.setState({ isLoadingComplete: true });
     }
   };
-
 }

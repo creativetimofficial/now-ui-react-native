@@ -71,7 +71,7 @@ class Elements extends React.Component {
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
         <Block center>
             <Button
-              textStyle={{ fontFamily: "open-sans-bold" }}
+              textStyle={{ fontFamily: "montserrat-bold" }}
               color="neutral"
             >
               DEFAULT
@@ -79,7 +79,7 @@ class Elements extends React.Component {
           </Block>
           <Block center>
             <Button
-              textStyle={{ fontFamily: "open-sans-bold" }}
+              textStyle={{ fontFamily: "montserrat-bold" }}
               color="default"
               style={styles.button}
             >
@@ -89,7 +89,7 @@ class Elements extends React.Component {
           <Block center>
             <Button
               color="secondary"
-              textStyle={{ fontFamily: "open-sans-bold", color: "black" }}
+              textStyle={{ fontFamily: "montserrat-bold", color: "black" }}
               style={styles.button}
             >
               SECONDARY
@@ -97,7 +97,7 @@ class Elements extends React.Component {
           </Block>
           <Block center>
             <Button
-              textStyle={{ fontFamily: "open-sans-bold" }}
+              textStyle={{ fontFamily: "montserrat-bold" }}
               style={styles.button}
             >
               PRIMARY
@@ -105,7 +105,7 @@ class Elements extends React.Component {
           </Block>
           <Block center>
             <Button
-              textStyle={{ fontFamily: "open-sans-bold" }}
+              textStyle={{ fontFamily: "montserrat-bold" }}
               color="info"
               style={styles.button}
             >
@@ -114,7 +114,7 @@ class Elements extends React.Component {
           </Block>
           <Block center>
             <Button
-              textStyle={{ fontFamily: "open-sans-bold" }}
+              textStyle={{ fontFamily: "montserrat-bold" }}
               color="success"
               style={styles.button}
             >
@@ -123,7 +123,7 @@ class Elements extends React.Component {
           </Block>
           <Block center>
             <Button
-              textStyle={{ fontFamily: "open-sans-bold" }}
+              textStyle={{ fontFamily: "montserrat-bold" }}
               color="warning"
               style={styles.button}
             >
@@ -132,7 +132,7 @@ class Elements extends React.Component {
           </Block>
           <Block center>
             <Button
-              textStyle={{ fontFamily: "open-sans-bold" }}
+              textStyle={{ fontFamily: "montserrat-bold" }}
               color="error"
               style={styles.button}
             >
@@ -148,7 +148,7 @@ class Elements extends React.Component {
             </Block>
             <Block flex center>
               <Button
-                textStyle={{ fontFamily: "open-sans-bold", fontSize: 12 }}
+                textStyle={{ fontFamily: "montserrat-bold", fontSize: 12 }}
                 small
                 center
                 color="default"
@@ -159,7 +159,7 @@ class Elements extends React.Component {
             </Block>
             <Block flex={1.25} right>
               <Button
-                textStyle={{ fontFamily: "open-sans-bold", fontSize: 12 }}
+                textStyle={{ fontFamily: "montserrat-bold", fontSize: 12 }}
                 center
                 color="default"
                 style={styles.optionsButton}
@@ -183,7 +183,7 @@ class Elements extends React.Component {
           <Text
             h1
             style={{
-              fontFamily: "open-sans-regular",
+              fontFamily: "montserrat-regular",
               marginBottom: theme.SIZES.BASE / 2
             }}
             color={nowTheme.COLORS.DEFAULT}
@@ -193,7 +193,7 @@ class Elements extends React.Component {
           <Text
             h2
             style={{
-              fontFamily: "open-sans-regular",
+              fontFamily: "montserrat-regular",
               marginBottom: theme.SIZES.BASE / 2
             }}
             color={nowTheme.COLORS.DEFAULT}
@@ -203,7 +203,7 @@ class Elements extends React.Component {
           <Text
             h3
             style={{
-              fontFamily: "open-sans-regular",
+              fontFamily: "montserrat-regular",
               marginBottom: theme.SIZES.BASE / 2
             }}
             color={nowTheme.COLORS.DEFAULT}
@@ -213,7 +213,7 @@ class Elements extends React.Component {
           <Text
             h4
             style={{
-              fontFamily: "open-sans-regular",
+              fontFamily: "montserrat-regular",
               marginBottom: theme.SIZES.BASE / 2
             }}
             color={nowTheme.COLORS.DEFAULT}
@@ -223,7 +223,7 @@ class Elements extends React.Component {
           <Text
             h5
             style={{
-              fontFamily: "open-sans-regular",
+              fontFamily: "montserrat-regular",
               marginBottom: theme.SIZES.BASE / 2
             }}
             color={nowTheme.COLORS.DEFAULT}
@@ -233,14 +233,14 @@ class Elements extends React.Component {
           <Text
             p
             style={{
-              fontFamily: "open-sans-regular",
+              fontFamily: "montserrat-regular",
               marginBottom: theme.SIZES.BASE / 2
             }}
             color={nowTheme.COLORS.DEFAULT}
           >
             Paragraph
           </Text>
-          <Text style={{ fontFamily: "open-sans-regular" }} muted>
+          <Text style={{ fontFamily: "montserrat-regular" }} muted>
             This is a muted paragraph.
           </Text>
         </Block>
@@ -372,7 +372,7 @@ class Elements extends React.Component {
             style={{ marginBottom: theme.SIZES.BASE }}
           >
             <Text
-              style={{ fontFamily: "open-sans-regular" }}
+              style={{ fontFamily: "montserrat-regular" }}
               size={14}
               color={nowTheme.COLORS.TEXT}
             >
@@ -385,7 +385,7 @@ class Elements extends React.Component {
           </Block>
           <Block row middle space="between">
             <Text
-              style={{ fontFamily: "open-sans-regular" }}
+              style={{ fontFamily: "montserrat-regular" }}
               size={14}
               color={nowTheme.COLORS.TEXT}
             >
@@ -413,7 +413,7 @@ class Elements extends React.Component {
             <TouchableOpacity onPress={() => navigation.navigate("Pro")}>
               <Block row middle space="between" style={{ paddingTop: 7 }}>
                 <Text
-                  style={{ fontFamily: "open-sans-regular" }}
+                  style={{ fontFamily: "montserrat-regular" }}
                   size={14}
                   color={nowTheme.COLORS.TEXT}
                 >
@@ -1001,7 +1001,7 @@ class Elements extends React.Component {
                 }}
               >
                 <Block style={styles.categoryTitle}>
-                  <Text style={{ fontFamily: 'open-sans-bold' }} size={18} color={theme.COLORS.WHITE}>
+                  <Text style={{ fontFamily: 'montserrat-bold' }} size={18} color={theme.COLORS.WHITE}>
                     View article
                   </Text>
                 </Block>
@@ -1168,7 +1168,7 @@ class Elements extends React.Component {
 
 const styles = StyleSheet.create({
   title: {
-    fontFamily: "open-sans-bold",
+    fontFamily: "montserrat-bold",
     paddingBottom: theme.SIZES.BASE,
     paddingHorizontal: theme.SIZES.BASE * 2,
     marginTop: 44,
@@ -1323,11 +1323,11 @@ const styles = StyleSheet.create({
   productPrice: {
     paddingTop: theme.SIZES.BASE,
     paddingBottom: theme.SIZES.BASE / 2,
-    fontFamily: "open-sans-bold"
+    fontFamily: "montserrat-bold"
   },
   productDescription: {
     paddingTop: theme.SIZES.BASE,
-    fontFamily: "open-sans-regular"
+    fontFamily: "montserrat-regular"
     // paddingBottom: theme.SIZES.BASE * 2,
   },
   textArea: {
@@ -1367,11 +1367,11 @@ const styles = StyleSheet.create({
   productPrice: {
     paddingTop: theme.SIZES.BASE,
     paddingBottom: theme.SIZES.BASE / 2,
-    fontFamily: 'open-sans-bold'
+    fontFamily: 'montserrat-bold'
   },
   productDescription: {
     paddingTop: theme.SIZES.BASE,
-    fontFamily: 'open-sans-regular'
+    fontFamily: 'montserrat-regular'
     // paddingBottom: theme.SIZES.BASE * 2,
   },
   group: {

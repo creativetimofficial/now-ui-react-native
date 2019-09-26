@@ -49,7 +49,7 @@ class Card extends React.Component {
           <Block flex space="between" style={styles.cardDescription}>
             <Block flex>
               <Text
-                style={{ fontFamily: 'open-sans-regular' }}
+                style={{ fontFamily: 'montserrat-regular' }}
                 size={14}
                 style={styles.cardTitle}
                 color={nowTheme.COLORS.TEXT}
@@ -58,7 +58,7 @@ class Card extends React.Component {
               </Text>
               {item.body ? (
                 <Block flex left>
-                  <Text style={{ fontFamily: 'open-sans-regular' }} size={12} color={nowTheme.COLORS.TEXT}>
+                  <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color={nowTheme.COLORS.TEXT}>
                     {item.body}
                   </Text>
                 </Block>
@@ -68,7 +68,7 @@ class Card extends React.Component {
             </Block>
             <Block right={ctaRight ? true : false}>
               <Text
-                style={{ fontFamily: 'open-sans-bold' }}
+                style={{ fontFamily: 'montserrat-bold' }}
                 size={12}
                 muted={!ctaColor}
                 color={ctaColor || nowTheme.COLORS.ACTIVE}
