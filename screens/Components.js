@@ -278,7 +278,7 @@ class Components extends React.Component {
                   backgroundColor: nowTheme.COLORS.INPUT_SUCCESS
                 }}
               >
-                <Icon size={11} color={nowTheme.COLORS.ICON} name="g-check" family="ArgonExtra" />
+                <Icon size={11} color={nowTheme.COLORS.ICON} name="check-22x" family="NowExtra" />
               </Block>
             }
           />
@@ -298,7 +298,12 @@ class Components extends React.Component {
                   backgroundColor: nowTheme.COLORS.INPUT_ERROR
                 }}
               >
-                <Icon size={11} color={nowTheme.COLORS.ICON} name="support" family="ArgonExtra" />
+                <Icon
+                  size={11}
+                  color={nowTheme.COLORS.ICON}
+                  name="simple-remove2x"
+                  family="NowExtra"
+                />
               </Block>
             }
           />
@@ -311,8 +316,8 @@ class Components extends React.Component {
                 size={11}
                 style={{ marginRight: 10 }}
                 color={nowTheme.COLORS.ICON}
-                name="search-zoom-in"
-                family="ArgonExtra"
+                name="zoom-bold2x"
+                family="NowExtra"
               />
             }
           />
@@ -323,12 +328,7 @@ class Components extends React.Component {
             right
             placeholder="Icon Right"
             iconContent={
-              <Icon
-                size={11}
-                color={nowTheme.COLORS.ICON}
-                name="search-zoom-in"
-                family="ArgonExtra"
-              />
+              <Icon size={11} color={nowTheme.COLORS.ICON} name="zoom-bold2x" family="NowExtra" />
             }
           />
         </Block>

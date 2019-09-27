@@ -11,44 +11,42 @@ class DrawerItem extends React.Component {
 
     switch (title) {
       case 'Home':
-        return <Icon name="shop" family="ArgonExtra" size={14} color={'rgba(0,0,0,0.5)'} />;
+        return <Icon name="app2x" family="NowExtra" size={14} color={'white'} />;
       case 'Components':
-        return <Icon name="map-big" family="ArgonExtra" size={14} color={'rgba(0,0,0,0.5)'} />;
+        return <Icon name="atom2x" family="NowExtra" size={14} color={'white'} />;
       case 'Articles':
-        return <Icon name="spaceship" family="ArgonExtra" size={14} color={'rgba(0,0,0,0.5)'} />;
+        return <Icon name="paper" family="NowExtra" size={14} color={'white'} />;
       case 'Profile':
-        return <Icon name="chart-pie-35" family="ArgonExtra" size={14} color={'rgba(0,0,0,0.5)'} />;
+        return <Icon name="profile-circle" family="NowExtra" size={14} color={'white'} />;
       case 'Account':
-        return (
-          <Icon name="calendar-date" family="ArgonExtra" size={14} color={'rgba(0,0,0,0.5)'} />
-        );
+        return <Icon name="badge2x" family="NowExtra" size={14} color={'white'} />;
       case 'Examples':
         return (
           <Icon
-            name="calendar-date"
-            family="ArgonExtra"
+            name="album"
+            family="NowExtra"
             size={14}
-            color={focused ? nowTheme.COLORS.PRIMARY : 'rgba(0,0,0,0.5)'}
+            color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
           />
         );
       case 'Getting Started':
         return (
           <Icon
-            name="spaceship"
-            family="ArgonExtra"
+            name="spaceship2x"
+            family="NowExtra"
             size={14}
             style={{ borderColor: 'rgba(0,0,0,0.5)' }}
-            color={focused ? nowTheme.COLORS.PRIMARY : 'rgba(0,0,0,0.5)'}
+            color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
           />
         );
       case 'LOGOUT':
         return (
           <Icon
-            name="spaceship"
-            family="ArgonExtra"
+            name="share"
+            family="NowExtra"
             size={14}
             style={{ borderColor: 'rgba(0,0,0,0.5)' }}
-            color={focused ? nowTheme.COLORS.PRIMARY : 'rgba(0,0,0,0.5)'}
+            color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
           />
         );
       default:

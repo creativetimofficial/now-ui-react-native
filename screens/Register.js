@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   StyleSheet,
   ImageBackground,
@@ -6,24 +6,16 @@ import {
   StatusBar,
   TouchableWithoutFeedback,
   Keyboard
-} from "react-native";
-import {
-  Block,
-  Checkbox,
-  Text,
-  Button as GaButton,
-  theme
-} from "galio-framework";
+} from 'react-native';
+import { Block, Checkbox, Text, Button as GaButton, theme } from 'galio-framework';
 
-import { Button, Icon, Input } from "../components";
-import { Images, nowTheme } from "../constants";
+import { Button, Icon, Input } from '../components';
+import { Images, nowTheme } from '../constants';
 
-const { width, height } = Dimensions.get("screen");
+const { width, height } = Dimensions.get('screen');
 
 const DismissKeyboard = ({ children }) => (
-  <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-    {children}
-  </TouchableWithoutFeedback>
+  <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>{children}</TouchableWithoutFeedback>
 );
 
 class Register extends React.Component {
@@ -32,23 +24,25 @@ class Register extends React.Component {
       <DismissKeyboard>
         <Block flex middle>
           <StatusBar hidden />
-          <ImageBackground
-            source={Images.RegisterBackground}
-            style={{ width, height, zIndex: 1 }}
-          >
+          <ImageBackground source={Images.RegisterBackground} style={{ width, height, zIndex: 1 }}>
             <Block flex middle>
               <Block style={styles.registerContainer}>
                 <Block flex space="evenly">
                   <Block flex={0.4} middle style={styles.socialConnect}>
                     <Block flex={0.5} middle>
-                      <Text  style={{
-                          fontFamily: "montserrat-regular",
-                          textAlign: "center"
-                        }}   color="#8898AA"
-                        size={20}>Register</Text>
+                      <Text
+                        style={{
+                          fontFamily: 'montserrat-regular',
+                          textAlign: 'center'
+                        }}
+                        color="#8898AA"
+                        size={20}
+                      >
+                        Register
+                      </Text>
                     </Block>
 
-                    <Block flex={0.5} row middle space="between"  style={{ marginBottom: 18 }}>
+                    <Block flex={0.5} row middle space="between" style={{ marginBottom: 18 }}>
                       <GaButton
                         round
                         onlyIcon
@@ -86,26 +80,22 @@ class Register extends React.Component {
                     </Block>
                   </Block>
                   <Block flex={0.1} middle>
-                      <Text
-                        style={{
-                          fontFamily: "montserrat-regular",
-                          textAlign: "center"
-                        }}
-                        color="#8898AA"
-                        size={20}
-                      >
-                        or be classical
-                      </Text>
-                    </Block>
+                    <Text
+                      style={{
+                        fontFamily: 'montserrat-regular',
+                        textAlign: 'center'
+                      }}
+                      color="#8898AA"
+                      size={20}
+                    >
+                      or be classical
+                    </Text>
+                  </Block>
                   <Block flex={0.8} middle space="between">
-
                     <Block center flex={0.9}>
                       <Block flex space="between">
                         <Block>
-                          <Block
-                            width={width * 0.8}
-                            style={{ marginBottom: 5 }}
-                          >
+                          <Block width={width * 0.8} style={{ marginBottom: 5 }}>
                             <Input
                               borderless
                               placeholder="First Name"
@@ -113,17 +103,14 @@ class Register extends React.Component {
                                 <Icon
                                   size={16}
                                   color="#ADB5BD"
-                                  name="hat-3"
-                                  family="ArgonExtra"
+                                  name="profile-circle"
+                                  family="NowExtra"
                                   style={styles.inputIcons}
                                 />
                               }
                             />
                           </Block>
-                          <Block
-                            width={width * 0.8}
-                            style={{ marginBottom: 5 }}
-                          >
+                          <Block width={width * 0.8} style={{ marginBottom: 5 }}>
                             <Input
                               borderless
                               placeholder="Last Name"
@@ -131,8 +118,8 @@ class Register extends React.Component {
                                 <Icon
                                   size={16}
                                   color="#ADB5BD"
-                                  name="ic_mail_24px"
-                                  family="ArgonExtra"
+                                  name="caps-small2x"
+                                  family="NowExtra"
                                   style={styles.inputIcons}
                                 />
                               }
@@ -146,8 +133,8 @@ class Register extends React.Component {
                                 <Icon
                                   size={16}
                                   color="#ADB5BD"
-                                  name="ic_mail_24px"
-                                  family="ArgonExtra"
+                                  name="email-852x"
+                                  family="NowExtra"
                                   style={styles.inputIcons}
                                 />
                               }
@@ -161,32 +148,16 @@ class Register extends React.Component {
                               color={nowTheme.COLORS.PRIMARY}
                               labelStyle={{
                                 color: nowTheme.COLORS.TEXT,
-                                fontFamily: "montserrat-regular"
+                                fontFamily: 'montserrat-regular'
                               }}
-                              label="I agree with the"
+                              label="I agree to the terms and conditions."
                             />
-                            <Button
-                              style={{ width: 100 }}
-                              color="transparent"
-                              textStyle={{
-                                color: nowTheme.COLORS.PRIMARY,
-                                fontSize: 14,
-                                fontFamily: "montserrat-regular",
-                                marginRight: 5
-                              }}
-                            >
-                              Privacy Policy
-                            </Button>
                           </Block>
                         </Block>
                         <Block center>
-                          <Button
-                            color="primary"
-                            round
-                            style={styles.createButton}
-                          >
+                          <Button color="primary" round style={styles.createButton}>
                             <Text
-                              style={{ fontFamily: "montserrat-bold" }}
+                              style={{ fontFamily: 'montserrat-bold' }}
                               size={14}
                               color={nowTheme.COLORS.WHITE}
                             >
@@ -221,7 +192,7 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     shadowOpacity: 0.1,
     elevation: 1,
-    overflow: "hidden"
+    overflow: 'hidden'
   },
   socialConnect: {
     backgroundColor: nowTheme.COLORS.WHITE
@@ -231,7 +202,7 @@ const styles = StyleSheet.create({
   socialButtons: {
     width: 120,
     height: 40,
-    backgroundColor: "#fff",
+    backgroundColor: '#fff',
     shadowColor: nowTheme.COLORS.BLACK,
     shadowOffset: {
       width: 0,
@@ -243,7 +214,7 @@ const styles = StyleSheet.create({
   },
   socialTextButtons: {
     color: nowTheme.COLORS.PRIMARY,
-    fontWeight: "800",
+    fontWeight: '800',
     fontSize: 14
   },
   inputIcons: {
@@ -263,8 +234,8 @@ const styles = StyleSheet.create({
     width: theme.SIZES.BASE * 3.5,
     height: theme.SIZES.BASE * 3.5,
     borderRadius: theme.SIZES.BASE * 1.75,
-    justifyContent: "center",
-    marginHorizontal:10
+    justifyContent: 'center',
+    marginHorizontal: 10
   }
 });
 

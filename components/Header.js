@@ -18,7 +18,7 @@ const BellButton = ({ isWhite, style, navigation }) => (
     onPress={() => navigation.navigate('Notifications')}
   >
     <Icon
-      family="ArgonExtra"
+      family="NowExtra"
       size={16}
       name="bell"
       color={nowTheme.COLORS[isWhite ? 'WHITE' : 'ICON']}
@@ -30,9 +30,9 @@ const BellButton = ({ isWhite, style, navigation }) => (
 const BasketButton = ({ isWhite, style, navigation }) => (
   <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Cart')}>
     <Icon
-      family="ArgonExtra"
+      family="NowExtra"
       size={16}
-      name="basket"
+      name="basket2x"
       color={nowTheme.COLORS[isWhite ? 'WHITE' : 'ICON']}
     />
   </TouchableOpacity>
@@ -43,7 +43,7 @@ const SearchButton = ({ isWhite, style, navigation }) => (
     <Icon
       size={16}
       family="Galio"
-      name="search-zoom-in"
+      name="zoom-bold2x"
       color={theme.COLORS[isWhite ? 'WHITE' : 'ICON']}
     />
   </TouchableOpacity>
@@ -121,7 +121,7 @@ class Header extends React.Component {
         placeholderTextColor={'#8898AA'}
         onFocus={() => navigation.navigate('Search')}
         iconContent={
-          <Icon size={16} color={theme.COLORS.MUTED} name="search-zoom-in" family="ArgonExtra" />
+          <Icon size={16} color={theme.COLORS.MUTED} name="zoom-bold2x" family="NowExtra" />
         }
       />
     );
@@ -138,8 +138,8 @@ class Header extends React.Component {
         >
           <Block row middle>
             <Icon
-              name="diamond"
-              family="ArgonExtra"
+              name="bulb"
+              family="NowExtra"
               style={{ paddingRight: 8 }}
               color={nowTheme.COLORS.ICON}
             />
@@ -152,8 +152,8 @@ class Header extends React.Component {
           <Block row middle>
             <Icon
               size={16}
-              name="bag-17"
-              family="ArgonExtra"
+              name="bag-162x"
+              family="NowExtra"
               style={{ paddingRight: 8 }}
               color={nowTheme.COLORS.ICON}
             />
@@ -223,8 +223,8 @@ class Header extends React.Component {
           rightStyle={{ alignItems: 'center' }}
           left={
             <Icon
-              name={back ? 'nav-left' : 'menu-8'}
-              family="ArgonExtra"
+              name={back ? 'minimal-left2x' : 'align-left-22x'}
+              family="NowExtra"
               size={14}
               onPress={this.handleLeftPress}
               color={iconColor || nowTheme.COLORS.ICON}
