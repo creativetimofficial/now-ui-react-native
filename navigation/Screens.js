@@ -1,46 +1,46 @@
-import React from "react";
-import { Easing, Animated } from "react-native";
+import React from 'react';
+import { Easing, Animated } from 'react-native';
 import {
   createStackNavigator,
   createDrawerNavigator,
   createBottomTabNavigator,
   createAppContainer
-} from "react-navigation";
-import { Icon } from "../components";
-import { nowTheme } from "../constants";
+} from 'react-navigation';
+import { Icon } from '../components';
+import { nowTheme } from '../constants';
 // screens
-import Home from "../screens/Home";
+import Home from '../screens/Home';
 // import Onboarding from "../screens/Onboarding";
-import Pro from "../screens/Pro";
-import Profile from "../screens/Profile";
-import Register from "../screens/Register";
-import Elements from "../screens/Elements";
-import Articles from "../screens/Articles";
-import Beauty from "../screens/Beauty";
-import Category from "../screens/Category";
-import Fashion from "../screens/Fashion";
-import Product from "../screens/Product";
-import Gallery from "../screens/Gallery";
-import Chat from "../screens/Chat";
-import Search from "../screens/Search";
-import Cart from "../screens/Cart";
+import Pro from '../screens/Pro';
+import Profile from '../screens/Profile';
+import Register from '../screens/Register';
+import Components from '../screens/Components';
+import Articles from '../screens/Articles';
+import Beauty from '../screens/Beauty';
+import Category from '../screens/Category';
+import Fashion from '../screens/Fashion';
+import Product from '../screens/Product';
+import Gallery from '../screens/Gallery';
+import Chat from '../screens/Chat';
+import Search from '../screens/Search';
+import Cart from '../screens/Cart';
 // settings
-import SettingsScreen from "../screens/Settings";
-import AgreementScreen from "../screens/Agreement";
-import PrivacyScreen from "../screens/Privacy";
-import AboutScreen from "../screens/About";
-import NotificationsScreen from "../screens/Notifications";
+import SettingsScreen from '../screens/Settings';
+import AgreementScreen from '../screens/Agreement';
+import PrivacyScreen from '../screens/Privacy';
+import AboutScreen from '../screens/About';
+import NotificationsScreen from '../screens/Notifications';
 // Notifications
-import PersonalNotifications from "../screens/PersonalNotifications";
-import SystemNotifications from "../screens/SystemNotifications";
+import PersonalNotifications from '../screens/PersonalNotifications';
+import SystemNotifications from '../screens/SystemNotifications';
 
 // drawer
-import Menu from "./Menu";
-import DrawerItem from "../components/DrawerItem";
+import Menu from './Menu';
+import DrawerItem from '../components/DrawerItem';
 
 // header for screens
-import Header from "../components/Header";
-import tabs from "../constants/tabs";
+import Header from '../components/Header';
+import tabs from '../constants/tabs';
 
 const transitionConfig = (transitionProps, prevTransitionProps) => ({
   transitionSpec: {
@@ -67,12 +67,11 @@ const transitionConfig = (transitionProps, prevTransitionProps) => ({
     });
 
     const scaleWithOpacity = { opacity };
-    const screenName = "Search";
+    const screenName = 'Search';
 
     if (
       screenName === transitionProps.scene.route.routeName ||
-      (prevTransitionProps &&
-        screenName === prevTransitionProps.scene.route.routeName)
+      (prevTransitionProps && screenName === prevTransitionProps.scene.route.routeName)
     ) {
       return scaleWithOpacity;
     }
@@ -90,39 +89,45 @@ const NotificationsStack = createBottomTabNavigator(
       tabBarIcon: ({ focused, horizontal, tintColor }) => {
         const { routeName } = navigation.state;
         let iconName;
-        if (routeName === "Personal") {
-          iconName = "user";
-        } else if (routeName === "System") {
-          iconName = "database";
+        if (routeName === 'Personal') {
+          iconName = 'user';
+        } else if (routeName === 'System') {
+          iconName = 'database';
         }
         // You can return any component that you like here!
         return (
-          <Icon name={iconName} family="entypo" size={22} color={tintColor} style={{ marginTop : 10 }} />
+          <Icon
+            name={iconName}
+            family="entypo"
+            size={22}
+            color={tintColor}
+            style={{ marginTop: 10 }}
+          />
         );
       }
     }),
     tabBarOptions: {
       activeTintColor: nowTheme.COLORS.PRIMARY,
-      inactiveTintColor: "gray",
+      inactiveTintColor: 'gray',
       labelStyle: {
-        fontFamily: 'montserrat-regular',
+        fontFamily: 'montserrat-regular'
       }
     }
   }
 );
 
-const ElementsStack = createStackNavigator(
+const ComponentsStack = createStackNavigator(
   {
-    Elements: {
-      screen: Elements,
+    Components: {
+      screen: Components,
       navigationOptions: ({ navigation }) => ({
-        header: <Header title="Elements" navigation={navigation} />
+        header: <Header title="Components" navigation={navigation} />
       })
     }
   },
   {
     cardStyle: {
-      backgroundColor: "#F8F9FE"
+      backgroundColor: '#F8F9FE'
     },
     transitionConfig
   }
@@ -174,7 +179,7 @@ const SettingsStack = createStackNavigator(
     }
   },
   {
-    cardStyle: { backgroundColor: "#F8F9FE" },
+    cardStyle: { backgroundColor: '#F8F9FE' },
     transitionConfig
   }
 );
@@ -190,7 +195,7 @@ const ArticlesStack = createStackNavigator(
   },
   {
     cardStyle: {
-      backgroundColor: "#F8F9FE"
+      backgroundColor: '#F8F9FE'
     },
     transitionConfig
   }
@@ -202,13 +207,7 @@ const ProfileStack = createStackNavigator(
       screen: Profile,
       navigationOptions: ({ navigation }) => ({
         header: (
-          <Header
-            white
-            transparent
-            title="Profile"
-            iconColor={"#FFF"}
-            navigation={navigation}
-          />
+          <Header white transparent title="Profile" iconColor={'#FFF'} navigation={navigation} />
         ),
         headerTransparent: true
       })
@@ -227,7 +226,7 @@ const ProfileStack = createStackNavigator(
     }
   },
   {
-    cardStyle: { backgroundColor: "#FFFFFF" },
+    cardStyle: { backgroundColor: '#FFFFFF' },
     transitionConfig
   }
 );
@@ -243,21 +242,14 @@ const HomeStack = createStackNavigator(
     Beauty: {
       screen: Beauty,
       navigationOptions: ({ navigation }) => ({
-        header: (
-          <Header
-            back
-            title="Beauty"
-            tabs={tabs.beauty}
-            navigation={navigation}
-          />
-        )
+        header: <Header back title="Beauty" tabs={tabs.beauty} navigation={navigation} />
       })
     },
     Category: {
       screen: Category,
       navigationOptions: ({ navigation }) => {
         const { params } = navigation.state;
-        const title = (params && params.title) || "Category";
+        const title = (params && params.title) || 'Category';
         return {
           header: <Header back title={title} navigation={navigation} />
         };
@@ -266,31 +258,20 @@ const HomeStack = createStackNavigator(
     Fashion: {
       screen: Fashion,
       navigationOptions: ({ navigation }) => ({
-        header: (
-          <Header
-            back
-            title="Fashion"
-            tabs={tabs.fashion}
-            navigation={navigation}
-          />
-        )
+        header: <Header back title="Fashion" tabs={tabs.fashion} navigation={navigation} />
       })
     },
     Product: {
       screen: Product,
       navigationOptions: ({ navigation }) => ({
-        header: (
-          <Header back white transparent title="" navigation={navigation} />
-        ),
+        header: <Header back white transparent title="" navigation={navigation} />,
         headerTransparent: true
       })
     },
     Gallery: {
       screen: Gallery,
       navigationOptions: ({ navigation }) => ({
-        header: (
-          <Header back white transparent title="" navigation={navigation} />
-        ),
+        header: <Header back white transparent title="" navigation={navigation} />,
         headerTransparent: true
       })
     },
@@ -321,7 +302,7 @@ const HomeStack = createStackNavigator(
   },
   {
     cardStyle: {
-      backgroundColor: "#F8F9FE"
+      backgroundColor: '#F8F9FE'
     },
     transitionConfig
   }
@@ -338,8 +319,28 @@ const AppStack = createDrawerNavigator(
     Home: {
       screen: HomeStack,
       navigationOptions: navOpt => ({
+        drawerLabel: ({ focused }) => <DrawerItem focused={focused} title="Home" />
+      })
+    },
+    Settings: {
+      screen: SettingsStack,
+      navigationOptions: navOpt => ({
+        drawerLabel: ({ focused }) => <DrawerItem focused={focused} title="Examples" />
+      })
+    },
+    Components: {
+      screen: ComponentsStack,
+      navigationOptions: navOpt => ({
         drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} title="Home" />
+          <DrawerItem focused={focused} screen="Components" title="Components" />
+        )
+      })
+    },
+    Articles: {
+      screen: ArticlesStack,
+      navigationOptions: navOpt => ({
+        drawerLabel: ({ focused }) => (
+          <DrawerItem focused={focused} screen="Articles" title="Articles" />
         )
       })
     },
@@ -358,31 +359,7 @@ const AppStack = createDrawerNavigator(
           <DrawerItem focused={focused} screen="Register" title="Account" />
         )
       })
-    },
-    Elements: {
-      screen: ElementsStack,
-      navigationOptions: navOpt => ({
-        drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} screen="Elements" title="Elements" />
-        )
-      })
-    },
-    Articles: {
-      screen: ArticlesStack,
-      navigationOptions: navOpt => ({
-        drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} screen="Articles" title="Articles" />
-        )
-      })
-    },
-    Settings: {
-      screen: SettingsStack,
-      navigationOptions: navOpt => ({
-        drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} title="Settings" />
-        )
-      })
-    },
+    }
   },
   Menu
 );

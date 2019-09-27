@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   ScrollView,
   StyleSheet,
@@ -6,37 +6,37 @@ import {
   TouchableOpacity,
   Alert,
   Image,
-  ImageBackground,
-} from "react-native";
+  ImageBackground
+} from 'react-native';
 // Galio components
-import { Block, Text, Button as GaButton, theme } from "galio-framework";
+import { Block, Text, Button as GaButton, theme } from 'galio-framework';
 
 // Argon themed components
-import { articles, Images, nowTheme, tabs  } from "../constants/";
-import { Button, Select, Icon, Input, Header, Switch } from "../components";
+import { articles, Images, nowTheme, tabs } from '../constants';
+import { Button, Select, Icon, Input, Header, Switch } from '../components';
 
-import Img from "../components/Img";
-import { Notification } from "../components";
-import { Card } from "../components/";
+import Img from '../components/Img';
+import { Notification } from '../components';
+import { Card } from '../components';
 
-const { width } = Dimensions.get("screen");
+const { width } = Dimensions.get('screen');
 
 const thumbMeasure = (width - 48 - 32) / 3;
 const cardWidth = width - theme.SIZES.BASE * 2;
 
-class Elements extends React.Component {
+class Components extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       checkSelected: [],
-      "switch-1": true,
-      "switch-2": false,
+      'switch-1': true,
+      'switch-2': false,
       progress: 0,
       value: 50,
       checked: false,
-      borderTextArea: "#E3E3E3",
-      textTag:"City",
-      tags:["Washington", "Sydney", "Beijing"]
+      borderTextArea: '#E3E3E3',
+      textTag: 'City',
+      tags: ['Washington', 'Sydney', 'Beijing']
     };
   }
   _onSelect = id => {
@@ -59,8 +59,7 @@ class Elements extends React.Component {
     });
   }
 
-  toggleSwitch = switchId =>
-    this.setState({ [switchId]: !this.state[switchId] });
+  toggleSwitch = switchId => this.setState({ [switchId]: !this.state[switchId] });
 
   renderButtons = () => {
     return (
@@ -69,17 +68,14 @@ class Elements extends React.Component {
           Buttons
         </Text>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-        <Block center>
-            <Button
-              textStyle={{ fontFamily: "montserrat-bold" }}
-              color="neutral"
-            >
+          <Block center>
+            <Button textStyle={{ fontFamily: 'montserrat-bold' }} color="neutral">
               DEFAULT
             </Button>
           </Block>
           <Block center>
             <Button
-              textStyle={{ fontFamily: "montserrat-bold" }}
+              textStyle={{ fontFamily: 'montserrat-bold' }}
               color="default"
               style={styles.button}
             >
@@ -89,23 +85,20 @@ class Elements extends React.Component {
           <Block center>
             <Button
               color="secondary"
-              textStyle={{ fontFamily: "montserrat-bold", color: "black" }}
+              textStyle={{ fontFamily: 'montserrat-bold', color: 'black' }}
               style={styles.button}
             >
               SECONDARY
             </Button>
           </Block>
           <Block center>
-            <Button
-              textStyle={{ fontFamily: "montserrat-bold" }}
-              style={styles.button}
-            >
+            <Button textStyle={{ fontFamily: 'montserrat-bold' }} style={styles.button}>
               PRIMARY
             </Button>
           </Block>
           <Block center>
             <Button
-              textStyle={{ fontFamily: "montserrat-bold" }}
+              textStyle={{ fontFamily: 'montserrat-bold' }}
               color="info"
               style={styles.button}
             >
@@ -114,7 +107,7 @@ class Elements extends React.Component {
           </Block>
           <Block center>
             <Button
-              textStyle={{ fontFamily: "montserrat-bold" }}
+              textStyle={{ fontFamily: 'montserrat-bold' }}
               color="success"
               style={styles.button}
             >
@@ -123,7 +116,7 @@ class Elements extends React.Component {
           </Block>
           <Block center>
             <Button
-              textStyle={{ fontFamily: "montserrat-bold" }}
+              textStyle={{ fontFamily: 'montserrat-bold' }}
               color="warning"
               style={styles.button}
             >
@@ -132,7 +125,7 @@ class Elements extends React.Component {
           </Block>
           <Block center>
             <Button
-              textStyle={{ fontFamily: "montserrat-bold" }}
+              textStyle={{ fontFamily: 'montserrat-bold' }}
               color="error"
               style={styles.button}
             >
@@ -141,14 +134,11 @@ class Elements extends React.Component {
           </Block>
           <Block row space="evenly">
             <Block flex left>
-              <Select
-                defaultIndex={1}
-                options={["01", "02", "03", "04", "05"]}
-              />
+              <Select defaultIndex={1} options={['01', '02', '03', '04', '05']} />
             </Block>
             <Block flex center>
               <Button
-                textStyle={{ fontFamily: "montserrat-bold", fontSize: 12 }}
+                textStyle={{ fontFamily: 'montserrat-bold', fontSize: 12 }}
                 small
                 center
                 color="default"
@@ -159,7 +149,7 @@ class Elements extends React.Component {
             </Block>
             <Block flex={1.25} right>
               <Button
-                textStyle={{ fontFamily: "montserrat-bold", fontSize: 12 }}
+                textStyle={{ fontFamily: 'montserrat-bold', fontSize: 12 }}
                 center
                 color="default"
                 style={styles.optionsButton}
@@ -183,7 +173,7 @@ class Elements extends React.Component {
           <Text
             h1
             style={{
-              fontFamily: "montserrat-regular",
+              fontFamily: 'montserrat-regular',
               marginBottom: theme.SIZES.BASE / 2
             }}
             color={nowTheme.COLORS.DEFAULT}
@@ -193,7 +183,7 @@ class Elements extends React.Component {
           <Text
             h2
             style={{
-              fontFamily: "montserrat-regular",
+              fontFamily: 'montserrat-regular',
               marginBottom: theme.SIZES.BASE / 2
             }}
             color={nowTheme.COLORS.DEFAULT}
@@ -203,7 +193,7 @@ class Elements extends React.Component {
           <Text
             h3
             style={{
-              fontFamily: "montserrat-regular",
+              fontFamily: 'montserrat-regular',
               marginBottom: theme.SIZES.BASE / 2
             }}
             color={nowTheme.COLORS.DEFAULT}
@@ -213,7 +203,7 @@ class Elements extends React.Component {
           <Text
             h4
             style={{
-              fontFamily: "montserrat-regular",
+              fontFamily: 'montserrat-regular',
               marginBottom: theme.SIZES.BASE / 2
             }}
             color={nowTheme.COLORS.DEFAULT}
@@ -223,7 +213,7 @@ class Elements extends React.Component {
           <Text
             h5
             style={{
-              fontFamily: "montserrat-regular",
+              fontFamily: 'montserrat-regular',
               marginBottom: theme.SIZES.BASE / 2
             }}
             color={nowTheme.COLORS.DEFAULT}
@@ -233,14 +223,14 @@ class Elements extends React.Component {
           <Text
             p
             style={{
-              fontFamily: "montserrat-regular",
+              fontFamily: 'montserrat-regular',
               marginBottom: theme.SIZES.BASE / 2
             }}
             color={nowTheme.COLORS.DEFAULT}
           >
             Paragraph
           </Text>
-          <Text style={{ fontFamily: "montserrat-regular" }} muted>
+          <Text style={{ fontFamily: 'montserrat-regular' }} muted>
             This is a muted paragraph.
           </Text>
         </Block>
@@ -288,12 +278,7 @@ class Elements extends React.Component {
                   backgroundColor: nowTheme.COLORS.INPUT_SUCCESS
                 }}
               >
-                <Icon
-                  size={11}
-                  color={nowTheme.COLORS.ICON}
-                  name="g-check"
-                  family="ArgonExtra"
-                />
+                <Icon size={11} color={nowTheme.COLORS.ICON} name="g-check" family="ArgonExtra" />
               </Block>
             }
           />
@@ -313,12 +298,7 @@ class Elements extends React.Component {
                   backgroundColor: nowTheme.COLORS.INPUT_ERROR
                 }}
               >
-                <Icon
-                  size={11}
-                  color={nowTheme.COLORS.ICON}
-                  name="support"
-                  family="ArgonExtra"
-                />
+                <Icon size={11} color={nowTheme.COLORS.ICON} name="support" family="ArgonExtra" />
               </Block>
             }
           />
@@ -352,8 +332,6 @@ class Elements extends React.Component {
             }
           />
         </Block>
-
-
       </Block>
     );
   };
@@ -365,35 +343,30 @@ class Elements extends React.Component {
           Switches
         </Text>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Block
-            row
-            middle
-            space="between"
-            style={{ marginBottom: theme.SIZES.BASE }}
-          >
+          <Block row middle space="between" style={{ marginBottom: theme.SIZES.BASE }}>
             <Text
-              style={{ fontFamily: "montserrat-regular" }}
+              style={{ fontFamily: 'montserrat-regular' }}
               size={14}
               color={nowTheme.COLORS.TEXT}
             >
               Switch is ON
             </Text>
             <Switch
-              value={this.state["switch-1"]}
-              onValueChange={() => this.toggleSwitch("switch-1")}
+              value={this.state['switch-1']}
+              onValueChange={() => this.toggleSwitch('switch-1')}
             />
           </Block>
           <Block row middle space="between">
             <Text
-              style={{ fontFamily: "montserrat-regular" }}
+              style={{ fontFamily: 'montserrat-regular' }}
               size={14}
               color={nowTheme.COLORS.TEXT}
             >
               Switch is OFF
             </Text>
             <Switch
-              value={this.state["switch-2"]}
-              onValueChange={() => this.toggleSwitch("switch-2")}
+              value={this.state['switch-2']}
+              onValueChange={() => this.toggleSwitch('switch-2')}
             />
           </Block>
         </Block>
@@ -410,20 +383,16 @@ class Elements extends React.Component {
         </Text>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
           <Block style={styles.rows}>
-            <TouchableOpacity onPress={() => navigation.navigate("Pro")}>
+            <TouchableOpacity onPress={() => navigation.navigate('Pro')}>
               <Block row middle space="between" style={{ paddingTop: 7 }}>
                 <Text
-                  style={{ fontFamily: "montserrat-regular" }}
+                  style={{ fontFamily: 'montserrat-regular' }}
                   size={14}
                   color={nowTheme.COLORS.TEXT}
                 >
                   Manage Options
                 </Text>
-                <Icon
-                  name="chevron-right"
-                  family="entypo"
-                  style={{ paddingRight: 5 }}
-                />
+                <Icon name="chevron-right" family="entypo" style={{ paddingRight: 5 }} />
               </Block>
             </TouchableOpacity>
           </Block>
@@ -479,7 +448,6 @@ class Elements extends React.Component {
                 style={[styles.social, styles.shadow]}
               />
             </Block>
-
           </Block>
         </Block>
       </Block>
@@ -512,7 +480,6 @@ class Elements extends React.Component {
             <Header search title="Title" navigation={this.props.navigation} />
           </Block>
 
-
           <Block style={{ marginBottom: theme.SIZES.BASE }}>
             <Header
               options
@@ -523,12 +490,10 @@ class Elements extends React.Component {
               navigation={this.props.navigation}
             />
           </Block>
-
         </Block>
       </Block>
     );
   };
-
 
   renderNeutralSocialBtn = () => {
     return (
@@ -536,11 +501,7 @@ class Elements extends React.Component {
         <Text size={16} style={styles.title}>
           Social Btns Icons
         </Text>
-        <Block
-          middle
-          space="evenly"
-          style={{ paddingHorizontal: theme.SIZES.BASE }}
-        >
+        <Block middle space="evenly" style={{ paddingHorizontal: theme.SIZES.BASE }}>
           <Button
             style={{
               ...styles.socialButtons,
@@ -556,10 +517,7 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.GITHUB}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-              <Text
-                adjustsFontSizeToFit
-                style={{ color: nowTheme.COLORS.GITHUB }}
-              >
+              <Text adjustsFontSizeToFit style={{ color: nowTheme.COLORS.GITHUB }}>
                 Connect with Github
               </Text>
             </Block>
@@ -579,10 +537,7 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.FACEBOOK}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-              <Text
-                adjustsFontSizeToFit
-                style={{ color: nowTheme.COLORS.FACEBOOK }}
-              >
+              <Text adjustsFontSizeToFit style={{ color: nowTheme.COLORS.FACEBOOK }}>
                 Connect with Facebook
               </Text>
             </Block>
@@ -602,10 +557,7 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.GOOGLE}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-              <Text
-                adjustsFontSizeToFit
-                style={{ color: nowTheme.COLORS.GOOGLE }}
-              >
+              <Text adjustsFontSizeToFit style={{ color: nowTheme.COLORS.GOOGLE }}>
                 Share on Google+
               </Text>
             </Block>
@@ -625,10 +577,7 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.PINTEREST}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-              <Text
-                adjustsFontSizeToFit
-                style={{ color: nowTheme.COLORS.PINTEREST }}
-              >
+              <Text adjustsFontSizeToFit style={{ color: nowTheme.COLORS.PINTEREST }}>
                 Pin it - 232
               </Text>
             </Block>
@@ -648,10 +597,7 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.YOUTUBE}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-              <Text
-                adjustsFontSizeToFit
-                style={{ color: nowTheme.COLORS.YOUTUBE }}
-              >
+              <Text adjustsFontSizeToFit style={{ color: nowTheme.COLORS.YOUTUBE }}>
                 View on Youtube
               </Text>
             </Block>
@@ -671,10 +617,7 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.DRIBBBLE}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-              <Text
-                adjustsFontSizeToFit
-                style={{ color: nowTheme.COLORS.DRIBBBLE }}
-              >
+              <Text adjustsFontSizeToFit style={{ color: nowTheme.COLORS.DRIBBBLE }}>
                 Find us on Dribbble
               </Text>
             </Block>
@@ -694,10 +637,7 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.REDDIT}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-              <Text
-                adjustsFontSizeToFit
-                style={{ color: nowTheme.COLORS.REDDIT }}
-              >
+              <Text adjustsFontSizeToFit style={{ color: nowTheme.COLORS.REDDIT }}>
                 Report - 232
               </Text>
             </Block>
@@ -717,10 +657,7 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.TUMBLR}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-              <Text
-                adjustsFontSizeToFit
-                style={{ color: nowTheme.COLORS.TUMBLR }}
-              >
+              <Text adjustsFontSizeToFit style={{ color: nowTheme.COLORS.TUMBLR }}>
                 Repost
               </Text>
             </Block>
@@ -740,10 +677,7 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.LINKEDIN}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-              <Text
-                adjustsFontSizeToFit
-                style={{ color: nowTheme.COLORS.LINKEDIN }}
-              >
+              <Text adjustsFontSizeToFit style={{ color: nowTheme.COLORS.LINKEDIN }}>
                 Connect with Linkedin
               </Text>
             </Block>
@@ -763,10 +697,7 @@ class Elements extends React.Component {
                 color={nowTheme.COLORS.TWITTER}
                 style={{ marginTop: 2, marginRight: 5 }}
               />
-              <Text
-                adjustsFontSizeToFit
-                style={{ color: nowTheme.COLORS.TWITTER }}
-              >
+              <Text adjustsFontSizeToFit style={{ color: nowTheme.COLORS.TWITTER }}>
                 Connect with Twitter
               </Text>
             </Block>
@@ -781,12 +712,8 @@ class Elements extends React.Component {
         <Text size={16} style={styles.title}>
           Social Icons
         </Text>
-        <Block
-          row
-          space="evenly"
-          style={{ paddingHorizontal: theme.SIZES.BASE }}
-        >
-           <Button
+        <Block row space="evenly" style={{ paddingHorizontal: theme.SIZES.BASE }}>
+          <Button
             style={{
               ...styles.neutralIcon,
               ...styles.neutralLink,
@@ -806,8 +733,7 @@ class Elements extends React.Component {
           <Button
             style={{
               ...styles.neutralIcon,
-              ...styles.neutralLink,
-
+              ...styles.neutralLink
             }}
           >
             <Block row>
@@ -823,8 +749,7 @@ class Elements extends React.Component {
           <Button
             style={{
               ...styles.neutralIcon,
-              ...styles.neutralLink,
-
+              ...styles.neutralLink
             }}
           >
             <Block row>
@@ -840,8 +765,7 @@ class Elements extends React.Component {
           <Button
             style={{
               ...styles.neutralIcon,
-              ...styles.neutralLink,
-
+              ...styles.neutralLink
             }}
           >
             <Block row>
@@ -857,11 +781,10 @@ class Elements extends React.Component {
           <Button
             style={{
               ...styles.neutralIcon,
-              ...styles.neutralLink,
-
+              ...styles.neutralLink
             }}
           >
-          <Block row>
+            <Block row>
               <Icon
                 name="logo-github"
                 family="Ionicon"
@@ -872,17 +795,11 @@ class Elements extends React.Component {
             </Block>
           </Button>
         </Block>
-        <Block
-          row
-          space="evenly"
-          style={{ paddingHorizontal: theme.SIZES.BASE }}
-        >
-
+        <Block row space="evenly" style={{ paddingHorizontal: theme.SIZES.BASE }}>
           <Button
             style={{
               ...styles.neutralIcon,
-              ...styles.neutralLink,
-
+              ...styles.neutralLink
             }}
           >
             <Block row>
@@ -898,8 +815,7 @@ class Elements extends React.Component {
           <Button
             style={{
               ...styles.neutralIcon,
-              ...styles.neutralLink,
-
+              ...styles.neutralLink
             }}
           >
             <Block row>
@@ -915,8 +831,7 @@ class Elements extends React.Component {
           <Button
             style={{
               ...styles.neutralIcon,
-              ...styles.neutralLink,
-
+              ...styles.neutralLink
             }}
           >
             <Block row>
@@ -932,8 +847,7 @@ class Elements extends React.Component {
           <Button
             style={{
               ...styles.neutralIcon,
-              ...styles.neutralLink,
-
+              ...styles.neutralLink
             }}
           >
             <Block row>
@@ -949,8 +863,7 @@ class Elements extends React.Component {
           <Button
             style={{
               ...styles.neutralIcon,
-              ...styles.neutralLink,
-
+              ...styles.neutralLink
             }}
           >
             <Block row>
@@ -963,9 +876,7 @@ class Elements extends React.Component {
               />
             </Block>
           </Button>
-
         </Block>
-
       </Block>
     );
   };
@@ -977,82 +888,63 @@ class Elements extends React.Component {
           Cards
         </Text>
         <Block flex>
-
           <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
             <Card item={articles[0]} horizontal />
             <Block flex row>
-              <Card
-                item={articles[1]}
-                style={{ marginRight: theme.SIZES.BASE }}
-              />
+              <Card item={articles[1]} style={{ marginRight: theme.SIZES.BASE }} />
               <Card item={articles[2]} />
             </Block>
             <Card item={articles[4]} full />
             <Block flex card shadow style={styles.category}>
               <ImageBackground
-                source={{ uri: Images.Products["View article"] }}
-                style={[
-                  styles.imageBlock,
-                  { width: width - theme.SIZES.BASE * 2, height: 252 }
-                ]}
+                source={{ uri: Images.Products['View article'] }}
+                style={[styles.imageBlock, { width: width - theme.SIZES.BASE * 2, height: 252 }]}
                 imageStyle={{
                   width: width - theme.SIZES.BASE * 2,
                   height: 252
                 }}
               >
                 <Block style={styles.categoryTitle}>
-                  <Text style={{ fontFamily: 'montserrat-bold' }} size={18} color={theme.COLORS.WHITE}>
+                  <Text
+                    style={{ fontFamily: 'montserrat-bold' }}
+                    size={18}
+                    color={theme.COLORS.WHITE}
+                  >
                     View article
                   </Text>
                 </Block>
               </ImageBackground>
             </Block>
           </Block>
-          </Block>
         </Block>
-
+      </Block>
     );
   };
-  renderAlbums = () =>{
+  renderAlbums = () => {
     const { navigation } = this.props;
 
     return (
-      <Block
-        flex
-        style={[styles.group, { paddingBottom: theme.SIZES.BASE * 5 }]}
-      >
+      <Block flex style={[styles.group, { paddingBottom: theme.SIZES.BASE * 5 }]}>
         <Block style={{ marginHorizontal: theme.SIZES.BASE * 2 }}>
           <Block row space="between">
-          <Text bold size={16} color="#525F7F" style={{ marginTop: 3 }}>
-          Album
-        </Text>
-            <Button
-              small
-              color="transparent"
-              textStyle={{ color: "#5E72E4", fontSize: 14 }}
-            >
+            <Text bold size={16} color="#525F7F" style={{ marginTop: 3 }}>
+              Album
+            </Text>
+            <Button small color="transparent" textStyle={{ color: '#5E72E4', fontSize: 14 }}>
               View All
             </Button>
           </Block>
-          <Block
-            row
-            space="between"
-            style={{ marginTop: theme.SIZES.BASE, flexWrap: "wrap" }}
-          >
+          <Block row space="between" style={{ marginTop: theme.SIZES.BASE, flexWrap: 'wrap' }}>
             {Images.Viewed.map((img, index) => (
               <Block key={`viewed-${img}`} style={styles.shadow}>
-                <Image
-                  resizeMode="cover"
-                  source={{ uri: img }}
-                  style={styles.albumThumb}
-                />
+                <Image resizeMode="cover" source={{ uri: img }} style={styles.albumThumb} />
               </Block>
             ))}
           </Block>
         </Block>
       </Block>
     );
-  }
+  };
   renderNotifications = () => {
     return (
       <Block flex style={styles.group}>
@@ -1069,7 +961,7 @@ class Elements extends React.Component {
             style={{ marginTop: 15 }}
             onPress={() =>
               Alert.alert(
-                "Yes, you can use the notifications as buttons so you could send your customers to anything you want."
+                'Yes, you can use the notifications as buttons so you could send your customers to anything you want.'
               )
             }
           />
@@ -1082,7 +974,7 @@ class Elements extends React.Component {
             style={{ marginTop: 15 }}
             onPress={() =>
               Alert.alert(
-                "Yes, you can use the notifications as buttons so you could send your customers to anything you want."
+                'Yes, you can use the notifications as buttons so you could send your customers to anything you want.'
               )
             }
           />
@@ -1095,7 +987,7 @@ class Elements extends React.Component {
             style={{ marginTop: 15 }}
             onPress={() =>
               Alert.alert(
-                "Yes, you can use the notifications as buttons so you could send your customers to anything you want."
+                'Yes, you can use the notifications as buttons so you could send your customers to anything you want.'
               )
             }
           />
@@ -1108,7 +1000,7 @@ class Elements extends React.Component {
             style={{ marginTop: 15 }}
             onPress={() =>
               Alert.alert(
-                "Yes, you can use the notifications as buttons so you could send your customers to anything you want."
+                'Yes, you can use the notifications as buttons so you could send your customers to anything you want.'
               )
             }
           />
@@ -1121,7 +1013,7 @@ class Elements extends React.Component {
             style={{ marginTop: 15 }}
             onPress={() =>
               Alert.alert(
-                "Yes, you can use the notifications as buttons so you could send your customers to anything you want."
+                'Yes, you can use the notifications as buttons so you could send your customers to anything you want.'
               )
             }
           />
@@ -1134,7 +1026,7 @@ class Elements extends React.Component {
             style={{ marginTop: 15 }}
             onPress={() =>
               Alert.alert(
-                "Yes, you can use the notifications as buttons so you could send your customers to anything you want."
+                'Yes, you can use the notifications as buttons so you could send your customers to anything you want.'
               )
             }
           />
@@ -1142,7 +1034,6 @@ class Elements extends React.Component {
       </Block>
     );
   };
-
 
   render() {
     return (
@@ -1168,7 +1059,7 @@ class Elements extends React.Component {
 
 const styles = StyleSheet.create({
   title: {
-    fontFamily: "montserrat-bold",
+    fontFamily: 'montserrat-bold',
     paddingBottom: theme.SIZES.BASE,
     paddingHorizontal: theme.SIZES.BASE * 2,
     marginTop: 44,
@@ -1178,7 +1069,7 @@ const styles = StyleSheet.create({
     paddingTop: theme.SIZES.BASE * 2
   },
   shadow: {
-    shadowColor: "black",
+    shadowColor: 'black',
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 4,
     shadowOpacity: 0.2,
@@ -1189,7 +1080,7 @@ const styles = StyleSheet.create({
     width: width - theme.SIZES.BASE * 2
   },
   optionsButton: {
-    width: "auto",
+    width: 'auto',
     height: 34,
     paddingHorizontal: theme.SIZES.BASE,
     paddingVertical: 10
@@ -1222,7 +1113,7 @@ const styles = StyleSheet.create({
     width: theme.SIZES.BASE * 3.5,
     height: theme.SIZES.BASE * 3.5,
     borderRadius: theme.SIZES.BASE * 1.75,
-    justifyContent: "center"
+    justifyContent: 'center'
   },
   btnIcon: {
     width: 70,
@@ -1240,7 +1131,7 @@ const styles = StyleSheet.create({
     borderRadius: 3
   },
   neutralLink: {
-    backgroundColor: "rgba(0,0,0,0)"
+    backgroundColor: 'rgba(0,0,0,0)'
   },
   neutralIcon: {
     width: 140,
@@ -1262,9 +1153,9 @@ const styles = StyleSheet.create({
   },
   socialTextButtons: {
     color: nowTheme.COLORS.WHITE,
-    fontWeight: "800",
+    fontWeight: '800',
     fontSize: 14,
-    alignItems: "center"
+    alignItems: 'center'
   },
 
   githubBtn: {
@@ -1300,17 +1191,17 @@ const styles = StyleSheet.create({
   behanceBtn: {
     backgroundColor: nowTheme.COLORS.BEHANCE
   },
-  tagContainer:{
-    backgroundColor: "#FF3636",
+  tagContainer: {
+    backgroundColor: '#FF3636',
     paddingVertical: 3,
-    paddingVertical:8,
+    paddingVertical: 8,
     borderRadius: 12,
-    height:30
+    height: 30
   },
   productItem: {
     width: cardWidth - theme.SIZES.BASE * 2,
     marginHorizontal: theme.SIZES.BASE,
-    shadowColor: "black",
+    shadowColor: 'black',
     shadowOffset: { width: 0, height: 7 },
     shadowRadius: 10,
     shadowOpacity: 0.2
@@ -1323,11 +1214,11 @@ const styles = StyleSheet.create({
   productPrice: {
     paddingTop: theme.SIZES.BASE,
     paddingBottom: theme.SIZES.BASE / 2,
-    fontFamily: "montserrat-bold"
+    fontFamily: 'montserrat-bold'
   },
   productDescription: {
     paddingTop: theme.SIZES.BASE,
-    fontFamily: "montserrat-regular"
+    fontFamily: 'montserrat-regular'
     // paddingBottom: theme.SIZES.BASE * 2,
   },
   textArea: {
@@ -1341,20 +1232,20 @@ const styles = StyleSheet.create({
     borderWidth: 0
   },
   categoryTitle: {
-    height: "100%",
+    height: '100%',
     paddingHorizontal: theme.SIZES.BASE,
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
-    justifyContent: "center",
-    alignItems: "center"
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   imageBlock: {
-    overflow: "hidden",
+    overflow: 'hidden',
     borderRadius: 4
   },
   productItem: {
     width: cardWidth - theme.SIZES.BASE * 2,
     marginHorizontal: theme.SIZES.BASE,
-    shadowColor: "black",
+    shadowColor: 'black',
     shadowOffset: { width: 0, height: 7 },
     shadowRadius: 10,
     shadowOpacity: 0.2
@@ -1380,10 +1271,10 @@ const styles = StyleSheet.create({
   albumThumb: {
     borderRadius: 4,
     marginVertical: 4,
-    alignSelf: "center",
+    alignSelf: 'center',
     width: thumbMeasure,
     height: thumbMeasure
-  },
+  }
 });
 
-export default Elements;
+export default Components;

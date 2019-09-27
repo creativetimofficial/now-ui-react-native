@@ -9,10 +9,14 @@ import Tabs from './Tabs';
 import nowTheme from '../constants/Theme';
 
 const { height, width } = Dimensions.get('window');
-const iPhoneX = () => Platform.OS === 'ios' && (height === 812 || width === 812 || height === 896 || width === 896);
+const iPhoneX = () =>
+  Platform.OS === 'ios' && (height === 812 || width === 812 || height === 896 || width === 896);
 
-const BellButton = ({isWhite, style, navigation}) => (
-  <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Notifications')}>
+const BellButton = ({ isWhite, style, navigation }) => (
+  <TouchableOpacity
+    style={[styles.button, style]}
+    onPress={() => navigation.navigate('Notifications')}
+  >
     <Icon
       family="ArgonExtra"
       size={16}
@@ -23,7 +27,7 @@ const BellButton = ({isWhite, style, navigation}) => (
   </TouchableOpacity>
 );
 
-const BasketButton = ({isWhite, style, navigation}) => (
+const BasketButton = ({ isWhite, style, navigation }) => (
   <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Cart')}>
     <Icon
       family="ArgonExtra"
@@ -34,7 +38,7 @@ const BasketButton = ({isWhite, style, navigation}) => (
   </TouchableOpacity>
 );
 
-const SearchButton = ({isWhite, style, navigation}) => (
+const SearchButton = ({ isWhite, style, navigation }) => (
   <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Search')}>
     <Icon
       size={16}
@@ -48,64 +52,64 @@ const SearchButton = ({isWhite, style, navigation}) => (
 class Header extends React.Component {
   handleLeftPress = () => {
     const { back, navigation } = this.props;
-    return (back ? navigation.goBack() : navigation.openDrawer());
-  }
+    return back ? navigation.goBack() : navigation.openDrawer();
+  };
   renderRight = () => {
     const { white, title, navigation } = this.props;
     const { routeName } = navigation.state;
 
     if (title === 'Title') {
       return [
-        <BellButton key='chat-title' navigation={navigation} isWhite={white} />,
-        <BasketButton key='basket-title' navigation={navigation} isWhite={white} />
-      ]
+        <BellButton key="chat-title" navigation={navigation} isWhite={white} />,
+        <BasketButton key="basket-title" navigation={navigation} isWhite={white} />
+      ];
     }
 
     switch (routeName) {
       case 'Home':
-        return ([
-          <BellButton key='chat-home' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-home' navigation={navigation} isWhite={white} />
-        ]);
+        return [
+          <BellButton key="chat-home" navigation={navigation} isWhite={white} />,
+          <BasketButton key="basket-home" navigation={navigation} isWhite={white} />
+        ];
       case 'Deals':
-        return ([
-          <BellButton key='chat-categories' navigation={navigation} />,
-          <BasketButton key='basket-categories' navigation={navigation} />
-        ]);
+        return [
+          <BellButton key="chat-categories" navigation={navigation} />,
+          <BasketButton key="basket-categories" navigation={navigation} />
+        ];
       case 'Categories':
-        return ([
-          <BellButton key='chat-categories' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-categories' navigation={navigation} isWhite={white} />
-        ]);
+        return [
+          <BellButton key="chat-categories" navigation={navigation} isWhite={white} />,
+          <BasketButton key="basket-categories" navigation={navigation} isWhite={white} />
+        ];
       case 'Category':
-        return ([
-          <BellButton key='chat-deals' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-deals' navigation={navigation} isWhite={white} />
-        ]);
+        return [
+          <BellButton key="chat-deals" navigation={navigation} isWhite={white} />,
+          <BasketButton key="basket-deals" navigation={navigation} isWhite={white} />
+        ];
       case 'Profile':
-        return ([
-          <BellButton key='chat-profile' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-deals' navigation={navigation} isWhite={white} />
-        ]);
+        return [
+          <BellButton key="chat-profile" navigation={navigation} isWhite={white} />,
+          <BasketButton key="basket-deals" navigation={navigation} isWhite={white} />
+        ];
       case 'Product':
-        return ([
-          <BellButton key='chat-profile' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-product' navigation={navigation} isWhite={white} />
-        ]);
+        return [
+          <BellButton key="chat-profile" navigation={navigation} isWhite={white} />,
+          <BasketButton key="basket-product" navigation={navigation} isWhite={white} />
+        ];
       case 'Search':
-        return ([
-          <BellButton key='chat-search' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-search' navigation={navigation} isWhite={white} />
-        ]);
+        return [
+          <BellButton key="chat-search" navigation={navigation} isWhite={white} />,
+          <BasketButton key="basket-search" navigation={navigation} isWhite={white} />
+        ];
       case 'Settings':
-        return ([
-          <BellButton key='chat-search' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-search' navigation={navigation} isWhite={white} />
-        ]);
+        return [
+          <BellButton key="chat-search" navigation={navigation} isWhite={white} />,
+          <BasketButton key="basket-search" navigation={navigation} isWhite={white} />
+        ];
       default:
         break;
     }
-  }
+  };
   renderSearch = () => {
     const { navigation } = this.props;
     return (
@@ -116,30 +120,51 @@ class Header extends React.Component {
         placeholder="What are you looking for?"
         placeholderTextColor={'#8898AA'}
         onFocus={() => navigation.navigate('Search')}
-        iconContent={<Icon size={16} color={theme.COLORS.MUTED} name="search-zoom-in" family="ArgonExtra" />}
+        iconContent={
+          <Icon size={16} color={theme.COLORS.MUTED} name="search-zoom-in" family="ArgonExtra" />
+        }
       />
     );
-  }
+  };
   renderOptions = () => {
     const { navigation, optionLeft, optionRight } = this.props;
 
     return (
       <Block row style={styles.options}>
-        <Button shadowless style={[styles.tab, styles.divider]} onPress={() => navigation.navigate('Beauty')}>
+        <Button
+          shadowless
+          style={[styles.tab, styles.divider]}
+          onPress={() => navigation.navigate('Beauty')}
+        >
           <Block row middle>
-            <Icon name="diamond" family="ArgonExtra" style={{ paddingRight: 8 }} color={nowTheme.COLORS.ICON} />
-            <Text style={{ fontFamily: 'montserrat-regular' }} size={16}  style={styles.tabTitle}>{optionLeft || 'Beauty'}</Text>
+            <Icon
+              name="diamond"
+              family="ArgonExtra"
+              style={{ paddingRight: 8 }}
+              color={nowTheme.COLORS.ICON}
+            />
+            <Text style={{ fontFamily: 'montserrat-regular' }} size={16} style={styles.tabTitle}>
+              {optionLeft || 'Beauty'}
+            </Text>
           </Block>
         </Button>
         <Button shadowless style={styles.tab} onPress={() => navigation.navigate('Fashion')}>
           <Block row middle>
-            <Icon size={16} name="bag-17" family="ArgonExtra" style={{ paddingRight: 8 }} color={nowTheme.COLORS.ICON}/>
-            <Text style={{ fontFamily: 'montserrat-regular' }} size={16} style={styles.tabTitle}>{optionRight || 'Fashion'}</Text>
+            <Icon
+              size={16}
+              name="bag-17"
+              family="ArgonExtra"
+              style={{ paddingRight: 8 }}
+              color={nowTheme.COLORS.ICON}
+            />
+            <Text style={{ fontFamily: 'montserrat-regular' }} size={16} style={styles.tabTitle}>
+              {optionRight || 'Fashion'}
+            </Text>
           </Block>
         </Button>
       </Block>
     );
-  }
+  };
   renderTabs = () => {
     const { tabs, tabIndex, navigation } = this.props;
     const defaultTab = tabs && tabs[0] && tabs[0].id;
@@ -150,9 +175,10 @@ class Header extends React.Component {
       <Tabs
         data={tabs || []}
         initialIndex={tabIndex || defaultTab}
-        onChange={id => navigation.setParams({ tabId: id })} />
-    )
-  }
+        onChange={id => navigation.setParams({ tabId: id })}
+      />
+    );
+  };
   renderHeader = () => {
     const { search, options, tabs } = this.props;
     if (search || tabs || options) {
@@ -164,20 +190,27 @@ class Header extends React.Component {
         </Block>
       );
     }
-  }
+  };
   render() {
-    const { back, title, white, transparent, bgColor, iconColor, titleColor, navigation, ...props } = this.props;
+    const {
+      back,
+      title,
+      white,
+      transparent,
+      bgColor,
+      iconColor,
+      titleColor,
+      navigation,
+      ...props
+    } = this.props;
     const { routeName } = navigation.state;
     const noShadow = ['Search', 'Categories', 'Deals', 'Pro', 'Profile'].includes(routeName);
     const headerStyles = [
       !noShadow ? styles.shadow : null,
-      transparent ? { backgroundColor: 'rgba(0,0,0,0)' } : null,
+      transparent ? { backgroundColor: 'rgba(0,0,0,0)' } : null
     ];
 
-    const navbarStyles = [
-      styles.navbar,
-      bgColor && { backgroundColor: bgColor }
-    ];
+    const navbarStyles = [styles.navbar, bgColor && { backgroundColor: bgColor }];
 
     return (
       <Block style={headerStyles}>
@@ -190,9 +223,12 @@ class Header extends React.Component {
           rightStyle={{ alignItems: 'center' }}
           left={
             <Icon
-              name={back ? 'nav-left' : "menu-8"} family="ArgonExtra"
-              size={14} onPress={this.handleLeftPress}
-              color={iconColor || nowTheme.COLORS.ICON}/>
+              name={back ? 'nav-left' : 'menu-8'}
+              family="ArgonExtra"
+              size={14}
+              onPress={this.handleLeftPress}
+              color={iconColor || nowTheme.COLORS.ICON}
+            />
           }
           leftStyle={{ paddingVertical: 12, flex: 0.2 }}
           titleStyle={[
@@ -211,18 +247,19 @@ class Header extends React.Component {
 const styles = StyleSheet.create({
   button: {
     padding: 12,
-    position: 'relative',
+    position: 'relative'
   },
   title: {
     width: '100%',
     fontSize: 16,
     fontWeight: 'bold',
+    fontFamily: 'montserrat-regular'
   },
   navbar: {
     paddingVertical: 0,
     paddingBottom: theme.SIZES.BASE * 1.5,
     paddingTop: iPhoneX ? theme.SIZES.BASE * 4 : theme.SIZES.BASE,
-    zIndex: 5,
+    zIndex: 5
   },
   shadow: {
     backgroundColor: theme.COLORS.WHITE,
@@ -230,7 +267,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 6,
     shadowOpacity: 0.2,
-    elevation: 3,
+    elevation: 3
   },
   notify: {
     backgroundColor: nowTheme.COLORS.LABEL,
@@ -239,14 +276,14 @@ const styles = StyleSheet.create({
     width: theme.SIZES.BASE / 2,
     position: 'absolute',
     top: 9,
-    right: 12,
+    right: 12
   },
   header: {
-    backgroundColor: theme.COLORS.WHITE,
+    backgroundColor: theme.COLORS.WHITE
   },
   divider: {
     borderRightWidth: 0.3,
-    borderRightColor: theme.COLORS.ICON,
+    borderRightColor: theme.COLORS.ICON
   },
   search: {
     height: 48,
@@ -259,7 +296,7 @@ const styles = StyleSheet.create({
   options: {
     marginBottom: 24,
     marginTop: 10,
-    elevation: 4,
+    elevation: 4
   },
   tab: {
     backgroundColor: theme.COLORS.TRANSPARENT,
@@ -267,13 +304,13 @@ const styles = StyleSheet.create({
     borderRadius: 0,
     borderWidth: 0,
     height: 24,
-    elevation: 0,
+    elevation: 0
   },
   tabTitle: {
     lineHeight: 19,
     fontWeight: '400',
     color: nowTheme.COLORS.HEADER
-  },
+  }
 });
 
 export default withNavigation(Header);

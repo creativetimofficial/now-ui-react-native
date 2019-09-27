@@ -1,81 +1,56 @@
-import React from "react";
-import { StyleSheet } from "react-native";
-import { Block, Text, theme } from "galio-framework";
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { Block, Text, theme } from 'galio-framework';
 
-import Icon from "./Icon";
-import nowTheme from "../constants/Theme";
+import Icon from './Icon';
+import nowTheme from '../constants/Theme';
 
 class DrawerItem extends React.Component {
   renderIcon = () => {
     const { title, focused } = this.props;
 
     switch (title) {
-      case "Home":
+      case 'Home':
+        return <Icon name="shop" family="ArgonExtra" size={14} color={'rgba(0,0,0,0.5)'} />;
+      case 'Components':
+        return <Icon name="map-big" family="ArgonExtra" size={14} color={'rgba(0,0,0,0.5)'} />;
+      case 'Articles':
+        return <Icon name="spaceship" family="ArgonExtra" size={14} color={'rgba(0,0,0,0.5)'} />;
+      case 'Profile':
+        return <Icon name="chart-pie-35" family="ArgonExtra" size={14} color={'rgba(0,0,0,0.5)'} />;
+      case 'Account':
         return (
-          <Icon
-            name="shop"
-            family="ArgonExtra"
-            size={14}
-            color={"rgba(0,0,0,0.5)"}
-          />
+          <Icon name="calendar-date" family="ArgonExtra" size={14} color={'rgba(0,0,0,0.5)'} />
         );
-      case "Elements":
-        return (
-          <Icon
-            name="map-big"
-            family="ArgonExtra"
-            size={14}
-            color={"rgba(0,0,0,0.5)"}
-          />
-        );
-      case "Articles":
-        return (
-          <Icon
-            name="spaceship"
-            family="ArgonExtra"
-            size={14}
-            color={"rgba(0,0,0,0.5)"}
-          />
-        );
-      case "Profile":
-        return (
-          <Icon
-            name="chart-pie-35"
-            family="ArgonExtra"
-            size={14}
-            color={"rgba(0,0,0,0.5)"}
-          />
-        );
-      case "Account":
+      case 'Examples':
         return (
           <Icon
             name="calendar-date"
             family="ArgonExtra"
             size={14}
-            color={"rgba(0,0,0,0.5)"}
+            color={focused ? nowTheme.COLORS.PRIMARY : 'rgba(0,0,0,0.5)'}
           />
         );
-      case "Settings":
-        return (
-          <Icon
-            name="calendar-date"
-            family="ArgonExtra"
-            size={14}
-            color={focused ? nowTheme.COLORS.PRIMARY : "rgba(0,0,0,0.5)"}
-          />
-        );
-      case "Getting Started":
+      case 'Getting Started':
         return (
           <Icon
             name="spaceship"
             family="ArgonExtra"
             size={14}
-            style={{ borderColor:"rgba(0,0,0,0.5)"}}
-            color={focused ? nowTheme.COLORS.PRIMARY : "rgba(0,0,0,0.5)"}
+            style={{ borderColor: 'rgba(0,0,0,0.5)' }}
+            color={focused ? nowTheme.COLORS.PRIMARY : 'rgba(0,0,0,0.5)'}
           />
         );
-      case "Log out":
-        return <Icon />;
+      case 'LOGOUT':
+        return (
+          <Icon
+            name="spaceship"
+            family="ArgonExtra"
+            size={14}
+            style={{ borderColor: 'rgba(0,0,0,0.5)' }}
+            color={focused ? nowTheme.COLORS.PRIMARY : 'rgba(0,0,0,0.5)'}
+          />
+        );
       default:
         return null;
     }
@@ -99,7 +74,7 @@ class DrawerItem extends React.Component {
             style={{ fontFamily: 'montserrat-regular' }}
             size={15}
             bold={focused ? true : false}
-            color={focused ? nowTheme.COLORS.PRIMARY : "white"}
+            color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
           >
             {title}
           </Text>
@@ -113,12 +88,12 @@ const styles = StyleSheet.create({
   defaultStyle: {
     paddingVertical: 15,
     paddingHorizontal: 14,
-    color: 'white',
+    color: 'white'
   },
   activeStyle: {
     backgroundColor: nowTheme.COLORS.WHITE,
     borderRadius: 30,
-    color: 'white',
+    color: 'white'
   },
   shadow: {
     shadowColor: theme.COLORS.BLACK,
