@@ -2,7 +2,7 @@ import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 //galio
 import { Block, theme } from 'galio-framework';
-//argon
+
 import { articles } from '../constants/';
 import { Card } from '../components/';
 

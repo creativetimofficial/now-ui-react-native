@@ -11,12 +11,11 @@ import {
 // Galio components
 import { Block, Text, Button as GaButton, theme } from 'galio-framework';
 
-// Argon themed components
+// Now UI themed components
 import { articles, Images, nowTheme, tabs } from '../constants';
 import { Button, Select, Icon, Input, Header, Switch } from '../components';
 
 import Img from '../components/Img';
-import { Notification } from '../components';
 import { Card } from '../components';
 
 const { width } = Dimensions.get('screen');
@@ -69,13 +68,8 @@ class Components extends React.Component {
         </Text>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
           <Block center>
-            <Button textStyle={{ fontFamily: 'montserrat-bold' }} color="neutral">
-              DEFAULT
-            </Button>
-          </Block>
-          <Block center>
             <Button
-              textStyle={{ fontFamily: 'montserrat-bold' }}
+              textStyle={{ fontFamily: 'montserrat-regular' }}
               color="default"
               style={styles.button}
             >
@@ -85,20 +79,20 @@ class Components extends React.Component {
           <Block center>
             <Button
               color="secondary"
-              textStyle={{ fontFamily: 'montserrat-bold', color: 'black' }}
+              textStyle={{ fontFamily: 'montserrat-regular' }}
               style={styles.button}
             >
               SECONDARY
             </Button>
           </Block>
           <Block center>
-            <Button textStyle={{ fontFamily: 'montserrat-bold' }} style={styles.button}>
+            <Button textStyle={{ fontFamily: 'montserrat-regular' }} style={styles.button}>
               PRIMARY
             </Button>
           </Block>
           <Block center>
             <Button
-              textStyle={{ fontFamily: 'montserrat-bold' }}
+              textStyle={{ fontFamily: 'montserrat-regular' }}
               color="info"
               style={styles.button}
             >
@@ -107,7 +101,7 @@ class Components extends React.Component {
           </Block>
           <Block center>
             <Button
-              textStyle={{ fontFamily: 'montserrat-bold' }}
+              textStyle={{ fontFamily: 'montserrat-regular' }}
               color="success"
               style={styles.button}
             >
@@ -116,7 +110,7 @@ class Components extends React.Component {
           </Block>
           <Block center>
             <Button
-              textStyle={{ fontFamily: 'montserrat-bold' }}
+              textStyle={{ fontFamily: 'montserrat-regular' }}
               color="warning"
               style={styles.button}
             >
@@ -125,11 +119,20 @@ class Components extends React.Component {
           </Block>
           <Block center>
             <Button
-              textStyle={{ fontFamily: 'montserrat-bold' }}
+              textStyle={{ fontFamily: 'montserrat-regular' }}
               color="error"
               style={styles.button}
             >
               ERROR
+            </Button>
+          </Block>
+          <Block center>
+            <Button
+              textStyle={{ fontFamily: 'montserrat-regular', color: nowTheme.COLORS.PRIMARY }}
+              color="neutral"
+              style={styles.button}
+            >
+              Neutral
             </Button>
           </Block>
           <Block row space="evenly">
@@ -269,17 +272,7 @@ class Components extends React.Component {
             right
             placeholder="Success"
             iconContent={
-              <Block
-                middle
-                style={{
-                  width: 20,
-                  height: 20,
-                  borderRadius: 10,
-                  backgroundColor: nowTheme.COLORS.INPUT_SUCCESS
-                }}
-              >
-                <Icon size={11} color={nowTheme.COLORS.ICON} name="check-22x" family="NowExtra" />
-              </Block>
+              <Icon size={11} color={nowTheme.COLORS.SUCCESS} name="check-22x" family="NowExtra" />
             }
           />
         </Block>
@@ -289,22 +282,12 @@ class Components extends React.Component {
             right
             placeholder="Error Input"
             iconContent={
-              <Block
-                middle
-                style={{
-                  width: 20,
-                  height: 20,
-                  borderRadius: 10,
-                  backgroundColor: nowTheme.COLORS.INPUT_ERROR
-                }}
-              >
-                <Icon
-                  size={11}
-                  color={nowTheme.COLORS.ICON}
-                  name="simple-remove2x"
-                  family="NowExtra"
-                />
-              </Block>
+              <Icon
+                size={11}
+                color={nowTheme.COLORS.INPUT_ERROR}
+                name="simple-remove2x"
+                family="NowExtra"
+              />
             }
           />
         </Block>
@@ -328,7 +311,7 @@ class Components extends React.Component {
             right
             placeholder="Icon Right"
             iconContent={
-              <Icon size={11} color={nowTheme.COLORS.ICON} name="zoom-bold2x" family="NowExtra" />
+              <Icon size={11} color={nowTheme.COLORS.ICON} name="single" family="NowExtra" />
             }
           />
         </Block>
@@ -495,392 +478,6 @@ class Components extends React.Component {
     );
   };
 
-  renderNeutralSocialBtn = () => {
-    return (
-      <Block flex style={styles.group}>
-        <Text size={16} style={styles.title}>
-          Social Btns Icons
-        </Text>
-        <Block middle space="evenly" style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Button
-            style={{
-              ...styles.socialButtons,
-              ...styles.neutralLink,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-github"
-                family="Ionicon"
-                size={14}
-                color={nowTheme.COLORS.GITHUB}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-              <Text adjustsFontSizeToFit style={{ color: nowTheme.COLORS.GITHUB }}>
-                Connect with Github
-              </Text>
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.socialButtons,
-              ...styles.neutralLink,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-facebook"
-                family="Ionicon"
-                size={14}
-                color={nowTheme.COLORS.FACEBOOK}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-              <Text adjustsFontSizeToFit style={{ color: nowTheme.COLORS.FACEBOOK }}>
-                Connect with Facebook
-              </Text>
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.socialButtons,
-              ...styles.neutralLink,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-google"
-                family="Ionicon"
-                size={14}
-                color={nowTheme.COLORS.GOOGLE}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-              <Text adjustsFontSizeToFit style={{ color: nowTheme.COLORS.GOOGLE }}>
-                Share on Google+
-              </Text>
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.socialButtons,
-              ...styles.neutralLink,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-pinterest"
-                family="Ionicon"
-                size={14}
-                color={nowTheme.COLORS.PINTEREST}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-              <Text adjustsFontSizeToFit style={{ color: nowTheme.COLORS.PINTEREST }}>
-                Pin it - 232
-              </Text>
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.socialButtons,
-              ...styles.neutralLink,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-youtube"
-                family="Ionicon"
-                size={14}
-                color={nowTheme.COLORS.YOUTUBE}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-              <Text adjustsFontSizeToFit style={{ color: nowTheme.COLORS.YOUTUBE }}>
-                View on Youtube
-              </Text>
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.socialButtons,
-              ...styles.neutralLink,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-dribbble"
-                family="Ionicon"
-                size={14}
-                color={nowTheme.COLORS.DRIBBBLE}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-              <Text adjustsFontSizeToFit style={{ color: nowTheme.COLORS.DRIBBBLE }}>
-                Find us on Dribbble
-              </Text>
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.socialButtons,
-              ...styles.neutralLink,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-reddit"
-                family="Ionicon"
-                size={14}
-                color={nowTheme.COLORS.REDDIT}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-              <Text adjustsFontSizeToFit style={{ color: nowTheme.COLORS.REDDIT }}>
-                Report - 232
-              </Text>
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.socialButtons,
-              ...styles.neutralLink,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-tumblr"
-                family="Ionicon"
-                size={14}
-                color={nowTheme.COLORS.TUMBLR}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-              <Text adjustsFontSizeToFit style={{ color: nowTheme.COLORS.TUMBLR }}>
-                Repost
-              </Text>
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.socialButtons,
-              ...styles.neutralLink,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-linkedin"
-                family="Ionicon"
-                size={14}
-                color={nowTheme.COLORS.LINKEDIN}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-              <Text adjustsFontSizeToFit style={{ color: nowTheme.COLORS.LINKEDIN }}>
-                Connect with Linkedin
-              </Text>
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.socialButtons,
-              ...styles.neutralLink,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-twitter"
-                family="Ionicon"
-                size={14}
-                color={nowTheme.COLORS.TWITTER}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-              <Text adjustsFontSizeToFit style={{ color: nowTheme.COLORS.TWITTER }}>
-                Connect with Twitter
-              </Text>
-            </Block>
-          </Button>
-        </Block>
-      </Block>
-    );
-  };
-  renderNeutralSocialIcons = () => {
-    return (
-      <Block flex style={styles.group}>
-        <Text size={16} style={styles.title}>
-          Social Icons
-        </Text>
-        <Block row space="evenly" style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Button
-            style={{
-              ...styles.neutralIcon,
-              ...styles.neutralLink,
-              marginRight: 30
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-reddit"
-                family="Ionicon"
-                size={25}
-                color={nowTheme.COLORS.REDDIT}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.neutralIcon,
-              ...styles.neutralLink
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-tumblr"
-                family="Ionicon"
-                size={25}
-                color={nowTheme.COLORS.TUMBLR}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.neutralIcon,
-              ...styles.neutralLink
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-linkedin"
-                family="Ionicon"
-                size={25}
-                color={nowTheme.COLORS.LINKEDIN}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.neutralIcon,
-              ...styles.neutralLink
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-twitter"
-                family="Ionicon"
-                size={25}
-                color={nowTheme.COLORS.TWITTER}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.neutralIcon,
-              ...styles.neutralLink
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-github"
-                family="Ionicon"
-                size={25}
-                color={nowTheme.COLORS.GITHUB}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-        </Block>
-        <Block row space="evenly" style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Button
-            style={{
-              ...styles.neutralIcon,
-              ...styles.neutralLink
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-facebook"
-                family="Ionicon"
-                size={25}
-                color={nowTheme.COLORS.FACEBOOK}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.neutralIcon,
-              ...styles.neutralLink
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-google"
-                family="Ionicon"
-                size={25}
-                color={nowTheme.COLORS.GOOGLE}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.neutralIcon,
-              ...styles.neutralLink
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-pinterest"
-                family="Ionicon"
-                size={25}
-                color={nowTheme.COLORS.PINTEREST}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.neutralIcon,
-              ...styles.neutralLink
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-youtube"
-                family="Ionicon"
-                size={25}
-                color={nowTheme.COLORS.YOUTUBE}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-          <Button
-            style={{
-              ...styles.neutralIcon,
-              ...styles.neutralLink
-            }}
-          >
-            <Block row>
-              <Icon
-                name="logo-dribbble"
-                family="Ionicon"
-                size={25}
-                color={nowTheme.COLORS.DRIBBBLE}
-                style={{ marginTop: 2, marginRight: 5 }}
-              />
-            </Block>
-          </Button>
-        </Block>
-      </Block>
-    );
-  };
-
   renderCards = () => {
     return (
       <Block flex style={styles.group}>
@@ -895,6 +492,8 @@ class Components extends React.Component {
               <Card item={articles[2]} />
             </Block>
             <Card item={articles[4]} full />
+            <Card item={articles[5]} full titleStyle={styles.productTitle} />
+            <Card item={articles[5]} full titleStyle={styles.productTitle} />
             <Block flex card shadow style={styles.category}>
               <ImageBackground
                 source={{ uri: Images.Products['View article'] }}
@@ -945,95 +544,6 @@ class Components extends React.Component {
       </Block>
     );
   };
-  renderNotifications = () => {
-    return (
-      <Block flex style={styles.group}>
-        <Text size={16} style={styles.title}>
-          Notifications
-        </Text>
-        <Block flex style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Notification
-            color={nowTheme.COLORS.PRIMARY}
-            time="15:30"
-            body="About your order #45C23B Wifey made the best Father's Day meal ever. So thankful so happy."
-            iconName="ship"
-            iconFamily="font-awesome"
-            style={{ marginTop: 15 }}
-            onPress={() =>
-              Alert.alert(
-                'Yes, you can use the notifications as buttons so you could send your customers to anything you want.'
-              )
-            }
-          />
-          <Notification
-            color={nowTheme.COLORS.SECONDARY}
-            time="15:30"
-            body="About your order #45C23B Wifey made the best Father's Day meal ever. So thankful so happy."
-            iconName="ship"
-            iconFamily="font-awesome"
-            style={{ marginTop: 15 }}
-            onPress={() =>
-              Alert.alert(
-                'Yes, you can use the notifications as buttons so you could send your customers to anything you want.'
-              )
-            }
-          />
-          <Notification
-            color={nowTheme.COLORS.INFO}
-            time="15:30"
-            body="About your order #45C23B Wifey made the best Father's Day meal ever. So thankful so happy."
-            iconName="ship"
-            iconFamily="font-awesome"
-            style={{ marginTop: 15 }}
-            onPress={() =>
-              Alert.alert(
-                'Yes, you can use the notifications as buttons so you could send your customers to anything you want.'
-              )
-            }
-          />
-          <Notification
-            color={nowTheme.COLORS.WARNING}
-            time="15:30"
-            body="About your order #45C23B Wifey made the best Father's Day meal ever. So thankful so happy."
-            iconName="ship"
-            iconFamily="font-awesome"
-            style={{ marginTop: 15 }}
-            onPress={() =>
-              Alert.alert(
-                'Yes, you can use the notifications as buttons so you could send your customers to anything you want.'
-              )
-            }
-          />
-          <Notification
-            color={nowTheme.COLORS.ERROR}
-            time="15:30"
-            body="About your order #45C23B Wifey made the best Father's Day meal ever. So thankful so happy."
-            iconName="ship"
-            iconFamily="font-awesome"
-            style={{ marginTop: 15 }}
-            onPress={() =>
-              Alert.alert(
-                'Yes, you can use the notifications as buttons so you could send your customers to anything you want.'
-              )
-            }
-          />
-          <Notification
-            time="04:23"
-            body="Congratulations! Someone just ordered a pair of Yamaha HS8 speakers through your app! Hurry up and ship them!"
-            iconName="ship"
-            iconFamily="font-awesome"
-            color={nowTheme.COLORS.SUCCESS}
-            style={{ marginTop: 15 }}
-            onPress={() =>
-              Alert.alert(
-                'Yes, you can use the notifications as buttons so you could send your customers to anything you want.'
-              )
-            }
-          />
-        </Block>
-      </Block>
-    );
-  };
 
   render() {
     return (
@@ -1065,6 +575,12 @@ const styles = StyleSheet.create({
     marginTop: 44,
     color: nowTheme.COLORS.HEADER
   },
+  social: {
+    width: theme.SIZES.BASE * 3.5,
+    height: theme.SIZES.BASE * 3.5,
+    borderRadius: theme.SIZES.BASE * 1.75,
+    justifyContent: 'center'
+  },
   group: {
     paddingTop: theme.SIZES.BASE * 2
   },
@@ -1085,147 +601,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: theme.SIZES.BASE,
     paddingVertical: 10
   },
-  input: {
-    borderBottomWidth: 1
-  },
-  inputDefault: {
-    borderBottomColor: nowTheme.COLORS.PLACEHOLDER
-  },
-  inputTheme: {
-    borderBottomColor: nowTheme.COLORS.PRIMARY
-  },
-  inputTheme: {
-    borderBottomColor: nowTheme.COLORS.PRIMARY
-  },
-  inputInfo: {
-    borderBottomColor: nowTheme.COLORS.INFO
-  },
-  inputSuccess: {
-    borderBottomColor: nowTheme.COLORS.SUCCESS
-  },
-  inputWarning: {
-    borderBottomColor: nowTheme.COLORS.WARNING
-  },
-  inputDanger: {
-    borderBottomColor: nowTheme.COLORS.ERROR
-  },
-  social: {
-    width: theme.SIZES.BASE * 3.5,
-    height: theme.SIZES.BASE * 3.5,
-    borderRadius: theme.SIZES.BASE * 1.75,
-    justifyContent: 'center'
-  },
-  btnIcon: {
-    width: 70,
-    height: 50,
-    paddingVertical: 11,
-    paddingHorizontal: 22,
-    shadowColor: nowTheme.COLORS.BLACK,
-    shadowOffset: {
-      width: 0,
-      height: 4
-    },
-    shadowRadius: 8,
-    shadowOpacity: 0.1,
-    elevation: 1,
-    borderRadius: 3
-  },
-  neutralLink: {
-    backgroundColor: 'rgba(0,0,0,0)'
-  },
-  neutralIcon: {
-    width: 140,
-    height: 60
-  },
-  socialButtons: {
-    width: 240,
-    height: 40,
-    paddingVertical: 11,
-    paddingHorizontal: 22,
-    shadowColor: nowTheme.COLORS.BLACK,
-    shadowOffset: {
-      width: 0,
-      height: 4
-    },
-    shadowRadius: 8,
-    shadowOpacity: 0.1,
-    elevation: 1
-  },
-  socialTextButtons: {
-    color: nowTheme.COLORS.WHITE,
-    fontWeight: '800',
-    fontSize: 14,
-    alignItems: 'center'
-  },
-
-  githubBtn: {
-    backgroundColor: nowTheme.COLORS.GITHUB
-  },
-  facebookBtn: {
-    backgroundColor: nowTheme.COLORS.FACEBOOK
-  },
-  twitterBtn: {
-    backgroundColor: nowTheme.COLORS.TWITTER
-  },
-  googleBtn: {
-    backgroundColor: nowTheme.COLORS.GOOGLE
-  },
-  linkedinBtn: {
-    backgroundColor: nowTheme.COLORS.LINKEDIN
-  },
-  youtubeBtn: {
-    backgroundColor: nowTheme.COLORS.YOUTUBE
-  },
-  pinterestBtn: {
-    backgroundColor: nowTheme.COLORS.PINTEREST
-  },
-  tumblrBtn: {
-    backgroundColor: nowTheme.COLORS.TUMBLR
-  },
-  dribbbleBtn: {
-    backgroundColor: nowTheme.COLORS.DRIBBBLE
-  },
-  redditBtn: {
-    backgroundColor: nowTheme.COLORS.REDDIT
-  },
-  behanceBtn: {
-    backgroundColor: nowTheme.COLORS.BEHANCE
-  },
-  tagContainer: {
-    backgroundColor: '#FF3636',
-    paddingVertical: 3,
-    paddingVertical: 8,
-    borderRadius: 12,
-    height: 30
-  },
-  productItem: {
-    width: cardWidth - theme.SIZES.BASE * 2,
-    marginHorizontal: theme.SIZES.BASE,
-    shadowColor: 'black',
-    shadowOffset: { width: 0, height: 7 },
-    shadowRadius: 10,
-    shadowOpacity: 0.2
-  },
-  productImage: {
-    width: cardWidth - theme.SIZES.BASE,
-    height: cardWidth - theme.SIZES.BASE,
-    borderRadius: 3
-  },
-  productPrice: {
-    paddingTop: theme.SIZES.BASE,
-    paddingBottom: theme.SIZES.BASE / 2,
-    fontFamily: 'montserrat-bold'
-  },
-  productDescription: {
-    paddingTop: theme.SIZES.BASE,
-    fontFamily: 'montserrat-regular'
-    // paddingBottom: theme.SIZES.BASE * 2,
-  },
-  textArea: {
-    borderBottomWidth: 1,
-    padding: 5,
-    height: 50
-  },
   category: {
     backgroundColor: theme.COLORS.WHITE,
     marginVertical: theme.SIZES.BASE / 2,
@@ -1242,38 +617,18 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     borderRadius: 4
   },
-  productItem: {
-    width: cardWidth - theme.SIZES.BASE * 2,
-    marginHorizontal: theme.SIZES.BASE,
-    shadowColor: 'black',
-    shadowOffset: { width: 0, height: 7 },
-    shadowRadius: 10,
-    shadowOpacity: 0.2
-  },
-  productImage: {
-    width: cardWidth - theme.SIZES.BASE,
-    height: cardWidth - theme.SIZES.BASE,
-    borderRadius: 3
-  },
-  productPrice: {
-    paddingTop: theme.SIZES.BASE,
-    paddingBottom: theme.SIZES.BASE / 2,
-    fontFamily: 'montserrat-bold'
-  },
-  productDescription: {
-    paddingTop: theme.SIZES.BASE,
-    fontFamily: 'montserrat-regular'
-    // paddingBottom: theme.SIZES.BASE * 2,
-  },
-  group: {
-    paddingTop: theme.SIZES.BASE
-  },
   albumThumb: {
     borderRadius: 4,
     marginVertical: 4,
     alignSelf: 'center',
     width: thumbMeasure,
     height: thumbMeasure
+  },
+  productTitle: {
+    color: nowTheme.COLORS.PRIMARY,
+    textAlign: 'center',
+    fontFamily: 'montserrat-bold',
+    fontSize: 18
   }
 });
 

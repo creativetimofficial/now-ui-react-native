@@ -1,38 +1,17 @@
 import React from 'react';
 import { Easing, Animated } from 'react-native';
-import {
-  createStackNavigator,
-  createDrawerNavigator,
-  createBottomTabNavigator,
-  createAppContainer
-} from 'react-navigation';
-import { Icon } from '../components';
-import { nowTheme } from '../constants';
+import { createStackNavigator, createDrawerNavigator, createAppContainer } from 'react-navigation';
+
 // screens
 import Home from '../screens/Home';
-// import Onboarding from "../screens/Onboarding";
 import Pro from '../screens/Pro';
 import Profile from '../screens/Profile';
 import Register from '../screens/Register';
 import Components from '../screens/Components';
 import Articles from '../screens/Articles';
-import Beauty from '../screens/Beauty';
-import Category from '../screens/Category';
-import Fashion from '../screens/Fashion';
-import Product from '../screens/Product';
-import Gallery from '../screens/Gallery';
-import Chat from '../screens/Chat';
-import Search from '../screens/Search';
-import Cart from '../screens/Cart';
+
 // settings
 import SettingsScreen from '../screens/Settings';
-import AgreementScreen from '../screens/Agreement';
-import PrivacyScreen from '../screens/Privacy';
-import AboutScreen from '../screens/About';
-import NotificationsScreen from '../screens/Notifications';
-// Notifications
-import PersonalNotifications from '../screens/PersonalNotifications';
-import SystemNotifications from '../screens/SystemNotifications';
 
 // drawer
 import Menu from './Menu';
@@ -40,7 +19,6 @@ import DrawerItem from '../components/DrawerItem';
 
 // header for screens
 import Header from '../components/Header';
-import tabs from '../constants/tabs';
 
 const transitionConfig = (transitionProps, prevTransitionProps) => ({
   transitionSpec: {
@@ -79,43 +57,6 @@ const transitionConfig = (transitionProps, prevTransitionProps) => ({
   }
 });
 
-const NotificationsStack = createBottomTabNavigator(
-  {
-    Personal: PersonalNotifications,
-    System: SystemNotifications
-  },
-  {
-    defaultNavigationOptions: ({ navigation }) => ({
-      tabBarIcon: ({ focused, horizontal, tintColor }) => {
-        const { routeName } = navigation.state;
-        let iconName;
-        if (routeName === 'Personal') {
-          iconName = 'user';
-        } else if (routeName === 'System') {
-          iconName = 'database';
-        }
-        // You can return any component that you like here!
-        return (
-          <Icon
-            name={iconName}
-            family="entypo"
-            size={22}
-            color={tintColor}
-            style={{ marginTop: 10 }}
-          />
-        );
-      }
-    }),
-    tabBarOptions: {
-      activeTintColor: nowTheme.COLORS.PRIMARY,
-      inactiveTintColor: 'gray',
-      labelStyle: {
-        fontFamily: 'montserrat-regular'
-      }
-    }
-  }
-);
-
 const ComponentsStack = createStackNavigator(
   {
     Components: {
@@ -139,42 +80,6 @@ const SettingsStack = createStackNavigator(
       screen: SettingsScreen,
       navigationOptions: ({ navigation }) => ({
         header: <Header title="Settings" navigation={navigation} />
-      })
-    },
-    Agreement: {
-      screen: AgreementScreen,
-      navigationOptions: ({ navigation }) => ({
-        header: <Header back title="User Agreement" navigation={navigation} />
-      })
-    },
-    Privacy: {
-      screen: PrivacyScreen,
-      navigationOptions: ({ navigation }) => ({
-        header: <Header back title="Privacy Policy" navigation={navigation} />
-      })
-    },
-    About: {
-      screen: AboutScreen,
-      navigationOptions: ({ navigation }) => ({
-        header: <Header back title="About us" navigation={navigation} />
-      })
-    },
-    NotificationsSettings: {
-      screen: NotificationsScreen,
-      navigationOptions: ({ navigation }) => ({
-        header: <Header back title="Notifications" navigation={navigation} />
-      })
-    },
-    Cart: {
-      screen: Cart,
-      navigationOptions: ({ navigation }) => ({
-        header: <Header back title="Shopping Cart" navigation={navigation} />
-      })
-    },
-    Notifications: {
-      screen: NotificationsStack,
-      navigationOptions: ({ navigation }) => ({
-        header: <Header back title="Notifications" navigation={navigation} />
       })
     }
   },
@@ -211,17 +116,23 @@ const ProfileStack = createStackNavigator(
         ),
         headerTransparent: true
       })
-    },
-    Cart: {
-      screen: Cart,
+    }
+  },
+  {
+    cardStyle: { backgroundColor: '#FFFFFF' },
+    transitionConfig
+  }
+);
+
+const AccountStack = createStackNavigator(
+  {
+    Account: {
+      screen: Register,
       navigationOptions: ({ navigation }) => ({
-        header: <Header back title="Shopping Cart" navigation={navigation} />
-      })
-    },
-    Notifications: {
-      screen: NotificationsStack,
-      navigationOptions: ({ navigation }) => ({
-        header: <Header back title="Notifications" navigation={navigation} />
+        header: (
+          <Header transparent title="Create Account" iconColor={'#333'} navigation={navigation} />
+        ),
+        headerTransparent: true
       })
     }
   },
@@ -237,66 +148,6 @@ const HomeStack = createStackNavigator(
       screen: Home,
       navigationOptions: ({ navigation }) => ({
         header: <Header search options title="Home" navigation={navigation} />
-      })
-    },
-    Beauty: {
-      screen: Beauty,
-      navigationOptions: ({ navigation }) => ({
-        header: <Header back title="Beauty" tabs={tabs.beauty} navigation={navigation} />
-      })
-    },
-    Category: {
-      screen: Category,
-      navigationOptions: ({ navigation }) => {
-        const { params } = navigation.state;
-        const title = (params && params.title) || 'Category';
-        return {
-          header: <Header back title={title} navigation={navigation} />
-        };
-      }
-    },
-    Fashion: {
-      screen: Fashion,
-      navigationOptions: ({ navigation }) => ({
-        header: <Header back title="Fashion" tabs={tabs.fashion} navigation={navigation} />
-      })
-    },
-    Product: {
-      screen: Product,
-      navigationOptions: ({ navigation }) => ({
-        header: <Header back white transparent title="" navigation={navigation} />,
-        headerTransparent: true
-      })
-    },
-    Gallery: {
-      screen: Gallery,
-      navigationOptions: ({ navigation }) => ({
-        header: <Header back white transparent title="" navigation={navigation} />,
-        headerTransparent: true
-      })
-    },
-    Chat: {
-      screen: Chat,
-      navigationOptions: ({ navigation }) => ({
-        header: <Header back title="Rachel Brown" navigation={navigation} />
-      })
-    },
-    Search: {
-      screen: Search,
-      navigationOptions: ({ navigation }) => ({
-        header: <Header back title="Search" navigation={navigation} />
-      })
-    },
-    Cart: {
-      screen: Cart,
-      navigationOptions: ({ navigation }) => ({
-        header: <Header back title="Shopping Cart" navigation={navigation} />
-      })
-    },
-    Notifications: {
-      screen: NotificationsStack,
-      navigationOptions: ({ navigation }) => ({
-        header: <Header back title="Notifications" navigation={navigation} />
       })
     }
   },
@@ -353,7 +204,7 @@ const AppStack = createDrawerNavigator(
       })
     },
     Account: {
-      screen: Register,
+      screen: AccountStack,
       navigationOptions: navOpt => ({
         drawerLabel: ({ focused }) => (
           <DrawerItem focused={focused} screen="Register" title="Account" />

@@ -31,5 +31,14 @@ export default [
       'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1302&q=80',
     cta: 'View article',
     horizontal: true
+  },
+  {
+    title: '$377',
+    image:
+      'https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=628&q=80',
+    subtitle: 'Black Jacket',
+    description:
+      'The structured shoulders and sleek detailing ensure a sharp silhouette. Team it with a silk pocket.',
+    horizontal: true
   }
 ];

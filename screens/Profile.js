@@ -48,7 +48,7 @@ class Profile extends React.Component {
                         size={12}
                         color={nowTheme.COLORS.TEXT}
                       >
-                        Orders
+                        Friends
                       </Text>
                     </Block>
                     <Block middle>
@@ -57,14 +57,14 @@ class Profile extends React.Component {
                         size={18}
                         style={{ marginBottom: 4, fontFamily: 'montserrat-bold' }}
                       >
-                        10
+                        26
                       </Text>
                       <Text
                         style={{ fontFamily: 'montserrat-regular' }}
                         size={12}
                         color={nowTheme.COLORS.TEXT}
                       >
-                        Photos
+                        Friends
                       </Text>
                     </Block>
                     <Block middle>
@@ -73,14 +73,14 @@ class Profile extends React.Component {
                         size={18}
                         style={{ marginBottom: 4, fontFamily: 'montserrat-bold' }}
                       >
-                        89
+                        48
                       </Text>
                       <Text
                         style={{ fontFamily: 'montserrat-regular' }}
                         size={12}
                         color={nowTheme.COLORS.TEXT}
                       >
-                        Comments
+                        Bookmarks
                       </Text>
                     </Block>
                   </Block>
@@ -88,38 +88,39 @@ class Profile extends React.Component {
                 <Block flex>
                   <Block middle style={styles.nameInfo}>
                     <Text style={{ fontFamily: 'montserrat-regular' }} size={28} color="#32325D">
-                      Jessica Jones, 27
+                      Ryan Scheinder
                     </Text>
                     <Text
                       size={16}
-                      color="#32325D"
+                      muted
                       style={{ marginTop: 10, fontFamily: 'montserrat-regular' }}
                     >
-                      San Francisco, USA
+                      Photographer
                     </Text>
                   </Block>
-                  <Block middle style={{ marginTop: 30, marginBottom: 16 }}>
-                    <Block style={styles.divider} />
-                  </Block>
+
                   <Block middle>
+                    <Text
+                      style={{
+                        color: '#333',
+                        fontWeight: 'bold',
+                        fontSize: 18,
+                        fontFamily: 'montserrat-regular',
+                        marginTop: 30,
+                        marginBottom: 16
+                      }}
+                    >
+                      About me
+                    </Text>
                     <Text
                       size={16}
                       color="#525F7F"
                       style={{ textAlign: 'center', fontFamily: 'montserrat-regular' }}
                     >
-                      An artist of considerable range, Jessica name taken by Melbourne …
+                      An artist of considerable range, Ryan — the name taken by Melbourne-raised,
+                      Brooklyn-based Nick Murphy — writes, performs and records all of his own
+                      music.
                     </Text>
-                    <Button
-                      color="transparent"
-                      textStyle={{
-                        color: '#233DD2',
-                        fontWeight: '500',
-                        fontSize: 16,
-                        fontFamily: 'montserrat-regular'
-                      }}
-                    >
-                      Show more
-                    </Button>
                   </Block>
                   <Block row style={{ paddingVertical: 14 }} space="between">
                     <Text bold size={16} color="#525F7F" style={{ marginTop: 3 }}>
@@ -128,7 +129,7 @@ class Profile extends React.Component {
                     <Button
                       small
                       color="transparent"
-                      textStyle={{ color: '#5E72E4', fontSize: 14 }}
+                      textStyle={{ color: nowTheme.COLORS.PRIMARY, fontSize: 14 }}
                     >
                       View all
                     </Button>

@@ -23,8 +23,11 @@ class Register extends React.Component {
     return (
       <DismissKeyboard>
         <Block flex middle>
-          <StatusBar hidden />
-          <ImageBackground source={Images.RegisterBackground} style={{ width, height, zIndex: 1 }}>
+          <ImageBackground
+            source={Images.RegisterBackground}
+            style={styles.imageBackgroundContainer}
+            imageStyle={styles.imageBackground}
+          >
             <Block flex middle>
               <Block style={styles.registerContainer}>
                 <Block flex space="evenly">
@@ -140,7 +143,11 @@ class Register extends React.Component {
                               }
                             />
                           </Block>
-                          <Block row width={width * 0.75}>
+                          <Block
+                            style={{ marginVertical: theme.SIZES.BASE }}
+                            row
+                            width={width * 0.75}
+                          >
                             <Checkbox
                               checkboxStyle={{
                                 borderWidth: 1
@@ -179,9 +186,20 @@ class Register extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  imageBackgroundContainer: {
+    width: width,
+    height: height,
+    padding: 0,
+    zIndex: 1
+  },
+  imageBackground: {
+    width: width,
+    height: height
+  },
   registerContainer: {
+    marginTop: 55,
     width: width * 0.9,
-    height: height < 812 ? height * 0.9 : height * 0.8,
+    height: height < 812 ? height * 0.8 : height * 0.8,
     backgroundColor: nowTheme.COLORS.WHITE,
     borderRadius: 4,
     shadowColor: nowTheme.COLORS.BLACK,

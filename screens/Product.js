@@ -95,7 +95,7 @@ export default class Product extends React.Component {
         onPress={() => this.setState({ selectedSize: label })}
       >
         <Text
-          style={{ fontFamily: 'montserrat-regular' }}
+          style={{ fontFamily: 'open-sans-regular' }}
           color={active ? theme.COLORS.PRIMARY : nowTheme.COLORS.TEXT}
         >
           {label}
@@ -146,7 +146,7 @@ export default class Product extends React.Component {
             >
               <Text
                 size={28}
-                style={{ paddingBottom: 24, fontFamily: 'montserrat-regular' }}
+                style={{ paddingBottom: 24, fontFamily: 'open-sans-regular' }}
                 color={nowTheme.COLORS.TEXT}
               >
                 {product.title}
@@ -156,14 +156,14 @@ export default class Product extends React.Component {
                   <Image source={Images.ProfilePicture} style={styles.avatar} />
                   <Block style={{ marginTop: 2 }}>
                     <Text
-                      style={{ fontFamily: 'montserrat-regular' }}
+                      style={{ fontFamily: 'open-sans-regular' }}
                       size={14}
                       color={nowTheme.COLORS.TEXT}
                     >
                       Jessica Jones
                     </Text>
                     <Text
-                      style={{ fontFamily: 'montserrat-regular' }}
+                      style={{ fontFamily: 'open-sans-light' }}
                       size={14}
                       color={nowTheme.COLORS.TEXT}
                       style={{ fontWeight: '100' }}
@@ -173,7 +173,7 @@ export default class Product extends React.Component {
                   </Block>
                 </Block>
                 <Text
-                  style={{ fontFamily: 'montserrat-bold' }}
+                  style={{ fontFamily: 'open-sans-bold' }}
                   size={18}
                   color={nowTheme.COLORS.TEXT}
                 >
@@ -183,7 +183,7 @@ export default class Product extends React.Component {
             </Block>
             <Block style={{ padding: theme.SIZES.BASE }}>
               <Text
-                style={{ fontFamily: 'montserrat-regular' }}
+                style={{ fontFamily: 'open-sans-regular' }}
                 size={16}
                 color={nowTheme.COLORS.TEXT}
               >
@@ -263,7 +263,7 @@ export default class Product extends React.Component {
                 color={nowTheme.COLORS.PRIMARY}
                 onPress={() => navigation.navigate('Cart')}
               >
-                <Text style={{ fontFamily: 'montserrat-bold' }} color={nowTheme.COLORS.WHITE}>
+                <Text style={{ fontFamily: 'open-sans-bold' }} color={nowTheme.COLORS.WHITE}>
                   ADD TO CART
                 </Text>
               </Button>

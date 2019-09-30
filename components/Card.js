@@ -1,14 +1,10 @@
-import React from "react";
-import { withNavigation } from "react-navigation";
-import PropTypes from "prop-types";
-import {
-  StyleSheet,
-  Image,
-  TouchableWithoutFeedback
-} from "react-native";
-import { Block, Text, theme } from "galio-framework";
+import React from 'react';
+import { withNavigation } from 'react-navigation';
+import PropTypes from 'prop-types';
+import { StyleSheet, Image, TouchableWithoutFeedback } from 'react-native';
+import { Block, Text, theme } from 'galio-framework';
 
-import { nowTheme } from "../constants";
+import { nowTheme } from '../constants';
 
 class Card extends React.Component {
   render() {
@@ -20,13 +16,12 @@ class Card extends React.Component {
       style,
       ctaColor,
       imageStyle,
-      ctaRight
+      ctaRight,
+      titleStyle
     } = this.props;
 
-    const imageStyles = [
-      full ? styles.fullImage : styles.horizontalImage,
-      imageStyle
-    ];
+    const imageStyles = [full ? styles.fullImage : styles.horizontalImage, imageStyle];
+    const titleStyles = [styles.cardTitle, titleStyle];
     const cardContainer = [styles.card, styles.shadow, style];
     const imgContainer = [
       styles.imageContainer,
@@ -36,29 +31,55 @@ class Card extends React.Component {
 
     return (
       <Block row={horizontal} card flex style={cardContainer}>
-        <TouchableWithoutFeedback
-          onPress={() => navigation.navigate("Product", { product: item })}
-        >
+        <TouchableWithoutFeedback onPress={() => navigation.navigate('Product', { product: item })}>
           <Block flex style={imgContainer}>
             <Image source={{ uri: item.image }} style={imageStyles} />
           </Block>
         </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback
-          onPress={() => navigation.navigate("Product", { product: item })}
-        >
+        <TouchableWithoutFeedback onPress={() => navigation.navigate('Product', { product: item })}>
           <Block flex space="between" style={styles.cardDescription}>
             <Block flex>
               <Text
                 style={{ fontFamily: 'montserrat-regular' }}
                 size={14}
-                style={styles.cardTitle}
+                style={titleStyles}
                 color={nowTheme.COLORS.TEXT}
               >
                 {item.title}
               </Text>
+              {item.subtitle ? (
+                <Block flex center>
+                  <Text
+                    style={{ fontFamily: 'montserrat-regular' }}
+                    size={32}
+                    color={nowTheme.COLORS.BLACK}
+                  >
+                    {item.subtitle}
+                  </Text>
+                </Block>
+              ) : (
+                <Block />
+              )}
+              {item.description ? (
+                <Block flex center>
+                  <Text
+                    style={{ fontFamily: 'montserrat-regular', textAlign: 'center', padding: 10 }}
+                    size={16}
+                    muted
+                  >
+                    {item.description}
+                  </Text>
+                </Block>
+              ) : (
+                <Block />
+              )}
               {item.body ? (
                 <Block flex left>
-                  <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color={nowTheme.COLORS.TEXT}>
+                  <Text
+                    style={{ fontFamily: 'montserrat-regular' }}
+                    size={12}
+                    color={nowTheme.COLORS.TEXT}
+                  >
                     {item.body}
                   </Text>
                 </Block>
@@ -90,7 +111,9 @@ Card.propTypes = {
   full: PropTypes.bool,
   ctaColor: PropTypes.string,
   imageStyle: PropTypes.any,
-  ctaRight: PropTypes.bool
+  ctaRight: PropTypes.bool,
+  titleStyle: PropTypes.any,
+  textBodyStyle: PropTypes.any
 };
 
 const styles = StyleSheet.create({
@@ -99,7 +122,7 @@ const styles = StyleSheet.create({
     marginVertical: theme.SIZES.BASE,
     borderWidth: 0,
     minHeight: 114,
-    marginBottom: 4,
+    marginBottom: 4
   },
   cardTitle: {
     // flex: 1,
@@ -112,14 +135,14 @@ const styles = StyleSheet.create({
   imageContainer: {
     borderRadius: 3,
     elevation: 1,
-    overflow: "hidden"
+    overflow: 'hidden'
   },
   image: {
     // borderRadius: 3,
   },
   horizontalImage: {
     height: 122,
-    width: "auto"
+    width: 'auto'
   },
   horizontalStyles: {
     borderTopRightRadius: 0,
@@ -133,7 +156,7 @@ const styles = StyleSheet.create({
     height: 215
   },
   shadow: {
-    shadowColor: "#8898AA",
+    shadowColor: '#8898AA',
     shadowOffset: { width: 0, height: 1 },
     shadowRadius: 6,
     shadowOpacity: 0.1,

@@ -21,7 +21,7 @@ export default class Pro extends React.Component {
           <Block space="between" style={styles.padded}>
             <Block>
               <Block middle style={{ marginTop: 5 }}>
-                <Image source={Images.ArgonLogo} style={{ width: 115, height: 124 }} />
+                <Image source={Images.NowLogo} style={{ width: 115, height: 124 }} />
               </Block>
               <Block>
                 <Block middle style={{ marginTop: 25 }}>

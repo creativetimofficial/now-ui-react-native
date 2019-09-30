@@ -2,7 +2,7 @@ import React from 'react';
 import { DrawerItems } from 'react-navigation';
 import { ScrollView, StyleSheet, Dimensions, Image, TouchableOpacity, Linking } from 'react-native';
 import { Block, Text, theme } from 'galio-framework';
-
+import Icon from '../components/Icon';
 import Images from '../constants/Images';
 import { DrawerItem } from '../components/index';
 
@@ -12,9 +12,13 @@ const { width } = Dimensions.get('screen');
 
 const Drawer = props => (
   <Block style={styles.container} forceInset={{ top: 'always', horizontal: 'never' }}>
-    <Block flex={0.05} style={styles.header}>
+    <Block style={styles.header}>
       <Image styles={styles.logo} source={Images.Logo} />
+      <Block right style={styles.headerIcon}>
+        <Icon name="align-left-22x" family="NowExtra" size={15} color={'white'} />
+      </Block>
     </Block>
+
     <Block flex>
       <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }}>
         <DrawerItems {...props} />
@@ -83,6 +87,9 @@ const styles = StyleSheet.create({
     paddingBottom: theme.SIZES.BASE,
     paddingTop: theme.SIZES.BASE * 3,
     justifyContent: 'center'
+  },
+  headerIcon: {
+    marginTop: -20
   }
 });
 

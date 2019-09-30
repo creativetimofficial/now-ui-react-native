@@ -1,7 +1,7 @@
 {
-  "name": "argon-pro-react-native",
+  "name": "now-ui-react-native",
   "version": "1.0.0",
-  "description": "Argon Pro React Native, based on Argon Design System. Coded by Creative Tim",
+  "description": "Now UI React Native, based on Argon Design System. Coded by Creative Tim",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/argon-pro-react-native.git"
+    "url": "git+https://github.com/creativetimofficial/now-ui-react-native.git"
   },
   "dependencies": {
     "expo": "^33.0.0",
@@ -29,26 +29,26 @@
     "babel-preset-expo": "^5.0.0"
   },
   "keywords": [
-    "argon react native",
-    "argon design system",
-    "argon app react native",
-    "argon iOS",
+    "now react native",
+    "now design system",
+    "now app react native",
+    "now iOS",
     "react native iOS",
     "creative tim",
-    "argon Android",
+    "now Android",
     "react native ui kit",
     "react native expo",
     "freebie",
-    "react native argon design",
+    "react native now design",
     "react native galio",
-    "galio argon pro",
+    "galio now pro",
     "galio react native free app",
-    "argon expo react native",
+    "now expo react native",
     "react native ui template"
   ],
   "author": "Creative Tim <hello@creative-tim.com> (https://www.creative-tim.com/)",
   "bugs": {
-    "url": "https://github.com/creativetimofficial/argon-pro-react-native/issues"
+    "url": "https://github.com/creativetimofficial/now-ui-react-native/issues"
   },
-  "homepage": "https://demos.creative-tim.com/argon-pro-react-native"
+  "homepage": "https://demos.creative-tim.com/now-ui-react-native"
 }
