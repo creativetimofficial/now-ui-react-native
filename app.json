@@ -3,12 +3,9 @@
     "name": "Now UI PRO React Native",
     "slug": "now-ui-pro-react-native",
     "privacy": "public",
-    "sdkVersion": "33.0.0",
-    "platforms": [
-      "ios",
-      "android"
-    ],
-    "version": "1.1.0",
+    "sdkVersion": "34.0.0",
+    "platforms": ["ios", "android"],
+    "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -19,9 +16,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     }
