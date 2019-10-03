@@ -1,7 +1,7 @@
 import React from 'react';
 import { withNavigation } from 'react-navigation';
 import { TouchableOpacity, StyleSheet, Platform, Dimensions } from 'react-native';
-import { Button, Block, NavBar, Text, theme } from 'galio-framework';
+import { Button, Block, NavBar, Text, theme, Button as GaButton } from 'galio-framework';
 
 import Icon from './Icon';
 import Input from './Input';
@@ -38,16 +38,7 @@ const BasketButton = ({ isWhite, style, navigation }) => (
   </TouchableOpacity>
 );
 
-const SearchButton = ({ isWhite, style, navigation }) => (
-  <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Search')}>
-    <Icon
-      size={16}
-      family="Galio"
-      name="zoom-bold2x"
-      color={theme.COLORS[isWhite ? 'WHITE' : 'ICON']}
-    />
-  </TouchableOpacity>
-);
+
 
 class Header extends React.Component {
   handleLeftPress = () => {
@@ -170,6 +161,7 @@ class Header extends React.Component {
       </Block>
     );
   };
+
   renderTabs = () => {
     const { tabs, tabIndex, navigation } = this.props;
     const defaultTab = tabs && tabs[0] && tabs[0].id;
@@ -315,7 +307,13 @@ const styles = StyleSheet.create({
     lineHeight: 19,
     fontWeight: '400',
     color: nowTheme.COLORS.HEADER
-  }
+  },
+  social: {
+    width: theme.SIZES.BASE * 3.5,
+    height: theme.SIZES.BASE * 3.5,
+    borderRadius: theme.SIZES.BASE * 1.75,
+    justifyContent: 'center'
+  },
 });
 
 export default withNavigation(Header);

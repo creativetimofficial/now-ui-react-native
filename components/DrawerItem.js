@@ -11,15 +11,15 @@ class DrawerItem extends React.Component {
 
     switch (title) {
       case 'Home':
-        return <Icon name="app2x" family="NowExtra" size={14} color={'white'} />;
+        return <Icon name="app2x" family="NowExtra" size={14} color={focused ? nowTheme.COLORS.PRIMARY : 'white'} />;
       case 'Components':
-        return <Icon name="atom2x" family="NowExtra" size={14} color={'white'} />;
+        return <Icon name="atom2x" family="NowExtra" size={14} color={focused ? nowTheme.COLORS.PRIMARY : 'white'} />;
       case 'Articles':
-        return <Icon name="paper" family="NowExtra" size={14} color={'white'} />;
+        return <Icon name="paper" family="NowExtra" size={14} color={focused ? nowTheme.COLORS.PRIMARY : 'white'} />;
       case 'Profile':
-        return <Icon name="profile-circle" family="NowExtra" size={14} color={'white'} />;
+        return <Icon name="profile-circle" family="NowExtra" size={14} color={focused ? nowTheme.COLORS.PRIMARY : 'white'} />;
       case 'Account':
-        return <Icon name="badge2x" family="NowExtra" size={14} color={'white'} />;
+        return <Icon name="badge2x" family="NowExtra" size={14} color={focused ? nowTheme.COLORS.PRIMARY : 'white'} />;
       case 'Examples':
         return (
           <Icon

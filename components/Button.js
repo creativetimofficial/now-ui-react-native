@@ -7,7 +7,7 @@ import nowTheme from '../constants/Theme';
 
 class ArButton extends React.Component {
   render() {
-    const { small, shadowless, children, color, style, fontSize, ...props } = this.props;
+    const { small, shadowless, children, color, style, fontSize, round, ...props } = this.props;
 
     const colorStyle = color && nowTheme.COLORS[color.toUpperCase()];
 
@@ -16,6 +16,7 @@ class ArButton extends React.Component {
       colorStyle === 'neutral'
         ? { backgroundColor: 'rgba(0,0,0,0)' }
         : color && { backgroundColor: colorStyle },
+      round && { borderRadius: nowTheme.SIZES.BASE * 2 },
       !shadowless && styles.shadow,
       { ...style }
     ];

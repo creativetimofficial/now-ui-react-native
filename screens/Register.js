@@ -38,8 +38,8 @@ class Register extends React.Component {
                           fontFamily: 'montserrat-regular',
                           textAlign: 'center'
                         }}
-                        color="#8898AA"
-                        size={20}
+                        color="#333"
+                        size={24}
                       >
                         Register
                       </Text>
@@ -88,13 +88,13 @@ class Register extends React.Component {
                         fontFamily: 'montserrat-regular',
                         textAlign: 'center'
                       }}
-                      color="#8898AA"
-                      size={20}
+                      muted
+                      size={16}
                     >
                       or be classical
                     </Text>
                   </Block>
-                  <Block flex={0.8} middle space="between">
+                  <Block flex={1} middle space="between">
                     <Block center flex={0.9}>
                       <Block flex space="between">
                         <Block>

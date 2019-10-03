@@ -21,7 +21,6 @@ import { Card } from '../components';
 const { width } = Dimensions.get('screen');
 
 const thumbMeasure = (width - 48 - 32) / 3;
-const cardWidth = width - theme.SIZES.BASE * 2;
 
 class Components extends React.Component {
   constructor(props) {
@@ -473,6 +472,7 @@ class Components extends React.Component {
               navigation={this.props.navigation}
             />
           </Block>
+
         </Block>
       </Block>
     );
@@ -493,7 +493,7 @@ class Components extends React.Component {
             </Block>
             <Card item={articles[4]} full />
             <Card item={articles[5]} full titleStyle={styles.productTitle} />
-            <Card item={articles[5]} full titleStyle={styles.productTitle} />
+            <Card item={articles[6]} full titleStyle={styles.productTitle} />
             <Block flex card shadow style={styles.category}>
               <ImageBackground
                 source={{ uri: Images.Products['View article'] }}
