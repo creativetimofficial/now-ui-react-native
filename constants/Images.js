@@ -22,7 +22,7 @@ const Viewed = [
 ];
 
 const Products = {
-  'View article': 'https://images.unsplash.com/photo-1501601983405-7c7cabaa1581?fit=crop&w=240&q=80'
+  'View article': 'https://images.unsplash.com/photo-1476681227192-05dedd2b6709?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=800'
 };
 
 export default {

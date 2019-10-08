@@ -68,7 +68,7 @@ const ComponentsStack = createStackNavigator(
   },
   {
     cardStyle: {
-      backgroundColor: '#F8F9FE'
+      backgroundColor: '#FFFFFF'
     },
     transitionConfig
   }
@@ -84,7 +84,7 @@ const SettingsStack = createStackNavigator(
     }
   },
   {
-    cardStyle: { backgroundColor: '#F8F9FE' },
+    cardStyle: { backgroundColor: '#FFFFFF' },
     transitionConfig
   }
 );
@@ -100,7 +100,7 @@ const ArticlesStack = createStackNavigator(
   },
   {
     cardStyle: {
-      backgroundColor: '#F8F9FE'
+      backgroundColor: '#FFFFFF'
     },
     transitionConfig
   }
@@ -153,7 +153,7 @@ const HomeStack = createStackNavigator(
   },
   {
     cardStyle: {
-      backgroundColor: '#F8F9FE'
+      backgroundColor: '#FFFFFF'
     },
     transitionConfig
   }
@@ -164,7 +164,7 @@ const AppStack = createDrawerNavigator(
     Onboarding: {
       screen: Pro,
       navigationOptions: {
-        drawerLabel: () => {}
+        drawerLabel: () => { }
       }
     },
     Home: {

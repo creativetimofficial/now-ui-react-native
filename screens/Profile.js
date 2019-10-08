@@ -79,9 +79,9 @@ const Profile = () => {
               middle
               row
               space="evenly"
-              style={{ marginTop: 20, paddingBottom: 24, zIndex: 5 }}
+              style={{ marginTop: 22, paddingBottom: 24, zIndex: 5 }}
             >
-              <Button style={{ width: 114, height: 44 }} round>
+              <Button style={{ width: 114, height: 44, }} textStyle={{ fontSize: 16 }} round>
                 Follow
               </Button>
               <GaButton
@@ -91,7 +91,7 @@ const Profile = () => {
                 icon="twitter"
                 iconFamily="Font-Awesome"
                 iconColor={nowTheme.COLORS.WHITE}
-                iconSize={nowTheme.SIZES.BASE * 1.625}
+                iconSize={nowTheme.SIZES.BASE * 1.375}
                 color={'#888888'}
                 style={[styles.social, styles.shadow]}
               />
@@ -102,7 +102,7 @@ const Profile = () => {
                 icon="pinterest"
                 iconFamily="Font-Awesome"
                 iconColor={nowTheme.COLORS.WHITE}
-                iconSize={nowTheme.SIZES.BASE * 1.625}
+                iconSize={nowTheme.SIZES.BASE * 1.375}
                 color={'#888888'}
                 style={[styles.social, styles.shadow]}
               />
@@ -161,7 +161,7 @@ const Profile = () => {
           <Block style={{ marginBottom: 25 }} />
         </Block>
       </ImageBackground>
-    </Block>
+    </Block >
   );
 };
 

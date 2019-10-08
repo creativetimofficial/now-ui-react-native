@@ -42,7 +42,6 @@ ArButton.propTypes = {
     PropTypes.oneOf([
       'default',
       'primary',
-      'secondary',
       'info',
       'error',
       'success',

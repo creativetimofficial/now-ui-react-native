@@ -30,7 +30,7 @@ export default class Pro extends React.Component {
                   </Text>
                 </Block>
               </Block>
-              <Block row style={{ marginTop: 35 }}>
+              <Block middle row style={{ marginTop: 35 }}>
                 <Text
                   color="white"
                   size={16}
@@ -47,7 +47,7 @@ export default class Pro extends React.Component {
                   }}
                 />
               </Block>
-              <Block row style={{ marginTop: 35 }}>
+              <Block middle row style={{ marginTop: 35 }}>
                 <Text
                   color="white"
                   size={16}

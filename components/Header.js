@@ -23,7 +23,7 @@ const BellButton = ({ isWhite, style, navigation }) => (
       name="bell"
       color={nowTheme.COLORS[isWhite ? 'WHITE' : 'ICON']}
     />
-    <Block middle style={styles.notify} />
+    <Block middle style={[styles.notify, { backgroundColor: nowTheme.COLORS[isWhite ? 'WHITE' : 'PRIMARY'] }]} />
   </TouchableOpacity>
 );
 
@@ -267,7 +267,7 @@ const styles = StyleSheet.create({
     elevation: 3
   },
   notify: {
-    backgroundColor: nowTheme.COLORS.LABEL,
+    backgroundColor: nowTheme.COLORS.SUCCESS,
     borderRadius: 4,
     height: theme.SIZES.BASE / 2,
     width: theme.SIZES.BASE / 2,

@@ -29,33 +29,11 @@ class Components extends React.Component {
       checkSelected: [],
       'switch-1': true,
       'switch-2': false,
-      progress: 0,
-      value: 50,
-      checked: false,
-      borderTextArea: '#E3E3E3',
-      textTag: 'City',
-      tags: ['Washington', 'Sydney', 'Beijing']
+
     };
   }
-  _onSelect = id => {
-    console.log(id);
-  };
 
-  componentDidMount() {
-    setInterval(() => {
-      this.setState(state => ({
-        progress: state.progress + 0.1
-      }));
-    }, 1000);
-  }
-  onChangeCheck() {
-    this.setState({ checked: !this.state.checked });
-  }
-  onFocus() {
-    this.setState({
-      borderTextArea: nowTheme.COLORS.PRIMARY
-    });
-  }
+
 
   toggleSwitch = switchId => this.setState({ [switchId]: !this.state[switchId] });
 
@@ -76,28 +54,21 @@ class Components extends React.Component {
             </Button>
           </Block>
           <Block center>
-            <Button
-              color="secondary"
-              textStyle={{ fontFamily: 'montserrat-regular' }}
-              style={styles.button}
-            >
-              SECONDARY
-            </Button>
-          </Block>
-          <Block center>
             <Button textStyle={{ fontFamily: 'montserrat-regular' }} style={styles.button}>
               PRIMARY
             </Button>
           </Block>
           <Block center>
             <Button
-              textStyle={{ fontFamily: 'montserrat-regular' }}
               color="info"
+              textStyle={{ fontFamily: 'montserrat-regular' }}
               style={styles.button}
             >
               INFO
             </Button>
           </Block>
+
+
           <Block center>
             <Button
               textStyle={{ fontFamily: 'montserrat-regular' }}
@@ -178,7 +149,7 @@ class Components extends React.Component {
               fontFamily: 'montserrat-regular',
               marginBottom: theme.SIZES.BASE / 2
             }}
-            color={nowTheme.COLORS.DEFAULT}
+            color={nowTheme.COLORS.HEADER}
           >
             Heading 1
           </Text>
@@ -188,7 +159,7 @@ class Components extends React.Component {
               fontFamily: 'montserrat-regular',
               marginBottom: theme.SIZES.BASE / 2
             }}
-            color={nowTheme.COLORS.DEFAULT}
+            color={nowTheme.COLORS.HEADER}
           >
             Heading 2
           </Text>
@@ -198,7 +169,7 @@ class Components extends React.Component {
               fontFamily: 'montserrat-regular',
               marginBottom: theme.SIZES.BASE / 2
             }}
-            color={nowTheme.COLORS.DEFAULT}
+            color={nowTheme.COLORS.HEADER}
           >
             Heading 3
           </Text>
@@ -208,7 +179,7 @@ class Components extends React.Component {
               fontFamily: 'montserrat-regular',
               marginBottom: theme.SIZES.BASE / 2
             }}
-            color={nowTheme.COLORS.DEFAULT}
+            color={nowTheme.COLORS.HEADER}
           >
             Heading 4
           </Text>
@@ -218,7 +189,7 @@ class Components extends React.Component {
               fontFamily: 'montserrat-regular',
               marginBottom: theme.SIZES.BASE / 2
             }}
-            color={nowTheme.COLORS.DEFAULT}
+            color={nowTheme.COLORS.HEADER}
           >
             Heading 5
           </Text>
@@ -228,7 +199,7 @@ class Components extends React.Component {
               fontFamily: 'montserrat-regular',
               marginBottom: theme.SIZES.BASE / 2
             }}
-            color={nowTheme.COLORS.DEFAULT}
+            color={nowTheme.COLORS.HEADER}
           >
             Paragraph
           </Text>
@@ -492,8 +463,7 @@ class Components extends React.Component {
               <Card item={articles[2]} />
             </Block>
             <Card item={articles[4]} full />
-            <Card item={articles[5]} full titleStyle={styles.productTitle} />
-            <Card item={articles[6]} full titleStyle={styles.productTitle} />
+
             <Block flex card shadow style={styles.category}>
               <ImageBackground
                 source={{ uri: Images.Products['View article'] }}
@@ -514,6 +484,8 @@ class Components extends React.Component {
                 </Block>
               </ImageBackground>
             </Block>
+            <Card item={articles[5]} full titleStyle={styles.productTitle} />
+            <Card item={articles[6]} full titleStyle={styles.productTitle} />
           </Block>
         </Block>
       </Block>
@@ -526,10 +498,10 @@ class Components extends React.Component {
       <Block flex style={[styles.group, { paddingBottom: theme.SIZES.BASE * 5 }]}>
         <Block style={{ marginHorizontal: theme.SIZES.BASE * 2 }}>
           <Block row space="between">
-            <Text bold size={16} color="#525F7F" style={{ marginTop: 3 }}>
+            <Text bold size={16} color="#333" style={{ marginTop: 3 }}>
               Album
             </Text>
-            <Button small color="transparent" textStyle={{ color: '#5E72E4', fontSize: 14 }}>
+            <Button small color="transparent" textStyle={{ color: nowTheme.COLORS.PRIMARY, fontSize: 14 }}>
               View All
             </Button>
           </Block>
@@ -611,7 +583,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: theme.SIZES.BASE,
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   imageBlock: {
     overflow: 'hidden',
