@@ -58,21 +58,21 @@ class Card extends React.Component {
                   </Text>
                 </Block>
               ) : (
-                <Block />
-              )}
+                  <Block />
+                )}
               {item.description ? (
                 <Block flex center>
                   <Text
                     style={{ fontFamily: 'montserrat-regular', textAlign: 'center', padding: 10 }}
-                    size={16}
+                    size={14}
                     muted
                   >
                     {item.description}
                   </Text>
                 </Block>
               ) : (
-                <Block />
-              )}
+                  <Block />
+                )}
               {item.body ? (
                 <Block flex left>
                   <Text
@@ -84,8 +84,8 @@ class Card extends React.Component {
                   </Text>
                 </Block>
               ) : (
-                <Block />
-              )}
+                  <Block />
+                )}
             </Block>
             <Block right={ctaRight ? true : false}>
               <Text

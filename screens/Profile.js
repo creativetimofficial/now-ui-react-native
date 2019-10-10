@@ -12,13 +12,17 @@ const thumbMeasure = (width - 48 - 32) / 3;
 
 const Profile = () => {
   return (
-    <Block flex style={styles.profile}>
-      <ImageBackground
-        source={Images.ProfileBackground}
-        style={styles.profileContainer}
-        imageStyle={styles.profileBackground}
-      >
-        <Block flex>
+    <Block style={{
+      flex: 1,
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+    }} >
+      <Block flex={0.6} >
+        <ImageBackground
+          source={Images.ProfileBackground}
+          style={styles.profileContainer}
+          imageStyle={styles.profileBackground}
+        >
           <Block flex style={styles.profileCard}>
             <Block middle style={styles.avatarContainer}>
               <Image source={Images.ProfilePicture} style={styles.avatar} />
@@ -107,70 +111,76 @@ const Profile = () => {
                 style={[styles.social, styles.shadow]}
               />
             </Block>
-            <ScrollView showsVerticalScrollIndicator={false}>
-              <Block flex>
-                <Block middle>
-                  <Text
-                    style={{
-                      color: '#333',
-                      fontWeight: 'bold',
-                      fontSize: 18,
-                      fontFamily: 'montserrat-regular',
-                      marginTop: 15,
-                      marginBottom: 16
-                    }}
-                  >
-                    About me
-                  </Text>
-                  <Text
-                    size={16}
-                    muted
-                    style={{ textAlign: 'center', fontFamily: 'montserrat-regular' }}
-                  >
-                    An artist of considerable range, Ryan — the name taken by Melbourne-raised,
-                    Brooklyn-based Nick Murphy — writes, performs and records all of his own music.
-                  </Text>
-                </Block>
-                <Block row style={{ paddingVertical: 14 }} space="between">
-                  <Text bold size={16} color="#525F7F" style={{ marginTop: 3 }}>
-                    Album
-                  </Text>
-                  <Button
-                    small
-                    color="transparent"
-                    textStyle={{ color: nowTheme.COLORS.PRIMARY, fontSize: 14 }}
-                  >
-                    View all
-                  </Button>
-                </Block>
-                <Block style={{ paddingBottom: -HeaderHeight * 2 }}>
-                  <Block row space="between" style={{ flexWrap: 'wrap' }}>
-                    {Images.Viewed.map((img, imgIndex) => (
-                      <Image
-                        source={{ uri: img }}
-                        key={`viewed-${img}`}
-                        resizeMode="cover"
-                        style={styles.thumb}
-                      />
-                    ))}
-                  </Block>
-                </Block>
-              </Block>
-            </ScrollView>
           </Block>
-          <Block style={{ marginBottom: 25 }} />
-        </Block>
-      </ImageBackground>
-    </Block >
-  );
-};
+        </ImageBackground>
+
+
+      </Block>
+      <Block flex={0.4} style={{ padding: theme.SIZES.BASE, }}>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <Block flex style={{ marginTop: 20 }}>
+            <Block middle>
+              <Text
+                style={{
+                  color: '#333',
+                  fontWeight: 'bold',
+                  fontSize: 18,
+                  fontFamily: 'montserrat-regular',
+                  marginTop: 15,
+                  marginBottom: 16
+                }}
+              >
+                About me
+                  </Text>
+              <Text
+                size={16}
+                muted
+                style={{ textAlign: 'center', fontFamily: 'montserrat-regular' }}
+              >
+                An artist of considerable range, Ryan — the name taken by Melbourne-raised,
+                Brooklyn-based Nick Murphy — writes, performs and records all of his own music.
+                  </Text>
+            </Block>
+            <Block row style={{ paddingVertical: 14 }} space="between">
+              <Text bold size={16} color="#525F7F" style={{ marginTop: 3 }}>
+                Album
+                  </Text>
+              <Button
+                small
+                color="transparent"
+                textStyle={{ color: nowTheme.COLORS.PRIMARY, fontSize: 14 }}
+              >
+                View all
+                  </Button>
+            </Block>
+
+
+            <Block style={{ paddingBottom: -HeaderHeight * 2 }}>
+              <Block row space="between" style={{ flexWrap: 'wrap' }}>
+                {Images.Viewed.map((img, imgIndex) => (
+                  <Image
+                    source={{ uri: img }}
+                    key={`viewed-${img}`}
+                    resizeMode="cover"
+                    style={styles.thumb}
+                  />
+                ))}
+              </Block>
+            </Block>
+          </Block>
+        </ScrollView>
+      </Block>
+    </Block>
+
+  )
+}
+
+
+
+
 
 const styles = StyleSheet.create({
-  profile: {
-    marginTop: Platform.OS === 'android' ? -HeaderHeight : 0,
-    // marginBottom: -HeaderHeight * 2,
-    flex: 1
-  },
+
   profileContainer: {
     width,
     height,

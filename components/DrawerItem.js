@@ -12,7 +12,7 @@ class DrawerItem extends React.Component {
     switch (title) {
       case 'Home':
         return <Icon name="app2x" family="NowExtra" size={14} color={focused ? nowTheme.COLORS.PRIMARY : 'white'} />;
-      case 'Components':
+      case 'Elements':
         return <Icon name="atom2x" family="NowExtra" size={14} color={focused ? nowTheme.COLORS.PRIMARY : 'white'} />;
       case 'Articles':
         return <Icon name="paper" family="NowExtra" size={14} color={focused ? nowTheme.COLORS.PRIMARY : 'white'} />;

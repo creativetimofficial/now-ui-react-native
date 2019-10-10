@@ -34,11 +34,7 @@ const Drawer = props => (
           </Text>
         </Block>
         <TouchableOpacity
-          onPress={() =>
-            Linking.openURL('https://demos.creative-tim.com/argon-pro-react-native/docs/').catch(
-              err => console.error('An error occurred', err)
-            )
-          }
+
         >
           <DrawerItem {...props} title="Getting Started" />
         </TouchableOpacity>

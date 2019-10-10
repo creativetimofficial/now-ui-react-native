@@ -4,19 +4,21 @@ import {
   StyleSheet,
   Dimensions,
   TouchableOpacity,
-  Alert,
   Image,
-  ImageBackground
+  Animated
 } from 'react-native';
+
+import Articles from '../screens/Articles';
 // Galio components
 import { Block, Text, Button as GaButton, theme } from 'galio-framework';
 
 // Now UI themed components
-import { articles, Images, nowTheme, tabs } from '../constants';
+import { Images, nowTheme, articles } from '../constants';
 import { Button, Select, Icon, Input, Header, Switch } from '../components';
 
 import Img from '../components/Img';
 import { Card } from '../components';
+
 
 const { width } = Dimensions.get('screen');
 
@@ -450,45 +452,31 @@ class Components extends React.Component {
   };
 
   renderCards = () => {
+    scrollX = new Animated.Value(0);
+    cards = [articles[5], articles[6]]
     return (
-      <Block flex style={styles.group}>
-        <Text size={16} style={styles.title}>
-          Cards
-        </Text>
-        <Block flex>
-          <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-            <Card item={articles[0]} horizontal />
-            <Block flex row>
-              <Card item={articles[1]} style={{ marginRight: theme.SIZES.BASE }} />
-              <Card item={articles[2]} />
-            </Block>
-            <Card item={articles[4]} full />
+      <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+        <Articles />
+        <ScrollView
+          horizontal={true}
+          style={styles.contentContainer}
+          showsHorizontalScrollIndicator={false}
+          showsVerticalScrollIndicator={false}
+          scrollEventThrottle={16}
+          onScroll={Animated.event([
+            { nativeEvent: { contentOffset: { x: this.scrollX } } },
+          ])}
+          contentContainerStyle={{
+            width: width * 2
+          }}>
+          {cards.map((item, index) => {
+            return <Card key={index} item={item} full titleStyle={styles.productTitle} />
+          })}
 
-            <Block flex card shadow style={styles.category}>
-              <ImageBackground
-                source={{ uri: Images.Products['View article'] }}
-                style={[styles.imageBlock, { width: width - theme.SIZES.BASE * 2, height: 252 }]}
-                imageStyle={{
-                  width: width - theme.SIZES.BASE * 2,
-                  height: 252
-                }}
-              >
-                <Block style={styles.categoryTitle}>
-                  <Text
-                    style={{ fontFamily: 'montserrat-bold' }}
-                    size={18}
-                    color={theme.COLORS.WHITE}
-                  >
-                    View article
-                  </Text>
-                </Block>
-              </ImageBackground>
-            </Block>
-            <Card item={articles[5]} full titleStyle={styles.productTitle} />
-            <Card item={articles[6]} full titleStyle={styles.productTitle} />
-          </Block>
-        </Block>
+        </ScrollView>
+
       </Block>
+
     );
   };
   renderAlbums = () => {

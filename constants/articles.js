@@ -44,7 +44,7 @@ export default [
   {
     title: '$299',
     image:
-      'https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=628&q=80',
+      'https://images.unsplash.com/photo-1495105787522-5334e3ffa0ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
     subtitle: 'Saint Laurent',
     description:
       'The smooth woven-wool is water resistant to ensure you stay pristine after a long-haul flight.',
