@@ -1,5 +1,5 @@
 import React from 'react';
-import { DrawerItems } from 'react-navigation';
+import { DrawerNavigatorItems } from 'react-navigation-drawer';
 import { ScrollView, StyleSheet, Dimensions, Image, TouchableOpacity, Linking } from 'react-native';
 import { Block, Text, theme } from 'galio-framework';
 import Icon from '../components/Icon';
@@ -21,7 +21,7 @@ const Drawer = props => (
 
     <Block flex>
       <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }}>
-        <DrawerItems {...props} />
+        <DrawerNavigatorItems {...props} />
         <Block flex style={{ marginTop: 24, marginVertical: 8, paddingHorizontal: 8 }}>
           <Block
             style={{ borderColor: 'white', width: '100%', borderWidth: StyleSheet.hairlineWidth }}

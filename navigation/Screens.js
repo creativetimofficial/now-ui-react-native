@@ -1,7 +1,8 @@
 import React from 'react';
 import { Easing, Animated } from 'react-native';
-import { createStackNavigator, createDrawerNavigator, createAppContainer } from 'react-navigation';
-
+import { createStackNavigator } from 'react-navigation-stack';
+import { createAppContainer } from 'react-navigation';
+import { createDrawerNavigator } from 'react-navigation-drawer';
 // screens
 import Home from '../screens/Home';
 import Pro from '../screens/Pro';
