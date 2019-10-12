@@ -33,7 +33,7 @@ class Card extends React.Component {
       <Block row={horizontal} card flex style={cardContainer}>
         <TouchableWithoutFeedback onPress={() => navigation.navigate('Product', { product: item })}>
           <Block flex style={imgContainer}>
-            <Image source={{ uri: item.image }} style={imageStyles} />
+            <Image resizeMode="cover" source={item.image} style={imageStyles} />
           </Block>
         </TouchableWithoutFeedback>
         <TouchableWithoutFeedback onPress={() => navigation.navigate('Product', { product: item })}>
