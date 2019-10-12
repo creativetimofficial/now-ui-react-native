@@ -63,9 +63,9 @@ class Card extends React.Component {
               {item.description ? (
                 <Block flex center>
                   <Text
-                    style={{ fontFamily: 'montserrat-regular', textAlign: 'center', padding: 10 }}
+                    style={{ fontFamily: 'montserrat-regular', textAlign: 'center', padding: 15 }}
                     size={14}
-                    muted
+                    color={"#9A9A9A"}
                   >
                     {item.description}
                   </Text>

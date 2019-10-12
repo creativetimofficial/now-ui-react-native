@@ -24,66 +24,73 @@ const Profile = () => {
           imageStyle={styles.profileBackground}
         >
           <Block flex style={styles.profileCard}>
-            <Block middle style={styles.avatarContainer}>
-              <Image source={Images.ProfilePicture} style={styles.avatar} />
-            </Block>
-            <Block middle style={styles.nameInfo}>
-              <Text style={{ fontFamily: 'montserrat-regular' }} size={24} color="white">
-                Ryan Scheinder
+            <Block style={{ position: 'absolute', width: width, zIndex: 5, paddingHorizontal: 20 }}>
+              <Block middle style={{ top: height * 0.095 }}>
+                <Image source={Images.ProfilePicture} style={styles.avatar} />
+              </Block>
+              <Block style={{ top: height * 0.15 }}>
+                <Block middle >
+                  <Text style={{ fontFamily: 'montserrat-regular' }} size={24} color="white">
+                    Ryan Scheinder
               </Text>
-              <Text
-                size={16}
-                color="white"
-                style={{ marginTop: 10, fontFamily: 'montserrat-regular' }}
-              >
-                Photographer
+                  <Text
+                    size={16}
+                    color="white"
+                    style={{ marginTop: 10, fontFamily: 'montserrat-regular' }}
+                  >
+                    Photographer
               </Text>
-            </Block>
-            <Block style={styles.info}>
-              <Block row space="between">
-                <Block middle>
-                  <Text
-                    size={18}
-                    color="white"
-                    style={{ marginBottom: 4, fontFamily: 'montserrat-bold' }}
-                  >
-                    2K
-                  </Text>
-                  <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color="white">
-                    Friends
-                  </Text>
                 </Block>
-                <Block middle>
-                  <Text
-                    color="white"
-                    size={18}
-                    style={{ marginBottom: 4, fontFamily: 'montserrat-bold' }}
-                  >
-                    26
+                <Block style={styles.info}>
+                  <Block row space="between">
+                    <Block middle>
+                      <Text
+                        size={18}
+                        color="white"
+                        style={{ marginBottom: 4, fontFamily: 'montserrat-bold' }}
+                      >
+                        2K
                   </Text>
-                  <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color="white">
-                    Comments
+                      <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color="white">
+                        Friends
                   </Text>
-                </Block>
-                <Block middle>
-                  <Text
-                    color="white"
-                    size={18}
-                    style={{ marginBottom: 4, fontFamily: 'montserrat-bold' }}
-                  >
-                    48
+                    </Block>
+                    <Block middle>
+                      <Text
+                        color="white"
+                        size={18}
+                        style={{ marginBottom: 4, fontFamily: 'montserrat-bold' }}
+                      >
+                        26
                   </Text>
-                  <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color="white">
-                    Bookmarks
+                      <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color="white">
+                        Comments
                   </Text>
+                    </Block>
+                    <Block middle>
+                      <Text
+                        color="white"
+                        size={18}
+                        style={{ marginBottom: 4, fontFamily: 'montserrat-bold' }}
+                      >
+                        48
+                  </Text>
+                      <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color="white">
+                        Bookmarks
+                  </Text>
+                    </Block>
+                  </Block>
                 </Block>
               </Block>
+
             </Block>
+
+
             <Block
               middle
               row
               space="evenly"
-              style={{ marginTop: 22, paddingBottom: 24, zIndex: 5 }}
+              style={{ position: 'absolute', width: width, top: height * 0.6 - 22, zIndex: 5 }}
             >
               <Button style={{ width: 114, height: 44, }} textStyle={{ fontSize: 16 }} round>
                 Follow
@@ -116,6 +123,7 @@ const Profile = () => {
 
 
       </Block>
+      <Block />
       <Block flex={0.4} style={{ padding: theme.SIZES.BASE, }}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <Block flex style={{ marginTop: 20 }}>
@@ -159,7 +167,7 @@ const Profile = () => {
               <Block row space="between" style={{ flexWrap: 'wrap' }}>
                 {Images.Viewed.map((img, imgIndex) => (
                   <Image
-                    source={{ uri: img }}
+                    source={img}
                     key={`viewed-${img}`}
                     resizeMode="cover"
                     style={styles.thumb}
@@ -191,12 +199,7 @@ const styles = StyleSheet.create({
     width,
     height: height * 0.6
   },
-  profileCard: {
-    padding: theme.SIZES.BASE,
-    marginHorizontal: theme.SIZES.BASE,
-    marginTop: 135,
-    zIndex: 2
-  },
+
   info: {
     marginTop: 20,
     paddingHorizontal: 10
@@ -213,11 +216,6 @@ const styles = StyleSheet.create({
   },
   nameInfo: {
     marginTop: 35
-  },
-  divider: {
-    width: '90%',
-    borderWidth: 1,
-    borderColor: '#E9ECEF'
   },
   thumb: {
     borderRadius: 4,
