@@ -5,7 +5,8 @@ import {
   Dimensions,
   TouchableOpacity,
   Image,
-  Animated
+  Animated,
+  ImageBackground
 } from 'react-native';
 
 import Articles from '../screens/Articles';
@@ -457,6 +458,25 @@ class Components extends React.Component {
     return (
       <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
         <Articles />
+        <Block flex card shadow style={styles.category}>
+          <ImageBackground
+            source={Images.Products['path']}
+            style={[
+              styles.imageBlock,
+              { width: width - theme.SIZES.BASE * 2, height: 252 }
+            ]}
+            imageStyle={{
+              width: width - theme.SIZES.BASE * 2,
+              height: 252
+            }}
+          >
+            <Block style={styles.categoryTitle}>
+              <Text size={18} bold color={theme.COLORS.WHITE}>
+                View article
+                  </Text>
+            </Block>
+          </ImageBackground>
+        </Block>
         <ScrollView
           horizontal={true}
           style={styles.contentContainer}
@@ -496,7 +516,7 @@ class Components extends React.Component {
           <Block row space="between" style={{ marginTop: theme.SIZES.BASE, flexWrap: 'wrap' }}>
             {Images.Viewed.map((img, index) => (
               <Block key={`viewed-${img}`} style={styles.shadow}>
-                <Image resizeMode="cover" source={{ uri: img }} style={styles.albumThumb} />
+                <Image resizeMode="cover" source={img} style={styles.albumThumb} />
               </Block>
             ))}
           </Block>

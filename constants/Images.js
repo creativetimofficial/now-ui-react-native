@@ -13,16 +13,17 @@ const CreativeTimLogo = require('../assets/imgs/creative-tim-white-slim2.png');
 const InvisionLogo = require('../assets/imgs/invision-white-slim.png');
 
 const Viewed = [
-  'https://images.unsplash.com/photo-1562184552-997c461abbe6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-  'https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80',
-  'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-  'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80',
-  'https://images.unsplash.com/photo-1552242718-c5360894aecd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-  'https://images.unsplash.com/photo-1547110287-71448271b1de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80'
+  require('../assets/imgs/project5.jpg'),
+  require('../assets/imgs/project7.jpg'),
+  require('../assets/imgs/project6.jpg'),
+  require('../assets/imgs/project4.jpg'),
+  require('../assets/imgs/project24.jpg'),
+  require('../assets/imgs/project21.jpg')
 ];
 
 const Products = {
-  'View article': 'https://images.unsplash.com/photo-1476681227192-05dedd2b6709?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=800'
+  text: 'View article',
+  path: require('../assets/imgs/bg15.jpg')
 };
 
 export default {
