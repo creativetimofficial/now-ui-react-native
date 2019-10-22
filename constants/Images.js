@@ -17,8 +17,8 @@ const Viewed = [
   require('../assets/imgs/project7.jpg'),
   require('../assets/imgs/project6.jpg'),
   require('../assets/imgs/project4.jpg'),
-  require('../assets/imgs/project24.jpg'),
-  require('../assets/imgs/project21.jpg')
+  require('../assets/imgs/project21.jpg'),
+  require('../assets/imgs/project24.jpg')
 ];
 
 const Products = {
