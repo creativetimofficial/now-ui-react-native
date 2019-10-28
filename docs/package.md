@@ -1,6 +1,6 @@
 # Packages
 
-We find it fair to share our `package.json` with you! These are the main dependencies used inside Argon React Native.
+We find it fair to share our `package.json` with you! These are the main dependencies used inside Now UI React Native.
 
 ```
 {

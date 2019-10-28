@@ -27,7 +27,7 @@ class Onboarding extends React.Component {
           />
         </Block>
         <Block center>
-          <Image source={Images.LogoOnboarding} style={styles.logo} />
+
         </Block>
         <Block flex space="between" style={styles.padded}>
           <Block flex space="around" style={{ zIndex: 2 }}>
@@ -42,10 +42,10 @@ class Onboarding extends React.Component {
                   System
                 </Text>
                 <Block middle style={styles.pro}>
-                <Text size={16} color="white">
-                  PRO
+                  <Text size={16} color="white">
+                    PRO
                 </Text>
-              </Block>
+                </Block>
               </Block>
               <Block style={styles.subTitle}>
                 <Text color="white" size={16}>

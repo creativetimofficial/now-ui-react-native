@@ -1,6 +1,6 @@
 # Now UI React Native
 
-Now UI React Native is a beautiful resource built over Galio, React Native and Expo allowing you to create powerful and beautiful e-commerce mobile applications. We have redesigned all the usual components in [Galio](https://galio.io?ref=argonrn-docs) to make it look flat, minimalist and easy to use.
+Now UI React Native is a beautiful resource built over Galio, React Native and Expo allowing you to create powerful and beautiful e-commerce mobile applications. We have redesigned all the usual components in [Galio](https://galio.io?ref=now-uirn-docs) to make it look flat, minimalist and easy to use.
 
 Using the mobile application is very simple, but it does require you to understand basic JavaScript functions and React Native. To get the desired effect you will need to integrate React Native components and JS plugins that take a little bit more effort.
 
