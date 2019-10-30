@@ -321,7 +321,7 @@ At present, we officially aim to support the last two versions of the following 
 | ------- |
 
 
-| [![Now UI Dashboard Laravel](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-dashboard-pro-laravel/dashboard.png)](https://www.creative-tim.com/product/now-ui-dashboard-laravel)
+[![Now UI Dashboard Laravel](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-dashboard-pro-laravel/dashboard.png)](https://www.creative-tim.com/product/now-ui-dashboard-laravel)
 
 ## Reporting Issues
 
