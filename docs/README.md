@@ -23,6 +23,11 @@ The available screens for the free version are:
   <img src="https://raw.githubusercontent.com/creativetimofficial/now-ui-react-native/docs/docs/assets/screens/drawer-screen.png" width="225px" height="400px">
  
   <img src="https://raw.githubusercontent.com/creativetimofficial/now-ui-react-native/docs/docs/assets/screens/profile-screen.png" width="225px" height="400px">
+
+</p>
+
+<p align="center">
+
  <img src="https://raw.githubusercontent.com/creativetimofficial/now-ui-react-native/docs/docs/assets/screens/home-screen.png" width="225px" height="400px">
   <img src="https://raw.githubusercontent.com/creativetimofficial/now-ui-react-native/docs/docs/assets/screens/account-screen.png" width="225px" height="400px">
 

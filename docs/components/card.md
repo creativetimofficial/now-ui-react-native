@@ -11,8 +11,9 @@ Simple Example:
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/creativetimofficial/now-ui-react-native/gh-pages/docs/assets/cards.png" width="244px" height="386px">
+  <img src="https://raw.githubusercontent.com/creativetimofficial/now-ui-react-native/gh-pages/docs/assets/cards.png">
 </p>
+749 × 988
 
 ### Props
 
