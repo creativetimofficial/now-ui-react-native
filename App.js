@@ -11,7 +11,6 @@ import { Images, articles, nowTheme } from './constants';
 // cache app images
 const assetImages = [
   Images.Onboarding,
-  Images.LogoOnboarding,
   Images.Logo,
   Images.Pro,
   Images.NowLogo,
