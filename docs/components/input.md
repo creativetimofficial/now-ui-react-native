@@ -1,6 +1,6 @@
 # Input
 
-This components extends [Galio](https://galio.io?ref=argonrn-docs)'s Input component.
+This components extends [Galio](https://galio.io?ref=now-uirn-docs)'s Input component.
 
 ### Usage
 
@@ -24,7 +24,7 @@ Simple Example:
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/creativetimofficial/argon-react-native/gh-pages/docs/assets/inputs.png" width="244px" height="366px">
+  <img src="https://raw.githubusercontent.com/creativetimofficial/now-ui-react-native/gh-pages/docs/assets/inputs.png" width="244px" height="366px">
 </p>
 
 ### Props
