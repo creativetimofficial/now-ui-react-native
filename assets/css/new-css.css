@@ -1,71 +1,71 @@
-body{
+body {
   overflow-x: hidden;
 }
-.navbar .navbar-nav .nav-item .nav-link:not(.btn-just-icon) .fa{
+.navbar .navbar-nav .nav-item .nav-link:not(.btn-just-icon) .fa {
   margin-right: 0;
 }
-.navbar .navbar-nav .nav-item .nav-link{
+.navbar .navbar-nav .nav-item .nav-link {
   margin-right: 4px;
 }
 
-.imac{
+.imac {
   position: absolute;
   z-index: 1;
   right: -200px;
   width: 1050px;
   top: -170px;
 }
-.page-header{
+.page-header {
     background: radial-gradient(#565656 0%, #080404 100%);
     background-size: 150% 200%;
 }
 
-.page-header .figma-logo{
+.page-header .figma-logo {
   width: 30px;
   height: 30px;
 }
 
-.brand h1{
+.brand h1 {
   font-weight: 700;
 }
 
-.page-header .creative-tim-logo{
+.page-header .creative-tim-logo {
   width: 120px;
 }
-.page-header::before{
+.page-header::before {
   content:"";
   display: block;
   position: absolute;
   background: rgba(0,0,0,0.5);
 }
-.page-header .container{
+.page-header .container {
   z-index: auto;
 }
-.page-header .container .col-lg-6:first-child{
+.page-header .container .col-lg-6:first-child {
   z-index: 2;
 }
-p{
+p {
   font-size: 16px;
 }
 
-.features-1 .col-md-6{
+.features-1 .col-md-6 {
   border: 1px solid hsla(0, 3%, 33%, .1);
 
 }
 
-.features-1 .col-md-6:first-child{
+.features-1 .col-md-6:first-child {
   border-left: none;
   border-top: none;
 
 }
 
-.features-1 .col-md-6:nth-child(2){
+.features-1 .col-md-6:nth-child(2) {
   border-right: none;
   border-top: none;
 
 }
 
-.features-1 .col-md-6:nth-child(3){
+.features-1 .col-md-6:nth-child(3) {
   border-left: none;
   border-bottom: none;
 
@@ -77,51 +77,63 @@ p{
 
 }
 
+.features-1 .info .icon i {
+  font-size: 2.5rem;
+}
+
+.features-5 .info .icon i {
+  font-size: 2rem;
+}
+
+.team-3 {
+  margin-top: 100px;
+}
+
 .section-content
-img{
+img {
   height: auto !important;
 }
 
-.share-btn-img{
+.share-btn-img {
   border-radius: 3px;
 }
 
-footer{
+footer {
   border-top: 1px solid #ddd;
 }
 
-.image-container-responsive{
+.image-container-responsive {
   width: 800px;
   position: relative;
 }
 
-.image-container-responsive img{
+.image-container-responsive img {
   width: 100%;
   left: 100px;
   margin-left: 100px;
 
 }
 
-.image-container-responsive .phone{
+.image-container-responsive .phone {
   left: -200px;
   width: 65%;
   top: 100px;
   position: absolute;
 }
 
-img.phone1{
+img.phone1 {
   position: absolute;
-  right: -25%;
+  right: -10%;
   width: 150%;
   margin-top: -20px;
   z-index: 3;
 }
 
-img.phone2{
+img.phone2 {
   position: absolute;
   width: 175%;
-  right: -345px;
-  margin-top: -50px;
+  right: -70%;
+  margin-top: -10rem;
   z-index: 2;
 }
 
@@ -131,15 +143,15 @@ img.phone2{
     overflow: hidden;
 }
 
-.section-products{
+.section-products {
   z-index: 10;
 }
 
-.section-products img{
+.section-products img {
   width: 100%;
 }
 
-.section-components .table-img{
+.section-components .table-img {
   box-shadow: none;
   left: 15%;
     top: 36%;
@@ -147,7 +159,7 @@ img.phone2{
     border-radius: 2px;
 }
 
-.section-components .ecomm-2{
+.section-components .ecomm-2 {
   left: 3%;
   top: 7%;
   height: 100px;
@@ -220,9 +232,6 @@ img.phone2{
   top: 0;
 }
 
-.section-components{
-  margin-top: -150px;
-}
 .section-components .components-phone{
   left: 140px;
   height: 95%;
