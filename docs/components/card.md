@@ -20,3 +20,4 @@ Simple Example:
 |    full    |  bool  |   false  |             |
 |  ctaColor  | string |   null  |             |
 | imageStyle |   any  |   null  |             |
+

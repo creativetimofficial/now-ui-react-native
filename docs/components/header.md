@@ -1,6 +1,6 @@
 # Header
 
-This components extends [Galio](https://galio.io?ref=argonrn-docs)'s NavBar component.
+This components extends [Galio](https://galio.io?ref=now-uirn-docs)'s NavBar component.
 
 This has the same props as the NavBar component but the whole navigation and programming logic is written inside of it. For any changes regarding routes or icons you would have to edit the component's code. This is super easy to do being the fact that our components are beautifully written.
 
@@ -15,6 +15,7 @@ Simple example:
   optionRight="Option 2"
   navigation={this.props.navigation} />
 ```
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/creativetimofficial/argon-react-native/gh-pages/docs/assets/navigation.png" width="274px" height="366px">
 </p>

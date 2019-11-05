@@ -1,8 +1,8 @@
-# [Now UI React Native](https://creativetimofficial.github.io/now-ui-react-native/docs/#) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/home?status=Now%20React%20Native,%20a%20cool%20Now%20React%20Native%20App%20Template%20%E2%9D%A4%EF%B8%8F%20https%3A//bit.ly/2KAj86H%20%23reactnative%20%23now-ui%20%23designsystem%20%23developers%20via%20%40CreativeTim)
+# [Now UI React Native](https://creativetimofficial.github.io/now-ui-react-native/docs/#) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/home?status=Argon%20React%20Native,%20a%20cool%20Argon%20React%20Native%20App%20Template%20%E2%9D%A4%EF%B8%8F%20https%3A//bit.ly/2KAj86H%20%23reactnative%20%23argon%20%23designsystem%20%23developers%20via%20%40CreativeTim)
 
-![version](https://img.shields.io/badge/version-1.1.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/now-ui-react-native.svg?style=flat)](https://github.com/creativetimofficial/now-ui-react-native/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/now-ui-react-native.svg?maxAge=2592000)](https://github.com/creativetimofficial/now-ui-react-native/issues?q=is%3Aissue+is%3Aclosed)
+![version](https://img.shields.io/badge/version-1.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/argon-react-native.svg?style=flat)](https://github.com/creativetimofficial/argon-react-native/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/argon-react-native.svg?maxAge=2592000)](https://github.com/creativetimofficial/argon-react-native/issues?q=is%3Aissue+is%3Aclosed)
 
-![Product Gif](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/arg-rn-thumbnail.jpg)
+![Product Gif](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-react-native/arg-rn-thumbnail.jpg)
 
 Now UI React Native is a fully coded app template built over [Galio.io](https://galio.io/?ref=creativetim), [React Native](https://facebook.github.io/react-native/?ref=creativetim) and [Expo](https://expo.io/?ref=creativetim) to allow you to create powerful and beautiful e-commerce mobile applications. We have redesigned all the usual components in Galio to make it look like Now UI's KIT, minimalistic and easy to use.
 
@@ -19,6 +19,7 @@ You will save a lot of time going from prototyping to full-functional code, beca
 Now UI React Native comes packed with a large number of components and cards. Putting together a mobile app has never been easier than matching together different components. From the profile screen to a settings screen, you can easily customise and build your screens. We have created multiple options for you to put together and customise into pixel perfect screens.
 
 View [ all components/cards here](https://demos.creative-tim.com/now-ui-react-native/index.html#cards).
+
 
 ### Example Screens
 
@@ -128,6 +129,7 @@ At present, we officially aim to support the last two versions of the following 
 - Support: <https://www.creative-tim.com/contact-us>
 - Issues: [Github Issues Page](https://github.com/creativetimofficial/now-ui-react-native/issues)
 - [Now UI Kit](https://www.creative-tim.com/product/now-ui-kit-pro) - For Front End Development
+
 - **Dashboards:**
 
 | HTML                                                                                                                                                                                       | React                                                                                                                                                                                                                   | Angular                                                                                                                                                                                                                         |
@@ -155,7 +157,6 @@ If you have questions or need help integrating the product please [contact us](h
 ## Licensing
 
 - Copyright 2019 Creative Tim (https://www.creative-tim.com/)
-
 - Licensed under MIT (https://github.com/creativetimofficial/now-ui-react-native/blob/master/LICENSE.md)
 
 ## Useful Links

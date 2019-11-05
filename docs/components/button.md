@@ -1,6 +1,6 @@
 # Button
 
-This components extends [Galio](https://galio.io?ref=argonrn-docs)'s Button component.
+This components extends [Galio](https://galio.io?ref=nowuirn-docs)'s Button component.
 
 You will find our restyled button in `src/components/Button`.
 
@@ -40,4 +40,5 @@ Simple example:
 
 
 ### Galio Buttons
+
 For more props and buttons please check out the [galio buttons section](https://galio.io/docs/#/components/button).

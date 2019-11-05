@@ -1,6 +1,6 @@
 # Input
 
-This components extends [Galio](https://galio.io?ref=argonrn-docs)'s Input component.
+This components extends [Galio](https://galio.io?ref=now-uirn-docs)'s Input component.
 
 ### Usage
 
