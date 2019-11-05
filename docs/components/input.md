@@ -24,7 +24,7 @@ Simple Example:
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/creativetimofficial/argon-react-native/gh-pages/docs/assets/inputs.png" width="244px" height="366px">
+  <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/inputs.png" height="370px">
 </p>
 
 ### Props
