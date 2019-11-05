@@ -16,15 +16,16 @@ You will save a lot of time going from prototyping to full-functional code, beca
 
 ### Components & Cards
 
-Argon React Native comes packed with a large number of components and cards. Putting together a mobile app has never been easier than matching together different components. From the profile screen to a settings screen, you can easily customise and build your screens. We have created multiple options for you to put together and customise into pixel perfect screens.
+Now UI React Native comes packed with a large number of components and cards. Putting together a mobile app has never been easier than matching together different components. From the profile screen to a settings screen, you can easily customise and build your screens. We have created multiple options for you to put together and customise into pixel perfect screens.
 
-View [ all components/cards here](https://demos.creative-tim.com/argon-react-native/index.html#cards).
+View [ all components/cards here](https://demos.creative-tim.com/now-ui-react-native/index.html#cards).
+
 
 ### Example Screens
 
 If you want to get inspiration or just show something directly to your clients, you can jump start your development with our pre-built example screens. From onboarding screens to profile or discover screens, you will be able to quickly set up the basic structure for your React Native mobile project.
 
-View [all screens here](https://demos.creative-tim.com/argon-react-native/index.html#screens).
+View [all screens here](https://demos.creative-tim.com/now-ui-react-native/index.html#screens).
 
 Let us know your thoughts below. And good luck with development!
 
@@ -44,7 +45,7 @@ Let us know your thoughts below. And good luck with development!
 
 ## Versions
 
-[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/html-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-design-system)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vue-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/vue-argon-design-system)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-design-system-react)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-native-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-react-native)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/angular-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-angular)
+[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/html-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/now-ui-kit-pro)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vue-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/vue-now-ui-kit)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/now-ui-kit-react)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-native-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/now-ui-react-native)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/angular-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/now-ui-kit-angular)
 
 | HTML                                                                                                                                                                          | React                                                                                                                                                                                                   | Angular                                                                                                                                                                                                       |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -52,23 +53,23 @@ Let us know your thoughts below. And good luck with development!
 
 ## Demo
 
-| Home Screen                                                                                                                                                                          | Profile Screen                                                                                                                                                                             | Elements Screen                                                                                                                                                                              | Register Screen                                                                                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Home Screen](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/home-screen.png)](https://demos.creative-tim.com/argon-react-native/) | [![Profile Screen](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/profile-screen.png)](https://demos.creative-tim.com/argon-react-native/) | [![Elements Screen](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/elements-screen.png)](https://demos.creative-tim.com/argon-react-native/) | [![Register Screen](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/register-screen.png)](https://demos.creative-tim.com/argon-react-native/) |
+| Home Screen                                                                                                                                                                           | Profile Screen                                                                                                                                                                              | Elements Screen                                                                                                                                                                               | Register Screen                                                                                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Home Screen](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/home-screen.png)](https://demos.creative-tim.com/now-ui-react-native/) | [![Profile Screen](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/profile-screen.png)](https://demos.creative-tim.com/now-ui-react-native/) | [![Elements Screen](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/elements-screen.png)](https://demos.creative-tim.com/now-ui-react-native/) | [![Register Screen](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/register-screen.png)](https://demos.creative-tim.com/now-ui-react-native/) |
 
-- [Start page](https://demos.creative-tim.com/argon-react-native)
-- [How to install our free demo](https://demos.creative-tim.com/argon-react-native/docs/#/install)
+- [Start page](https://demos.creative-tim.com/now-ui-react-native)
+- [How to install our free demo](https://demos.creative-tim.com/now-ui-react-native/docs/#/install)
 
-[View more](https://demos.creative-tim.com/argon-react-native)
+[View more](https://demos.creative-tim.com/now-ui-react-native)
 
 ## Quick start
 
 - Try it out on Expo (Simulator for iOS or even your physical device if you have an Android)
-- Download from [Creative Tim](https://www.creative-tim.com/product/argon-react-native)
+- Download from [Creative Tim](https://www.creative-tim.com/product/now-ui-react-native)
 
 ## Documentation
 
-The documentation for the Now UI React Native is hosted at our [website](https://demos.creative-tim.com/argon-react-native/docs/).
+The documentation for the Now UI React Native is hosted at our [website](https://demos.creative-tim.com/now-ui-react-native/docs/).
 
 ## File Structure
 
@@ -121,13 +122,14 @@ At present, we officially aim to support the last two versions of the following 
 
 ## Resources
 
-- Demo: <https://demos.creative-tim.com/argon-react-native>
-- Download Page: <https://www.creative-tim.com/product/argon-react-native>
-- Documentation: <https://demos.creative-tim.com/argon-react-native/docs>
+- Demo: <https://demos.creative-tim.com/now-ui-react-native>
+- Download Page: <https://www.creative-tim.com/product/now-ui-react-native>
+- Documentation: <https://demos.creative-tim.com/now-ui-react-native/docs>
 - License Agreement: <https://www.creative-tim.com/license>
 - Support: <https://www.creative-tim.com/contact-us>
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/argon-react-native/issues)
-- [Argon Design System](https://www.creative-tim.com/product/argon-design-system?ref=argonrn-readme) - For Front End Development
+- Issues: [Github Issues Page](https://github.com/creativetimofficial/now-ui-react-native/issues)
+- [Now UI Kit](https://www.creative-tim.com/product/now-ui-kit-pro) - For Front End Development
+
 - **Dashboards:**
 
 | HTML                                                                                                                                                                                       | React                                                                                                                                                                                                                   | Angular                                                                                                                                                                                                                         |
@@ -138,13 +140,13 @@ At present, we officially aim to support the last two versions of the following 
 | ------- |
 
 
-| [![Now UI Dashboard Laravel](https://s3.amazonaws.com/creativetim_bucket/products/211/original/opt_nud_laravel_thumbnail.jpg)](https://www.creative-tim.com/product/now-ui-dashboard-laravel)
+| [![Now UI Dashboard Laravel](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-dashboard-pro-laravel/dashboard.png)](https://www.creative-tim.com/product/now-ui-dashboard-laravel)
 
 ## Reporting Issues
 
-We use GitHub Issues as the official bug tracker for the Argon React Native. Here are some advices for our users that want to report an issue:
+We use GitHub Issues as the official bug tracker for the Now UI React Native. Here are some advices for our users that want to report an issue:
 
-1. Make sure that you are using the latest version of the Argon React Native.
+1. Make sure that you are using the latest version of the Now UI React Native.
 2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
 3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
 
@@ -155,8 +157,7 @@ If you have questions or need help integrating the product please [contact us](h
 ## Licensing
 
 - Copyright 2019 Creative Tim (https://www.creative-tim.com/)
-
-- Licensed under MIT (https://github.com/creativetimofficial/argon-react-native/blob/master/LICENSE.md)
+- Licensed under MIT (https://github.com/creativetimofficial/now-ui-react-native/blob/master/LICENSE.md)
 
 ## Useful Links
 
@@ -169,7 +170,7 @@ If you have questions or need help integrating the product please [contact us](h
 - [Angular Products](https://www.creative-tim.com/bootstrap-themes/angular-themes) from Creative Tim
 - [VueJS Products](https://www.creative-tim.com/bootstrap-themes/vuejs-themes) from Creative Tim
 - [More products](https://www.creative-tim.com/bootstrap-themes) from Creative Tim
-- Check our Bundles [here](https://www.creative-tim.com/bundles?ref="argon-github-readme")
+- Check our Bundles [here](https://www.creative-tim.com/bundles?ref="now-ui-github-readme")
 
 ### Social Media
 

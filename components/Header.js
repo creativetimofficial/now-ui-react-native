@@ -136,6 +136,7 @@ class Header extends React.Component {
             <Icon
               name="bulb"
               family="NowExtra"
+              size={16}
               style={{ paddingRight: 8 }}
               color={nowTheme.COLORS.ICON}
             />

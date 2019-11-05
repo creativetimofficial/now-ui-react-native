@@ -3,7 +3,7 @@
     "name": "Now UI PRO React Native",
     "slug": "now-ui-pro-react-native",
     "privacy": "public",
-    "sdkVersion": "34.0.0",
+    "sdkVersion": "35.0.0",
     "platforms": ["ios", "android"],
     "version": "1.2.0",
     "orientation": "portrait",
@@ -19,6 +19,9 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
+    },
+    "packagerOpts": {
+      "assetExts": ["ttf"]
     }
   }
 }

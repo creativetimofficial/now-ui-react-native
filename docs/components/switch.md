@@ -3,9 +3,7 @@
 This component extends React Native's native Switch component. All props are available.
 
 ### Usage
-
 Simple example:
-
 ```
 
 toggleSwitch = switchId => this.setState({ [switchId]: !this.state[switchId] });
