@@ -30,16 +30,23 @@ const Profile = () => {
               </Block>
               <Block style={{ top: height * 0.15 }}>
                 <Block middle >
-                  <Text style={{ fontFamily: 'montserrat-regular' }} size={24} color="white">
+                  <Text
+                    style={{
+                      fontFamily: 'montserrat',
+                      marginBottom: theme.SIZES.BASE / 2,
+                      fontWeight: '900'
+                    }}
+                    color='#ffffff'
+                    >
                     Ryan Scheinder
               </Text>
                   <Text
                     size={16}
                     color="white"
-                    style={{ marginTop: 10, fontFamily: 'montserrat-regular' }}
+                    style={{ marginTop: 10, fontFamily: 'montserrat-regular', lineHeight: 20, fontWeight: 'bold' }}
                   >
                     Photographer
-              </Text>
+                  </Text>
                 </Block>
                 <Block style={styles.info}>
                   <Block row space="between">
@@ -90,7 +97,7 @@ const Profile = () => {
               middle
               row
               space="evenly"
-              style={{ position: 'absolute', width: width, top: height * 0.6 - 22, zIndex: 5 }}
+              style={{ position: 'absolute', width: width, top: height * 0.6 - 22, zIndex: 99 }}
             >
               <Button style={{ width: 114, height: 44, }} textStyle={{ fontSize: 16 }} round>
                 Follow
@@ -135,7 +142,8 @@ const Profile = () => {
                   fontSize: 18,
                   fontFamily: 'montserrat-regular',
                   marginTop: 15,
-                  marginBottom: 16
+                  marginBottom: 16,
+                  zIndex: 2
                 }}
               >
                 About me
@@ -143,7 +151,11 @@ const Profile = () => {
               <Text
                 size={16}
                 muted
-                style={{ textAlign: 'center', fontFamily: 'montserrat-regular' }}
+                style={{
+                  textAlign: 'center',
+                  fontFamily: 'montserrat-regular',
+                  zIndex: 2
+                }}
               >
                 An artist of considerable range, Ryan — the name taken by Melbourne-raised,
                 Brooklyn-based Nick Murphy — writes, performs and records all of his own music.
@@ -228,7 +240,8 @@ const styles = StyleSheet.create({
     width: nowTheme.SIZES.BASE * 3,
     height: nowTheme.SIZES.BASE * 3,
     borderRadius: nowTheme.SIZES.BASE * 1.5,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    zIndex: 99
   }
 });
 

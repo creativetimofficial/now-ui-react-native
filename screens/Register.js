@@ -100,8 +100,8 @@ class Register extends React.Component {
                         <Block>
                           <Block width={width * 0.8} style={{ marginBottom: 5 }}>
                             <Input
-                              borderless
                               placeholder="First Name"
+                              style={styles.inputs}
                               iconContent={
                                 <Icon
                                   size={16}
@@ -115,8 +115,8 @@ class Register extends React.Component {
                           </Block>
                           <Block width={width * 0.8} style={{ marginBottom: 5 }}>
                             <Input
-                              borderless
                               placeholder="Last Name"
+                              style={styles.inputs}
                               iconContent={
                                 <Icon
                                   size={16}
@@ -130,8 +130,8 @@ class Register extends React.Component {
                           </Block>
                           <Block width={width * 0.8}>
                             <Input
-                              borderless
                               placeholder="Email"
+                              style={styles.inputs}
                               iconContent={
                                 <Icon
                                   size={16}
@@ -144,7 +144,7 @@ class Register extends React.Component {
                             />
                           </Block>
                           <Block
-                            style={{ marginVertical: theme.SIZES.BASE }}
+                            style={{ marginVertical: theme.SIZES.BASE, marginLeft: 15}}
                             row
                             width={width * 0.75}
                           >
@@ -154,7 +154,7 @@ class Register extends React.Component {
                               }}
                               color={nowTheme.COLORS.PRIMARY}
                               labelStyle={{
-                                color: nowTheme.COLORS.TEXT,
+                                color: nowTheme.COLORS.HEADER,
                                 fontFamily: 'montserrat-regular'
                               }}
                               label="I agree to the terms and conditions."
@@ -236,7 +236,13 @@ const styles = StyleSheet.create({
     fontSize: 14
   },
   inputIcons: {
-    marginRight: 12
+    marginRight: 12,
+    color: nowTheme.COLORS.ICON_INPUT
+  },
+  inputs: {
+    borderWidth: 1,
+    borderColor: '#E3E3E3',
+    borderRadius: 21.5
   },
   passwordCheck: {
     paddingLeft: 2,

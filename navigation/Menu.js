@@ -33,10 +33,8 @@ const Drawer = props => (
             DOCUMENTATION
           </Text>
         </Block>
-        <TouchableOpacity
-
-        >
-          <DrawerItem {...props} title="Getting Started" />
+        <TouchableOpacity>
+          <DrawerItem {...props} title="GETTING STARTED" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => props.navigation.navigate('Onboarding')}>
           <DrawerItem {...props} title="LOGOUT" />
