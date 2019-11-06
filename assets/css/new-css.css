@@ -145,6 +145,7 @@ img.phone2 {
 
 .section-products {
   z-index: 10;
+  margin-top: 100px;
 }
 
 .section-products img {
@@ -228,8 +229,9 @@ img.phone2 {
   max-width: 1400px;
   width: auto;
   position: absolute;
+  z-index: 99;
   right: 0;
-  top: 0;
+  top: 70px;
 }
 
 .section-components .components-phone{
