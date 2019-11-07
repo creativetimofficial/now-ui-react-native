@@ -150,7 +150,9 @@ class Register extends React.Component {
                           >
                             <Checkbox
                               checkboxStyle={{
-                                borderWidth: 1
+                                borderWidth: 1,
+                                borderRadius: 2,
+                                borderColor: '#E3E3E3'
                               }}
                               color={nowTheme.COLORS.PRIMARY}
                               labelStyle={{

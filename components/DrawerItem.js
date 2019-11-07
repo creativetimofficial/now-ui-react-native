@@ -16,14 +16,18 @@ class DrawerItem extends React.Component {
             name="app2x"
             family="NowExtra"
             size={18}
-            color={focused ? nowTheme.COLORS.PRIMARY : 'white'} />
+            color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
+            style={{ opacity: 0.5 }}
+            />
         );
       case 'Elements':
         return (
           <Icon
             name="atom2x"
             family="NowExtra"
-            size={18} color={focused ? nowTheme.COLORS.PRIMARY : 'white'} />
+            size={18} color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
+            style={{ opacity: 0.5 }}
+            />
         );
       case 'Articles':
         return (
@@ -31,7 +35,9 @@ class DrawerItem extends React.Component {
             name="paper"
             family="NowExtra"
             size={18}
-            color={focused ? nowTheme.COLORS.PRIMARY : 'white'} />
+            color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
+            style={{ opacity: 0.5 }}
+            />
         );
       case 'Profile':
         return (
@@ -39,7 +45,9 @@ class DrawerItem extends React.Component {
             name="profile-circle"
             family="NowExtra"
             size={18}
-            color={focused ? nowTheme.COLORS.PRIMARY : 'white'} />
+            color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
+            style={{ opacity: 0.5 }}
+            />
         );
       case 'Account':
         return (
@@ -47,7 +55,9 @@ class DrawerItem extends React.Component {
             name="badge2x"
             family="NowExtra"
             size={18}
-            color={focused ? nowTheme.COLORS.PRIMARY : 'white'} />
+            color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
+            style={{ opacity: 0.5 }}
+            />
         );
       case 'Examples':
         return (
@@ -64,7 +74,7 @@ class DrawerItem extends React.Component {
             name="spaceship2x"
             family="NowExtra"
             size={18}
-            style={{ borderColor: 'rgba(0,0,0,0.5)' }}
+            style={{ borderColor: 'rgba(0,0,0,0.5)', opacity: 0.5 }}
             color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
           />
         );
@@ -74,7 +84,7 @@ class DrawerItem extends React.Component {
             name="share"
             family="NowExtra"
             size={18}
-            style={{ borderColor: 'rgba(0,0,0,0.5)' }}
+            style={{ borderColor: 'rgba(0,0,0,0.5)', opacity: 0.5 }}
             color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
           />
         );

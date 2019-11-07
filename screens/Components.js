@@ -32,7 +32,6 @@ class Components extends React.Component {
       checkSelected: [],
       'switch-1': true,
       'switch-2': false,
-
     };
   }
 
@@ -49,7 +48,7 @@ class Components extends React.Component {
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
           <Block center>
             <Button
-              textStyle={{ fontFamily: 'montserrat-regular' }}
+              textStyle={{ fontFamily: 'montserrat-regular', fontSize: 12 }}
               color="default"
               style={styles.button}
             >
@@ -57,14 +56,16 @@ class Components extends React.Component {
             </Button>
           </Block>
           <Block center>
-            <Button textStyle={{ fontFamily: 'montserrat-regular' }} style={styles.button}>
+            <Button textStyle={{ fontFamily: 'montserrat-regular', fontSize: 12 }}
+              style={styles.button}
+            >
               PRIMARY
             </Button>
           </Block>
           <Block center>
             <Button
               color="info"
-              textStyle={{ fontFamily: 'montserrat-regular' }}
+              textStyle={{ fontFamily: 'montserrat-regular', fontSize: 12 }}
               style={styles.button}
             >
               INFO
@@ -74,7 +75,7 @@ class Components extends React.Component {
 
           <Block center>
             <Button
-              textStyle={{ fontFamily: 'montserrat-regular' }}
+              textStyle={{ fontFamily: 'montserrat-regular', fontSize: 12 }}
               color="success"
               style={styles.button}
             >
@@ -83,7 +84,7 @@ class Components extends React.Component {
           </Block>
           <Block center>
             <Button
-              textStyle={{ fontFamily: 'montserrat-regular' }}
+              textStyle={{ fontFamily: 'montserrat-regular', fontSize: 12 }}
               color="warning"
               style={styles.button}
             >
@@ -92,7 +93,7 @@ class Components extends React.Component {
           </Block>
           <Block center>
             <Button
-              textStyle={{ fontFamily: 'montserrat-regular' }}
+              textStyle={{ fontFamily: 'montserrat-regular', fontSize: 12 }}
               color="error"
               style={styles.button}
             >
@@ -101,18 +102,18 @@ class Components extends React.Component {
           </Block>
           <Block center>
             <Button
-              textStyle={{ fontFamily: 'montserrat-regular', color: nowTheme.COLORS.PRIMARY }}
+              textStyle={{ fontFamily: 'montserrat-regular', color: nowTheme.COLORS.PRIMARY, fontSize: 12 }}
               color="neutral"
               style={styles.button}
             >
-              Neutral
+              NEUTRAL
             </Button>
           </Block>
-          <Block row space="evenly">
-            <Block flex left>
+          <Block row space="between">
+            <Block flex={0.93} left>
               <Select defaultIndex={1} options={['01', '02', '03', '04', '05']} />
             </Block>
-            <Block flex center>
+            <Block flex>
               <Button
                 textStyle={{ fontFamily: 'montserrat-bold', fontSize: 12 }}
                 small
@@ -230,6 +231,9 @@ class Components extends React.Component {
       </Block>
     );
   };
+
+
+
   renderInputs = () => {
     return (
       <Block flex style={styles.group}>
@@ -237,13 +241,21 @@ class Components extends React.Component {
           Inputs
         </Text>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Input right placeholder="Regular" iconContent={<Block />} />
+          <Input
+            right
+            placeholder="Regular"
+            iconContent={<Block />}
+            shadowless
+          />
         </Block>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
           <Input
-            success
+            success={this.state.successFocus}
             right
+            shadowless
             placeholder="Success"
+            onFocus = {() => this.setState({successFocus: true})}
+            onBlur = {() => this.setState({successFocus: false})}
             iconContent={
               <Icon size={11} color={nowTheme.COLORS.SUCCESS} name="check-22x" family="NowExtra" />
             }
@@ -251,9 +263,12 @@ class Components extends React.Component {
         </Block>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
           <Input
-            error
+            error={this.state.errorFocus}
             right
+            shadowless
             placeholder="Error Input"
+            onFocus = {() => this.setState({errorFocus: true})}
+            onBlur = {() => this.setState({errorFocus: false})}
             iconContent={
               <Icon
                 size={11}
@@ -267,6 +282,7 @@ class Components extends React.Component {
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
           <Input
             placeholder="Left Font Awesome Icon"
+            shadowless
             iconContent={
               <Icon
                 size={11}
@@ -283,6 +299,7 @@ class Components extends React.Component {
           <Input
             right
             placeholder="Icon Right"
+            shadowless
             iconContent={
               <Icon size={11} color={nowTheme.COLORS.ICON} name="single" family="NowExtra" />
             }
@@ -357,59 +374,6 @@ class Components extends React.Component {
     );
   };
 
-  renderSocial = () => {
-    return (
-      <Block flex style={styles.group}>
-        <Text size={16} style={styles.title}>
-          Social
-        </Text>
-        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Block row center space="between">
-            <Block flex middle right>
-              <GaButton
-                round
-                onlyIcon
-                shadowless
-                icon="facebook"
-                iconFamily="Font-Awesome"
-                iconColor={theme.COLORS.WHITE}
-                iconSize={theme.SIZES.BASE * 1.625}
-                color={nowTheme.COLORS.FACEBOOK}
-                style={[styles.social, styles.shadow]}
-              />
-            </Block>
-            <Block flex middle center>
-              <GaButton
-                round
-                onlyIcon
-                shadowless
-                icon="twitter"
-                iconFamily="Font-Awesome"
-                iconColor={theme.COLORS.WHITE}
-                iconSize={theme.SIZES.BASE * 1.625}
-                color={nowTheme.COLORS.TWITTER}
-                style={[styles.social, styles.shadow]}
-              />
-            </Block>
-            <Block flex middle left>
-              <GaButton
-                round
-                onlyIcon
-                shadowless
-                icon="dribbble"
-                iconFamily="Font-Awesome"
-                iconColor={theme.COLORS.WHITE}
-                iconSize={theme.SIZES.BASE * 1.625}
-                color={nowTheme.COLORS.DRIBBBLE}
-                style={[styles.social, styles.shadow]}
-              />
-            </Block>
-          </Block>
-        </Block>
-      </Block>
-    );
-  };
-
   renderNavigation = () => {
     return (
       <Block flex style={styles.group}>
@@ -452,11 +416,69 @@ class Components extends React.Component {
     );
   };
 
+
+  renderSocial = () => {
+    return (
+      <Block flex style={styles.group}>
+        <Text size={16} style={styles.title}>
+          Social
+        </Text>
+        <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+          <Block row center space="between">
+            <Block flex middle right>
+              <GaButton
+                round
+                onlyIcon
+                shadowless
+                icon="facebook"
+                iconFamily="Font-Awesome"
+                iconColor={theme.COLORS.WHITE}
+                iconSize={theme.SIZES.BASE * 1.625}
+                color={nowTheme.COLORS.FACEBOOK}
+                style={[styles.social]}
+              />
+            </Block>
+            <Block flex middle center>
+              <GaButton
+                round
+                onlyIcon
+                shadowless
+                icon="twitter"
+                iconFamily="Font-Awesome"
+                iconColor={theme.COLORS.WHITE}
+                iconSize={theme.SIZES.BASE * 1.625}
+                color={nowTheme.COLORS.TWITTER}
+                style={[styles.social]}
+              />
+            </Block>
+            <Block flex middle left>
+              <GaButton
+                round
+                onlyIcon
+                shadowless
+                icon="dribbble"
+                iconFamily="Font-Awesome"
+                iconColor={theme.COLORS.WHITE}
+                iconSize={theme.SIZES.BASE * 1.625}
+                color={nowTheme.COLORS.DRIBBBLE}
+                style={[styles.social]}
+              />
+            </Block>
+          </Block>
+        </Block>
+      </Block>
+    );
+  };
+
+
   renderCards = () => {
     scrollX = new Animated.Value(0);
     cards = [articles[5], articles[6]]
     return (
-      <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+      <Block flex style={styles.group}>
+      <Text size={16} style={styles.title}>
+        Cards
+      </Text>
         <Articles />
         <Block flex card shadow style={styles.category}>
           <ImageBackground
@@ -535,10 +557,10 @@ class Components extends React.Component {
           {this.renderButtons()}
           {this.renderText()}
           {this.renderInputs()}
-          {this.renderSocial()}
           {this.renderSwitches()}
           {this.renderTableCell()}
           {this.renderNavigation()}
+          {this.renderSocial()}
           {this.renderCards()}
           {this.renderAlbums()}
         </ScrollView>
@@ -573,7 +595,7 @@ const styles = StyleSheet.create({
   },
   button: {
     marginBottom: theme.SIZES.BASE,
-    width: width - theme.SIZES.BASE * 2
+    width: width - theme.SIZES.BASE * 2,
   },
   optionsButton: {
     width: 'auto',

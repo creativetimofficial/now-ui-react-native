@@ -20,7 +20,7 @@ const BellButton = ({ isWhite, style, navigation }) => (
     <Icon
       family="NowExtra"
       size={16}
-      name="bell"
+      name="bulb"
       color={nowTheme.COLORS[isWhite ? 'WHITE' : 'ICON']}
     />
     <Block middle style={[styles.notify, { backgroundColor: nowTheme.COLORS[isWhite ? 'WHITE' : 'PRIMARY'] }]} />
@@ -136,9 +136,9 @@ class Header extends React.Component {
             <Icon
               name="bulb"
               family="NowExtra"
-              size={16}
+              size={18}
               style={{ paddingRight: 8 }}
-              color={nowTheme.COLORS.ICON}
+              color={nowTheme.COLORS.HEADER}
             />
             <Text style={{ fontFamily: 'montserrat-regular' }} size={16} style={styles.tabTitle}>
               {optionLeft || 'Beauty'}
@@ -148,11 +148,11 @@ class Header extends React.Component {
         <Button shadowless style={styles.tab} onPress={() => navigation.navigate('Fashion')}>
           <Block row middle>
             <Icon
-              size={16}
+              size={18}
               name="bag-162x"
               family="NowExtra"
               style={{ paddingRight: 8 }}
-              color={nowTheme.COLORS.ICON}
+              color={nowTheme.COLORS.HEADER}
             />
             <Text style={{ fontFamily: 'montserrat-regular' }} size={16} style={styles.tabTitle}>
               {optionRight || 'Fashion'}

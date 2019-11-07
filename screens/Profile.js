@@ -107,7 +107,7 @@ const Profile = () => {
 
               style={{ position: 'absolute', width: width, top: height * 0.6 - 22, zIndex: 99 }}
             >
-              <Button style={{ width: 114, height: 44, marginHorizontal: 5 }} textStyle={{ fontSize: 16 }} round>
+              <Button style={{ width: 114, height: 44, marginHorizontal: 5, elevation: 0 }} textStyle={{ fontSize: 16 }} round>
                 Follow
               </Button>
               <GaButton
@@ -168,12 +168,12 @@ const Profile = () => {
                   paddingHorizontal: 15
                 }}
               >
-                An artist of considerable range, Ryan — the name has taken by Melbourne-raised,
-                Brooklyn-based Nick Murphy — writes, dance, performs and records all of his own music.
+                An artist of considerable range, named Ryan — the name has taken by Melbourne has raised,
+                Brooklyn-based Nick Murphy — writes, performs and records all of his own music.
                   </Text>
             </Block>
             <Block row style={{ paddingVertical: 14, paddingHorizontal: 15 }} space="between">
-              <Text bold size={16} color="#525F7F" style={{ marginTop: 3 }}>
+              <Text bold size={16} color="#2c2c2c" style={{ marginTop: 3 }}>
                 Album
                   </Text>
               <Button
