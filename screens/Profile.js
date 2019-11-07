@@ -25,16 +25,17 @@ const Profile = () => {
         >
           <Block flex style={styles.profileCard}>
             <Block style={{ position: 'absolute', width: width, zIndex: 5, paddingHorizontal: 20 }}>
-              <Block middle style={{ top: height * 0.095 }}>
+              <Block middle style={{ top: height * 0.15 }}>
                 <Image source={Images.ProfilePicture} style={styles.avatar} />
               </Block>
-              <Block style={{ top: height * 0.15 }}>
+              <Block style={{ top: height * 0.2 }}>
                 <Block middle >
                   <Text
                     style={{
-                      fontFamily: 'montserrat',
+                      fontFamily: 'montserrat-bold',
                       marginBottom: theme.SIZES.BASE / 2,
-                      fontWeight: '900'
+                      fontWeight: '900',
+                      fontSize: 26
                     }}
                     color='#ffffff'
                     >
@@ -43,13 +44,20 @@ const Profile = () => {
                   <Text
                     size={16}
                     color="white"
-                    style={{ marginTop: 10, fontFamily: 'montserrat-regular', lineHeight: 20, fontWeight: 'bold' }}
+                    style={{
+                      marginTop: 5,
+                      fontFamily: 'montserrat-bold',
+                      lineHeight: 20,
+                      fontWeight: 'bold',
+                      fontSize: 18,
+                      opacity: .8
+                    }}
                   >
                     Photographer
                   </Text>
                 </Block>
                 <Block style={styles.info}>
-                  <Block row space="between">
+                  <Block row space="around">
                     <Block middle>
                       <Text
                         size={18}
@@ -58,7 +66,7 @@ const Profile = () => {
                       >
                         2K
                   </Text>
-                      <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color="white">
+                      <Text style={{ fontFamily: 'montserrat-regular' }} size={14} color="white">
                         Friends
                   </Text>
                     </Block>
@@ -70,7 +78,7 @@ const Profile = () => {
                       >
                         26
                   </Text>
-                      <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color="white">
+                      <Text style={{ fontFamily: 'montserrat-regular' }} size={14} color="white">
                         Comments
                   </Text>
                     </Block>
@@ -82,7 +90,7 @@ const Profile = () => {
                       >
                         48
                   </Text>
-                      <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color="white">
+                      <Text style={{ fontFamily: 'montserrat-regular' }} size={14} color="white">
                         Bookmarks
                   </Text>
                     </Block>
@@ -96,10 +104,10 @@ const Profile = () => {
             <Block
               middle
               row
-              space="evenly"
+
               style={{ position: 'absolute', width: width, top: height * 0.6 - 22, zIndex: 99 }}
             >
-              <Button style={{ width: 114, height: 44, }} textStyle={{ fontSize: 16 }} round>
+              <Button style={{ width: 114, height: 44, marginHorizontal: 5 }} textStyle={{ fontSize: 16 }} round>
                 Follow
               </Button>
               <GaButton
@@ -137,12 +145,12 @@ const Profile = () => {
             <Block middle>
               <Text
                 style={{
-                  color: '#333',
+                  color: '#2c2c2c',
                   fontWeight: 'bold',
-                  fontSize: 18,
-                  fontFamily: 'montserrat-regular',
-                  marginTop: 15,
-                  marginBottom: 16,
+                  fontSize: 19,
+                  fontFamily: 'montserrat-bold',
+                  marginTop: 45,
+                  marginBottom: 30,
                   zIndex: 2
                 }}
               >
@@ -154,14 +162,17 @@ const Profile = () => {
                 style={{
                   textAlign: 'center',
                   fontFamily: 'montserrat-regular',
-                  zIndex: 2
+                  zIndex: 2,
+                  lineHeight: 25,
+                  color: '#9A9A9A',
+                  paddingHorizontal: 15
                 }}
               >
-                An artist of considerable range, Ryan — the name taken by Melbourne-raised,
-                Brooklyn-based Nick Murphy — writes, performs and records all of his own music.
+                An artist of considerable range, Ryan — the name has taken by Melbourne-raised,
+                Brooklyn-based Nick Murphy — writes, dance, performs and records all of his own music.
                   </Text>
             </Block>
-            <Block row style={{ paddingVertical: 14 }} space="between">
+            <Block row style={{ paddingVertical: 14, paddingHorizontal: 15 }} space="between">
               <Text bold size={16} color="#525F7F" style={{ marginTop: 3 }}>
                 Album
                   </Text>
@@ -175,7 +186,7 @@ const Profile = () => {
             </Block>
 
 
-            <Block style={{ paddingBottom: -HeaderHeight * 2 }}>
+            <Block style={{ paddingBottom: -HeaderHeight * 2, paddingHorizontal: 15}}>
               <Block row space="between" style={{ flexWrap: 'wrap' }}>
                 {Images.Viewed.map((img, imgIndex) => (
                   <Image
@@ -213,7 +224,7 @@ const styles = StyleSheet.create({
   },
 
   info: {
-    marginTop: 20,
+    marginTop: 40,
     paddingHorizontal: 10
   },
   avatarContainer: {
@@ -241,7 +252,8 @@ const styles = StyleSheet.create({
     height: nowTheme.SIZES.BASE * 3,
     borderRadius: nowTheme.SIZES.BASE * 1.5,
     justifyContent: 'center',
-    zIndex: 99
+    zIndex: 99,
+    marginHorizontal: 5
   }
 });
 

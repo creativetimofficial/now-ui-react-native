@@ -14,7 +14,7 @@ class Home extends React.Component {
         contentContainerStyle={styles.articles}
       >
         <Block flex>
-        <Card item={articles[0]} horizontal /> 
+        <Card item={articles[0]} horizontal />
           <Block flex row>
             <Card
               item={articles[1]}
@@ -45,7 +45,9 @@ const styles = StyleSheet.create({
   articles: {
     width: width - theme.SIZES.BASE * 2,
     paddingVertical: theme.SIZES.BASE,
-    paddingHorizontal: 2
+    paddingHorizontal: 2,
+    fontFamily: 'montserrat-regular'
+
   }
 });
 

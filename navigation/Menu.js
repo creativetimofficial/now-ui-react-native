@@ -13,7 +13,7 @@ const { width } = Dimensions.get('screen');
 const Drawer = props => (
   <Block style={styles.container} forceInset={{ top: 'always', horizontal: 'never' }}>
     <Block style={styles.header}>
-      <Image styles={styles.logo} source={Images.Logo} />
+      <Image style={styles.logo} source={Images.Logo} />
       <Block right style={styles.headerIcon}>
         <Icon name="align-left-22x" family="NowExtra" size={15} color={'white'} />
       </Block>
@@ -84,6 +84,10 @@ const styles = StyleSheet.create({
   },
   headerIcon: {
     marginTop: -20
+  },
+  logo: {
+    height: 40,
+    width: 37
   }
 });
 
