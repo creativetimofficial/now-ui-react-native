@@ -150,6 +150,12 @@ const HomeStack = createStackNavigator(
       navigationOptions: ({ navigation }) => ({
         header: <Header search options title="Home" navigation={navigation} />
       })
+    },
+    Pro: {
+      screen: Pro,
+      navigationOptions: ({ navigation }) => ({
+        headerLeft: null
+      })
     }
   },
   {
