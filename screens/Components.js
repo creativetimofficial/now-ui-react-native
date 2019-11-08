@@ -110,12 +110,12 @@ class Components extends React.Component {
             </Button>
           </Block>
           <Block row space="between">
-            <Block flex={0.93} left>
+            <Block flex left>
               <Select defaultIndex={1} options={['01', '02', '03', '04', '05']} />
             </Block>
             <Block flex>
               <Button
-                textStyle={{ fontFamily: 'montserrat-bold', fontSize: 12 }}
+                textStyle={{ fontFamily: 'montserrat-regular', fontSize: 10 }}
                 small
                 center
                 color="default"
@@ -124,9 +124,9 @@ class Components extends React.Component {
                 DELETE
               </Button>
             </Block>
-            <Block flex={1.25} right>
+            <Block flex right>
               <Button
-                textStyle={{ fontFamily: 'montserrat-bold', fontSize: 12 }}
+                textStyle={{ fontFamily: 'montserrat-regular', fontSize: 10 }}
                 center
                 color="default"
                 style={styles.optionsButton}
@@ -401,7 +401,7 @@ class Components extends React.Component {
           </Block>
 
           <Block style={{ marginBottom: theme.SIZES.BASE }}>
-            <Header back  tabs={tabs.beauty} title="Title" navigation={this.props.navigation} />
+            <Header back tabs={tabs.beauty} title="Title" navigation={this.props.navigation} />
           </Block>
 
           <Block style={{ marginBottom: theme.SIZES.BASE }}>
@@ -518,7 +518,7 @@ class Components extends React.Component {
             width: width * 2
           }}>
           {cards.map((item, index) => {
-            return <Card key={index} item={item} full titleStyle={styles.productTitle} />
+            return <Card key={index} item={item} full titleStyle={styles.productTitle} imageStyle={ { height: 300, width: '100%', resizeMode: 'contain' } }/>
           })}
 
         </ScrollView>
@@ -606,7 +606,7 @@ const styles = StyleSheet.create({
   optionsButton: {
     width: 'auto',
     height: 34,
-    paddingHorizontal: theme.SIZES.BASE,
+    paddingHorizontal: 10,
     paddingVertical: 10
   },
   category: {
@@ -624,7 +624,8 @@ const styles = StyleSheet.create({
   },
   imageBlock: {
     overflow: 'hidden',
-    borderRadius: 4
+    borderRadius: 4,
+    marginHorizontal: 10
   },
   albumThumb: {
     borderRadius: 4,

@@ -109,7 +109,7 @@ class DrawerItem extends React.Component {
         <Block row center flex={0.9}>
           <Text
             style={{ fontFamily: 'montserrat-regular', textTransform: 'uppercase', fontWeight: '300' }}
-            size={14}
+            size={12}
             bold={focused ? true : false}
             color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
           >

@@ -41,7 +41,7 @@ class Card extends React.Component {
             <Block flex>
               <Text
                 style={{ fontFamily: 'montserrat-regular' }}
-                size={16}
+                size={14}
                 style={titleStyles}
                 color={nowTheme.COLORS.SECONDARY}
               >
@@ -90,7 +90,7 @@ class Card extends React.Component {
             <Block right={ctaRight ? true : false}>
               <Text
                 style={styles.articleButton}
-                size={13}
+                size={12}
                 muted={!ctaColor}
                 color={ctaColor || nowTheme.COLORS.ACTIVE}
                 bold

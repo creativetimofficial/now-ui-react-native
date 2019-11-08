@@ -8,6 +8,7 @@ const COLORS = {
   WARNING: '#FFB236',
   SECONDARY: '#444444',
   NEUTRAL: 'rgba(255, 255, 255, 0.2)',
+  TABS: 'rgba(222, 222, 222, 0.3)',
   TEXT: '#32325D',
   MUTED: '#8898AA',
   INPUT: '#DCDCDC',
