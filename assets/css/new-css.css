@@ -118,23 +118,46 @@ footer {
 
 img.phone1 {
   position: absolute;
-  right: -10%;
-  width: 150%;
-  margin-top: -20px;
+  right: 10%;
+  width: 600px;
+  margin-top: -15%;
   z-index: 3;
 }
 
 img.phone2 {
   position: absolute;
-  width: 175%;
-  right: -70%;
+  width: 800px;
+  margin-top: -20%;
+  right: -20%;
   z-index: 2;
 }
 
 .shadow {
-    border-radius: 20px;
-    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1);
-    overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+body .title {
+  color: #2c2c2c;
+}
+
+.title+.category {
+  margin-top: -25px;
+}
+
+.description {
+  margin-top: 35px;
+}
+
+.margined {
+  margin-top: 150px;
+}
+
+.git-buttons {
+  position: absolute;
+  bottom: 40%;
+  left: 40%;
 }
 
 .section-products {

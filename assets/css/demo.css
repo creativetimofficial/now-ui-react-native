@@ -450,7 +450,6 @@
 
 .brand .h1-seo {
   font-size: 2.8em;
-  text-transform: uppercase;
   font-weight: 300;
 }
 
@@ -957,7 +956,6 @@
 
 .section-components .title{
     margin-top: 60px;
-    margin-bottom: 5px;
 }
 .section-components .description{
     margin-top: 35px;
