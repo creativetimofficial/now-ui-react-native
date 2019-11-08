@@ -11,7 +11,7 @@ Simple example:
 <Button>Press here!</Button>
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/elements-screen.png" height="370px">
+  <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/buttons.png" height="370px">
 </p>
 
 ### Props

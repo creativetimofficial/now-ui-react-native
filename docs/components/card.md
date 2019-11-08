@@ -1,14 +1,14 @@
 # Card
 
-Show off your products, articles and just about anything with this cool card component! 
+Show off your products, articles and just about anything with this cool card component!
 
 ### Usage
-Simple Example: 
+Simple Example:
 ```
 <Card item={articles[0]} horizontal />
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/creativetimofficial/argon-react-native/gh-pages/docs/assets/cards.png" width="244px" height="386px">
+  <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/card.png" width="244px" height="386px">
 </p>
 
 
@@ -20,4 +20,3 @@ Simple Example:
 |    full    |  bool  |   false  |             |
 |  ctaColor  | string |   null  |             |
 | imageStyle |   any  |   null  |             |
-
