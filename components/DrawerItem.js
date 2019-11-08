@@ -20,7 +20,7 @@ class DrawerItem extends React.Component {
             style={{ opacity: 0.5 }}
             />
         );
-      case 'Elements':
+      case 'Components':
         return (
           <Icon
             name="atom2x"

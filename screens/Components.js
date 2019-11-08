@@ -14,7 +14,7 @@ import Articles from '../screens/Articles';
 import { Block, Text, Button as GaButton, theme } from 'galio-framework';
 
 // Now UI themed components
-import { Images, nowTheme, articles } from '../constants';
+import { Images, nowTheme, articles, tabs } from '../constants';
 import { Button, Select, Icon, Input, Header, Switch } from '../components';
 
 import Img from '../components/Img';
@@ -399,6 +399,11 @@ class Components extends React.Component {
               white={true}
             />
           </Block>
+
+          <Block style={{ marginBottom: theme.SIZES.BASE }}>
+            <Header back  tabs={tabs.beauty} title="Title" navigation={this.props.navigation} />
+          </Block>
+
           <Block style={{ marginBottom: theme.SIZES.BASE }}>
             <Header search title="Title" navigation={this.props.navigation} />
           </Block>
@@ -479,9 +484,7 @@ class Components extends React.Component {
     cards = [articles[5], articles[6]]
     return (
       <Block flex style={styles.group}>
-      <Text size={16} style={styles.title}>
-        Cards
-      </Text>
+
         <Articles />
         <Block flex card shadow style={styles.category}>
           <ImageBackground
@@ -498,7 +501,7 @@ class Components extends React.Component {
             <Block style={styles.categoryTitle}>
               <Text size={18} bold color={theme.COLORS.WHITE}>
                 View article
-                  </Text>
+              </Text>
             </Block>
           </ImageBackground>
         </Block>
@@ -609,7 +612,8 @@ const styles = StyleSheet.create({
   category: {
     backgroundColor: theme.COLORS.WHITE,
     marginVertical: theme.SIZES.BASE / 2,
-    borderWidth: 0
+    borderWidth: 0,
+    paddingHorizontal: 10
   },
   categoryTitle: {
     height: '100%',

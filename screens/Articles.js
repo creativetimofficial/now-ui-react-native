@@ -1,15 +1,18 @@
 import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 //galio
-import { Block, theme } from 'galio-framework';
+import { Block, Text, theme } from 'galio-framework';
 
-import { articles } from '../constants/';
+import { articles, nowTheme } from '../constants/';
 import { Card } from '../components/';
 
 class Articles extends React.Component {
   renderCards = () => {
     return (
       <Block style={styles.container}>
+      <Text size={16} style={styles.title}>
+        Cards
+      </Text>
         <Card item={articles[0]} horizontal />
         <Block flex row>
           <Card item={articles[1]} style={{ marginRight: theme.SIZES.BASE }} />
@@ -33,6 +36,12 @@ class Articles extends React.Component {
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: theme.SIZES.BASE
+  },
+  title: {
+    fontFamily: 'montserrat-bold',
+    paddingBottom: theme.SIZES.BASE,
+    marginTop: 44,
+    color: nowTheme.COLORS.HEADER
   }
 });
 
