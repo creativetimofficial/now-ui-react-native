@@ -104,7 +104,6 @@ const Profile = () => {
             <Block
               middle
               row
-
               style={{ position: 'absolute', width: width, top: height * 0.6 - 22, zIndex: 99 }}
             >
               <Button style={{ width: 114, height: 44, marginHorizontal: 5, elevation: 0 }} textStyle={{ fontSize: 16 }} round>
@@ -139,7 +138,7 @@ const Profile = () => {
 
       </Block>
       <Block />
-      <Block flex={0.4} style={{ padding: theme.SIZES.BASE, }}>
+      <Block flex={0.4} style={{ padding: theme.SIZES.BASE, marginTop: 90}}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <Block flex style={{ marginTop: 20 }}>
             <Block middle>
@@ -149,7 +148,7 @@ const Profile = () => {
                   fontWeight: 'bold',
                   fontSize: 19,
                   fontFamily: 'montserrat-bold',
-                  marginTop: 45,
+                  marginTop: 15,
                   marginBottom: 30,
                   zIndex: 2
                 }}

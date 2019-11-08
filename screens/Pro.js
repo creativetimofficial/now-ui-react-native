@@ -20,21 +20,27 @@ export default class Pro extends React.Component {
           />
           <Block space="between" style={styles.padded}>
             <Block>
-              <Block middle style={{ marginTop: 5 }}>
-                <Image source={Images.NowLogo} style={{ width: 115, height: 124 }} />
+              <Block middle>
+                <Image source={Images.NowLogo} style={{ width: 115, height: 124, bottom: 200, position: 'absolute' }} />
               </Block>
               <Block>
-                <Block middle style={{ marginTop: 25 }}>
-                  <Text style={{ fontFamily: 'montserrat-regular' }} color="white" size={44}>
+                <Block middle>
+                  <Text
+                    style={{
+                      fontFamily: 'montserrat-regular', bottom: 100, position: 'absolute', letterSpacing: 2
+                    }}
+                    color="white"
+                    size={50}
+                  >
                     Now UI Kit
                   </Text>
                 </Block>
               </Block>
-              <Block middle row style={{ marginTop: 35 }}>
+              <Block middle row>
                 <Text
                   color="white"
                   size={16}
-                  style={{ fontFamily: 'montserrat-regular', marginTop: 4 }}
+                  style={{ fontFamily: 'montserrat-regular' }}
                 >
                   Designed by
                 </Text>
@@ -47,11 +53,11 @@ export default class Pro extends React.Component {
                   }}
                 />
               </Block>
-              <Block middle row style={{ marginTop: 35 }}>
+              <Block middle row style={{ marginTop: 15, marginBottom: 30}}>
                 <Text
                   color="white"
                   size={16}
-                  style={{ fontFamily: 'montserrat-regular', marginTop: 4 }}
+                  style={{ fontFamily: 'montserrat-regular' }}
                 >
                   Coded by
                 </Text>

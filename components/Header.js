@@ -130,7 +130,7 @@ class Header extends React.Component {
         <Button
           shadowless
           style={[styles.tab, styles.divider]}
-          onPress={() => navigation.navigate('Beauty')}
+          onPress={() => navigation.navigate('Pro')}
         >
           <Block row middle>
             <Icon
@@ -145,7 +145,7 @@ class Header extends React.Component {
             </Text>
           </Block>
         </Button>
-        <Button shadowless style={styles.tab} onPress={() => navigation.navigate('Fashion')}>
+        <Button shadowless style={styles.tab} onPress={() => navigation.navigate('Pro')}>
           <Block row middle>
             <Icon
               size={18}
@@ -213,7 +213,6 @@ class Header extends React.Component {
     return (
       <Block style={headerStyles}>
         <NavBar
-          back={back}
           title={title}
           style={navbarStyles}
           transparent={transparent}
@@ -223,7 +222,7 @@ class Header extends React.Component {
             <Icon
               name={back ? 'minimal-left2x' : 'align-left-22x'}
               family="NowExtra"
-              size={14}
+              size={16}
               onPress={this.handleLeftPress}
               color={iconColor || nowTheme.COLORS.ICON}
             />

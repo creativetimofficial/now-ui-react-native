@@ -43,7 +43,7 @@ class Onboarding extends React.Component {
                 </Text>
                 <Block middle style={styles.pro}>
                   <Text size={16} color="white">
-                    PRO
+                  PRO
                 </Text>
                 </Block>
               </Block>

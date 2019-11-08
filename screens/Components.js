@@ -401,7 +401,7 @@ class Components extends React.Component {
           </Block>
 
           <Block style={{ marginBottom: theme.SIZES.BASE }}>
-            <Header back tabs={tabs.beauty} title="Title" navigation={this.props.navigation} />
+            <Header tabs={tabs.beauty} title="Title" navigation={this.props.navigation} />
           </Block>
 
           <Block style={{ marginBottom: theme.SIZES.BASE }}>
@@ -486,7 +486,7 @@ class Components extends React.Component {
       <Block flex style={styles.group}>
 
         <Articles />
-        <Block flex card shadow style={styles.category}>
+        <Block flex card center shadow style={styles.category}>
           <ImageBackground
             source={Images.Products['path']}
             style={[
@@ -520,7 +520,6 @@ class Components extends React.Component {
           {cards.map((item, index) => {
             return <Card key={index} item={item} full titleStyle={styles.productTitle} imageStyle={ { height: 300, width: '100%', resizeMode: 'contain' } }/>
           })}
-
         </ScrollView>
 
       </Block>
@@ -612,8 +611,7 @@ const styles = StyleSheet.create({
   category: {
     backgroundColor: theme.COLORS.WHITE,
     marginVertical: theme.SIZES.BASE / 2,
-    borderWidth: 0,
-    paddingHorizontal: 10
+    borderWidth: 0
   },
   categoryTitle: {
     height: '100%',
