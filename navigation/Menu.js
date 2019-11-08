@@ -28,7 +28,7 @@ const Drawer = props => (
           />
           <Text
             color={nowTheme.COLORS.WHITE}
-            style={{ marginTop: 30, marginLeft: 20, marginBottom: 15, fontFamily: 'montserrat-regular' }}
+            style={{ marginTop: 30, marginLeft: 20, marginBottom: 10, fontFamily: 'montserrat-regular', fontWeight: '300'}}
           >
             DOCUMENTATION
           </Text>

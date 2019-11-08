@@ -242,8 +242,11 @@ class Components extends React.Component {
         </Text>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
           <Input
+            primary={this.state.primaryFocus}
             right
             placeholder="Regular"
+            onFocus = {() => this.setState({primaryFocus: true})}
+            onBlur = {() => this.setState({primaryFocus: false})}
             iconContent={<Block />}
             shadowless
           />
