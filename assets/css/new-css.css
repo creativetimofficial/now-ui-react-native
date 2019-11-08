@@ -32,12 +32,7 @@ body {
 .page-header .creative-tim-logo {
   width: 120px;
 }
-.page-header::before {
-  content:"";
-  display: block;
-  position: absolute;
-  background: rgba(0,0,0,0.5);
-}
+
 .page-header .container {
   z-index: auto;
 }
@@ -133,7 +128,6 @@ img.phone2 {
   position: absolute;
   width: 175%;
   right: -70%;
-  margin-top: -10rem;
   z-index: 2;
 }
 
