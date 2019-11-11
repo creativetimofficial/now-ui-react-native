@@ -13,6 +13,10 @@ Simple example:
   onChange={id => navigation.setParams({ tabId: id })}
 />
 ```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/tabs.png" width="374px">
+</p>
+
 
 ### Props
 

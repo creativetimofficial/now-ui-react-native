@@ -1,6 +1,6 @@
 # Now UI React Native
 
-Now UI React Native is a beautiful resource built over Galio, React Native and Expo allowing you to create powerful and beautiful e-commerce mobile applications. We have redesigned all the usual components in [Galio](https://galio.io?ref=now-uirn-docs) to make it look flat, minimalist and easy to use.
+Now UI React Native is a beautiful resource built over Galio, React Native and Expo allowing you to create powerful and beautiful e-commerce mobile applications. We have redesigned all the usual components in [Galio](https://galio.io?ref=argonrn-docs) to make it look flat, minimalist and easy to use.
 
 Using the mobile application is very simple, but it does require you to understand basic JavaScript functions and React Native. To get the desired effect you will need to integrate React Native components and JS plugins that take a little bit more effort.
 
@@ -18,18 +18,5 @@ The available screens for the free version are:
 ## Example screenshots
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/creativetimofficial/now-ui-react-native/docs/docs/assets/screens/onboarding-screen.png" width="225px" height="400px">
-
-  <img src="https://raw.githubusercontent.com/creativetimofficial/now-ui-react-native/docs/docs/assets/screens/drawer-screen.png" width="225px" height="400px">
- 
-  <img src="https://raw.githubusercontent.com/creativetimofficial/now-ui-react-native/docs/docs/assets/screens/profile-screen.png" width="225px" height="400px">
-
-</p>
-
-<p align="center">
-
- <img src="https://raw.githubusercontent.com/creativetimofficial/now-ui-react-native/docs/docs/assets/screens/home-screen.png" width="225px" height="400px">
-  <img src="https://raw.githubusercontent.com/creativetimofficial/now-ui-react-native/docs/docs/assets/screens/account-screen.png" width="225px" height="400px">
-
-  <img src="https://raw.githubusercontent.com/creativetimofficial/now-ui-react-native/docs/docs/assets/screens/components-screen.png" width="225px" height="400px"> 
+  <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/example.png" width="800px">
 </p>

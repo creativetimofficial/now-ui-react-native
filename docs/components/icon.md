@@ -5,7 +5,6 @@ This components extends [Galio](https://galio.io?ref=now-uirn-docs)'s Icon compo
 ### Usage
 
 Simple example:
-
 ```
 <Icon name="pin-3" family="Galio" color={rgb(100,120,40)} size={10} />
 ```
