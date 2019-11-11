@@ -1,28 +1,28 @@
 export default [
   {
-    title: 'Society has put up so many boundaries …',
+    title: 'Society has put up so many boundaries',
     image: require("../assets/imgs/project13.jpg"),
     cta: 'View article',
     horizontal: true
   },
   {
-    title: 'Many limitations on what’s right …',
+    title: 'Many limitations on what’s right',
     image: require("../assets/imgs/bg40.jpg"),
     cta: 'View article'
   },
   {
-    title: 'Why would anyone pick blue over? …',
+    title: 'Why would anyone pick blue over?',
     image: require("../assets/imgs/bg28.jpg"),
     cta: 'View article'
   },
   {
-    title: 'Pink is obviously a better color …',
+    title: 'Pink is obviously a better color',
     image: require("../assets/imgs/project21.jpg"),
     cta: 'View article'
   },
 
   {
-    title: 'The time is now for it to be okay to be …',
+    title: 'The time is now for it to be okay to be',
     image: require("../assets/imgs/project15.jpg"),
     cta: 'View article',
     horizontal: true

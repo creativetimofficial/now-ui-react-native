@@ -11,15 +11,54 @@ class DrawerItem extends React.Component {
 
     switch (title) {
       case 'Home':
-        return <Icon name="app2x" family="NowExtra" size={14} color={focused ? nowTheme.COLORS.PRIMARY : 'white'} />;
-      case 'Elements':
-        return <Icon name="atom2x" family="NowExtra" size={14} color={focused ? nowTheme.COLORS.PRIMARY : 'white'} />;
+        return (
+          <Icon
+            name="app2x"
+            family="NowExtra"
+            size={18}
+            color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
+            style={{ opacity: 0.5 }}
+            />
+        );
+      case 'Components':
+        return (
+          <Icon
+            name="atom2x"
+            family="NowExtra"
+            size={18} color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
+            style={{ opacity: 0.5 }}
+            />
+        );
       case 'Articles':
-        return <Icon name="paper" family="NowExtra" size={14} color={focused ? nowTheme.COLORS.PRIMARY : 'white'} />;
+        return (
+          <Icon
+            name="paper"
+            family="NowExtra"
+            size={18}
+            color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
+            style={{ opacity: 0.5 }}
+            />
+        );
       case 'Profile':
-        return <Icon name="profile-circle" family="NowExtra" size={14} color={focused ? nowTheme.COLORS.PRIMARY : 'white'} />;
+        return (
+          <Icon
+            name="profile-circle"
+            family="NowExtra"
+            size={18}
+            color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
+            style={{ opacity: 0.5 }}
+            />
+        );
       case 'Account':
-        return <Icon name="badge2x" family="NowExtra" size={14} color={focused ? nowTheme.COLORS.PRIMARY : 'white'} />;
+        return (
+          <Icon
+            name="badge2x"
+            family="NowExtra"
+            size={18}
+            color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
+            style={{ opacity: 0.5 }}
+            />
+        );
       case 'Examples':
         return (
           <Icon
@@ -29,13 +68,13 @@ class DrawerItem extends React.Component {
             color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
           />
         );
-      case 'Getting Started':
+      case 'GETTING STARTED':
         return (
           <Icon
             name="spaceship2x"
             family="NowExtra"
-            size={14}
-            style={{ borderColor: 'rgba(0,0,0,0.5)' }}
+            size={18}
+            style={{ borderColor: 'rgba(0,0,0,0.5)', opacity: 0.5 }}
             color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
           />
         );
@@ -44,8 +83,8 @@ class DrawerItem extends React.Component {
           <Icon
             name="share"
             family="NowExtra"
-            size={14}
-            style={{ borderColor: 'rgba(0,0,0,0.5)' }}
+            size={18}
+            style={{ borderColor: 'rgba(0,0,0,0.5)', opacity: 0.5 }}
             color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
           />
         );
@@ -69,8 +108,8 @@ class DrawerItem extends React.Component {
         </Block>
         <Block row center flex={0.9}>
           <Text
-            style={{ fontFamily: 'montserrat-regular' }}
-            size={15}
+            style={{ fontFamily: 'montserrat-regular', textTransform: 'uppercase', fontWeight: '300' }}
+            size={12}
             bold={focused ? true : false}
             color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
           >

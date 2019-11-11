@@ -1,4 +1,5 @@
 import React from 'react';
+import { Block } from "galio-framework";
 import { Easing, Animated } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
@@ -10,6 +11,7 @@ import Profile from '../screens/Profile';
 import Register from '../screens/Register';
 import Components from '../screens/Components';
 import Articles from '../screens/Articles';
+import Onboarding from '../screens/Onboarding';
 
 // settings
 import SettingsScreen from '../screens/Settings';
@@ -150,6 +152,15 @@ const HomeStack = createStackNavigator(
       navigationOptions: ({ navigation }) => ({
         header: <Header search options title="Home" navigation={navigation} />
       })
+    },
+    Pro: {
+      screen: Pro,
+      navigationOptions: ({ navigation }) => ({
+        header: (
+          <Header left={<Block />} white transparent title="" navigation={navigation} />
+        ),
+        headerTransparent: true
+      })
     }
   },
   {
@@ -163,7 +174,7 @@ const HomeStack = createStackNavigator(
 const AppStack = createDrawerNavigator(
   {
     Onboarding: {
-      screen: Pro,
+      screen: Onboarding,
       navigationOptions: {
         drawerLabel: () => { }
       }
@@ -172,6 +183,22 @@ const AppStack = createDrawerNavigator(
       screen: HomeStack,
       navigationOptions: navOpt => ({
         drawerLabel: ({ focused }) => <DrawerItem focused={focused} title="Home" />
+      })
+    },
+    Components: {
+      screen: ComponentsStack,
+      navigationOptions: navOpt => ({
+        drawerLabel: ({ focused }) => (
+          <DrawerItem focused={focused} screen="Components" title="Components" />
+        )
+      })
+    },
+    Articles: {
+      screen: ArticlesStack,
+      navigationOptions: navOpt => ({
+        drawerLabel: ({ focused }) => (
+          <DrawerItem focused={focused} screen="Articles" title="Articles" />
+        )
       })
     },
     Profile: {
@@ -189,25 +216,7 @@ const AppStack = createDrawerNavigator(
           <DrawerItem focused={focused} screen="Register" title="Account" />
         )
       })
-    },
-    Components: {
-      screen: ComponentsStack,
-      navigationOptions: navOpt => ({
-        drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} screen="Components" title="Elements" />
-        )
-      })
-    },
-    Articles: {
-      screen: ArticlesStack,
-      navigationOptions: navOpt => ({
-        drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} screen="Articles" title="Articles" />
-        )
-      })
-    },
-
-
+    }
   },
   Menu
 );

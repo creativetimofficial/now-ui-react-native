@@ -43,7 +43,7 @@ class Card extends React.Component {
                 style={{ fontFamily: 'montserrat-regular' }}
                 size={14}
                 style={titleStyles}
-                color={nowTheme.COLORS.TEXT}
+                color={nowTheme.COLORS.SECONDARY}
               >
                 {item.title}
               </Text>
@@ -89,7 +89,7 @@ class Card extends React.Component {
             </Block>
             <Block right={ctaRight ? true : false}>
               <Text
-                style={{ fontFamily: 'montserrat-bold' }}
+                style={styles.articleButton}
                 size={12}
                 muted={!ctaColor}
                 color={ctaColor || nowTheme.COLORS.ACTIVE}
@@ -125,9 +125,9 @@ const styles = StyleSheet.create({
     marginBottom: 4
   },
   cardTitle: {
-    // flex: 1,
-    // flexWrap: "wrap",
-    paddingBottom: 6
+    paddingHorizontal: 9,
+    paddingTop: 7,
+    paddingBottom: 15
   },
   cardDescription: {
     padding: theme.SIZES.BASE / 2
@@ -161,6 +161,11 @@ const styles = StyleSheet.create({
     shadowRadius: 6,
     shadowOpacity: 0.1,
     elevation: 2
+  },
+  articleButton: {
+    fontFamily: 'montserrat-bold',
+    paddingHorizontal: 9,
+    paddingVertical: 7
   }
 });
 

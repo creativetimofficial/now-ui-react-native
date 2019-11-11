@@ -13,7 +13,7 @@ const { width } = Dimensions.get('screen');
 const Drawer = props => (
   <Block style={styles.container} forceInset={{ top: 'always', horizontal: 'never' }}>
     <Block style={styles.header}>
-      <Image styles={styles.logo} source={Images.Logo} />
+      <Image style={styles.logo} source={Images.Logo} />
       <Block right style={styles.headerIcon}>
         <Icon name="align-left-22x" family="NowExtra" size={15} color={'white'} />
       </Block>
@@ -24,21 +24,23 @@ const Drawer = props => (
         <DrawerNavigatorItems {...props} />
         <Block flex style={{ marginTop: 24, marginVertical: 8, paddingHorizontal: 8 }}>
           <Block
-            style={{ borderColor: 'white', width: '100%', borderWidth: StyleSheet.hairlineWidth }}
+            style={{ borderColor: 'white', width: '93%', borderWidth: StyleSheet.hairlineWidth, marginHorizontal: 10}}
           />
           <Text
             color={nowTheme.COLORS.WHITE}
-            style={{ marginTop: 16, marginLeft: 8, fontFamily: 'montserrat-regular' }}
+            style={{ marginTop: 30, marginLeft: 20, marginBottom: 10, fontFamily: 'montserrat-regular', fontWeight: '300', fontSize: 12}}
           >
             DOCUMENTATION
           </Text>
         </Block>
-        <TouchableOpacity
-
+        <TouchableOpacity onPress={() => props.navigation.navigate('Onboarding')}
+          style={{ marginLeft: 10, fontFamily: 'montserrat-regular' }}
         >
-          <DrawerItem {...props} title="Getting Started" />
+          <DrawerItem {...props} title="GETTING STARTED" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => props.navigation.navigate('Onboarding')}>
+        <TouchableOpacity onPress={() => props.navigation.navigate('Onboarding')}
+          style={{ marginLeft: 10, fontFamily: 'montserrat-regular' }}
+        >
           <DrawerItem {...props} title="LOGOUT" />
         </TouchableOpacity>
       </ScrollView>
@@ -86,6 +88,10 @@ const styles = StyleSheet.create({
   },
   headerIcon: {
     marginTop: -20
+  },
+  logo: {
+    height: 40,
+    width: 37
   }
 });
 

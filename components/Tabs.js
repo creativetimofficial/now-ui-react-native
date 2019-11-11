@@ -65,13 +65,13 @@ export default class Tabs extends React.Component {
 
     const textColor = this.animatedValue.interpolate({
       inputRange: [0, 1],
-      outputRange: [nowTheme.COLORS.TEXT, isActive ? nowTheme.COLORS.WHITE : nowTheme.COLORS.TEXT],
+      outputRange: [nowTheme.COLORS.TEXT, isActive ? nowTheme.COLORS.WHITE : nowTheme.COLORS.SECONDARY],
       extrapolate: 'clamp',
     });
 
     const containerStyles = [
       styles.titleContainer,
-      !isActive && { backgroundColor: nowTheme.COLORS.SECONDARY },
+      !isActive && { backgroundColor: nowTheme.COLORS.TABS },
       isActive && styles.containerShadow
     ];
 
@@ -81,7 +81,7 @@ export default class Tabs extends React.Component {
           style={[
             styles.menuTitle,
             { color: textColor },
-            { fontFamily: 'montserrat-bold' },
+            { fontFamily: 'montserrat-regular' },
           ]}
           onPress={() => this.selectMenu(item.id)}>
           {item.title}
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
   titleContainer: {
     alignItems: 'center',
     backgroundColor: nowTheme.COLORS.ACTIVE,
-    borderRadius: 4,
+    borderRadius: 21,
     marginRight: 9,
     paddingHorizontal: 10,
     paddingVertical: 3,
@@ -154,7 +154,6 @@ const styles = StyleSheet.create({
   menuTitle: {
     fontWeight: '600',
     fontSize: 14,
-    // lineHeight: 28,
     paddingVertical: 8,
     paddingHorizontal: 12,
     color: nowTheme.COLORS.MUTED
