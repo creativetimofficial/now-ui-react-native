@@ -20,7 +20,7 @@ const BellButton = ({ isWhite, style, navigation }) => (
     <Icon
       family="NowExtra"
       size={16}
-      name="bell"
+      name="bulb"
       color={nowTheme.COLORS[isWhite ? 'WHITE' : 'ICON']}
     />
     <Block middle style={[styles.notify, { backgroundColor: nowTheme.COLORS[isWhite ? 'WHITE' : 'PRIMARY'] }]} />
@@ -130,28 +130,29 @@ class Header extends React.Component {
         <Button
           shadowless
           style={[styles.tab, styles.divider]}
-          onPress={() => navigation.navigate('Beauty')}
+          onPress={() => console.log(navigation.navigate('Pro'))}
         >
           <Block row middle>
             <Icon
               name="bulb"
               family="NowExtra"
+              size={18}
               style={{ paddingRight: 8 }}
-              color={nowTheme.COLORS.ICON}
+              color={nowTheme.COLORS.HEADER}
             />
             <Text style={{ fontFamily: 'montserrat-regular' }} size={16} style={styles.tabTitle}>
               {optionLeft || 'Beauty'}
             </Text>
           </Block>
         </Button>
-        <Button shadowless style={styles.tab} onPress={() => navigation.navigate('Fashion')}>
+        <Button shadowless style={styles.tab} onPress={() => navigation.navigate('Pro')}>
           <Block row middle>
             <Icon
-              size={16}
+              size={18}
               name="bag-162x"
               family="NowExtra"
               style={{ paddingRight: 8 }}
-              color={nowTheme.COLORS.ICON}
+              color={nowTheme.COLORS.HEADER}
             />
             <Text style={{ fontFamily: 'montserrat-regular' }} size={16} style={styles.tabTitle}>
               {optionRight || 'Fashion'}
@@ -212,7 +213,6 @@ class Header extends React.Component {
     return (
       <Block style={headerStyles}>
         <NavBar
-          back={back}
           title={title}
           style={navbarStyles}
           transparent={transparent}
@@ -222,7 +222,7 @@ class Header extends React.Component {
             <Icon
               name={back ? 'minimal-left2x' : 'align-left-22x'}
               family="NowExtra"
-              size={14}
+              size={16}
               onPress={this.handleLeftPress}
               color={iconColor || nowTheme.COLORS.ICON}
             />

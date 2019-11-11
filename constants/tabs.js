@@ -1,6 +1,6 @@
 export default tabs = {
   beauty: [
-    { id: 'music', title: 'Music' },
+    { id: 'popular', title: 'Popular' },
     { id: 'beauty', title: 'Beauty' },
     { id: 'fashion', title: 'Fashion' },
     { id: 'clothes', title: 'Clothes'}

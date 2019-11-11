@@ -9,13 +9,14 @@ import { nowTheme } from "../constants";
 
 class ArInput extends React.Component {
   render() {
-    const { shadowless, success, error } = this.props;
+    const { shadowless, success, error, primary } = this.props;
 
     const inputStyles = [
       styles.input,
-      !shadowless && styles.shadow,
+      !shadowless,
       success && styles.success,
       error && styles.error,
+      primary && styles.primary,
       {...this.props.style}
     ];
 
@@ -42,13 +43,15 @@ class ArInput extends React.Component {
 ArInput.defaultProps = {
   shadowless: false,
   success: false,
-  error: false
+  error: false,
+  primary: false
 };
 
 ArInput.propTypes = {
   shadowless: PropTypes.bool,
   success: PropTypes.bool,
-  error: PropTypes.bool
+  error: PropTypes.bool,
+  primary: PropTypes.bool
 }
 
 const styles = StyleSheet.create({
@@ -59,10 +62,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF'
   },
   success: {
-    borderColor: nowTheme.COLORS.INPUT_SUCCESS,
+    borderColor: nowTheme.COLORS.INPUT_SUCCESS
   },
   error: {
-    borderColor: nowTheme.COLORS.INPUT_ERROR,
+    borderColor: nowTheme.COLORS.INPUT_ERROR
+  },
+  primary: {
+    borderColor: nowTheme.COLORS.PRIMARY
   },
   shadow: {
     shadowColor: nowTheme.COLORS.BLACK,

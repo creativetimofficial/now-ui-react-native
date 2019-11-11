@@ -25,24 +25,39 @@ const Profile = () => {
         >
           <Block flex style={styles.profileCard}>
             <Block style={{ position: 'absolute', width: width, zIndex: 5, paddingHorizontal: 20 }}>
-              <Block middle style={{ top: height * 0.095 }}>
+              <Block middle style={{ top: height * 0.15 }}>
                 <Image source={Images.ProfilePicture} style={styles.avatar} />
               </Block>
-              <Block style={{ top: height * 0.15 }}>
+              <Block style={{ top: height * 0.2 }}>
                 <Block middle >
-                  <Text style={{ fontFamily: 'montserrat-regular' }} size={24} color="white">
+                  <Text
+                    style={{
+                      fontFamily: 'montserrat-bold',
+                      marginBottom: theme.SIZES.BASE / 2,
+                      fontWeight: '900',
+                      fontSize: 26
+                    }}
+                    color='#ffffff'
+                    >
                     Ryan Scheinder
               </Text>
                   <Text
                     size={16}
                     color="white"
-                    style={{ marginTop: 10, fontFamily: 'montserrat-regular' }}
+                    style={{
+                      marginTop: 5,
+                      fontFamily: 'montserrat-bold',
+                      lineHeight: 20,
+                      fontWeight: 'bold',
+                      fontSize: 18,
+                      opacity: .8
+                    }}
                   >
                     Photographer
-              </Text>
+                  </Text>
                 </Block>
                 <Block style={styles.info}>
-                  <Block row space="between">
+                  <Block row space="around">
                     <Block middle>
                       <Text
                         size={18}
@@ -51,7 +66,7 @@ const Profile = () => {
                       >
                         2K
                   </Text>
-                      <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color="white">
+                      <Text style={{ fontFamily: 'montserrat-regular' }} size={14} color="white">
                         Friends
                   </Text>
                     </Block>
@@ -63,7 +78,7 @@ const Profile = () => {
                       >
                         26
                   </Text>
-                      <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color="white">
+                      <Text style={{ fontFamily: 'montserrat-regular' }} size={14} color="white">
                         Comments
                   </Text>
                     </Block>
@@ -75,7 +90,7 @@ const Profile = () => {
                       >
                         48
                   </Text>
-                      <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color="white">
+                      <Text style={{ fontFamily: 'montserrat-regular' }} size={14} color="white">
                         Bookmarks
                   </Text>
                     </Block>
@@ -89,10 +104,9 @@ const Profile = () => {
             <Block
               middle
               row
-              space="evenly"
-              style={{ position: 'absolute', width: width, top: height * 0.6 - 22, zIndex: 5 }}
+              style={{ position: 'absolute', width: width, top: height * 0.6 - 22, zIndex: 99 }}
             >
-              <Button style={{ width: 114, height: 44, }} textStyle={{ fontSize: 16 }} round>
+              <Button style={{ width: 114, height: 44, marginHorizontal: 5, elevation: 0 }} textStyle={{ fontSize: 16 }} round>
                 Follow
               </Button>
               <GaButton
@@ -124,18 +138,19 @@ const Profile = () => {
 
       </Block>
       <Block />
-      <Block flex={0.4} style={{ padding: theme.SIZES.BASE, }}>
+      <Block flex={0.4} style={{ padding: theme.SIZES.BASE, marginTop: 90}}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <Block flex style={{ marginTop: 20 }}>
             <Block middle>
               <Text
                 style={{
-                  color: '#333',
+                  color: '#2c2c2c',
                   fontWeight: 'bold',
-                  fontSize: 18,
-                  fontFamily: 'montserrat-regular',
+                  fontSize: 19,
+                  fontFamily: 'montserrat-bold',
                   marginTop: 15,
-                  marginBottom: 16
+                  marginBottom: 30,
+                  zIndex: 2
                 }}
               >
                 About me
@@ -143,14 +158,21 @@ const Profile = () => {
               <Text
                 size={16}
                 muted
-                style={{ textAlign: 'center', fontFamily: 'montserrat-regular' }}
+                style={{
+                  textAlign: 'center',
+                  fontFamily: 'montserrat-regular',
+                  zIndex: 2,
+                  lineHeight: 25,
+                  color: '#9A9A9A',
+                  paddingHorizontal: 15
+                }}
               >
-                An artist of considerable range, Ryan — the name taken by Melbourne-raised,
+                An artist of considerable range, named Ryan — the name has taken by Melbourne has raised,
                 Brooklyn-based Nick Murphy — writes, performs and records all of his own music.
                   </Text>
             </Block>
-            <Block row style={{ paddingVertical: 14 }} space="between">
-              <Text bold size={16} color="#525F7F" style={{ marginTop: 3 }}>
+            <Block row style={{ paddingVertical: 14, paddingHorizontal: 15 }} space="between">
+              <Text bold size={16} color="#2c2c2c" style={{ marginTop: 3 }}>
                 Album
                   </Text>
               <Button
@@ -163,7 +185,7 @@ const Profile = () => {
             </Block>
 
 
-            <Block style={{ paddingBottom: -HeaderHeight * 2 }}>
+            <Block style={{ paddingBottom: -HeaderHeight * 2, paddingHorizontal: 15}}>
               <Block row space="between" style={{ flexWrap: 'wrap' }}>
                 {Images.Viewed.map((img, imgIndex) => (
                   <Image
@@ -201,7 +223,7 @@ const styles = StyleSheet.create({
   },
 
   info: {
-    marginTop: 20,
+    marginTop: 40,
     paddingHorizontal: 10
   },
   avatarContainer: {
@@ -228,7 +250,9 @@ const styles = StyleSheet.create({
     width: nowTheme.SIZES.BASE * 3,
     height: nowTheme.SIZES.BASE * 3,
     borderRadius: nowTheme.SIZES.BASE * 1.5,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    zIndex: 99,
+    marginHorizontal: 5
   }
 });
 
