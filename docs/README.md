@@ -18,10 +18,5 @@ The available screens for the free version are:
 ## Example screenshots
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/onboarding.png" height="487.2px">
-  <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/sidebar2.png" height="487.2px">
-  <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/profile.png" height="487.2px">
-  <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/home.png" height="487.2px">
-  <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/account.png" height="487.2px">
-  <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/elements-screen.png" height="487.2px">
+  <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/example.png" width="800px">
 </p>
