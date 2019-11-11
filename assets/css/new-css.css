@@ -223,8 +223,8 @@ body .title {
   width: 130%;
 }
 
-.our-clients{
-  margin-top: 70px;
+.our-clients {
+  margin-top: 100px;
 }
 
 .our-clients .card-featured-content img{
@@ -399,8 +399,12 @@ body .title {
     text-align: center;
   }
 
-  img.phone1, img.phone2{
-    display: none;
+  img.phone1 {
+    right: -15%;
+  }
+
+  img.phone2 {
+    right: -40%;
   }
 
   .section-cards .image-container img{
