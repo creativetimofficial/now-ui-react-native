@@ -32,12 +32,7 @@ body {
 .page-header .creative-tim-logo {
   width: 120px;
 }
-.page-header::before {
-  content:"";
-  display: block;
-  position: absolute;
-  background: rgba(0,0,0,0.5);
-}
+
 .page-header .container {
   z-index: auto;
 }
@@ -123,24 +118,46 @@ footer {
 
 img.phone1 {
   position: absolute;
-  right: -10%;
-  width: 150%;
-  margin-top: -20px;
+  right: 10%;
+  width: 600px;
+  margin-top: -15%;
   z-index: 3;
 }
 
 img.phone2 {
   position: absolute;
-  width: 175%;
-  right: -70%;
-  margin-top: -10rem;
+  width: 800px;
+  margin-top: -20%;
+  right: -20%;
   z-index: 2;
 }
 
 .shadow {
-    border-radius: 20px;
-    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1);
-    overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+body .title {
+  color: #2c2c2c;
+}
+
+.title+.category {
+  margin-top: -25px;
+}
+
+.description {
+  margin-top: 35px;
+}
+
+.margined {
+  margin-top: 150px;
+}
+
+.git-buttons {
+  position: absolute;
+  bottom: 40%;
+  left: 40%;
 }
 
 .section-products {
@@ -206,8 +223,8 @@ img.phone2 {
   width: 130%;
 }
 
-.our-clients{
-  margin-top: 70px;
+.our-clients {
+  margin-top: 100px;
 }
 
 .our-clients .card-featured-content img{
@@ -382,8 +399,12 @@ img.phone2 {
     text-align: center;
   }
 
-  img.phone1, img.phone2{
-    display: none;
+  img.phone1 {
+    right: -15%;
+  }
+
+  img.phone2 {
+    right: -40%;
   }
 
   .section-cards .image-container img{

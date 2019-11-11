@@ -3,9 +3,7 @@
 This component extends React Native's native Switch component. All props are available.
 
 ### Usage
-
 Simple example:
-
 ```
 
 toggleSwitch = switchId => this.setState({ [switchId]: !this.state[switchId] });
@@ -17,7 +15,7 @@ toggleSwitch = switchId => this.setState({ [switchId]: !this.state[switchId] });
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/creativetimofficial/now-ui-react-native/gh-pages/docs/assets/switch.png" >
+  <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/switch.png" width="374px" height="366px">
 </p>
 
 ### Props
