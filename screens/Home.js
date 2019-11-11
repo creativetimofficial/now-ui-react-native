@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Dimensions, ScrollView } from "react-native";
 import { Block, theme, Text } from "galio-framework";
 
-import { Card } from "../components";
+import { Card, Button } from "../components";
 import articles from "../constants/articles";
 const { width } = Dimensions.get("screen");
 
@@ -25,6 +25,9 @@ class Home extends React.Component {
           <Card item={articles[3]} horizontal />
           <Card item={articles[4]} full />
         </Block>
+        <Button shadowless style={styles.tab} onPress={() => this.props.navigation.navigate('Pro')}>
+pulamea
+        </Button>
       </ScrollView>
     );
   };
