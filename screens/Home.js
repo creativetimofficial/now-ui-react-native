@@ -25,9 +25,6 @@ class Home extends React.Component {
           <Card item={articles[3]} horizontal />
           <Card item={articles[4]} full />
         </Block>
-        <Button shadowless style={styles.tab} onPress={() => this.props.navigation.navigate('Pro')}>
-pulamea
-        </Button>
       </ScrollView>
     );
   };
