@@ -28,7 +28,6 @@ const Products = {
 export default {
   Onboarding,
   Logo,
-
   ProfileBackground,
   ProfilePicture,
   RegisterBackground,
