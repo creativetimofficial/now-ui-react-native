@@ -40,7 +40,8 @@ const Profile = () => {
                     color='#ffffff'
                     >
                     Ryan Scheinder
-              </Text>
+                  </Text>
+
                   <Text
                     size={16}
                     color="white"
@@ -58,6 +59,7 @@ const Profile = () => {
                 </Block>
                 <Block style={styles.info}>
                   <Block row space="around">
+
                     <Block middle>
                       <Text
                         size={18}
@@ -65,11 +67,12 @@ const Profile = () => {
                         style={{ marginBottom: 4, fontFamily: 'montserrat-bold' }}
                       >
                         2K
-                  </Text>
+                      </Text>
                       <Text style={{ fontFamily: 'montserrat-regular' }} size={14} color="white">
                         Friends
-                  </Text>
+                      </Text>
                     </Block>
+
                     <Block middle>
                       <Text
                         color="white"
@@ -77,11 +80,12 @@ const Profile = () => {
                         style={{ marginBottom: 4, fontFamily: 'montserrat-bold' }}
                       >
                         26
-                  </Text>
+                      </Text>
                       <Text style={{ fontFamily: 'montserrat-regular' }} size={14} color="white">
                         Comments
-                  </Text>
+                        </Text>
                     </Block>
+
                     <Block middle>
                       <Text
                         color="white"
@@ -89,11 +93,12 @@ const Profile = () => {
                         style={{ marginBottom: 4, fontFamily: 'montserrat-bold' }}
                       >
                         48
-                  </Text>
+                      </Text>
                       <Text style={{ fontFamily: 'montserrat-regular' }} size={14} color="white">
                         Bookmarks
-                  </Text>
+                      </Text>
                     </Block>
+
                   </Block>
                 </Block>
               </Block>
@@ -223,17 +228,18 @@ const styles = StyleSheet.create({
   },
 
   info: {
-    marginTop: 40,
-    paddingHorizontal: 10
+    marginTop: 30,
+    paddingHorizontal: 10,
+    height: height * 0.8
   },
   avatarContainer: {
     position: 'relative',
     marginTop: -80
   },
   avatar: {
-    width: 124,
-    height: 124,
-    borderRadius: 62,
+    width: thumbMeasure,
+    height: thumbMeasure,
+    borderRadius: 50,
     borderWidth: 0
   },
   nameInfo: {

@@ -15,7 +15,12 @@ const assetImages = [
   Images.Pro,
   Images.NowLogo,
   Images.iOSLogo,
-  Images.androidLogo
+  Images.androidLogo,
+  Images.ProfilePicture,
+  Images.CreativeTimLogo,
+  Images.InvisionLogo,
+  Images.RegisterBackground,
+  Images.ProfileBackground
 ];
 
 // cache product images
