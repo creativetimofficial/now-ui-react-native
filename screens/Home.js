@@ -16,6 +16,7 @@ class Home extends React.Component {
         contentContainerStyle={styles.articles}
       >
         <Block flex>
+          <Card item={articles[3]} />
           <Card item={articles[0]} />
           <Card item={articles[1]} />
           <Card item={articles[2]} />
