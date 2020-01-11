@@ -54,4 +54,10 @@ export default [
     cta: 'View article',
     horizontal: true
   },
+  {
+    title: 'Society has put up so many boundaries',
+    image: require("../assets/imgs/cardwise.png"),
+    cta: 'View article',
+    horizontal: true
+  },
 ];
