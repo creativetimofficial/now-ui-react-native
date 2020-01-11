@@ -13,36 +13,36 @@ const { width } = Dimensions.get('screen');
 const Drawer = props => (
   <Block style={styles.container} forceInset={{ top: 'always', horizontal: 'never' }}>
     <Block style={styles.header}>
-      <Image style={styles.logo} source={Images.Logo} />
+      <Image source={Images.Logo}/>
       <Block right style={styles.headerIcon}>
-        <Icon name="align-left-22x" family="NowExtra" size={15} color={'white'} />
+        <Icon name="align-left-22x" family="NowExtra" size={15} color={'white'}/>
       </Block>
     </Block>
 
     <Block flex>
       <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }}>
         <DrawerNavigatorItems {...props} />
-        <Block flex style={{ marginTop: 24, marginVertical: 8, paddingHorizontal: 8 }}>
-          <Block
-            style={{ borderColor: 'white', width: '93%', borderWidth: StyleSheet.hairlineWidth, marginHorizontal: 10}}
-          />
-          <Text
-            color={nowTheme.COLORS.WHITE}
-            style={{ marginTop: 30, marginLeft: 20, marginBottom: 10, fontFamily: 'montserrat-regular', fontWeight: '300', fontSize: 12}}
-          >
-            DOCUMENTATION
-          </Text>
-        </Block>
-        <TouchableOpacity onPress={() => props.navigation.navigate('Onboarding')}
-          style={{ marginLeft: 10, fontFamily: 'montserrat-regular' }}
-        >
-          <DrawerItem {...props} title="GETTING STARTED" />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => props.navigation.navigate('Payment')}
-          style={{ marginLeft: 10, fontFamily: 'montserrat-regular' }}
-        >
-          <DrawerItem {...props} title="LOGOUT" />
-        </TouchableOpacity>
+        {/*<Block flex style={{ marginTop: 24, marginVertical: 8, paddingHorizontal: 8 }}>*/}
+        {/*  <Block*/}
+        {/*    style={{ borderColor: 'white', width: '93%', borderWidth: StyleSheet.hairlineWidth, marginHorizontal: 10}}*/}
+        {/*  />*/}
+        {/*  <Text*/}
+        {/*    color={nowTheme.COLORS.WHITE}*/}
+        {/*    style={{ marginTop: 30, marginLeft: 20, marginBottom: 10, fontFamily: 'montserrat-regular', fontWeight: '300', fontSize: 12}}*/}
+        {/*  >*/}
+        {/*    DOCUMENTATION*/}
+        {/*  </Text>*/}
+        {/*</Block>*/}
+        {/*<TouchableOpacity onPress={() => props.navigation.navigate('Onboarding')}*/}
+        {/*  style={{ marginLeft: 10, fontFamily: 'montserrat-regular' }}*/}
+        {/*>*/}
+        {/*  <DrawerItem {...props} title="GETTING STARTED" />*/}
+        {/*</TouchableOpacity>*/}
+        {/*<TouchableOpacity onPress={() => props.navigation.navigate('Payment')}*/}
+        {/*  style={{ marginLeft: 10, fontFamily: 'montserrat-regular' }}*/}
+        {/*>*/}
+        {/*  <DrawerItem {...props} title="LOGOUT" />*/}
+        {/*</TouchableOpacity>*/}
       </ScrollView>
     </Block>
   </Block>
@@ -50,7 +50,7 @@ const Drawer = props => (
 
 const Menu = {
   contentComponent: props => <Drawer {...props} />,
-  drawerBackgroundColor: nowTheme.COLORS.PRIMARY,
+  drawerBackgroundColor: nowTheme.COLORS.BACKGROUND,
   drawerWidth: width * 0.8,
   contentOptions: {
     activeTintColor: nowTheme.COLORS.WHITE,
@@ -89,10 +89,6 @@ const styles = StyleSheet.create({
   headerIcon: {
     marginTop: -20
   },
-  logo: {
-    height: 40,
-    width: 37
-  }
 });
 
 export default Menu;

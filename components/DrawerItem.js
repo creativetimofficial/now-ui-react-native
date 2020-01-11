@@ -13,33 +13,53 @@ class DrawerItem extends React.Component {
       case 'Home':
         return (
           <Icon
-            name="app2x"
+            name="shop2x"
             family="NowExtra"
             size={18}
             color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
             style={{ opacity: 0.5 }}
             />
         );
-      case 'Components':
+      case 'Add Card':
         return (
           <Icon
-            name="atom2x"
-            family="NowExtra"
-            size={18} color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
-            style={{ opacity: 0.5 }}
-            />
-        );
-      case 'Articles':
-        return (
-          <Icon
-            name="paper"
+            name="credit-card2x"
             family="NowExtra"
             size={18}
             color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
             style={{ opacity: 0.5 }}
             />
         );
-      case 'Preference Reward Type':
+      case 'Reward Gained':
+        return (
+          <Icon
+            name="satisfied2x"
+            family="NowExtra"
+            size={18}
+            color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
+            style={{ opacity: 0.5 }}
+            />
+        );
+      // case 'Components':
+      //   return (
+      //     <Icon
+      //       name="atom2x"
+      //       family="NowExtra"
+      //       size={18} color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
+      //       style={{ opacity: 0.5 }}
+      //       />
+      //   );
+      // case 'Articles':
+      //   return (
+      //     <Icon
+      //       name="paper"
+      //       family="NowExtra"
+      //       size={18}
+      //       color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
+      //       style={{ opacity: 0.5 }}
+      //       />
+      //   );
+      case 'Reward Type Preference':
         return (
             <Icon
                 name="trophy2x"
@@ -59,47 +79,45 @@ class DrawerItem extends React.Component {
             style={{ opacity: 0.5 }}
             />
         );
-      case 'Account':
-        return (
-          <Icon
-            name="badge2x"
-            family="NowExtra"
-            size={18}
-            color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
-            style={{ opacity: 0.5 }}
-            />
-        );
-      case 'Examples':
-        return (
-          <Icon
-            name="album"
-            family="NowExtra"
-            size={14}
-            color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
-          />
-        );
-      case 'GETTING STARTED':
-        return (
-          <Icon
-            name="spaceship2x"
-            family="NowExtra"
-            size={18}
-            style={{ borderColor: 'rgba(0,0,0,0.5)', opacity: 0.5 }}
-            color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
-          />
-        );
-      case 'LOGOUT':
-        return (
-          <Icon
-            name="share"
-            family="NowExtra"
-            size={18}
-            style={{ borderColor: 'rgba(0,0,0,0.5)', opacity: 0.5 }}
-            color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
-          />
-        );
-
-
+      // case 'Account':
+      //   return (
+      //     <Icon
+      //       name="badge2x"
+      //       family="NowExtra"
+      //       size={18}
+      //       color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
+      //       style={{ opacity: 0.5 }}
+      //       />
+      //   );
+      // case 'Examples':
+      //   return (
+      //     <Icon
+      //       name="album"
+      //       family="NowExtra"
+      //       size={14}
+      //       color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
+      //     />
+      //   );
+      // case 'GETTING STARTED':
+      //   return (
+      //     <Icon
+      //       name="spaceship2x"
+      //       family="NowExtra"
+      //       size={18}
+      //       style={{ borderColor: 'rgba(0,0,0,0.5)', opacity: 0.5 }}
+      //       color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
+      //     />
+      //   );
+      // case 'LOGOUT':
+      //   return (
+      //     <Icon
+      //       name="share"
+      //       family="NowExtra"
+      //       size={18}
+      //       style={{ borderColor: 'rgba(0,0,0,0.5)', opacity: 0.5 }}
+      //       color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
+      //     />
+      //   );
       default:
         return null;
     }
