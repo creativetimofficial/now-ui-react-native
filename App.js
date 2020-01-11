@@ -20,7 +20,9 @@ const assetImages = [
   Images.CreativeTimLogo,
   Images.InvisionLogo,
   Images.RegisterBackground,
-  Images.ProfileBackground
+  Images.ProfileBackground,
+  Images.CardLogo,
+  Images.EnjoyCard,
 ];
 
 // cache product images
