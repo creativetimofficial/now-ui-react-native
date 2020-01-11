@@ -223,7 +223,10 @@ class AddCard extends React.Component {
         {this.state.added ? (
           <Block>
             <Button style={{ marginBottom: 30 }} round uppercase
-                    color="info" onPress={() => this.props.navigation.navigate('Home')}>complete</Button>
+                    color="info" onPress={() => this.props.navigation.navigate('Home', {
+              itemId: 86,
+              otherParam: 'anything you want here',
+            })}>complete</Button>
           </Block>
         ) : (
           <Block>

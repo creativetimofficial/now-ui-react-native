@@ -2,42 +2,48 @@ export default [
   {
     title: 'HSBC Advance',
     image: require("../assets/imgs/credit_card_PNG61.png"),
+    description: "Awd",
     cta: 'View article',
     horizontal: true
   },
   {
     title: 'HSBC Premier',
     image: require("../assets/imgs/premier-world-elite.png"),
+    description: "Awd",
     cta: 'View article'
   },
   {
     title: 'HSBC Gold',
     image: require("../assets/imgs/gold-visa.png"),
+    description: "Awd",
     cta: 'View article'
   },
   {
     title: 'Hang Seng Enjoy Card',
     image: require("../assets/imgs/enjoycard.jpg"),
+    description: "Awd",
     cta: 'View article'
   },
   {
-    title: 'Pink is obviously a better color',
-    image: require("../assets/imgs/gold-visa.png"),
-    cta: 'View article'
+    title: 'Earn the most ASIAN MILES',
+    image: require("../assets/imgs/credit_card_PNG61.png"),
+    description: "Paying with HSBC Visa Card can earn 1 mile with HKD$4. Try using HSBC Visa Card",
+    cta: 'View article',
   },
 
   {
-    title: 'The time is now for it to be okay to be',
-    image: require("../assets/imgs/credit_card_PNG61.png"),
+    title: 'Earn the most CASH REWARD',
+    image: require("../assets/imgs/enjoycard.jpg"),
     cta: 'View article',
+    description: "Paying with Hang Seng Bank ENJOY CARD can enjoy 5% discount. In this transanction, you can receive HKD 3.59 Cash Reward",
     horizontal: true
   },
   {
-    title: '$377',
-    image: require("../assets/imgs/saint-laurent.jpg"),
+    title: 'Earn the most REWARD-U',
+    image: require("../assets/imgs/enjoycard.jpg"),
     subtitle: 'Black Jacket',
     description:
-      'The structured shoulders and sleek detailing ensure a sharp silhouette. Team it with a silk pocket.',
+      'Paying with Hang Seng Bank ENJOY CARD can receive REWARD-U Discounts. In this transanction, you can earn 0.2872 points.',
     horizontal: true
   },
   {
