@@ -12,6 +12,7 @@ import Register from '../screens/Register';
 import Components from '../screens/Components';
 import Articles from '../screens/Articles';
 import Onboarding from '../screens/Onboarding';
+import Welcome from '../screens/Welcome';
 
 // settings
 import SettingsScreen from '../screens/Settings';
@@ -171,8 +172,25 @@ const HomeStack = createStackNavigator(
   }
 );
 
+// const WelcomeStack = createStackNavigator(
+//   {
+//     Welcome: {
+//       screen: Welcome,
+//       navigationOptions: ({ navigation }) => ({
+//         header: <Header title="Welcome" navigator={navigation} />
+//       })
+//     }
+//   }
+// )
+
 const AppStack = createDrawerNavigator(
   {
+    Welcome: {
+      screen: Welcome,
+      navigationOptions: {
+        drawerLabel: () => { }
+      }
+    },
     Onboarding: {
       screen: Onboarding,
       navigationOptions: {

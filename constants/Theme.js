@@ -42,7 +42,9 @@ const COLORS = {
   GITHUB: '#333333',
   BEHANCE: '#1769ff',
   REDDIT: '#ff4500',
-  GOOGLE: '#dd4b39'
+  GOOGLE: '#dd4b39',
+  BACKGROUND: '#add1e6',
+  WELCOME_BUTTON: '#49525d',
 };
 
 const SIZES = {
