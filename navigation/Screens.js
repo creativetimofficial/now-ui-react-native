@@ -16,6 +16,7 @@ import Welcome from '../screens/Welcome';
 import AddCard from '../screens/AddCard';
 import Preference from "../screens/Preference";
 import Payment from "../screens/Payment";
+import RewardGain from '../screens/Reward_Gain';
 // settings
 import SettingsScreen from '../screens/Settings';
 
@@ -63,60 +64,60 @@ const transitionConfig = (transitionProps, prevTransitionProps) => ({
   }
 });
 
-const ComponentsStack = createStackNavigator(
-  {
-    Components: {
-      screen: Components,
-      navigationOptions: ({ navigation }) => ({
-        header: <Header title="Components" navigation={navigation} />
-      })
-    }
-  },
-  {
-    cardStyle: {
-      backgroundColor: '#FFFFFF'
-    },
-    transitionConfig
-  }
-);
-
-const SettingsStack = createStackNavigator(
-  {
-    Settings: {
-      screen: SettingsScreen,
-      navigationOptions: ({ navigation }) => ({
-        header: <Header title="Settings" navigation={navigation} />
-      })
-    }
-  },
-  {
-    cardStyle: { backgroundColor: '#FFFFFF' },
-    transitionConfig
-  }
-);
-
-const ArticlesStack = createStackNavigator(
-  {
-    Articles: {
-      screen: Articles,
-      navigationOptions: ({ navigation }) => ({
-        header: <Header title="Articles" navigation={navigation} />
-      })
-    }
-  },
-  {
-    cardStyle: {
-      backgroundColor: '#FFFFFF'
-    },
-    transitionConfig
-  }
-);
+// const ComponentsStack = createStackNavigator(
+//   {
+//     Components: {
+//       screen: Components,
+//       navigationOptions: ({ navigation }) => ({
+//         header: <Header title="Components" navigation={navigation} />
+//       })
+//     }
+//   },
+//   {
+//     cardStyle: {
+//       backgroundColor: '#FFFFFF'
+//     },
+//     transitionConfig
+//   }
+// );
+//
+// const SettingsStack = createStackNavigator(
+//   {
+//     Settings: {
+//       screen: SettingsScreen,
+//       navigationOptions: ({ navigation }) => ({
+//         header: <Header title="Settings" navigation={navigation} />
+//       })
+//     }
+//   },
+//   {
+//     cardStyle: { backgroundColor: '#FFFFFF' },
+//     transitionConfig
+//   }
+// );
+//
+// const ArticlesStack = createStackNavigator(
+//   {
+//     Articles: {
+//       screen: Articles,
+//       navigationOptions: ({ navigation }) => ({
+//         header: <Header title="Articles" navigation={navigation} />
+//       })
+//     }
+//   },
+//   {
+//     cardStyle: {
+//       backgroundColor: '#FFFFFF'
+//     },
+//     transitionConfig
+//   }
+// );
 const PreferenceStack = createStackNavigator(
     {
       Preference: {
         screen: Preference,
         navigationOptions: ({ navigation }) => ({
-          header: <Header title="Preference Reward Type" navigation={navigation} />
+          header: <Header title="Reward Type Preference" navigation={navigation} />
         })
       }
     },
@@ -135,24 +136,23 @@ const ProfileStack = createStackNavigator(
   }
 );
 
-const AccountStack = createStackNavigator(
-  {
-    Account: {
-      screen: Register,
-      navigationOptions: ({ navigation }) => ({
-        header: (
-          <Header transparent title="Create Account" iconColor={'#333'} navigation={navigation} />
-        ),
-        headerTransparent: true
-      })
-    }
-  },
-  {
-    cardStyle: { backgroundColor: '#FFFFFF' },
-    transitionConfig
-  }
-);
-
+// const AccountStack = createStackNavigator(
+//   {
+//     Account: {
+//       screen: Register,
+//       navigationOptions: ({ navigation }) => ({
+//         header: (
+//           <Header transparent title="Create Account" iconColor={'#333'} navigation={navigation} />
+//         ),
+//         headerTransparent: true
+//       })
+//     }
+//   },
+//   {
+//     cardStyle: { backgroundColor: '#FFFFFF' },
+//     transitionConfig
+//   }
+// );
 
 const AddCardStack = createStackNavigator(
   {
@@ -172,12 +172,30 @@ const AddCardStack = createStackNavigator(
   }
 );
 
+const RewardGainStack = createStackNavigator(
+  {
+    RewardGain: {
+      screen: RewardGain,
+      navigationOptions: ({ navigation }) => ({
+        header: (
+          <Header transparent title="Reward Gained" iconColor={'#333'} navigation={navigation} />
+        ),
+        headerTransparent: true
+      })
+    }
+  },
+  {
+    cardStyle: { backgroundColor: '#FFFFFF' },
+    transitionConfig
+  }
+);
+
 const HomeStack = createStackNavigator(
   {
     Home: {
       screen: Home,
       navigationOptions: ({ navigation }) => ({
-        header: <Header search options title="Home" navigation={navigation} />
+        header: <Header title="Home" navigation={navigation} />
       })
     },
     Pro: {
@@ -212,46 +230,36 @@ const AppStack = createDrawerNavigator(
               drawerLabel: () => { }
           }
       },
-    Onboarding: {
-      screen: Onboarding,
-      navigationOptions: {
-        drawerLabel: () => { }
-      }
-    },
-    AddCard: {
-      screen: AddCardStack,
-      navigationOptions: {
-        drawerLabel: ({ focused }) => <DrawerItem focused={focused} title="Add Card" />
-      }
-    },
+    // Onboarding: {
+    //   screen: Onboarding,
+    //   navigationOptions: {
+    //     drawerLabel: () => { }
+    //   }
+    // },
     Home: {
       screen: HomeStack,
       navigationOptions: navOpt => ({
         drawerLabel: ({ focused }) => <DrawerItem focused={focused} title="Home" />
       })
     },
-    Components: {
-      screen: ComponentsStack,
-      navigationOptions: navOpt => ({
-        drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} screen="Components" title="Components" />
-        )
-      })
+    // Components: {
+    //   screen: ComponentsStack,
+    //   navigationOptions: navOpt => ({
+    //     drawerLabel: ({ focused }) => (
+    //       <DrawerItem focused={focused} screen="Components" title="Components" />
+    //     )
+    //   })
+    // },
+    AddCard: {
+      screen: AddCardStack,
+      navigationOptions: {
+        drawerLabel: ({ focused }) => <DrawerItem focused={focused} title="Add Card" />
+      }
     },
-    Preference: {
-      screen: PreferenceStack,
+    Reward_Gain: {
+      screen: RewardGainStack,
       navigationOptions: navOpt => ({
-        drawerLabel: ({ focused }) => (
-            <DrawerItem focused={focused} screen="Preference" title="Preference Reward Type" />
-        )
-      })
-    },
-    Articles: {
-      screen: ArticlesStack,
-      navigationOptions: navOpt => ({
-        drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} screen="Articles" title="Articles" />
-        )
+        drawerLabel: ({ focused }) => <DrawerItem focused={focused} title="Reward Gained" />
       })
     },
     Profile: {
@@ -262,14 +270,30 @@ const AppStack = createDrawerNavigator(
         )
       })
     },
-    Account: {
-      screen: AccountStack,
+    Preference: {
+      screen: PreferenceStack,
       navigationOptions: navOpt => ({
         drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} screen="Register" title="Account" />
+            <DrawerItem focused={focused} screen="Preference" title="Reward Type Preference" />
         )
       })
-    }
+    },
+    // Articles: {
+    //   screen: ArticlesStack,
+    //   navigationOptions: navOpt => ({
+    //     drawerLabel: ({ focused }) => (
+    //       <DrawerItem focused={focused} screen="Articles" title="Articles" />
+    //     )
+    //   })
+    // },
+    // Account: {
+    //   screen: AccountStack,
+    //   navigationOptions: navOpt => ({
+    //     drawerLabel: ({ focused }) => (
+    //       <DrawerItem focused={focused} screen="Register" title="Account" />
+    //     )
+    //   })
+    // }
   },
   Menu
 );
