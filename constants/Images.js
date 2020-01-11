@@ -10,7 +10,7 @@ const androidLogo = require('../assets/imgs/android.png');
 const ProfilePicture = require('../assets/imgs/profile-img.jpg');
 const CreativeTimLogo = require('../assets/imgs/creative-tim-white-slim2.png');
 const InvisionLogo = require('../assets/imgs/invision-white-slim.png');
-
+const ApplePaymentConnecting = require('../assets/imgs/connecting.png');
 const CardLogo = require('../assets/imgs/CardLogo.png');
 const EnjoyCard = require('../assets/imgs/enjoycard.jpg');
 
@@ -44,4 +44,5 @@ export default {
   InvisionLogo,
   CardLogo,
   EnjoyCard,
+  ApplePaymentConnecting,
 };

@@ -15,7 +15,7 @@ import Onboarding from '../screens/Onboarding';
 import Welcome from '../screens/Welcome';
 import AddCard from '../screens/AddCard';
 import Preference from "../screens/Preference";
-
+import Payment from "../screens/Payment";
 // settings
 import SettingsScreen from '../screens/Settings';
 
@@ -206,6 +206,12 @@ const AppStack = createDrawerNavigator(
         drawerLabel: () => { }
       }
     },
+      Payment: {
+          screen: Payment,
+          navigationOptions: {
+              drawerLabel: () => { }
+          }
+      },
     Onboarding: {
       screen: Onboarding,
       navigationOptions: {

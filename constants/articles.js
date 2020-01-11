@@ -42,5 +42,11 @@ export default [
     description:
       'The smooth woven-wool is water resistant to ensure you stay pristine after a long-haul flight.',
     horizontal: true
-  }
+  },
+  {
+    title: 'Society has put up so many boundaries',
+    image: require("../assets/imgs/connecting.png"),
+    cta: 'View article',
+    horizontal: true
+  },
 ];
