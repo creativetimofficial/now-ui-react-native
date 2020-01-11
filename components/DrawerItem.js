@@ -39,6 +39,16 @@ class DrawerItem extends React.Component {
             style={{ opacity: 0.5 }}
             />
         );
+      case 'Preference Reward Type':
+        return (
+            <Icon
+                name="trophy2x"
+                family="NowExtra"
+                size={18}
+                style={{ borderColor: 'rgba(0,0,0,0.5)', opacity: 0.5 }}
+                color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
+            />
+        );
       case 'Profile':
         return (
           <Icon
@@ -88,6 +98,8 @@ class DrawerItem extends React.Component {
             color={focused ? nowTheme.COLORS.PRIMARY : 'white'}
           />
         );
+
+
       default:
         return null;
     }
