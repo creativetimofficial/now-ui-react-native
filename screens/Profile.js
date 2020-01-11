@@ -146,7 +146,7 @@ class Profile extends React.Component {
                     renderSeparator={(sectionId, rowId) => <View key={rowId} style={styles.separator} />}
                     data={[
                       {key: 'Devin'},
-                      {key: 'Dan'},
+                      {key: 'Daadwan'},
                       {key: 'Dominic'},
                       {key: 'Jackson'},
                       {key: 'James'},
