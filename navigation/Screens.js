@@ -13,6 +13,7 @@ import Components from '../screens/Components';
 import Articles from '../screens/Articles';
 import Onboarding from '../screens/Onboarding';
 import Welcome from '../screens/Welcome';
+import Preference from "../screens/Preference";
 
 // settings
 import SettingsScreen from '../screens/Settings';
@@ -109,7 +110,16 @@ const ArticlesStack = createStackNavigator(
     transitionConfig
   }
 );
-
+const PreferenceStack = createStackNavigator(
+    {
+      Preference: {
+        screen: Preference,
+        navigationOptions: ({ navigation }) => ({
+          header: <Header title="Preference Reward Type" navigation={navigation} />
+        })
+      }
+    },
+);
 const ProfileStack = createStackNavigator(
   {
     Profile: {
@@ -122,10 +132,6 @@ const ProfileStack = createStackNavigator(
       })
     }
   },
-  {
-    cardStyle: { backgroundColor: '#FFFFFF' },
-    transitionConfig
-  }
 );
 
 const AccountStack = createStackNavigator(
@@ -208,6 +214,14 @@ const AppStack = createDrawerNavigator(
       navigationOptions: navOpt => ({
         drawerLabel: ({ focused }) => (
           <DrawerItem focused={focused} screen="Components" title="Components" />
+        )
+      })
+    },
+    Preference: {
+      screen: PreferenceStack,
+      navigationOptions: navOpt => ({
+        drawerLabel: ({ focused }) => (
+            <DrawerItem focused={focused} screen="Preference" title="Preference Reward Type" />
         )
       })
     },
