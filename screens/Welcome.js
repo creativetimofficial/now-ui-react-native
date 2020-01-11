@@ -57,7 +57,7 @@ export default class Welcome extends React.Component {
                   radius={10}
                   style={styles.button}
                   color={nowTheme.COLORS.WELCOME_BUTTON}
-                  onPress={() => navigation.navigate('Home')}
+                  onPress={() => navigation.navigate('AddCard')}
                 >
                   <Text
                     style={{ fontFamily: 'montserrat-bold', fontSize: 14 }}

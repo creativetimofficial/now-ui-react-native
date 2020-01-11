@@ -16,7 +16,7 @@ export default [
     cta: 'View article'
   },
   {
-    title: 'adsefse',
+    title: 'Hang Seng Enjoy Card',
     image: require("../assets/imgs/enjoycard.jpg"),
     cta: 'View article'
   },
