@@ -1,5 +1,5 @@
 import React from 'react';
-import { Block } from "galio-framework";
+import { Block } from 'galio-framework';
 import { Easing, Animated } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
@@ -13,6 +13,7 @@ import Components from '../screens/Components';
 import Articles from '../screens/Articles';
 import Onboarding from '../screens/Onboarding';
 import Welcome from '../screens/Welcome';
+import AddCard from '../screens/AddCard';
 import Preference from "../screens/Preference";
 
 // settings
@@ -124,17 +125,14 @@ const ProfileStack = createStackNavigator(
   {
     Profile: {
       screen: Profile,
-      navigationOptions: ({ navigation }) => {
-        console.log('params', navigation);
-        return ({
-          header: (
-            <Header white transparent title="Profile" iconColor={'#FFF'} navigation={navigation} />
-          ),
-          headerTransparent: true
-        })
-      }
+      navigationOptions: ({ navigation }) => ({
+        header: (
+          <Header white transparent title="Profile" iconColor={'#FFF'} navigation={navigation}/>
+        ),
+        headerTransparent: true
+      })
     }
-  },
+  }
 );
 
 const AccountStack = createStackNavigator(
@@ -144,6 +142,25 @@ const AccountStack = createStackNavigator(
       navigationOptions: ({ navigation }) => ({
         header: (
           <Header transparent title="Create Account" iconColor={'#333'} navigation={navigation} />
+        ),
+        headerTransparent: true
+      })
+    }
+  },
+  {
+    cardStyle: { backgroundColor: '#FFFFFF' },
+    transitionConfig
+  }
+);
+
+
+const AddCardStack = createStackNavigator(
+  {
+    AddCard: {
+      screen: AddCard,
+      navigationOptions: ({ navigation }) => ({
+        header: (
+          <Header transparent title="Add Credit Card" iconColor={'#333'} navigation={navigation} />
         ),
         headerTransparent: true
       })
@@ -181,17 +198,6 @@ const HomeStack = createStackNavigator(
   }
 );
 
-// const WelcomeStack = createStackNavigator(
-//   {
-//     Welcome: {
-//       screen: Welcome,
-//       navigationOptions: ({ navigation }) => ({
-//         header: <Header title="Welcome" navigator={navigation} />
-//       })
-//     }
-//   }
-// )
-
 const AppStack = createDrawerNavigator(
   {
     Welcome: {
@@ -204,6 +210,12 @@ const AppStack = createDrawerNavigator(
       screen: Onboarding,
       navigationOptions: {
         drawerLabel: () => { }
+      }
+    },
+    AddCard: {
+      screen: AddCardStack,
+      navigationOptions: {
+        drawerLabel: ({ focused }) => <DrawerItem focused={focused} title="Add Card" />
       }
     },
     Home: {
