@@ -1,29 +1,29 @@
 export default [
   {
-    title: 'Society has put up so many boundaries',
-    image: require("../assets/imgs/project13.jpg"),
+    title: 'HSBC Advance',
+    image: require("../assets/imgs/credit_card_PNG61.png"),
     cta: 'View article',
     horizontal: true
   },
   {
-    title: 'Many limitations on what’s right',
-    image: require("../assets/imgs/bg40.jpg"),
+    title: 'HSBC Premier',
+    image: require("../assets/imgs/premier-world-elite.png"),
     cta: 'View article'
   },
   {
-    title: 'Why would anyone pick blue over?',
-    image: require("../assets/imgs/bg28.jpg"),
+    title: 'HSBC Gold',
+    image: require("../assets/imgs/gold-visa.png"),
     cta: 'View article'
   },
   {
     title: 'Pink is obviously a better color',
-    image: require("../assets/imgs/project21.jpg"),
+    image: require("../assets/imgs/gold-visa.png"),
     cta: 'View article'
   },
 
   {
     title: 'The time is now for it to be okay to be',
-    image: require("../assets/imgs/project15.jpg"),
+    image: require("../assets/imgs/credit_card_PNG61.png"),
     cta: 'View article',
     horizontal: true
   },

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Block } from "galio-framework";
+import { Block } from 'galio-framework';
 import { Easing, Animated } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
@@ -127,12 +127,12 @@ const ProfileStack = createStackNavigator(
       screen: Profile,
       navigationOptions: ({ navigation }) => ({
         header: (
-          <Header white transparent title="Profile" iconColor={'#FFF'} navigation={navigation} />
+          <Header white transparent title="Profile" iconColor={'#FFF'} navigation={navigation}/>
         ),
         headerTransparent: true
       })
     }
-  },
+  }
 );
 
 const AccountStack = createStackNavigator(
