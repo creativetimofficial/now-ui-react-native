@@ -13,25 +13,7 @@ const { width, height } = Dimensions.get('screen');
 
 const thumbMeasure = (width - 48 - 32) / 3;
 
-
-
 class Profile extends React.Component {
-
-
-  renderTabs = () => {
-    return (
-      <Tabs
-        data={[
-          { id: 'popular', title: 'Date' },
-          { id: 'beauty', title: 'Type' },
-          { id: 'fashion', title: 'Amount' },
-          { id: 'freqency', title: 'freq' },
-        ]}
-        initialIndex={0}
-      />
-    );
-  };
-
   render() {
     return (
       <Block style={{
@@ -45,170 +27,88 @@ class Profile extends React.Component {
             style={styles.profileContainer}
             imageStyle={styles.profileBackground}
           >
-            <Block flex style={styles.profileCard}>
-              <Block style={{ position: 'absolute', width: width, zIndex: 5, paddingHorizontal: 20 }}>
-                <Block middle style={{ top: height * 0.15 }}>
-                  <Image source={articles[0].image} style={styles.avatar}/>
-
-                </Block>
-                  <Block middle>
-                    <Text
-                      size={16}
-                      color="white"
-                      style={{
-                        marginTop: 100,
-                        fontFamily: 'montserrat-bold',
-                        lineHeight: 20,
-                        fontWeight: 'bold',
-                        fontSize: 18,
-                        opacity: .8
-                      }}
-                    >
-                      HSBC Advance
-                    </Text>
-                  </Block>
-                  <Block style={styles.info}>
-                    <Block row space="around">
-
-                      <Block middle>
-                        <Text
-                          size={18}
-                          color="white"
-                          style={{ marginBottom: 4, fontFamily: 'montserrat-bold' }}
-                        >
-                          2K
-                        </Text>
-                        <Text style={{ fontFamily: 'montserrat-regular' }} size={14} color="white">
-                          Friends
-                        </Text>
-                      </Block>
-
-                      <Block middle>
-                        <Text
-                          color="white"
-                          size={18}
-                          style={{ marginBottom: 4, fontFamily: 'montserrat-bold' }}
-                        >
-                          26
-                        </Text>
-                        <Text style={{ fontFamily: 'montserrat-regular' }} size={14} color="white">
-                          Comments
-                        </Text>
-                      </Block>
-
-                      <Block middle>
-                        <Text
-                          color="white"
-                          size={18}
-                          style={{ marginBottom: 4, fontFamily: 'montserrat-bold' }}
-                        >
-                          48
-                        </Text>
-                        <Text style={{ fontFamily: 'montserrat-regular' }} size={14} color="white">
-                          Bookmarks
-                        </Text>
-                      </Block>
-
-                    </Block>
-                  </Block>
-
+            <Block style={{ position: 'absolute', width: width, zIndex: 5, paddingHorizontal: 20 }}>
+              <Block middle style={{ top: height * 0.15 }}>
+                <Image source={articles[0].image} style={styles.avatar}/>
               </Block>
-
-
-              <Block
-                middle
-                row
-                style={{ position: 'absolute', width: width, top: height * 0.6 - 22, zIndex: 99 }}
-              >
-                <Button style={{ width: 300 , height: 44, marginHorizontal: 5, elevation: 0 }}
-                        textStyle={{ fontSize: 16 }}
-
-                        round>
-                  Transaction History
-                </Button>
-
-
+              <Block middle>
+                <Text
+                  size={16}
+                  color="white"
+                  style={{
+                    marginTop: 100,
+                    fontFamily: 'montserrat-bold',
+                    lineHeight: 20,
+                    fontWeight: 'bold',
+                    fontSize: 18,
+                    opacity: .8
+                  }}
+                >
+                  HSBC Advance
+                </Text>
               </Block>
+            </Block>
+            <Block middle row
+                   style={{ position: 'absolute', width: width, top: height * 0.6 - 22, zIndex: 99 }}
+            >
+              <Button style={{ width: 300, height: 44, marginHorizontal: 5, elevation: 0 }}
+                      textStyle={{ fontSize: 16 }} disabled
+                      round>
+                Transaction History
+              </Button>
             </Block>
           </ImageBackground>
 
-
         </Block>
-        <Block/>
         <Block flex={0.4} style={{ padding: theme.SIZES.BASE, marginTop: 90 }}>
           <ScrollView showsVerticalScrollIndicator={false}>
-            <Block flex style={{ marginTop: 20 }}>
-                <Block style={{ marginBottom: theme.SIZES.BASE }}>
-                </Block>
-
-                <View style={styles.container}>
-                  <FlatList
-                    renderSeparator={(sectionId, rowId) => <View key={rowId} style={styles.separator} />}
-                    data={[
-                      {key: 'Devin'},
-                      {key: 'Daadwan'},
-                      {key: 'Dominic'},
-                      {key: 'Jackson'},
-                      {key: 'James'},
-                      {key: 'Joel'},
-                      {key: 'John'},
-                      {key: 'Jillian'},
-                      {key: 'Jimmy'},
-                      {key: 'Julie'},
-                    ]}
-                    renderItem={({item}) => {
-
-                      return <View>
-                        <Text bold size={12} color="#2c2c2c" style={styles.item}>
-                          {item.key}
-                        </Text>
-                        <Text bold size={12} color="#2c2c2c" style={styles.item}>
-                          hi
-                        </Text>
-                      </View>;
-                    }}
-                  />
-                </View>
-              <Block row style={{ paddingVertical: 14, paddingHorizontal: 15 }} space="between">
-                <Text bold size={16} color="#2c2c2c" style={{ marginTop: 3 }}>
-                  Album
-                </Text>
-                <Button
-                  small
-                  color="transparent"
-                  textStyle={{ color: nowTheme.COLORS.PRIMARY, fontSize: 14 }}
-                >
-                  View all
-                </Button>
-              </Block>
-
-
-              <Block style={{ paddingBottom: -HeaderHeight * 2, paddingHorizontal: 15 }}>
-                <Block row space="between" style={{ flexWrap: 'wrap' }}>
-                  {Images.Viewed.map((img, imgIndex) => (
-                    <Image
-                      source={img}
-                      key={`viewed-${img}`}
-                      resizeMode="cover"
-                      style={styles.thumb}
-                    />
-                  ))}
-                </Block>
-              </Block>
+            <Block flex>
+              <View style={styles.container}>
+                <FlatList
+                  renderSeparator={(sectionId, rowId) => <View key={rowId} style={styles.separator}/>}
+                  data={[
+                    { date: '12/01/2020', merchant: 'Mannings HK', amount: '400.00' },
+                    { date: '10/01/2020', merchant: 'Spotify PA890268930', amount: '58.00' },
+                    { date: '09/01/2020', merchant: '**ALIPAY - Taobao', amount: '126.37' },
+                    { date: '03/01/2020', merchant: 'PAYME FROM HSBC HK HK', amount: '228.03' }
+                  ]}
+                  renderItem={({ item }) => (
+                    <Block style={{ marginBottom: 15 }}>
+                      <Block width={width} row key={`${item.date}_${item.merchant}`}>
+                        <Block flex={1}>
+                          <Text bold size={12} color="#2c2c2c" style={styles.item}>
+                            {item.date}
+                          </Text>
+                          <Text size={12} color="#2c2c2c" style={styles.item}>
+                            {item.merchant}
+                          </Text>
+                        </Block>
+                        <Block middle flex={1}>
+                          <Text bold size={12} color="#2c2c2c" style={styles.item}>
+                            {`HKD ${item.amount}`}
+                          </Text>
+                        </Block>
+                      </Block>
+                      <View
+                        style={{
+                          borderBottomColor: nowTheme.COLORS.GREY,
+                          borderBottomWidth: 1,
+                        }}
+                      />
+                    </Block>
+                  )}
+                />
+              </View>
             </Block>
           </ScrollView>
         </Block>
       </Block>
-
     );
   }
 }
 
 
-
-
 const styles = StyleSheet.create({
-
   profileContainer: {
     width,
     height,
@@ -250,8 +150,8 @@ const styles = StyleSheet.create({
     paddingTop: 22
   },
   item: {
-    fontSize: 10,
-    height: 21,
+    fontSize: 16,
+    height: 32
   },
   social: {
     width: nowTheme.SIZES.BASE * 3,
