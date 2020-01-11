@@ -13,6 +13,7 @@ const InvisionLogo = require('../assets/imgs/invision-white-slim.png');
 const ApplePaymentConnecting = require('../assets/imgs/connecting.png');
 const CardLogo = require('../assets/imgs/CardLogo.png');
 const EnjoyCard = require('../assets/imgs/enjoycard.jpg');
+const CardWise = require('../assets/imgs/cardwise.png')
 
 const Viewed = [
   require('../assets/imgs/project5.jpg'),
@@ -45,4 +46,5 @@ export default {
   CardLogo,
   EnjoyCard,
   ApplePaymentConnecting,
+  CardWise
 };
