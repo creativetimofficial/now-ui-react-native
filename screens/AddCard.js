@@ -14,7 +14,8 @@ import { Block, Checkbox, Text, Button as GaButton, theme, Icon } from 'galio-fr
 import { Button, Input } from '../components';
 import { Images, nowTheme } from '../constants';
 import { HeaderHeight } from '../constants/utils';
-import { Image } from 'react-native-svg';
+import { Image } from 'react-native';
+import { articles } from '../constants'
 
 const { width, height } = Dimensions.get('screen');
 
@@ -194,8 +195,8 @@ class AddCard extends React.Component {
             </Block>
             {this.state.added ? (
               <Block middle flex={1}>
-                <Image source={Images.EnjoyCard}
-                       style={{ width: 100, height: 60, zIndex: 999 }}
+                <Image source={articles[3].image}
+                       style={{ top:-180, width: 280, height: 220, zIndex: 999 }}
                        resizeMode={'contain'}/>
               </Block>
             ) : (

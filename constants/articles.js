@@ -16,6 +16,11 @@ export default [
     cta: 'View article'
   },
   {
+    title: 'adsefse',
+    image: require("../assets/imgs/enjoycard.jpg"),
+    cta: 'View article'
+  },
+  {
     title: 'Pink is obviously a better color',
     image: require("../assets/imgs/gold-visa.png"),
     cta: 'View article'
