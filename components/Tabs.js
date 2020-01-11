@@ -4,6 +4,8 @@ import { Block, theme } from 'galio-framework';
 
 const { width } = Dimensions.get('screen');
 import nowTheme from '../constants/Theme';
+import ArButton from './Button';
+import NSlider from './Sliders';
 
 const defaultMenu = [
   { id: 'music', title: 'Music', },
@@ -12,7 +14,7 @@ const defaultMenu = [
   { id: 'motocycles', title: 'Motocycles', },
 ];
 
-export default class Tabs extends React.Component {
+class Tabs extends React.Component {
   static defaultProps = {
     data: defaultMenu,
     initialIndex: null,
@@ -159,3 +161,6 @@ const styles = StyleSheet.create({
     color: nowTheme.COLORS.MUTED
   },
 });
+
+export default Tabs;
+

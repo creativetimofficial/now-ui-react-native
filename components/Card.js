@@ -1,7 +1,7 @@
 import React from 'react';
 import { withNavigation } from 'react-navigation';
 import PropTypes from 'prop-types';
-import { StyleSheet, Image, TouchableWithoutFeedback } from 'react-native';
+import { StyleSheet, Image, TouchableWithoutFeedback,Alert } from 'react-native';
 import { Block, Text, theme } from 'galio-framework';
 
 import { nowTheme } from '../constants';
@@ -20,9 +20,8 @@ class Card extends React.Component {
       titleStyle
     } = this.props;
 
-    const imageStyles = [full ? styles.fullImage : styles.horizontalImage, imageStyle];
     const titleStyles = [styles.cardTitle, titleStyle];
-    const cardContainer = [styles.card, styles.shadow, style];
+    const cardContainer = [styles.card, style];
     const imgContainer = [
       styles.imageContainer,
       horizontal ? styles.horizontalStyles : styles.verticalStyles,
@@ -31,74 +30,23 @@ class Card extends React.Component {
 
     return (
       <Block row={horizontal} card flex style={cardContainer}>
-        <TouchableWithoutFeedback onPress={() => navigation.navigate('Product', { product: item })}>
+        <TouchableWithoutFeedback
+          onPress={() => {
+            navigation.navigate('Profile',{ otherParam: "awda" });
+          }}
+        >
           <Block flex style={imgContainer}>
-            <Image resizeMode="cover" source={item.image} style={imageStyles} />
+            <Image source={item.image} style={styles.fullImage} />
           </Block>
         </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback onPress={() => navigation.navigate('Product', { product: item })}>
-          <Block flex space="between" style={styles.cardDescription}>
-            <Block flex>
-              <Text
-                style={{ fontFamily: 'montserrat-regular' }}
-                size={14}
-                style={titleStyles}
-                color={nowTheme.COLORS.SECONDARY}
-              >
-                {item.title}
-              </Text>
-              {item.subtitle ? (
-                <Block flex center>
-                  <Text
-                    style={{ fontFamily: 'montserrat-regular' }}
-                    size={32}
-                    color={nowTheme.COLORS.BLACK}
-                  >
-                    {item.subtitle}
-                  </Text>
-                </Block>
-              ) : (
-                  <Block />
-                )}
-              {item.description ? (
-                <Block flex center>
-                  <Text
-                    style={{ fontFamily: 'montserrat-regular', textAlign: 'center', padding: 15 }}
-                    size={14}
-                    color={"#9A9A9A"}
-                  >
-                    {item.description}
-                  </Text>
-                </Block>
-              ) : (
-                  <Block />
-                )}
-              {item.body ? (
-                <Block flex left>
-                  <Text
-                    style={{ fontFamily: 'montserrat-regular' }}
-                    size={12}
-                    color={nowTheme.COLORS.TEXT}
-                  >
-                    {item.body}
-                  </Text>
-                </Block>
-              ) : (
-                  <Block />
-                )}
-            </Block>
-            <Block right={ctaRight ? true : false}>
-              <Text
-                style={styles.articleButton}
-                size={12}
-                muted={!ctaColor}
-                color={ctaColor || nowTheme.COLORS.ACTIVE}
-                bold
-              >
-                {item.cta}
-              </Text>
-            </Block>
-          </Block>
+        <TouchableWithoutFeedback>
+          <Text
+            style={{ fontFamily: 'montserrat-regular', textAlign: 'center' }}
+            size={19}
+            color={nowTheme.COLORS.SECONDARY}
+          >
+          {item.title}
+          </Text>
         </TouchableWithoutFeedback>
       </Block>
     );
@@ -118,11 +66,11 @@ Card.propTypes = {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: theme.COLORS.WHITE,
-    marginVertical: theme.SIZES.BASE,
     borderWidth: 0,
+    backgroundColor: theme.COLORS.WHITE,
+    marginVertical: 0,
     minHeight: 114,
-    marginBottom: 4
+    marginBottom: 0
   },
   cardTitle: {
     paddingHorizontal: 9,
@@ -130,7 +78,7 @@ const styles = StyleSheet.create({
     paddingBottom: 15
   },
   cardDescription: {
-    padding: theme.SIZES.BASE / 2
+    justifyContent: 'center',
   },
   imageContainer: {
     borderRadius: 3,
@@ -138,7 +86,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden'
   },
   image: {
-    // borderRadius: 3,
+    borderRadius: 3,
   },
   horizontalImage: {
     height: 122,
@@ -153,7 +101,10 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 0
   },
   fullImage: {
-    height: 215
+    flex: 1,
+    width: 380,
+    height: 310,
+    resizeMode: 'contain'
   },
   shadow: {
     shadowColor: '#8898AA',
