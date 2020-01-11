@@ -13,6 +13,7 @@ import Components from '../screens/Components';
 import Articles from '../screens/Articles';
 import Onboarding from '../screens/Onboarding';
 import Welcome from '../screens/Welcome';
+import AddCard from '../screens/AddCard';
 import Preference from "../screens/Preference";
 
 // settings
@@ -152,6 +153,25 @@ const AccountStack = createStackNavigator(
   }
 );
 
+
+const AddCardStack = createStackNavigator(
+  {
+    AddCard: {
+      screen: AddCard,
+      navigationOptions: ({ navigation }) => ({
+        header: (
+          <Header transparent title="Add Credit Card" iconColor={'#333'} navigation={navigation} />
+        ),
+        headerTransparent: true
+      })
+    }
+  },
+  {
+    cardStyle: { backgroundColor: '#FFFFFF' },
+    transitionConfig
+  }
+);
+
 const HomeStack = createStackNavigator(
   {
     Home: {
@@ -178,17 +198,6 @@ const HomeStack = createStackNavigator(
   }
 );
 
-// const WelcomeStack = createStackNavigator(
-//   {
-//     Welcome: {
-//       screen: Welcome,
-//       navigationOptions: ({ navigation }) => ({
-//         header: <Header title="Welcome" navigator={navigation} />
-//       })
-//     }
-//   }
-// )
-
 const AppStack = createDrawerNavigator(
   {
     Welcome: {
@@ -201,6 +210,12 @@ const AppStack = createDrawerNavigator(
       screen: Onboarding,
       navigationOptions: {
         drawerLabel: () => { }
+      }
+    },
+    AddCard: {
+      screen: AddCardStack,
+      navigationOptions: {
+        drawerLabel: ({ focused }) => <DrawerItem focused={focused} title="Add Card" />
       }
     },
     Home: {
