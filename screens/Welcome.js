@@ -50,7 +50,7 @@ export default class Welcome extends React.Component {
                   style={{ fontFamily: 'montserrat-bold', fontSize: 12, marginBottom: 20 }}
                   color={theme.COLORS.BLACK}
                 >
-                  A step towards smart payment
+                  Never Miss Your Reward Again
                 </Text>
                 <Button
                   shadowless
