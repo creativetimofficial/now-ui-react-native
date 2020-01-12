@@ -97,6 +97,7 @@ class Profile extends React.Component {
                       />
                     </Block>
                   )}
+                  keyExtractor={(item, index) => index.toString()}
                 />
               </View>
             </Block>
