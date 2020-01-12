@@ -1,5 +1,11 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Image, Dimensions } from 'react-native';
+import {
+    ScrollView,
+    StyleSheet,
+    Image,
+    Dimensions,
+    TouchableWithoutFeedback,
+} from 'react-native';
 //galio
 import { Block, Text, theme } from 'galio-framework';
 
@@ -30,17 +36,20 @@ class Payment extends React.Component {
 
     renderImageCardWise = () => {
         return (
-            <Block flex middle height={200}>
-                <Image source={Images.CardWise} style={{ width: 200, height: 200}} resizeMode={'contain'} />
+            <Block flex middle height={200} >
+                <Image source={Images.CardWise} style={{ width: 200, height: 200}} resizeMode={'contain'}/>
             </Block>
         );
     };
 
     render() {
+        const { navigation } = this.props;
         if (this.state.change) {
             return (
+
                 <Block flex>
-                    <ScrollView showsVerticalScrollIndicator={false}>
+                    <ScrollView showsVerticalScrollIndicator={false} >
+
                         <Block
                             middle
                             style={{
@@ -56,11 +65,16 @@ class Payment extends React.Component {
                         >
                             {this.renderImageApplePay()}
                         </Block>
+
                     </ScrollView>
                 </Block>
+
             );
         }
             return (
+                <TouchableWithoutFeedback  onPress={() => {
+                    navigation.navigate('Profile');
+                }}>
                 <Block flex>
                     <ScrollView showsVerticalScrollIndicator={false}>
                         <Block
@@ -80,6 +94,7 @@ class Payment extends React.Component {
                         </Block>
                     </ScrollView>
                 </Block>
+                </TouchableWithoutFeedback>
             );
         }
     }

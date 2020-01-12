@@ -17,6 +17,7 @@ import AddCard from '../screens/AddCard';
 import Preference from "../screens/Preference";
 import Payment from "../screens/Payment";
 import RewardGain from '../screens/Reward_Gain';
+import DiscountDisplay from "../screens/DiscountDisplay";
 // settings
 import SettingsScreen from '../screens/Settings';
 
@@ -190,6 +191,24 @@ const RewardGainStack = createStackNavigator(
   }
 );
 
+const DiscountDisplayStack = createStackNavigator(
+  {
+    DiscountDisplay: {
+      screen: DiscountDisplay,
+      navigationOptions: ({ navigation }) => ({
+        header: (
+          <Header transparent title="Discount" iconColor={'#333'} navigation={navigation} />
+        ),
+        headerTransparent: true
+      })
+    }
+  },
+  {
+    cardStyle: { backgroundColor: '#FFFFFF' },
+    transitionConfig
+  }
+);
+
 const HomeStack = createStackNavigator(
   {
     Home: {
@@ -230,12 +249,6 @@ const AppStack = createDrawerNavigator(
               drawerLabel: () => { }
           }
       },
-    // Onboarding: {
-    //   screen: Onboarding,
-    //   navigationOptions: {
-    //     drawerLabel: () => { }
-    //   }
-    // },
     Home: {
       screen: HomeStack,
       navigationOptions: navOpt => ({
@@ -250,6 +263,12 @@ const AppStack = createDrawerNavigator(
     //     )
     //   })
     // },
+      DiscountDisplay: {
+          screen: DiscountDisplayStack,
+          navigationOptions: {
+              drawerLabel: ({ focused }) => <DrawerItem focused={focused} title="DiscountDisplay" />
+          }
+      },
     AddCard: {
       screen: AddCardStack,
       navigationOptions: {

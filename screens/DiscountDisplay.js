@@ -7,7 +7,7 @@ import Card2 from '../components/Card2'
 import articles from "../constants/articles";
 const { width } = Dimensions.get("screen");
 
-class Home extends React.Component {
+class DiscountDisplay extends React.Component {
   renderArticles = () => {
     const { navigation } = this.props;
 
@@ -36,6 +36,7 @@ class Home extends React.Component {
 
 const styles = StyleSheet.create({
   home: {
+    marginTop: 60,
     width: width
   },
   articles: {
@@ -47,4 +48,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Home;
+export default DiscountDisplay;
