@@ -1,5 +1,6 @@
-## [1.0.1] 2019-11-12
+## [1.1.0] 2020-03-11
 
+## [1.0.1] 2019-11-12
 ### HotFix
 - small fix on responsive for Profile Page
 - added pre-cache for images for a faster experience
