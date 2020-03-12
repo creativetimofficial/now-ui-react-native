@@ -4,6 +4,7 @@ import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 import { Asset } from 'expo-asset';
 import { Block, GalioProvider } from 'galio-framework';
+import { NavigationContainer } from '@react-navigation/native';
 
 import Screens from './navigation/Screens';
 import { Images, articles, nowTheme } from './constants';
@@ -62,11 +63,13 @@ export default class App extends React.Component {
       );
     } else {
       return (
-        <GalioProvider theme={nowTheme}>
-          <Block flex>
-            <Screens />
-          </Block>
-        </GalioProvider>
+        <NavigationContainer>
+          <GalioProvider theme={nowTheme}>
+            <Block flex>
+              <Screens />
+            </Block>
+          </GalioProvider>
+        </NavigationContainer>
       );
     }
   }
