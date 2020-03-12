@@ -1,5 +1,5 @@
 import React from 'react';
-import { withNavigation } from 'react-navigation';
+import { withNavigation } from '@react-navigation/compat';
 import { TouchableOpacity, StyleSheet, Platform, Dimensions } from 'react-native';
 import { Button, Block, NavBar, Text, theme, Button as GaButton } from 'galio-framework';
 
@@ -47,7 +47,7 @@ class Header extends React.Component {
   };
   renderRight = () => {
     const { white, title, navigation } = this.props;
-    const { routeName } = navigation.state;
+    
 
     if (title === 'Title') {
       return [
@@ -56,7 +56,7 @@ class Header extends React.Component {
       ];
     }
 
-    switch (routeName) {
+    switch (title) {
       case 'Home':
         return [
           <BellButton key="chat-home" navigation={navigation} isWhite={white} />,
@@ -201,8 +201,8 @@ class Header extends React.Component {
       navigation,
       ...props
     } = this.props;
-    const { routeName } = navigation.state;
-    const noShadow = ['Search', 'Categories', 'Deals', 'Pro', 'Profile'].includes(routeName);
+
+    const noShadow = ['Search', 'Categories', 'Deals', 'Pro', 'Profile'].includes(title);
     const headerStyles = [
       !noShadow ? styles.shadow : null,
       transparent ? { backgroundColor: 'rgba(0,0,0,0)' } : null
@@ -213,6 +213,7 @@ class Header extends React.Component {
     return (
       <Block style={headerStyles}>
         <NavBar
+          back={false}
           title={title}
           style={navbarStyles}
           transparent={transparent}
@@ -224,7 +225,7 @@ class Header extends React.Component {
               family="NowExtra"
               size={16}
               onPress={this.handleLeftPress}
-              color={iconColor || nowTheme.COLORS.ICON}
+              color={iconColor || (white ? nowTheme.COLORS.WHITE : nowTheme.COLORS.ICON)}
             />
           }
           leftStyle={{ paddingVertical: 12, flex: 0.2 }}

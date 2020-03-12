@@ -17,7 +17,7 @@ import SettingsScreen from '../screens/Settings';
 import CustomDrawerContent from "./Menu";
 // header for screens
 import { Header, Icon} from '../components';
-import { argonTheme, tabs } from "../constants";
+import { nowTheme, tabs } from "../constants";
 
 const { width } = Dimensions.get("screen");
 
