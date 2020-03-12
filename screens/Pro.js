@@ -82,7 +82,7 @@ class Pro extends React.Component {
                 onPress={() => navigation.navigate("Home")}
 
               >
-                Comming Soon
+                BUY NOW
               </Button>
             </Block>
           </Block>

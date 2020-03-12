@@ -31,7 +31,6 @@ function CustomDrawerContent({
     "Articles",
     "Profile",
     "Account",
-    "Settings"
   ];
   return (
     <Block
