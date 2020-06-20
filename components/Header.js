@@ -15,7 +15,7 @@ const iPhoneX = () =>
 const BellButton = ({ isWhite, style, navigation }) => (
   <TouchableOpacity
     style={[styles.button, style]}
-    onPress={() => navigation.navigate('Notifications')}
+    onPress={() => navigation.navigate('Pro')}
   >
     <Icon
       family="NowExtra"
@@ -28,7 +28,7 @@ const BellButton = ({ isWhite, style, navigation }) => (
 );
 
 const BasketButton = ({ isWhite, style, navigation }) => (
-  <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Cart')}>
+  <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Pro')}>
     <Icon
       family="NowExtra"
       size={16}
@@ -115,7 +115,7 @@ class Header extends React.Component {
         style={styles.search}
         placeholder="What are you looking for?"
         placeholderTextColor={'#8898AA'}
-        onFocus={() => navigation.navigate('Search')}
+        onFocus={() => navigation.navigate('Pro')}
         iconContent={
           <Icon size={16} color={theme.COLORS.MUTED} name="zoom-bold2x" family="NowExtra" />
         }
