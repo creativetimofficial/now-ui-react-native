@@ -75,6 +75,12 @@ export default class App extends React.Component {
   }
 
   _loadResourcesAsync = async () => {
+    // Font.loadAsync({
+    //   'montserrat-regular': require('./assets/font/Montserrat-Regular.ttf'),
+    //   'montserrat-bold': require('./assets/font/Montserrat-Bold.ttf')
+    // });
+
+    // this.setState({ fontLoaded: true });
     return Promise.all([...cacheImages(assetImages)]);
   };
 

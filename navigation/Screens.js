@@ -26,23 +26,10 @@ const Drawer = createDrawerNavigator();
 
 function ComponentsStack(props) {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="Components" mode="card" headerMode="screen">
       <Stack.Screen name="Components" component={Components} options={{
-        navigationOptions:({ navigation, scene }) => ({ 
-          header: <Header title="Components" navigation={navigation} scene={scene} />
-         }),
-         backgroundColor: "#FFFFFF"
-      }}/>
-    </Stack.Navigator>
-  );
-}
-
-function SettingsStack(props) {
-  return (
-    <Stack.Navigator initialRouteName="Settings" mode="card" headerMode="screen">
-      <Stackk.Screen name="Settings" component={SettingsScreen} options={{
-        header: ({ navigation, scene }) => (<Header title="Settings" navigation={navigation} scene={scene}/>),
-        backgroundcolor: '#FFFFFF'
+        header:({ navigation, scene }) => (<Header title="Components" navigation={navigation} scene={scene} />),
+        backgroundColor: "#FFFFFF"
       }}/>
     </Stack.Navigator>
   );
@@ -198,7 +185,6 @@ function AppStack(props) {
       <Drawer.Screen name="Articles" component={ArticlesStack} />
       <Drawer.Screen name="Profile" component={ProfileStack} />
       <Drawer.Screen name="Account" component={AccountStack} />
-      <Drawer.Screen name="Settings" component={AccountStack} />
     </Drawer.Navigator>
   );
 }
