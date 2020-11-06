@@ -25,11 +25,6 @@
     "ios": {
       "supportsTablet": true
     },
-    "packagerOpts": {
-      "assetExts": [
-        "ttf"
-      ]
-    },
     "description": "Now UI React Native, based on Now UI Design System. Coded by Creative Tim"
   }
 }
