@@ -1,6 +1,6 @@
 import React from 'react';
 import { withNavigation } from '@react-navigation/compat';
-import { TouchableOpacity, StyleSheet, Platform, Dimensions } from 'react-native';
+import { TouchableOpacity, StyleSheet, Platform, Dimensions, Keyboard } from 'react-native';
 import { Button, Block, NavBar, Text, theme, Button as GaButton } from 'galio-framework';
 
 import Icon from './Icon';
@@ -115,7 +115,7 @@ class Header extends React.Component {
         style={styles.search}
         placeholder="What are you looking for?"
         placeholderTextColor={'#8898AA'}
-        onFocus={() => navigation.navigate('Pro')}
+        onFocus={() => {Keyboard.dismiss(); navigation.navigate('Pro')}}
         iconContent={
           <Icon size={16} color={theme.COLORS.MUTED} name="zoom-bold2x" family="NowExtra" />
         }

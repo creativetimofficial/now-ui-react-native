@@ -109,7 +109,7 @@ const Profile = () => {
             <Block
               middle
               row
-              style={{ position: 'absolute', width: width, top: height * 0.6 - 22, zIndex: 99 }}
+              style={{ position: 'absolute', width: width, top: height * 0.6 - 26, zIndex: 99 }}
             >
               <Button style={{ width: 114, height: 44, marginHorizontal: 5, elevation: 0 }} textStyle={{ fontSize: 16 }} round>
                 Follow
