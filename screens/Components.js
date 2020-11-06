@@ -110,7 +110,7 @@ class Components extends React.Component {
             </Button>
           </Block>
           <Block row space="between">
-            <Block flex left>
+            <Block flex left style={{marginTop: 8}}>
               <Select defaultIndex={1} options={['01', '02', '03', '04', '05']} />
             </Block>
             <Block flex>
@@ -511,9 +511,6 @@ class Components extends React.Component {
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
           scrollEventThrottle={16}
-          onScroll={Animated.event([
-            { nativeEvent: { contentOffset: { x: this.scrollX } } },
-          ])}
           contentContainerStyle={{
             width: width * 2
           }}>
@@ -557,7 +554,7 @@ class Components extends React.Component {
       <Block flex center>
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{ paddingBottom: 30 }}
+          contentContainerStyle={{ paddingBottom: 30, width }}
         >
           {this.renderButtons()}
           {this.renderText()}
