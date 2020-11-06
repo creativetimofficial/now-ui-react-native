@@ -1,7 +1,7 @@
 # [Now UI React Native](https://creativetimofficial.github.io/now-ui-react-native/docs/#) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/home?status=now-ui%20React%20Native,%20a%20cool%20NowUI%20React%20Native%20App%20Template%20%E2%9D%A4%EF%B8%8F%20https%3A//bit.ly/2KAj86H%20%23reactnative%20%23NowUI%20%23designsystem%20%23developers%20via%20%40CreativeTim)
 
 
- ![version](https://img.shields.io/badge/version-1.2.0-blue.svg)  [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/now-ui-react-native.svg?style=flat)](https://github.com/creativetimofficial/now-ui-react-native/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/now-ui-react-native.svg?maxAge=2592000)](https://github.com/creativetimofficial/now-ui-react-native/issues?q=is%3Aissue+is%3Aclosed)
+ ![version](https://img.shields.io/badge/version-1.3.0-blue.svg)  [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/now-ui-react-native.svg?style=flat)](https://github.com/creativetimofficial/now-ui-react-native/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/now-ui-react-native.svg?maxAge=2592000)](https://github.com/creativetimofficial/now-ui-react-native/issues?q=is%3Aissue+is%3Aclosed)
 
 
 ![Product Gif](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-react-native/opt_nurn_thumbnail.jpg)
