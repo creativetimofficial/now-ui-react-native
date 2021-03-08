@@ -1,4 +1,4 @@
-## [1.4.0] 2020 - 08 - 03
+## [1.4.0] 2020 - 03 - 08
 ### Updated dependencies
 - updated `@react-navigation/drawer@5.8.1` to `@react-navigation/drawer@5.12.4`
 - updated `@react-navigation/native@5.5.0` to `@react-navigation/native@5.9.3`
