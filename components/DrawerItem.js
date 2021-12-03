@@ -20,6 +20,36 @@ class DrawerItem extends React.Component {
             style={{ opacity: 0.5 }}
           />
         );
+      case "Surf Buddies":
+        return (
+          <Icon
+            name="user-run2x"
+            family="NowExtra"
+            size={18}
+            color={focused ? nowTheme.COLORS.PRIMARY : "white"}
+            style={{ opacity: 0.5 }}
+          />
+        );
+      case "Your Trips":
+        return (
+          <Icon
+            name="calendar-602x"
+            family="NowExtra"
+            size={18}
+            color={focused ? nowTheme.COLORS.PRIMARY : "white"}
+            style={{ opacity: 0.5 }}
+          />
+        );
+      case "Destinations":
+        return (
+          <Icon
+            name="world2x"
+            family="NowExtra"
+            size={18}
+            color={focused ? nowTheme.COLORS.PRIMARY : "white"}
+            style={{ opacity: 0.5 }}
+          />
+        );
       case "Components":
         return (
           <Icon

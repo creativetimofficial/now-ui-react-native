@@ -51,10 +51,63 @@ class Card extends React.Component {
                 <Block flex center>
                   <Text
                     style={{ fontFamily: 'montserrat-regular' }}
-                    size={32}
+                    size={14}
+                    style={styles.cardDetails}
                     color={nowTheme.COLORS.BLACK}
                   >
                     {item.subtitle}
+                  </Text>
+                </Block>
+              ) : (
+                  <Block />
+                )}
+              {item.popularity ? (
+                <Block flex>
+                  <Text
+                    style={styles.cardDetails}
+                    size={14}
+                    color={nowTheme.COLORS.BLACK}
+                  >
+                    Popularity: {item.popularity}
+                  </Text>
+                </Block>
+              ) : (
+                  <Block />
+                )}
+              {item.cost ? (
+                <Block flex>
+                  <Text
+                    style={styles.cardDetails}
+                    size={14}
+                    color={nowTheme.COLORS.BLACK}
+                  >
+                    Wallet damage: {item.cost}
+                  </Text>
+                </Block>
+              ) : (
+                  <Block />
+                )}
+              {item.bestSeason ? (
+                <Block flex>
+                  <Text
+                    style={styles.cardDetails}
+                    size={14}
+                    color={nowTheme.COLORS.BLACK}
+                  >
+                    Season: {item.bestSeason}
+                  </Text>
+                </Block>
+              ) : (
+                  <Block />
+                )}
+              {item.skillLevel ? (
+                <Block flex>
+                  <Text
+                    style={styles.cardDetails}
+                    size={14}
+                    color={nowTheme.COLORS.BLACK}
+                  >
+                    Skill level: {item.skillLevel}
                   </Text>
                 </Block>
               ) : (
@@ -126,8 +179,10 @@ const styles = StyleSheet.create({
   },
   cardTitle: {
     paddingHorizontal: 9,
-    paddingTop: 7,
-    paddingBottom: 15
+    fontWeight: 'bold'
+  },
+  cardDetails: {
+    paddingHorizontal: 9,
   },
   cardDescription: {
     padding: theme.SIZES.BASE / 2

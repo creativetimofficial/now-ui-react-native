@@ -1,10 +1,12 @@
 // local imgs
-const Onboarding = require('../assets/imgs/getPro-bg-1.png');
+// const Onboarding = require('../assets/imgs/getPro-bg-1.png');
+const Onboarding = require('../assets/imgs/surf-background.png');
 const Logo = require('../assets/imgs/now-logo.png');
 const ProfileBackground = require('../assets/imgs/bg5.png');
 const RegisterBackground = require('../assets/imgs/register-bg.png');
 const Pro = require('../assets/imgs/bg.png');
 const NowLogo = require('../assets/imgs/now-logo.png');
+const SurfNomadLogo = require('../assets/imgs/surf-nomad-logo.png');
 const iOSLogo = require('../assets/imgs/ios.png');
 const androidLogo = require('../assets/imgs/android.png');
 const ProfilePicture = require('../assets/imgs/profile-img.jpg');
@@ -35,6 +37,7 @@ export default {
   Pro,
   Products,
   NowLogo: NowLogo,
+  SurfNomadLogo: SurfNomadLogo,
   iOSLogo,
   androidLogo,
   CreativeTimLogo,
