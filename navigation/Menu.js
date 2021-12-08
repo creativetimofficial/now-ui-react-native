@@ -26,10 +26,13 @@ function CustomDrawerContent({
 }) {
   const insets = useSafeArea();
   const screens = [
+    "Destinations",
+    "Surf Buddies",
+    "Your Trips",
+    "Profile",
     "Home",
     "Components",
     "Articles",
-    "Profile",
     "Account",
   ];
   return (
@@ -38,7 +41,7 @@ function CustomDrawerContent({
       forceInset={{ top: "always", horizontal: "never" }}
     >
       <Block style={styles.header}>
-        <Image style={styles.logo} source={Images.Logo} />
+        <Image style={styles.logo} source={Images.SurfNomadLogo} />
         <Block right style={styles.headerIcon}>
           <Icon
             name="align-left-22x"

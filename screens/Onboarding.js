@@ -16,12 +16,12 @@ export default class Onboarding extends React.Component {
         <Block flex>
           <ImageBackground
             source={Images.Onboarding}
-            style={{ flex: 1, height: height, width, zIndex: 1 }}
+            style={{ flex: 1, height: '106%', width, zIndex: 1 }}
           />
           <Block space="between" style={styles.padded}>
             <Block>
               <Block middle>
-                <Image source={Images.NowLogo} style={{ width: 115, height: 124, bottom: 200, position: 'absolute' }} />
+                <Image source={Images.SurfNomadLogo} style={{ width: 115, height: 124, bottom: 200, position: 'absolute' }} />
               </Block>
               <Block>
                 <Block middle>
@@ -29,30 +29,30 @@ export default class Onboarding extends React.Component {
                     style={{
                       fontFamily: 'montserrat-regular', bottom: 50, position: 'absolute', letterSpacing: 2, paddingHorizontal: 20, textAlign: 'center'
                     }}
-                    color="white"
+                    color="black"
                     size={44}
                   >
-                    Now UI
-                    React Native
+                    Surf
+                    Nomad
                   </Text>
                 </Block>
               </Block>
-              <Block middle row>
+              <Block middle row height="20%">
                 <Text
-                  color="white"
+                  color="black"
                   size={16}
                   style={{ fontFamily: 'montserrat-regular' }}
                 >
-                  Designed by
+                  Plan your epic surf trip
                 </Text>
-                <Image
+                {/* <Image
                   source={Images.InvisionLogo}
                   style={{
                     height: 28,
                     width: 91,
                     marginLeft: theme.SIZES.BASE
                   }}
-                />
+                /> */}
               </Block>
               <Block middle row style={{ marginTop: 15, marginBottom: 30}}>
                 <Text
@@ -60,16 +60,16 @@ export default class Onboarding extends React.Component {
                   size={16}
                   style={{ fontFamily: 'montserrat-regular' }}
                 >
-                  Coded by
+                  
                 </Text>
-                <Image
+                {/* <Image
                   source={Images.CreativeTimLogo}
                   style={{
                     height: 29,
                     width: 129,
                     marginLeft: theme.SIZES.BASE
                   }}
-                />
+                /> */}
               </Block>
 
               <Block
@@ -82,14 +82,14 @@ export default class Onboarding extends React.Component {
                 <Button
                   shadowless
                   style={styles.button}
-                  color={nowTheme.COLORS.PRIMARY}
+                  color={"black"}
                   onPress={() => navigation.navigate('App')}
                 >
                   <Text
                     style={{ fontFamily: 'montserrat-bold', fontSize: 14 }}
                     color={theme.COLORS.WHITE}
                   >
-                    GET STARTED
+                    GO SURFING
                   </Text>
                 </Button>
               </Block>

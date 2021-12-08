@@ -11,6 +11,7 @@ import Profile from '../screens/Profile';
 import Register from '../screens/Register';
 import Components from '../screens/Components';
 import Articles from '../screens/Articles';
+import Destinations from '../screens/Destinations';
 import Onboarding from '../screens/Onboarding';
 import SettingsScreen from '../screens/Settings';
 // drawer
@@ -29,6 +30,17 @@ function ComponentsStack(props) {
     <Stack.Navigator initialRouteName="Components" mode="card" headerMode="screen">
       <Stack.Screen name="Components" component={Components} options={{
         header:({ navigation, scene }) => (<Header title="Components" navigation={navigation} scene={scene} />),
+        backgroundColor: "#FFFFFF"
+      }}/>
+    </Stack.Navigator>
+  );
+}
+
+function DestinationsStack(props) {
+  return (
+    <Stack.Navigator initialRouteName="Destinations" mode="card" headerMode="screen">
+      <Stack.Screen name="Destinations" component={Destinations} options={{
+        header:({ navigation, scene }) => (<Header title="Destinations" navigation={navigation} scene={scene} />),
         backgroundColor: "#FFFFFF"
       }}/>
     </Stack.Navigator>
@@ -178,8 +190,9 @@ function AppStack(props) {
           fontWeight: "normal"
         }
       }}
-      initialRouteName="Home"
+      initialRouteName="Destinations"
     >
+      <Drawer.Screen name="Destinations" component={DestinationsStack} />
       <Drawer.Screen name="Home" component={HomeStack} />
       <Drawer.Screen name="Components" component={ComponentsStack} />
       <Drawer.Screen name="Articles" component={ArticlesStack} />
