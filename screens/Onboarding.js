@@ -5,6 +5,29 @@ import { Block, Button, Text, theme } from 'galio-framework';
 const { height, width } = Dimensions.get('screen');
 import { Images, nowTheme } from '../constants/';
 import { HeaderHeight } from '../constants/utils';
+import * as Notifications from 'expo-notifications'
+
+const postNotification = async () => {
+
+  if (Platform.OS === 'android') {
+    Notifications.setNotificationChannelAsync('default', {
+      name: 'default',
+      importance: Notifications.AndroidImportance.MAX,
+      vibrationPattern: [0, 250, 250, 250],
+      lightColor: '#FF231F7C',
+    });
+  }
+
+  await Notifications.scheduleNotificationAsync({
+    content: {
+      title: "You've got mail! 📬",
+      body: 'Here is the notification body',
+      data: { data: 'goes here' },
+    },
+    trigger: { seconds: 2 },
+  });
+
+}
 
 export default class Onboarding extends React.Component {
   render() {
@@ -81,17 +104,18 @@ export default class Onboarding extends React.Component {
               >
                 <Button
                   shadowless
-                  style={styles.button}
                   color={nowTheme.COLORS.PRIMARY}
-                  onPress={() => navigation.navigate('App')}
+                  style={styles.button}
+                  onPress={() => postNotification()}
                 >
                   <Text
-                    style={{ fontFamily: 'montserrat-bold', fontSize: 14 }}
-                    color={theme.COLORS.WHITE}
-                  >
-                    GET STARTED
-                  </Text>
+                      style={{ fontFamily: 'montserrat-bold', fontSize: 14 }}
+                      color={theme.COLORS.WHITE}
+                    >
+                      Notification
+                    </Text>
                 </Button>
+                 
               </Block>
             </Block>
           </Block>

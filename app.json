@@ -1,4 +1,7 @@
 {
+  "android":{
+    "googleServicesFile": "./google-services.json"
+  },
   "expo": {
     "name": "Now UI React Native",
     "slug": "now-ui-react-native",
