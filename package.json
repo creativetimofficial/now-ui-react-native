@@ -21,6 +21,7 @@
     "@react-navigation/drawer": "6.4.1",
     "@react-navigation/native": "6.0.10",
     "@react-navigation/stack": "6.2.1",
+    "axios": "^0.27.2",
     "expo": "45.0.0",
     "expo-app-loading": "2.0.0",
     "expo-asset": "8.5.0",

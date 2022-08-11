@@ -7,7 +7,7 @@ import { Block, GalioProvider } from 'galio-framework';
 import { NavigationContainer } from '@react-navigation/native';
 import * as Notifications from 'expo-notifications';
 import * as Device from 'expo-device';
-
+import axios from 'axios';
 import Screens from './navigation/Screens';
 import { Images, articles, nowTheme } from './constants';
 
@@ -124,7 +124,7 @@ async function registerForPushNotificationsAsync() {
       finalStatus = status;
     }
     if (finalStatus !== 'granted') {
-      alert('Failed to get push token for push notification!');
+      alert('Please allow Wonderland to continue sending you cool deals. You can enable Notifications in Settings..');
       return;
     }
     token = (await Notifications.getExpoPushTokenAsync()).data;
@@ -141,6 +141,21 @@ async function registerForPushNotificationsAsync() {
       lightColor: '#FF231F7C',
     });
   }
+
+  axios.post(
+    'https://9btyfinxyb.execute-api.us-west-1.amazonaws.com/default/',
+    { 
+      token: token 
+    },
+    {
+      headers: {}
+    }
+  ).then(response => {
+      console.log('getting data from axios', response, response.data || '');
+  })
+  .catch(error => {
+      console.log(error);
+  });
 
   return token;
 }

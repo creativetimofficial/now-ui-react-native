@@ -6,6 +6,7 @@ const { height, width } = Dimensions.get('screen');
 import { Images, nowTheme } from '../constants/';
 import { HeaderHeight } from '../constants/utils';
 import * as Notifications from 'expo-notifications'
+import axios from 'axios';
 
 const postNotification = async () => {
 
@@ -20,8 +21,8 @@ const postNotification = async () => {
 
   await Notifications.scheduleNotificationAsync({
     content: {
-      title: "You've got mail! 📬",
-      body: 'Here is the notification body',
+      title: "50% OFF Infused Joints! 📬",
+      body: 'You gotta check these amazing deals!',
       data: { data: 'goes here' },
     },
     trigger: { seconds: 2 },
