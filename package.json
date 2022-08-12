@@ -1,7 +1,7 @@
 {
   "name": "now-ui-react-native",
   "version": "1.5.0",
-  "description": "Now UI React Native, based on Now UI Design System. Coded by Creative Tim",
+  "description": "ative, based on Now UI Design System. Coded by Creative Tim",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
