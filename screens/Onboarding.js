@@ -32,6 +32,27 @@ const postNotification = async () => {
 }
 
 
+const broadcast = async(msg) => {
+  
+  await axios.post(
+    'https://9btyfinxyb.execute-api.us-west-1.amazonaws.com/default/',
+    { 
+      push: 'notifications',
+      title: 'hello',
+      msg: msg
+    },
+    {
+      headers: {}
+    }
+  ).then(response => {
+      console.log('getting data from axios', response, response.data || '');
+  })
+  .catch(error => {
+      console.log(error);
+  });
+
+}
+
 
 
 export default class Onboarding extends React.Component {
@@ -65,12 +86,37 @@ export default class Onboarding extends React.Component {
                     color="white"
                     size={44}
                   >                    
-                    WON
-                    DER
-                    LAND
+                    WON                    DER                    LAND
                   </Text>
                 </Block>
               </Block>
+
+              <Block style={{
+                  marginTop: theme.SIZES.BASE * 2,
+                  marginBottom: theme.SIZES.BASE * 2
+                }}>
+              <Input
+                right
+                placeholder="Amazing Deals"
+                iconContent={<Block />}
+                shadowless
+                onChangeText={newText => this.setState({msg: newText})}
+              />
+                  <Button
+                  shadowless
+                  color={nowTheme.COLORS.PRIMARY}
+                  style={styles.button}
+                  onPress={() => broadcast(this.state.msg)}
+                >
+                  <Text
+                      style={{ fontFamily: 'montserrat-bold', fontSize: 14 }}
+                      color={theme.COLORS.WHITE}
+                    >
+                      Broadcast
+                    </Text>
+                </Button>
+              </Block>
+
               <Block middle row>
                 {/* <Text
                   color="white"
@@ -107,6 +153,8 @@ export default class Onboarding extends React.Component {
 
               </Block>
               
+              
+
               <Block>
               <Text
                   style={{
@@ -141,37 +189,13 @@ export default class Onboarding extends React.Component {
                       style={{ fontFamily: 'montserrat-bold', fontSize: 14 }}
                       color={theme.COLORS.WHITE}
                     >
-                      I AGREE
+                      Send Local
                     </Text>
                 </Button>
                  
               </Block>
 
-              <Block style={{
-                  marginTop: theme.SIZES.BASE * 2,
-                  marginBottom: theme.SIZES.BASE * 2
-                }}>
-              <Input
-                right
-                placeholder="Amazing Deals"
-                iconContent={<Block />}
-                shadowless
-                onChangeText={newText => this.setState({msg: newText})}
-              />
-                  <Button
-                  shadowless
-                  color={nowTheme.COLORS.PRIMARY}
-                  style={styles.button}
-                  onPress={() => postNotification()}
-                >
-                  <Text
-                      style={{ fontFamily: 'montserrat-bold', fontSize: 14 }}
-                      color={theme.COLORS.WHITE}
-                    >
-                      Broadcast
-                    </Text>
-                </Button>
-              </Block>
+              
 
             </Block>
           </Block>
@@ -184,7 +208,8 @@ export default class Onboarding extends React.Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: theme.COLORS.BLACK,
-    marginTop: Platform.OS === 'android' ? -HeaderHeight : 0
+    marginTop: Platform.OS === 'android' ? -HeaderHeight : 0,
+    marginBottom: theme.SIZES.BASE*2
   },
   padded: {
     paddingHorizontal: theme.SIZES.BASE * 2,
