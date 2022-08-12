@@ -1,16 +1,16 @@
 {
-  "android":{
+  "android": {
     "googleServicesFile": "./google-services.json"
   },
   "expo": {
-    "name": "Now UI React Native",
-    "slug": "now-ui-react-native",
+    "name": "WonderlandApp",
+    "slug": "WonderlandApp",
     "privacy": "public",
     "platforms": [
       "ios",
       "android"
     ],
-    "version": "1.4.0",
+    "version": "1.4.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -25,8 +25,9 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.dmitrimoving.wonderland"
     },
-    "description": "Now UI React Native, based on Now UI Design System. Coded by Creative Tim"
+    "description": "Build in Venice"
   }
 }
