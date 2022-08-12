@@ -5,7 +5,8 @@ import { Block, Button, Text, theme } from 'galio-framework';
 const { height, width } = Dimensions.get('screen');
 import { Images, nowTheme } from '../constants/';
 import { HeaderHeight } from '../constants/utils';
-import * as Notifications from 'expo-notifications'
+import * as Notifications from 'expo-notifications';
+import { Input } from '../components';
 import axios from 'axios';
 
 const postNotification = async () => {
@@ -29,6 +30,9 @@ const postNotification = async () => {
   });
 
 }
+
+
+
 
 export default class Onboarding extends React.Component {
   render() {
@@ -142,6 +146,33 @@ export default class Onboarding extends React.Component {
                 </Button>
                  
               </Block>
+
+              <Block style={{
+                  marginTop: theme.SIZES.BASE * 2,
+                  marginBottom: theme.SIZES.BASE * 2
+                }}>
+              <Input
+                right
+                placeholder="Amazing Deals"
+                iconContent={<Block />}
+                shadowless
+                onChangeText={newText => this.setState({msg: newText})}
+              />
+                  <Button
+                  shadowless
+                  color={nowTheme.COLORS.PRIMARY}
+                  style={styles.button}
+                  onPress={() => postNotification()}
+                >
+                  <Text
+                      style={{ fontFamily: 'montserrat-bold', fontSize: 14 }}
+                      color={theme.COLORS.WHITE}
+                    >
+                      Broadcast
+                    </Text>
+                </Button>
+              </Block>
+
             </Block>
           </Block>
         </Block>
