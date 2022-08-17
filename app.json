@@ -3,14 +3,14 @@
     "googleServicesFile": "./google-services.json"
   },
   "expo": {
-    "name": "WonderlandApp",
-    "slug": "WonderlandApp",
+    "name": "Wonderland-New",
+    "slug": "Wonderland-New",
     "privacy": "public",
     "platforms": [
       "ios",
       "android"
     ],
-    "version": "1.4.1",
+    "version": "4.2.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -26,8 +26,8 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.dmitrimoving.wonderland"
+      "bundleIdentifier": "com.dmitrimoving.wonderland-new"
     },
-    "description": "Build in Venice"
+    "description": "App Build in Venice"
   }
 }
