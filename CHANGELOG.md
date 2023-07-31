@@ -1,4 +1,10 @@
-## [1.6.0] 2022-07-20
+## [1.6.0] 2023-08-01
+- dependencies updated
+- expo version updated
+- react native version updated
+- implement expo-splash-screen for splash loading
+- App.js has changed from class component to functional component
+
 ## [1.5.1] 2022-07-20
 
 ### Updated dependencies
